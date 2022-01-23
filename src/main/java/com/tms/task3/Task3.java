@@ -1,5 +1,7 @@
 package com.tms.task3;
 
+import java.util.List;
+
 public class Task3 {
 
     public static Boolean validateMonth(Integer days) {
@@ -60,5 +62,57 @@ public class Task3 {
                 break;
         }
         return result;
+    }
+
+    public static void printOnlyOddPositive(int number) {
+        if (number < 1)
+            throw new IllegalArgumentException("Число должно быть больше 0");
+
+        for (int i = 1; i <= number; i++) {
+            if (i % 2 == 0) {
+                System.out.println(i);
+            }
+        }
+    }
+
+    public static Integer getFirstOdd(List<Integer> numbers) {
+        Integer result = null;
+        for (Integer number : numbers) {
+            if (number % 2 == 0) {
+                result = number;
+                break;
+            }
+        }
+        return result;
+    }
+
+    public static void printRandomLessThen10() {
+        int i = 0;
+        while (Math.random() < 10) {
+            if (i >= 100) {
+                break;
+            } else {
+                i++;
+            }
+            System.out.println("Print random " + i);
+        }
+    }
+
+    public static void printTwice() {
+        for (int i = 1; i <= 7; i++){
+            System.out.println("Я выполняюсь перед continue");
+            if (i > 2)
+                continue;
+            System.out.println("Я выполняюсь всего дважды");
+        }
+    }
+
+    public static void printAtLeastOnce() {
+        int i = 10;
+        do {
+            System.out.println("Число i имеет значение " + i);
+            i--;
+            if (i < -10) break;
+        } while (i < 3);
     }
 }

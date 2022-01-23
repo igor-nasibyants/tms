@@ -2,22 +2,49 @@ package com.tms;
 
 import com.tms.task3.Task3;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("==================================");
+        task3();
+        System.out.println("==================================");
+
+    }
+
+    private static void task3(){
 //        Task 3.1 example start
 //        System.out.println("Is month has valid number of days?");
 //        System.out.println("The result is " + Task3.validateMonth(45));
 //        Task 3.1 example end
 
 //        Task 3.2 example start
-//        System.out.println("Сегодня второй день недели, а значит это  " + Task3.nameOfDay(20));
+//        System.out.println("Сегодня второй день недели, а значит это  " + Task3.nameOfDay(2));
 //        Task 3.2 example end
 
 //        Task 3.3 example start
 //        System.out.println(Task3.checkNumberConditions(7));
 //        Task 3.3 example end
-        System.out.println("==================================");
 
+//        Task 3.4 example start
+//        System.out.println("четные числа: ");
+//        Task3.printOnlyOddPositive(7);
+//        Task 3.4 example end
+
+//        Task 3.5 example start
+//        System.out.println("Первое четное число из списка 1,3,5,8,2: " + Task3.getFirstOdd(Arrays.asList(1,3,5,8,2)));
+//        Task 3.5 example end
+
+//        Task 3.6 example start
+//        Task3.printRandomLessThen10();
+//        Task 3.6 example end
+
+//        Task 3.7 example start
+//        Task3.printTwice();
+//        Task 3.7 example end
+
+//        Task 3.8 example start
+        Task3.printAtLeastOnce();
+//        Task 3.8 example end
     }
 }
