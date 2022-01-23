@@ -1,15 +1,24 @@
 package com.tms;
 
 import com.tms.task3.Task3;
+import com.tms.task4.Task4;
 
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("==================================");
-        task3();
+//        task3();
+        task4();
         System.out.println("==================================");
 
+    }
+
+    private static void task4() {
+        int[] sortedArray = Task4.bubbleSort(new int[] {4,3,1,6,7,8,3,2,2});
+        for (int i : sortedArray)
+            System.out.print(i + " ");
+        System.out.println();
     }
 
     private static void task3(){
