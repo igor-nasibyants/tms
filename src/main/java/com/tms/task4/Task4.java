@@ -29,7 +29,7 @@ public class Task4 {
         return array;
     }
 
-    public static void selectionSort(int[] array) {
+    public static int[] selectionSort(int[] array) {
         for (int i = 0; i < array.length; i++) {
             int min = array[i];
             int minId = i;
@@ -44,14 +44,16 @@ public class Task4 {
             array[i] = min;
             array[minId] = temp;
         }
+        return array;
     }
 
-    public static void mergeSort(int[] array, int left, int right) {
-        if (right <= left) return;
+    public static int[] mergeSort(int[] array, int left, int right) {
+        if (right <= left) return array;
         int mid = (left+right)/2;
         mergeSort(array, left, mid);
         mergeSort(array, mid+1, right);
         merge(array, left, mid, right);
+        return array;
     }
 
     private static void merge(int[] array, int left, int mid, int right) {
@@ -123,8 +125,8 @@ public class Task4 {
         }
     }
 
-    public static void heapSort(int[] array) {
-        if (array.length == 0) return;
+    public static int[] heapSort(int[] array) {
+        if (array.length == 0) return array;
 
         // Строим кучу
         int length = array.length;
@@ -139,6 +141,7 @@ public class Task4 {
 
             heapify(array, i, 0);
         }
+        return array;
     }
 
     static int partition(int[] array, int begin, int end) {
@@ -160,10 +163,35 @@ public class Task4 {
         return counter;
     }
 
-    public static void quickSort(int[] array, int begin, int end) {
-        if (end <= begin) return;
+    public static int[] quickSort(int[] array, int begin, int end) {
+        if (end <= begin) return array;
         int pivot = partition(array, begin, end);
         quickSort(array, begin, pivot-1);
         quickSort(array, pivot+1, end);
+        return array;
+    }
+
+    public static int[] shakerSort(int[] array) {
+        int left = 0;
+        int right = array.length - 1;
+        while (left <= right) {
+            for (int i = right; i > left; --i) {
+                if (array[i-1] > array[i]) {
+                    int temp = array[i-1];
+                    array[i-1] = array[i];
+                    array[i] = temp;
+                }
+            }
+            ++left;
+            for (int i = left; i < right; ++i) {
+                if (array[i] > array[i+1]) {
+                    int temp = array[i];
+                    array[i] = array[i+1];
+                    array[i+1] = temp;
+                }
+            }
+            --right;
+        }
+        return array;
     }
 }
