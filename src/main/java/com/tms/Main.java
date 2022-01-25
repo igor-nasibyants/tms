@@ -21,9 +21,7 @@ public class Main {
 //        int[] sortedArray = Task4.mergeSort(new int[] {4,3,1,6,7,8,3,2,2}, 0, 8);
 //        int[] sortedArray = Task4.selectionSort(new int[] {4,3,1,6,7,8,3,2,2});
 //        int[] sortedArray = Task4.heapSort(new int[] {4,3,1,6,7,8,3,2,2});
-        for (int i : sortedArray)
-            System.out.print(i + " ");
-        System.out.println();
+        Task4.printArray(sortedArray);
     }
 
     private static void task3(){
