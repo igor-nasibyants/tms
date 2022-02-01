@@ -1,4 +1,4 @@
-package com.tms.task4.arrays;
+package com.tms.task.task4.arrays;
 
 public class Task4Arrays {
     public static void main(String[] args) {

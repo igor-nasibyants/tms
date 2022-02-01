@@ -1,4 +1,4 @@
-package com.tms.task4.arrays;
+package com.tms.task.task4.arrays;
 
 import java.util.Objects;
 

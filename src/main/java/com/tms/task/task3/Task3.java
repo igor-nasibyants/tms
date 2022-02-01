@@ -1,10 +1,11 @@
-package com.tms.task3;
+package com.tms.task.task3;
+
 
 import java.util.List;
 
 public class Task3 {
 
-    public static Boolean validateMonth(Integer days) {
+    public Boolean validateMonth(Integer days) {
         System.out.println("Input parameter days = " + days);
         if (days < 31) {
             return Boolean.TRUE;
@@ -13,7 +14,7 @@ public class Task3 {
         }
     }
 
-    public static String checkNumberConditions(double number) {
+    public String checkNumberConditions(double number) {
         StringBuilder stringBuilder = new StringBuilder();
         if (number > 0) {
             stringBuilder.append("Число положительное");
@@ -31,7 +32,7 @@ public class Task3 {
         return stringBuilder.toString();
     }
 
-    public static String nameOfDay(int number) {
+    public String nameOfDay(int number) {
         if (number > 7 || number < 1)
             throw new IllegalArgumentException("Номер дня недели не может быть больше 7 и меньше 1");
 
@@ -64,7 +65,7 @@ public class Task3 {
         return result;
     }
 
-    public static void printOnlyOddPositive(int number) {
+    public void printOnlyOddPositive(int number) {
         if (number < 1)
             throw new IllegalArgumentException("Число должно быть больше 0");
 
@@ -75,7 +76,7 @@ public class Task3 {
         }
     }
 
-    public static Integer getFirstOdd(List<Integer> numbers) {
+    public Integer getFirstOdd(List<Integer> numbers) {
         Integer result = null;
         for (Integer number : numbers) {
             if (number % 2 == 0) {
@@ -86,7 +87,7 @@ public class Task3 {
         return result;
     }
 
-    public static void printRandomLessThen10() {
+    public void printRandomLessThen10() {
         int i = 0;
         while (Math.random() < 10) {
             if (i >= 100) {
@@ -98,7 +99,7 @@ public class Task3 {
         }
     }
 
-    public static void printTwice() {
+    public void printTwice() {
         for (int i = 1; i <= 7; i++){
             System.out.println("Я выполняюсь перед continue");
             if (i > 2)

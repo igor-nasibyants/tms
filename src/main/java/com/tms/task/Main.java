@@ -1,22 +1,25 @@
-package com.tms;
+package com.tms.task;
 
-import com.tms.task3.Task3;
-import com.tms.task4.Task4;
-
-import java.util.Arrays;
+import com.tms.task.task3.Task3;
+import com.tms.task.task4.Task4;
+import com.tms.task.task5.Task5;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("==================================");
-//        task3();
-        task4();
+        task5();
         System.out.println("==================================");
+    }
 
+    private static void task5() {
+//        Task5.twoDimArray();
+//        Task5.printTriangle();
+        Task5.printThreeDimArray();
     }
 
     private static void task4() {
-        int[] sortedArray = Task4.bubbleSort(new int[] {4,3,1,6,7,8,3,2,2});
-//        int[] sortedArray = Task4.shakerSort(new int[] {4,3,1,6,7,8,3,2,2});
+//        int[] sortedArray = Task4.bubbleSort(new int[] {4,3,1,6,7,8,3,2,2});
+        int[] sortedArray = Task4.shakerSort(new int[] {4,3,1,6,7,8,3,2,2});
 //        int[] sortedArray = Task4.quickSort(new int[] {4,3,1,6,7,8,3,2,2}, 0, 8);
 //        int[] sortedArray = Task4.mergeSort(new int[] {4,3,1,6,7,8,3,2,2}, 0, 8);
 //        int[] sortedArray = Task4.selectionSort(new int[] {4,3,1,6,7,8,3,2,2});
