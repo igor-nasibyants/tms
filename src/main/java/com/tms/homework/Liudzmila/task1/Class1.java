@@ -1,4 +1,4 @@
-package com.tms.homework.Liudzmila.task1;
+package com.tms.homework.liudzmila.task1;
 
 public class Class1 {
 }
