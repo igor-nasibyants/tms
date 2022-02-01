@@ -1,0 +1,2 @@
+public class Task1 {
+}
