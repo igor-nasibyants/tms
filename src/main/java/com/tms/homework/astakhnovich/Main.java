@@ -27,7 +27,7 @@ public class Main {
         twoDimArray.printTwoDimArray();
         twoDimArray.sumEvenElementsMainDiagonal();
         twoDimArray.elementsBelowMainDiagonal();
-
+        twoDimArray.matrixTransposition();
 
     }
 }
