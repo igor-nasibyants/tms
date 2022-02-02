@@ -1,8 +1,6 @@
 package com.tms.homework.astakhnovich;
 
 
-import com.tms.homework.astakhnovich.task1.Task1;
-import com.tms.homework.astakhnovich.task3.OneDimArray;
 import com.tms.homework.astakhnovich.task3.TwoDimArray;
 
 public class Main {
@@ -23,6 +21,13 @@ public class Main {
     }
 
     public static void twoDimArray() {
-        TwoDimArray.TaskOne();
+        TwoDimArray twoDimArray = new TwoDimArray();
+        twoDimArray.gettingNumber();
+        twoDimArray.arrayFilling();
+        twoDimArray.printTwoDimArray();
+        twoDimArray.sumEvenElementsMainDiagonal();
+        twoDimArray.elementsBelowMainDiagonal();
+
+
     }
 }
