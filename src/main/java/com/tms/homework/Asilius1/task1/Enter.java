@@ -11,13 +11,7 @@ public class Enter {
         int c,i;
 
         do{
-            System.out.println("Введите значение, над которым будут проводиться действия: ");
-            i = str.nextInt();
-
-            System.out.println("Значение i в десятичном виде " + i);
-            System.out.println("Значение i в двоичном виде " + Integer.toBinaryString(i));
-
-            System.out.println("Выберите необходимое действие с числом:  ");
+            System.out.println("Выберите необходимое действие над числом:  ");
             System.out.println("1 - обнуление необходимого бита;");
             System.out.println("2 - побитовый сдвиг вправо/влево; ");
             System.out.println("0 - выход");
@@ -25,8 +19,10 @@ public class Enter {
 
             switch (c){
                 case 1:
+                    Functional.bitReset();
                     break;
                 case 2:
+                    Functional.bitShift();
                     break;
                 case 0:
                     break;
