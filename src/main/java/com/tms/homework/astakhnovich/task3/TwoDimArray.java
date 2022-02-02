@@ -36,6 +36,7 @@ public class TwoDimArray {
             }
             System.out.println();
         }
+        System.out.println("---------------------------------------");
     }
 
     public void sumEvenElementsMainDiagonal(){
@@ -44,16 +45,30 @@ public class TwoDimArray {
             sum += twoDimArray[i][i];
         }
         System.out.println("the sum of the even elements of the main diagonal = " + sum);
+        System.out.println("---------------------------------------");
     }
 
     public void elementsBelowMainDiagonal(){
         Integer sum = 0;
         for (int i = 1; i < twoDimArray.length; i++) {
-            for (int j = 0; j < i; j++) {
+            for (int j = 0; j <= i; j++) {
                 if(twoDimArray[i][j] % 2 != 0){
-                    System.out.println(twoDimArray[i][j]);
+                    System.out.print(twoDimArray[i][j]+" ");
                 }
             }
         }
+        System.out.println();
+        System.out.println("---------------------------------------");
+    }
+
+    public void matrixTransposition(){
+        for (int i = 0; i < matrixSize; i++) {
+            for (int j = i+1; j < matrixSize; j++) {
+                int temp = twoDimArray[i][j];
+                twoDimArray[i][j] = twoDimArray[j][i];
+                twoDimArray[j][i] = temp;
+            }
+        }
+        printTwoDimArray();
     }
 }
