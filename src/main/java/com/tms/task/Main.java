@@ -12,9 +12,9 @@ public class Main {
     }
 
     private static void task5() {
-//        Task5.twoDimArray();
+//    Task5.twoDimArray();
 //        Task5.printTriangle();
-        Task5.printThreeDimArray();
+//        Task5.printThreeDimArray();
     }
 
     private static void task4() {
