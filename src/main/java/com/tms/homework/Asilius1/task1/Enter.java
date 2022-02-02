@@ -1,0 +1,38 @@
+package com.tms.homework.Asilius1.task1;
+
+
+import java.util.Scanner;
+
+public class Enter {
+
+    public static void menu() {
+        Scanner str = new Scanner(System.in);
+
+        int c,i;
+
+        do{
+            System.out.println("Введите значение, над которым будут проводиться действия: ");
+            i = str.nextInt();
+
+            System.out.println("Значение i в десятичном виде " + i);
+            System.out.println("Значение i в двоичном виде " + Integer.toBinaryString(i));
+
+            System.out.println("Выберите необходимое действие с числом:  ");
+            System.out.println("1 - обнуление необходимого бита;");
+            System.out.println("2 - побитовый сдвиг вправо/влево; ");
+            System.out.println("0 - выход");
+            c = str.nextInt();
+
+            switch (c){
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 0:
+                    break;
+            }
+    }
+        while (c!=0);
+    }
+
+}
