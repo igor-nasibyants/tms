@@ -3,7 +3,7 @@ package com.tms.homework.han.task1;
 public class Task7 {
     public static void main(String[] args) {
         int[] arr = new int[12];
-        int maxValueIndex = arr[0];
+        int maxValueIndex = 0;
         for (int i = 0; i < arr.length; i++) {
             arr[i] = ((int) (Math.random() * 15));
         }
