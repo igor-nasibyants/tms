@@ -106,12 +106,29 @@ public class LessonOne {
 
 
     }
-    public static int SummArray(int[] arr){
+    public static int   SummArray(int[] arr){
         int j = 0 ;
         for (int d = 0 ; d <arr.length ; d++){
             j = arr[d] + j ;
         }
         return j/arr.length;
+    }
+    public static  String ArrayIsStrictlyIncreasing(){
+        Random rand = new Random();
+        String y = " ";
+        int [] Array = new int[4];
+        for (int x = 0 ; x < Array.length ; x++ ){
+            Array[x] = rand.nextInt(10);
+            System.out.print(Array[x] + " ");
+        }
+        for (int s = 0 ; s < Array.length-1 ; s ++){
+            if (Array[s] > Array[s+1]){
+                y ="Массив является строго возрастающей последовательностью";
+            }else{
+                y = "Массив не является строго возрастающей последовательностью";
+            }
+        }
+        return y ;
     }
 
 }
