@@ -1,6 +1,7 @@
 package com.tms.homework.han.task1;
 
-import java.util.Arrays;
+//      «Сожмите» массив, выбросив из него каждый второй элемент.
+//      «Освободившиеся» места массива заполните нулями
 
 public class Task5Advanced {
     public static void main(String[] args) {

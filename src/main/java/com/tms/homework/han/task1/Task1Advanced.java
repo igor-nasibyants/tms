@@ -1,5 +1,7 @@
 package com.tms.homework.han.task1;
 
+//      Найти произведение элементов, кратных 3
+
 public class Task1Advanced {
     public static void main(String[] args) {
         int[] arr = new int[10];

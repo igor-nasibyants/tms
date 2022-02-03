@@ -1,5 +1,7 @@
 package com.tms.homework.han.task1;
 
+//        Найти среднее арифметическое элементов с нечетными номерами
+
 public class Task2Advanced {
     public static void main(String[] args) {
         int[] arr = new int[10];

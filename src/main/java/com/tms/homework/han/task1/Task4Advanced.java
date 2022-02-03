@@ -1,5 +1,7 @@
 package com.tms.homework.han.task1;
 
+//        Найти наименьший нечетный элемент.
+
 public class Task4Advanced {
     public static void main(String[] args) {
         int[] arr = new int[10];
