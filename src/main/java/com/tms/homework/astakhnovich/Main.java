@@ -5,9 +5,9 @@ import com.tms.homework.astakhnovich.task3.TwoDimArray;
 
 public class Main {
     public static void main(String[] args) {
-       task1();
-       oneDimArray();
-       twoDimArray();
+        task1();
+        oneDimArray();
+        twoDimArray();
     }
 
     public static void task1() {

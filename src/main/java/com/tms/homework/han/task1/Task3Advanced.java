@@ -1,5 +1,7 @@
 package com.tms.homework.han.task1;
 
+//      Найти средне арифметическое элементов массива, превосходящих некоторое число С
+
 public class Task3Advanced {
     public static void main(String[] args) {
         int[] arr = new int[10];
