@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class TwoDimArray {
     Integer matrixSize;
-    Integer [][] twoDimArray;
+    Integer[][] twoDimArray;
 
-    public void gettingNumber(){
+    public void gettingNumber() {
         Scanner scan = new Scanner(System.in);
         do {
             System.out.println("Please enter a positive number!");
@@ -20,11 +20,11 @@ public class TwoDimArray {
         twoDimArray = new Integer[matrixSize][matrixSize];
     }
 
-    public void arrayFilling(){
+    public void arrayFilling() {
         Random randomNumber = new Random();
         for (int i = 0; i < twoDimArray.length; i++) {
             for (int j = 0; j < twoDimArray[i].length; j++) {
-                twoDimArray [i][j] = randomNumber.nextInt(50);
+                twoDimArray[i][j] = randomNumber.nextInt(50);
             }
         }
     }
@@ -39,7 +39,7 @@ public class TwoDimArray {
         System.out.println("---------------------------------------");
     }
 
-    public void sumEvenElementsMainDiagonal(){
+    public void sumEvenElementsMainDiagonal() {
         Integer sum = 0;
         for (int i = 0; i < twoDimArray.length; i++) {
             sum += twoDimArray[i][i];
@@ -48,12 +48,12 @@ public class TwoDimArray {
         System.out.println("---------------------------------------");
     }
 
-    public void elementsBelowMainDiagonal(){
+    public void elementsBelowMainDiagonal() {
         Integer sum = 0;
         for (int i = 1; i < twoDimArray.length; i++) {
             for (int j = 0; j <= i; j++) {
-                if(twoDimArray[i][j] % 2 != 0){
-                    System.out.print(twoDimArray[i][j]+" ");
+                if (twoDimArray[i][j] % 2 != 0) {
+                    System.out.print(twoDimArray[i][j] + " ");
                 }
             }
         }
@@ -61,9 +61,9 @@ public class TwoDimArray {
         System.out.println("---------------------------------------");
     }
 
-    public void matrixTransposition(){
+    public void matrixTransposition() {
         for (int i = 0; i < matrixSize; i++) {
-            for (int j = i+1; j < matrixSize; j++) {
+            for (int j = i + 1; j < matrixSize; j++) {
                 int temp = twoDimArray[i][j];
                 twoDimArray[i][j] = twoDimArray[j][i];
                 twoDimArray[j][i] = temp;
