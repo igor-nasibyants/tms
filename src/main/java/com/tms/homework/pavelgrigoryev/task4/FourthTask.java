@@ -1,4 +1,4 @@
-package com.tms.homework.pavelgrigoryev.Task4;
+package com.tms.homework.pavelgrigoryev.task4;
 
 public class FourthTask {
     public static void main(String[] args) {

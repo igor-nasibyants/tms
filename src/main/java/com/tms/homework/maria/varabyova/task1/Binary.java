@@ -1,4 +1,4 @@
-package com.tms.homework.maria_varabyova.HW01;
+package com.tms.homework.maria.varabyova.task1;
 
 public class Binary {
     public static void main(String[] args) {

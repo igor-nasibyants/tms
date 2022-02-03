@@ -1,4 +1,4 @@
-package com.tms.homework.Asilius1.task1;
+package com.tms.homework.asilius1.task1;
 
 import java.util.Scanner;
 

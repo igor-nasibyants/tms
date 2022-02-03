@@ -1,7 +1,8 @@
-package com.tms.homework.maria_varabyova.HW02;
+package com.tms.homework.maria.varabyova.task2;
 
 import java.util.Scanner;
-public class isPrimeNumbers {
+
+public class PrimeNumbers {
     public static void main(String[] args) {
         try (Scanner tru = new Scanner(System.in)) {
             int number;

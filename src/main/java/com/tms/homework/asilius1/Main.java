@@ -1,7 +1,7 @@
-package com.tms.homework.Asilius1;
+package com.tms.homework.asilius1;
 
 import java.util.Scanner;
-import com.tms.homework.Asilius1.task1.*;
+import com.tms.homework.asilius1.task1.*;
 
 public class Main {
     public static void main(String[] args) {

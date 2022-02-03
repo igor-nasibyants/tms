@@ -1,4 +1,4 @@
-package com.tms.homework.maria_varabyova.HW02;
+package com.tms.homework.maria.varabyova.task2;
 
 public class CycleOperators {
     public static void main (String args[]) {
