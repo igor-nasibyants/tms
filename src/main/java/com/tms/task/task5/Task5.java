@@ -2,7 +2,6 @@ package com.tms.task.task5;
 
 public class Task5 {
 
-
     public static void twoDimArray() {
         int[][] twoDimArray = new int[3][4];
         twoDimArray[0][0] = 5;//записали значение 5 в ячейку на пересечении нулевой строки и нулевого столбца
