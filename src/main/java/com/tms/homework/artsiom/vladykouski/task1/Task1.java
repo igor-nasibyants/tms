@@ -1,4 +1,4 @@
-package com.tms.homework.ArtsiomVladykouski.Task1;
+package com.tms.homework.artsiom.vladykouski.task1;
 
 import com.tms.task.task5.Task5;
 import com.tms.task.task6.Point;
