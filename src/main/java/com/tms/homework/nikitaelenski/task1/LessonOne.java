@@ -1,12 +1,11 @@
 package com.tms.homework.nikitaelenski.task1;
 
-import com.tms.homework.pavelgrigoryev.Task1.FirstTask;
-
 import java.util.Random;
 
 public class LessonOne {
     public static void  EvenNumbers(){
         int[] Arr = new int[10];
+        System.out.println("массив из всех чётных чисел от 2 до 20");
         for(int i=2,b=0;i<=20;i++){
             if(i%2==0){
                 Arr[b]=i;
@@ -15,12 +14,14 @@ public class LessonOne {
             }
         }
         System.out.println(" ");
+        System.out.println("в столбик");
         for(int s=0;s<Arr.length;s++){
             System.out.println(Arr[s]+" ");
         }
     }
     public static void  OddNumbers(){
         int num=0;
+        System.out.println("массив из всех нечётных чисел от 1 до 99");
         for(int i=1;i<=99;i++){
             if(i%2==1);
                 num++;
@@ -33,6 +34,7 @@ public class LessonOne {
             }
         }
         System.out.print(" ");
+        System.out.println("массив из всех нечётных чисел от 1 до 99 ,  но на оборот");
         for(int u = 99 , v = 0 ; u>=1 ; u--) {
             if (u % 2 == 1) {
                 arrays[v] = u;
