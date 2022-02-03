@@ -35,7 +35,5 @@ public class Point {
                 "x=" + x +
                 ", y=" + y +
                 '}';
-        System.out.println(Point);
-
     }
 }
