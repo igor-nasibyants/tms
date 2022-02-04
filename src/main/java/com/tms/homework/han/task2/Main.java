@@ -18,6 +18,7 @@ public class Main {
             m = scanner.nextInt();
         }
         int[][] arr = new int[n][m];
+        System.out.println("Начальная матрица");
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
                 arr[i][j] = (int) (Math.random() * 50);
