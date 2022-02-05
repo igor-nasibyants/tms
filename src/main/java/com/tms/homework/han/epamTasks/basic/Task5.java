@@ -6,10 +6,10 @@ package com.tms.homework.han.epamTasks.basic;
 
 public class Task5 {
     public static void main(String[] args) {
-        System.out.println(function(150119));
+        System.out.println(getForm(150119));
     }
 
-    public static String function(int seconds) {
+    public static String getForm(int seconds) {
         return (seconds / 3600 + "ч " + (seconds % 3600) / 60 + "мин " + (seconds % 3600) % 60 + "c");
     }
 }

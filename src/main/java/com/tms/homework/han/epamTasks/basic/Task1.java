@@ -4,10 +4,10 @@ package com.tms.homework.han.epamTasks.basic;
 
 public class Task1 {
     public static void main(String[] args) {
-        System.out.println("Значение функции: " + function(4, 4, 1));
+        System.out.println("Значение функции: " + calcValue(4, 4, 1));
     }
 
-    public static int function(int a, int b, int c) {
+    public static int calcValue(int a, int b, int c) {
         return ((a - 3) * b / 2) + c;
     }
 }

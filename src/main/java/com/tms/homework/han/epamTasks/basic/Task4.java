@@ -6,10 +6,10 @@ package com.tms.homework.han.epamTasks.basic;
 
 public class Task4 {
     public static void main(String[] args) {
-        System.out.println(function(111.222));
+        System.out.println(swap(111.222));
     }
 
-    public static double function(double r) {
+    public static double swap(double r) {
         return (r * 1000) % 1000 + (int) r / 1000.0;
     }
 }

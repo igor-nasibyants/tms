@@ -5,10 +5,10 @@ package com.tms.homework.han.epamTasks.basic;
 
 public class Task3 {
     public static void main(String[] args) {
-        System.out.println("Значение выражения: " + function(2.4, 3.2));
+        System.out.println("Значение выражения: " + calcValue(2.4, 3.2));
     }
 
-    public static double function(double x, double y) {
+    public static double calcValue(double x, double y) {
         return (Math.sin(x) + Math.cos(y)) / (Math.cos(x) - Math.sin(y)) * Math.tan(x * y);
     }
 }
