@@ -11,7 +11,7 @@ public class MyTask3 {
         Random sc= new Random();
 
         Integer [] arrays=new Integer[15];
-        int i=0;
+        int i;
         int count=0;
         for (i=0;i<15;i++) {
             arrays[i] = sc.nextInt(99);
