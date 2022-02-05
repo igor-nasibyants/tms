@@ -11,7 +11,7 @@ public class Task5 {
     //арифметические равны).
 
     public static void main(String[] args) {
-        Random r1 = new Random(); //create array1
+        Random r1 = new Random(); //array1
         Integer array1[] = new Integer[5];
         int sum1 = 0;
         System.out.print("Array1: ");
@@ -24,10 +24,10 @@ public class Task5 {
         double am1 = (double) sum1 / array1.length;
         System.out.println("Arithmetical mean1 is " + am1);
 
-        Random r2 = new Random();
+        Random r2 = new Random(); //array2
         Integer array2[] = new Integer[5];
         int sum2 = 0;
-        System.out.print("Array2: "); //create array2
+        System.out.print("Array2: ");
         for (int i = 0; i < array2.length; i++) {
             array2[i] = r2.nextInt(15);
             System.out.print(array2[i] + " ");
