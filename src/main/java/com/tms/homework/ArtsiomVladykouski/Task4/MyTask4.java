@@ -6,11 +6,11 @@ public class MyTask4 {
         // Замените каждый элемент с нечётным индексом на ноль.
         // Снова выведете массив на экран на отдельной строке.
         Random r = new Random();
-        Integer[] arrays = new Integer[21];
+        Integer[] arrays = new Integer[20];
         int i;
-        for (i = 0; i <= 20; i++) {
+        for (i = 0; i < 20; i++) {
             arrays[i] = r.nextInt(20);
-            System.out.print(" " + arrays[i] + " ");
+            System.out.print(" " +arrays[i]+ " ");
             if (i % 2 != 0) {
                 arrays[i] = 0;
             }
