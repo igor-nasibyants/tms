@@ -19,7 +19,7 @@ public class Task7 {
         }
         System.out.println();
 
-        int max = array[0]; //ищем max и его индекс
+        int max = array[0]; //ищем max и индекс его последнего вхождения в массив
         int indexMax = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] >= max) {
@@ -29,7 +29,6 @@ public class Task7 {
         }
         System.out.println("Max is " + max);
         System.out.println("Last Max index is " + indexMax);
-        System.out.println();
     }
 }
 
