@@ -33,5 +33,20 @@ public class FifthTask {
         } else {
             System.out.println("Средние арифметические массивов равны  " + sumFirstArray );
         }
+        System.out.println("Сжатый первый массив с нулями : ");
+        for (int i = 0; i < firstArray.length; i++) {
+            if (i % 2 != 0){
+                firstArray[i] = 0;
+            }
+            System.out.print(firstArray[i] + " ");
+        }
+        System.out.println();
+        System.out.println("Сжатый второй массив с нулями : ");
+        for (int i = 0; i < secondArray.length; i++) {
+            if (i % 2 != 0){
+                secondArray[i] = 0;
+            }
+            System.out.print(secondArray[i] + " ");
+        }
     }
 }
