@@ -6,7 +6,7 @@ package com.tms.homework.maria.varabyova.task3;
  */
 
 import java.util.Random;
-public class OneDimArray3 {
+/*public class OneDimArray3 {
     public static void main(String args[]){
         int count = 0;
         int a[] = new int[15];
@@ -20,4 +20,4 @@ public class OneDimArray3 {
         System.out.println();
         System.out.print("Количество чётных значений: "+count);
     }
-}
+}*/
