@@ -16,10 +16,10 @@ public class Task9 {
         Scanner scanner = new Scanner(System.in);
         int firstArrSum = 0;
         int secondArrSum = 0;
-        System.out.println("Введите положительное число");
+        System.out.println("Введите положительное и четное число");
         int numbersOfArray = scanner.nextInt();
-        while (numbersOfArray < 0) {
-            System.out.println("Вы ввели отрицательное число!!! Попробуйте еще раз");
+        while (numbersOfArray <= 0 || numbersOfArray % 2 != 0) {
+            System.out.println("Вы ввели неподходящее число!!! Попробуйте еще раз. Оно должно быть положительным и четным");
             numbersOfArray = scanner.nextInt();
         }
         int[] arr = new int[numbersOfArray];
