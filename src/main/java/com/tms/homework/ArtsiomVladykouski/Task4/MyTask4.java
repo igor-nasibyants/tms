@@ -9,7 +9,7 @@ public class MyTask4 {
         Integer[] arrays = new Integer[20];
         int i;
         for (i = 0; i < 20; i++) {
-            arrays[i] = r.nextInt(20);
+            arrays[i] = r.nextInt(21);
             System.out.print(" " +arrays[i]+ " ");
             if (i % 2 != 0) {
                 arrays[i] = 0;
