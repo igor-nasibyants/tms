@@ -12,6 +12,7 @@ public class Task8 {
 
     public static void main(String[] args) {
 
+        System.out.println("============================================================================");
         System.out.print("Array1: ");
         Random r1 = new Random();
         int[] array1 = new int[10];
@@ -46,5 +47,7 @@ public class Task8 {
             }
         }
         System.out.print(count);
+        System.out.println();
+        System.out.println("============================================================================");
     }
 }
