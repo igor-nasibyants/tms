@@ -20,6 +20,6 @@ public class Main {
           int ArraySize = scanner.nextInt();
           LessonOne.LeftOrRrightMore(ArraySize);
 */
-
+//        LessonOne.KeyboardInput ();
     }
 }

@@ -212,7 +212,6 @@ public class LessonOne {
                 RightPart += Size[i];
             }
         }
-
         System.out.println(" ");
         if (LeftPart > RightPart ) {
             System.out.println("Сумма чисел в левой части больше");
@@ -222,5 +221,43 @@ public class LessonOne {
             System.out.println("Сумма чисел равна");
 
         }
+    }
+    public static void KeyboardInput () {
+        Random rnd = new Random();
+        Scanner scan = new Scanner(System.in);
+        System.out.println("В ведите число больше 3");
+        int RemainderOfTheDivision = 0 ;
+        int num = scan.nextInt();
+        while (num <= 3){
+            System.out.println("Неверное число попробуй еще раз ");
+            num = scan.nextInt();
+        }
+        System.out.println("Начальный массив");
+        int[] array = new int [num];
+        for(int i  = 0 ; i < array.length ; i++){
+            array[i] = rnd.nextInt(num);
+            System.out.print(array[i] + " ");
+            if (array[i] % 2 == 0){
+                RemainderOfTheDivision ++ ;
+            }
+
+        }
+        System.out.println(" ");
+        System.out.println("Массив с четными числами");
+        if (RemainderOfTheDivision != 0){
+            int[] LastArray = new int[RemainderOfTheDivision];
+            for (int j = 0 , s = 0; j < LastArray.length ; j ++ ){
+                if(array[s] % 2 ==0) {
+                    LastArray[s] = array[s];
+                    s++;
+                }
+            }
+            for (int f : LastArray) {
+                System.out.print(f + " ");
+            }
+        } else {
+            System.out.println("Нету ни одного четного числа");
+        }
+
     }
 }
