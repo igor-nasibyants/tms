@@ -19,7 +19,7 @@ public class Task9 {
 
         double n = sc.nextDouble();
 
-        while (n <= 0 || n != Math.floor(n)) {      //проверяем, подходит ли число
+        while (n <= 0 || n != Math.floor(n) || n % 2 != 0) {      //проверяем, подходит ли число
             if (n < 0) {
                 System.out.println("Please enter a positive number");
             }
@@ -28,6 +28,9 @@ public class Task9 {
             }
             if (n != Math.floor(n)) {
                 System.out.println("Please enter an integer number");
+            }
+            if (n % 2 != 0) {
+                System.out.println("Please enter an even number to divide the array into two halves");
             }
             n = sc.nextDouble();
         }
