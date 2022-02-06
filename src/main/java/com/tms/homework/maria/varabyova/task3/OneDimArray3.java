@@ -5,7 +5,6 @@ package com.tms.homework.maria.varabyova.task3;
 это количество на экран на отдельной строке.
  */
 
-
 import java.util.Random;
 public class OneDimArray3 {
     public static void main(String args[]){
