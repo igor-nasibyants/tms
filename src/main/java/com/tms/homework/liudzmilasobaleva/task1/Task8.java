@@ -12,8 +12,8 @@ public class Task8 {
 
     public static void main(String[] args) {
 
-        System.out.println("============================================================================");
-        System.out.print("Array1: ");
+        System.out.println("=======================================================================================");
+        System.out.print("Array1: ");    //создаем первый массив целых чисел от 0 до 9
         Random r1 = new Random();
         int[] array1 = new int[10];
         for (int i = 0; i < array1.length; i++) {
@@ -22,32 +22,36 @@ public class Task8 {
         }
         System.out.println();
 
-        System.out.print("Array2: ");
+        System.out.print("Array2: ");   //создаем второй массив целых чисел от 1 до 9, т.к. на 0 делить нельзя
         Random r2 = new Random();
         int[] array2 = new int[10];
         for (int i = 0; i < array2.length; i++) {
-            array2[i] = r2.nextInt(9);
+            int min = 1;
+            int max = 9;
+            int diff = max - min;
+            array2[i] = r2.nextInt(diff + 1);
+            array2[i] += min;
             System.out.print(array2[i] + " ");
         }
         System.out.println();
 
-        System.out.print("Array3: ");
+        System.out.print("Array3: ");   //создаем третий массив действительных чисел
         double[] array3 = new double[10];
         for (int i = 0; i < array3.length; i++) {
             array3[i] = (double) array1[i] / (double) array2[i];
             System.out.print(array3[i] + " ");
         }
         System.out.println();
-        System.out.print("Number of integers: ");
 
+        System.out.print("Number of integers: "); // считаем количество целых чисел в третьем массиве
         int count = 0;
         for (int i = 0; i < array3.length; i++) {
-            if (Math.floor(array3[i]) == array3[i] && array3[i] != Double.POSITIVE_INFINITY) {
+            if (Math.floor(array3[i]) == array3[i]) {
                 count++;
             }
         }
         System.out.print(count);
         System.out.println();
-        System.out.println("============================================================================");
+        System.out.println("=======================================================================================");
     }
 }
