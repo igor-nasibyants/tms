@@ -21,8 +21,8 @@ class People {
         this.name = name;
     }
 
-    public String print() {
-        return "Name: " + name + "Age: " + age + "Height: " + height;
+    public void print() {
+        System.out.println("Name: " + name + "Age: " + age + "Height: " + height);
     }
 
     public int getHeight() {
@@ -60,8 +60,8 @@ class Man extends People {
     }
 
     @Override
-    public String print() {
-        return "Name: " + this.name + " Age: " + this.age + " Height: " + this.height + " firstName " + this.firstName + " money " + this.money;
+    public void print() {
+        System.out.println("Name: " + this.name + " Age: " + this.age + " Height: " + this.height + " firstName " + this.firstName + " money " + this.money);
     }
 }
 
@@ -70,8 +70,19 @@ public class Main {
     static People people = new People(23, "Nikita", 173);
     static Man man = new Man(48, "Chel", 185, "asaa", 11111);
 
+    static People[] people1 = {people, man};
+
+    public static void massPrint(People[] peoples) {
+        for (int i = 0; i < peoples.length; i++) {
+            People person = peoples[i];
+            person.print();
+        }
+    }
+
     public static void main(String[] args) {
-        System.out.println(people.print());
-        System.out.println(man.print());
+        people.print();
+        man.print();
+        System.out.println();
+        massPrint(people1);
     }
 }
