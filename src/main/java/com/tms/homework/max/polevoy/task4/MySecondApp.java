@@ -1,4 +1,4 @@
-package com.tms.homework.MaxPolevoy.task4;
+package com.tms.homework.max.polevoy.task4;
 
 public class MySecondApp {
     public static void main(String[] args) {

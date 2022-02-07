@@ -1,4 +1,4 @@
-package com.tms.homework.MaxPolevoy.task6;
+package com.tms.homework.max.polevoy.task6;
 
 public class Box {
     int width;

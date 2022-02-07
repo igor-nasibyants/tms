@@ -2,25 +2,25 @@ package com.tms.homework.astakhnovich.task1;
 
 public class Task1 {
 
-    public static void BinaryOperations(){
+    public static void BinaryOperations() {
 
         System.out.println("\nПобитовый 'и'");
         System.out.println(Integer.toBinaryString(34210));
         System.out.println(Integer.toBinaryString(43205));
-        System.out.println(Integer.toBinaryString(34210&43205));
-        System.out.println(34210&43205);
+        System.out.println(Integer.toBinaryString(34210 & 43205));
+        System.out.println(34210 & 43205);
 
         System.out.println("\nПобитовый 'или'");
         System.out.println(Integer.toBinaryString(34210));
         System.out.println(Integer.toBinaryString(43205));
-        System.out.println(Integer.toBinaryString(34210|43205));
-        System.out.println(34210|43205);
+        System.out.println(Integer.toBinaryString(34210 | 43205));
+        System.out.println(34210 | 43205);
 
         System.out.println("\nXOR");
         System.out.println(Integer.toBinaryString(34210));
         System.out.println(Integer.toBinaryString(43205));
-        System.out.println(Integer.toBinaryString(34210^43205));
-        System.out.println(34210^43205);
+        System.out.println(Integer.toBinaryString(34210 ^ 43205));
+        System.out.println(34210 ^ 43205);
 
         System.out.println("\nУнарное отрицание");
         System.out.println(Integer.toBinaryString(34210));

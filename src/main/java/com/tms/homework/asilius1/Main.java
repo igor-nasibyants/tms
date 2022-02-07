@@ -1,6 +1,7 @@
 package com.tms.homework.asilius1;
 
 import java.util.Scanner;
+
 import com.tms.homework.asilius1.task1.*;
 
 public class Main {
@@ -16,7 +17,7 @@ public class Main {
 
             i = str.nextInt();
 
-            switch (i){
+            switch (i) {
                 case 1:
                     Enter.menu();
                     break;
@@ -25,6 +26,6 @@ public class Main {
                     break;
             }
         }
-        while (i!=0);
+        while (i != 0);
     }
 }

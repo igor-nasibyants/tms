@@ -8,16 +8,16 @@ public class Enter {
     public static void menu() {
         Scanner str = new Scanner(System.in);
 
-        int c,i;
+        int c, i;
 
-        do{
+        do {
             System.out.println("Выберите необходимое действие над числом:  ");
             System.out.println("1 - обнуление необходимого бита;");
             System.out.println("2 - побитовый сдвиг вправо/влево; ");
             System.out.println("0 - выход");
             c = str.nextInt();
 
-            switch (c){
+            switch (c) {
                 case 1:
                     Functional.bitReset();
                     break;
@@ -27,8 +27,8 @@ public class Enter {
                 case 0:
                     break;
             }
-    }
-        while (c!=0);
+        }
+        while (c != 0);
     }
 
 }
