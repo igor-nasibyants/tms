@@ -34,7 +34,7 @@ public class EighthTask {
         }
         System.out.println();
         System.out.println("Количество целых элементов в третьем массиве равно " + count);
-        System.out.println(max + " Первый по величине элемент массива");
-        System.out.println(secondMax + " Второй по величине элемент массива");
+        System.out.println(max + " Первый по величине элемент первого массива");
+        System.out.println(secondMax + " Второй по величине элемент первого массива");
     }
 }
