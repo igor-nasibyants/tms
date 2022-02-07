@@ -42,8 +42,8 @@ class People {
 }
 
 class Man extends People {
-    private final String firstName;
-    private final int money;
+    public String firstName;
+    public int money;
 
     public Man(int age, String name, int height, String firstName, int money) {
         super(age, name, height);
@@ -65,16 +65,37 @@ class Man extends People {
     }
 }
 
+class Boss extends Man {
+    String roar;
+
+    public Boss(int age, String name, int height, String firstName, int money, String roar) {
+        super(age, name, height, firstName, money);
+        this.roar = roar;
+    }
+
+    public String getRoar() {
+        return roar;
+    }
+
+    public void setRoar(String roar) {
+        this.roar = roar;
+    }
+
+    @Override
+    public void print() {
+        System.out.println("Name: " + this.name + " Age: " + this.age + " Height: " + this.height + " firstName " + this.firstName + " money " + this.money);
+    }
+}
+
 
 public class Main {
     static People people = new People(23, "Nikita", 173);
     static Man man = new Man(48, "Chel", 185, "asaa", 11111);
-
-    static People[] people1 = {people, man};
+    static Boss boss = new Boss(2, "BOSS", 200, "BOSSES", 99999999, "MONEY");
+    static People[] people1 = {people, man, boss};
 
     public static void massPrint(People[] peoples) {
-        for (int i = 0; i < peoples.length; i++) {
-            People person = peoples[i];
+        for (People person : peoples) {
             person.print();
         }
     }
@@ -82,6 +103,7 @@ public class Main {
     public static void main(String[] args) {
         people.print();
         man.print();
+        boss.print();
         System.out.println();
         massPrint(people1);
     }
