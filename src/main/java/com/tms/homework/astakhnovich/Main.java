@@ -27,7 +27,8 @@ public class Main {
         twoDimArray.printTwoDimArray();
         twoDimArray.sumEvenElementsMainDiagonal();
         twoDimArray.elementsBelowMainDiagonal();
-        twoDimArray.matrixTransposition();
+        Integer[][] arr =twoDimArray.matrixTransposition();
+        twoDimArray.printTwoDimArray(arr);
 
     }
 }
