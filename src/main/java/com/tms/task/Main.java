@@ -2,13 +2,30 @@ package com.tms.task;
 
 import com.tms.task.task3.Task3;
 import com.tms.task.task4.Task4;
+import static com.tms.task.task4.Task4.*;
 import com.tms.task.task5.Task5;
+import com.tms.task.task6.Person;
+import static com.tms.task.task6.Person.*;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("==================================");
-        task5();
+        task6();
         System.out.println("==================================");
+    }
+
+    private static void task6() {
+        Person p = new Person();
+//        Person p1 = new Person(20, "Peter");
+        Person p2 = new Person(39);
+        Person p3 = new Person( "Ivan");
+
+        p.printChangedPerson();
+        p2.printChangedPerson();
+        p3.printChangedPerson();
+//        String pName = p2.getName();
+//        System.out.println("p1 is " + p2.getInfo());
+//        printDefault();
     }
 
     private static void task5() {
@@ -19,7 +36,7 @@ public class Main {
 
     private static void task4() {
 //        int[] sortedArray = Task4.bubbleSort(new int[] {4,3,1,6,7,8,3,2,2});
-        int[] sortedArray = Task4.shakerSort(new int[] {4,3,1,6,7,8,3,2,2});
+        int[] sortedArray = shakerSort(new int[] {4,3,1,6,7,8,3,2,2});
 //        int[] sortedArray = Task4.quickSort(new int[] {4,3,1,6,7,8,3,2,2}, 0, 8);
 //        int[] sortedArray = Task4.mergeSort(new int[] {4,3,1,6,7,8,3,2,2}, 0, 8);
 //        int[] sortedArray = Task4.selectionSort(new int[] {4,3,1,6,7,8,3,2,2});

@@ -1,13 +1,11 @@
 package com.tms.homework.asilius1.task1;
 
 
-import java.util.Scanner;
+import static com.tms.homework.asilius1.Main.readInput;
 
 public class Enter {
 
     public static void menu() {
-        Scanner str = new Scanner(System.in);
-
         int c, i;
 
         do {
@@ -15,7 +13,7 @@ public class Enter {
             System.out.println("1 - обнуление необходимого бита;");
             System.out.println("2 - побитовый сдвиг вправо/влево; ");
             System.out.println("0 - выход");
-            c = str.nextInt();
+            c = readInput();
 
             switch (c) {
                 case 1:

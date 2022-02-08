@@ -1,21 +1,19 @@
 package com.tms.homework.asilius1.task1;
 
-import java.util.Scanner;
+import static com.tms.homework.asilius1.Main.readInput;
 
 public class Functional {
 
     public static void bitReset() {
 
-        Scanner str = new Scanner(System.in);
-
         System.out.println("Введите значение, над которым будут проводиться действия: ");
-        int i = str.nextInt();
+        int i = readInput();
 
         System.out.println(" " + System.lineSeparator() + "Значение i в десятичном виде " + i + System.lineSeparator()
                 + "Значение i в двоичном виде " + Integer.toBinaryString(i) + System.lineSeparator() + " ");
 
         System.out.println("Введите значение необходимого бита= ");
-        int g = str.nextInt();
+        int g = readInput();
 
         int res = i & ~(1 << g);
         System.out.println(" " + System.lineSeparator() + "Результат в десятичном виде: " + res + System.lineSeparator()
@@ -24,17 +22,15 @@ public class Functional {
 
     public static void bitShift() {
 
-        Scanner str = new Scanner(System.in);
-
         System.out.println("Введите значение, над которым будут проводиться действия: ");
-        int i = str.nextInt();
+        int i = readInput();
 
         System.out.println(" " + System.lineSeparator() + "Значение i в десятичном виде " + i + System.lineSeparator()
                 + "Значение i в двоичном виде " + Integer.toBinaryString(i) + System.lineSeparator() + " ");
 
         if (i > 0) {
             System.out.println("Введите значение, на сколько бит необходимо произвести сдвиг: ");
-            int g = str.nextInt();
+            int g = readInput();
             int res = i >> g;
             System.out.println(" " + System.lineSeparator() + "---побитовый сдвиг вправо ---");
             System.out.println("Результат в десятичном виде: " + res + System.lineSeparator()

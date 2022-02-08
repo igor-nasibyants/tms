@@ -32,6 +32,10 @@ public class Task3 {
         return stringBuilder.toString();
     }
 
+    public String nameOfDay(String number) {
+        return "";
+    }
+
     public String nameOfDay(int number) {
         if (number > 7 || number < 1)
             throw new IllegalArgumentException("Номер дня недели не может быть больше 7 и меньше 1");
