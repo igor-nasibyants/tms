@@ -1,4 +1,4 @@
-package com.tms.homework.pavelgrigoryev.task9;
+package com.tms.homework.pavelgrigoryev.part1.task9;
 
 import java.util.Scanner;
 
