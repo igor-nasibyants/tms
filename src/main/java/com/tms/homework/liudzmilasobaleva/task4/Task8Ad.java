@@ -1,4 +1,4 @@
-package com.tms.homework.liudzmilasobaleva.task1;
+package com.tms.homework.liudzmilasobaleva.task4;
 
 public class Task8Ad {
     public static void main(String[] args) {

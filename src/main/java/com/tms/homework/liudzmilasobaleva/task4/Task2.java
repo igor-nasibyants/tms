@@ -1,4 +1,4 @@
-package com.tms.homework.liudzmilasobaleva.task1;
+package com.tms.homework.liudzmilasobaleva.task4;
 
 public class Task2 {
     // 2)Создайте массив из всех нечётных чисел от 1 до 99, выведите его на экран в

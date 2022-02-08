@@ -1,4 +1,4 @@
-package com.tms.homework.liudzmilasobaleva.task1;
+package com.tms.homework.liudzmilasobaleva.task4;
 
 import java.util.Random;
 
