@@ -1,4 +1,4 @@
-package com.tms.homework.han.task3Game;
+package com.tms.homework.han.task5;
 
 import java.util.Scanner;
 

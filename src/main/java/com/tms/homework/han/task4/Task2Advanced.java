@@ -1,4 +1,4 @@
-package com.tms.homework.han.task1;
+package com.tms.homework.han.task4;
 
 //        Найти среднее арифметическое элементов с нечетными номерами
 

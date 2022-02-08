@@ -1,4 +1,4 @@
-package com.tms.homework.han.task2;
+package com.tms.homework.han.task5;
 
 //        Посчитать сумму четных элементов стоящих над побочной диагональю (не
 //        включительно)

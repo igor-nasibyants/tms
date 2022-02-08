@@ -1,4 +1,4 @@
-package com.tms.homework.han.task1;
+package com.tms.homework.han.task4;
 
 //        Найти второй по величине (т.е. следующий по величине за максимальным)
 //        элемент в массиве

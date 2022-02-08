@@ -1,4 +1,4 @@
-package com.tms.homework.han.task2;
+package com.tms.homework.han.task5;
 
 //      Проверить произведение элементов какой диагонали больше
 

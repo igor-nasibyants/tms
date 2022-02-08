@@ -1,9 +1,7 @@
-package com.tms.homework.han.task2;
+package com.tms.homework.han.task5;
 
 //        Транспонировать матрицу(1 столбец станет 1-й строкой, 2-й столбец - 2-й
 //        строкой и т. д.)
-
-import java.util.Arrays;
 
 public class Task5 {
     public static void main(String[] args) {

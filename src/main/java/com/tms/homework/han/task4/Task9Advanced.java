@@ -1,4 +1,4 @@
-package com.tms.homework.han.task1;
+package com.tms.homework.han.task4;
 
 //      Найти наименьший элемент среди элементов с четными индексами массива
 

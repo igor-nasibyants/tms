@@ -1,4 +1,4 @@
-package com.tms.homework.han.task2;
+package com.tms.homework.han.task5;
 
 public class Task1 {
     public static void main(String[] args) {

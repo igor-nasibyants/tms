@@ -1,4 +1,4 @@
-package com.tms.homework.han.task1;
+package com.tms.homework.han.task4;
 
 //      «Сожмите» массив, выбросив из него каждый второй элемент.
 //      «Освободившиеся» места массива заполните нулями

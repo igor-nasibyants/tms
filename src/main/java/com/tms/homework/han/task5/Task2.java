@@ -1,4 +1,4 @@
-package com.tms.homework.han.task2;
+package com.tms.homework.han.task5;
 
 //        Вывести нечетные элементы находящиеся под главной
 //        диагональю(включительно)
