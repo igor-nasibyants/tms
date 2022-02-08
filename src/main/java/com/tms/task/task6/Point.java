@@ -2,17 +2,17 @@ package com.tms.task.task6;
 
 public class Point {
 
-    private int x;
-    private int y;
+    private int x = 10;
+    private int y = 123;
+    private boolean flag;
 
     public Point(int x, int y) {
         this.x = x;
         this.y = y;
+        this.flag = true;
     }
 
     public Point() {
-        this.x = 0;
-        this.y = 0;
     }
 
     public int getX() {
@@ -21,6 +21,7 @@ public class Point {
 
     public void setX(int x) {
         this.x = x;
+        this.flag = Boolean.TRUE;
     }
 
     public int getY() {
