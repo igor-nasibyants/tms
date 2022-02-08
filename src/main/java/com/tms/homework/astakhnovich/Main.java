@@ -1,23 +1,29 @@
 package com.tms.homework.astakhnovich;
 
 
+import com.tms.homework.astakhnovich.task1.Task1;
+import com.tms.homework.astakhnovich.task3.OneDimArray;
 import com.tms.homework.astakhnovich.task3.TwoDimArray;
+import com.tms.homework.astakhnovich.task6.Essence;
+import com.tms.homework.astakhnovich.task6.Monkey;
 
 public class Main {
     public static void main(String[] args) {
-        task1();
-        oneDimArray();
-        twoDimArray();
+//        task1();
+//        oneDimArray();
+//        twoDimArray();
+
     }
 
     public static void task1() {
-//        Task1.BinaryOperations();
+        Task1.BinaryOperations();
     }
 
     public static void oneDimArray() {
-//        OneDimArray.taskOne();
-//        OneDimArray.taskTwo();
-//        OneDimArray.taskThree();
+        OneDimArray oneDimArray = new OneDimArray();
+        oneDimArray.taskOne();
+        oneDimArray.taskTwo();
+        oneDimArray.taskThree();
     }
 
     public static void twoDimArray() {
@@ -30,5 +36,10 @@ public class Main {
         Integer[][] arr =twoDimArray.matrixTransposition();
         twoDimArray.printTwoDimArray(arr);
 
+    }
+
+    public static void task6(){
+        Monkey monkey1 = new Monkey(20, 60, 4);
+        Monkey monkey2 = new Monkey (15);
     }
 }
