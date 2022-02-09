@@ -1,6 +1,6 @@
-package com.tms.homework.pavelgrigoryev.part1.task4;
+package com.tms.homework.pavelgrigoryev.task4;
 
-public class FourthTask {
+public class Task4 {
     public static void main(String[] args) {
         swim();
     }

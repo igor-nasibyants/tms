@@ -1,8 +1,8 @@
-package com.tms.homework.pavelgrigoryev.part1.task9;
+package com.tms.homework.pavelgrigoryev.task4;
 
 import java.util.Scanner;
 
-public class NinthTask {
+public class Task9 {
     public static void main(String[] args) {
       int first = 0;
       int second = 0;

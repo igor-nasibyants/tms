@@ -1,6 +1,6 @@
-package com.tms.homework.pavelgrigoryev.part1.task3;
+package com.tms.homework.pavelgrigoryev.task4;
 
-public class ThirdTask {
+public class Task3 {
     public static void main(String[] args) {
         jump();
     }

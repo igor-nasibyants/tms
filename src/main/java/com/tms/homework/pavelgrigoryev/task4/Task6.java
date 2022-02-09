@@ -1,6 +1,6 @@
-package com.tms.homework.pavelgrigoryev.part1.task6;
+package com.tms.homework.pavelgrigoryev.task4;
 
-public class SixthTask {
+public class Task6 {
     public static void main(String[] args) {
         laugh();
     }

@@ -1,6 +1,6 @@
-package com.tms.homework.pavelgrigoryev.part1.task8;
+package com.tms.homework.pavelgrigoryev.task4;
 
-public class EighthTask {
+public class Task8 {
     public static void main(String[] args) {
         int[] firstArray = new int[10];
         int[] secondArray = new int[10];

@@ -1,8 +1,8 @@
-package com.tms.homework.pavelgrigoryev.part1.task10;
+package com.tms.homework.pavelgrigoryev.task4;
 
 import java.util.Scanner;
 
-public class TenthTask {
+public class Task10 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int count = 0;

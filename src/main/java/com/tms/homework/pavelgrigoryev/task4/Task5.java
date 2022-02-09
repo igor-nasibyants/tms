@@ -1,6 +1,6 @@
-package com.tms.homework.pavelgrigoryev.part1.task5;
+package com.tms.homework.pavelgrigoryev.task4;
 
-public class FifthTask {
+public class Task5 {
     public static void main(String[] args) {
         foo();
     }
