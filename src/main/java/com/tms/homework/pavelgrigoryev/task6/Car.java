@@ -5,7 +5,7 @@ public class Car {
     private String model;
     private int year;
     private String color;
-    double price;
+    private double price;
 
     public Car(String make, String model, int year, String color, double price) {
         this.make = make;
