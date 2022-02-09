@@ -16,6 +16,7 @@ public class MyTask1 {
         for (int d : arrays) {
             System.out.println(d + " ");
         }
+
     }
 }
 
