@@ -2,7 +2,7 @@ package com.tms.task.task7.human;
 
 import java.util.Objects;
 
-public class Person implements Human1 {
+public class Person implements Humanable {
 
     private String name;
     private Integer age;

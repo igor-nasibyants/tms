@@ -4,7 +4,7 @@ import com.tms.task.task7.human.*;
 
 public class Main {
     public static void main(String[] args) {
-        Human1 h1 = new Person("Igor", 32);
+        Humanable h1 = new Person("Igor", 32);
         Client c = new Client("Client", 28, Sex.MAN);
         Client c1 = new Client("Client", 28, Sex.MAN);
         c.display();
@@ -37,7 +37,7 @@ public class Main {
             }
         };
 
-        Human1 h2 = new Human1() {
+        Humanable h2 = new Humanable() {
             @Override
             public void walk() {
 
