@@ -41,8 +41,8 @@ public class Main {
 
     public static void task6(){
         Essence essence = new Essence(200, 320);
-        Monkey monkey1 = new Monkey(20, 60, 4);
-        Human human = new Human(84, 188, 4, "Nikita", true);
+        Essence monkey1 = new Monkey(20, 60, 4);
+        Essence human = new Human(84, 188, 4, "Nikita", true);
         System.out.println(human.toString());
     }
 }
