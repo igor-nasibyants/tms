@@ -1,4 +1,4 @@
-package com.tms.homework.nikitaelenski.task1;
+package com.tms.homework.nikitaelenski.task4;
 
 import java.util.Random;
 import java.util.Scanner;
