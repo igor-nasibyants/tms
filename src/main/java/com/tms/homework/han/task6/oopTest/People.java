@@ -1,4 +1,4 @@
-package com.tms.homework.han.oopTest;
+package com.tms.homework.han.task6.oopTest;
 
 class People {
     int age;

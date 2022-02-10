@@ -1,4 +1,4 @@
-package com.tms.homework.han.oopTest;
+package com.tms.homework.han.task6.oopTest;
 
 class Boss extends Man {
     String roar;
