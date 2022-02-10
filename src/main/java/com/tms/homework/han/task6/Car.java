@@ -4,6 +4,12 @@ public class Car {
     private int wheels;
     private int engine;
     private String color;
+    private Car[] aa;
+
+    public Car(Car[] aa) {
+        this.aa = aa;
+    }
+
 
     public Car(int wheels, int engine, String color) {
         this.wheels = wheels;
@@ -64,6 +70,12 @@ public class Car {
             return "Супер-машина";
         } else {
             return "Непонятно";
+        }
+    }
+
+    public void sa() {
+        for (int i = 0; i < aa.length; i++) {
+            System.out.println(drive());
         }
     }
 

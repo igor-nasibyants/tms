@@ -6,6 +6,8 @@ public class Main {
         Car car2 = new Car(4, 1);
         Car car3 = new Car(4, "yellow");
         Car car4 = new Car();
+        Car car5 = new Car(new Car[]{car1, car2, car3});
+        car5.sa();
         System.out.println("Двигатель: " + car1.getEngine() + " Колеса " + car1.getWheels() + " " +
                 " Цвет " + car1.getColor() + " Состояние " + car1.fly());
         car1.setWheels(0);
