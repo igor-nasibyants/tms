@@ -6,8 +6,9 @@ public abstract class Human implements Printable {
 
     private String name;
     private Integer age;
+    private Sex sex;
 
-    public Human(String name, Integer age) {
+    public Human(String name, Integer age, Sex sex) {
         this.name = name;
         this.age = age;
     }
