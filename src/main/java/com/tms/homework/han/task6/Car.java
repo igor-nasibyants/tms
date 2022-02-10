@@ -1,5 +1,7 @@
 package com.tms.homework.han.task6;
 
+import java.util.Arrays;
+
 public class Car {
     private int wheels;
     private int engine;
@@ -79,4 +81,13 @@ public class Car {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "wheels=" + wheels +
+                ", engine=" + engine +
+                ", color='" + color + '\'' +
+                ", aa=" + Arrays.toString(aa) +
+                '}';
+    }
 }
