@@ -4,8 +4,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class TwoDimArray {
-    Integer matrixSize;
-    Integer[][] twoDimArray;
+    private Integer matrixSize;
+    private Integer[][] twoDimArray;
 
     public void gettingNumber() {
         Scanner scan = new Scanner(System.in);
@@ -39,6 +39,16 @@ public class TwoDimArray {
         System.out.println("---------------------------------------");
     }
 
+    public void printTwoDimArray(Integer arr [][]) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println("---------------------------------------");
+    }
+
     public void sumEvenElementsMainDiagonal() {
         Integer sum = 0;
         for (int i = 0; i < twoDimArray.length; i++) {
@@ -61,7 +71,7 @@ public class TwoDimArray {
         System.out.println("---------------------------------------");
     }
 
-    public void matrixTransposition() {
+    public Integer [][] matrixTransposition() {
         for (int i = 0; i < matrixSize; i++) {
             for (int j = i + 1; j < matrixSize; j++) {
                 int temp = twoDimArray[i][j];
@@ -69,6 +79,6 @@ public class TwoDimArray {
                 twoDimArray[j][i] = temp;
             }
         }
-        printTwoDimArray();
+        return twoDimArray;
     }
 }

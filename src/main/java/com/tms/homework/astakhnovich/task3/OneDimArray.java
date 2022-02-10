@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class OneDimArray {
 
-    public static void taskOne() {
+    public void taskOne() {
         Integer[] evenNumbers = new Integer[10];
         Integer count = 0;
         for (int i = 2; i <= 20; i++) {
@@ -17,7 +17,7 @@ public class OneDimArray {
         outputToColumn(evenNumbers);
     }
 
-    public static void taskTwo() {
+    public void taskTwo() {
         Integer[] oddNumbers = new Integer[50];
         Integer count = 0;
         for (int i = 1; i <= 99; i++) {
@@ -30,7 +30,7 @@ public class OneDimArray {
         reverseOutputToLine(oddNumbers);
     }
 
-    public static void taskThree() {
+    public void taskThree() {
         Random randomNumber = new Random();
         Integer[] arrayRandomNumbers = new Integer[15];
         Integer count = 0;

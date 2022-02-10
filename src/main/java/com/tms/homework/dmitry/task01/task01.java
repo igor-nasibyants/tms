@@ -1,4 +1,4 @@
-package com.tms.homework.staryyo.task01;
+package com.tms.homework.dmitry.task01;
 public class task01 {
     public static void main(String[] args) {
 
