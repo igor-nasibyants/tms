@@ -5,6 +5,7 @@ import com.tms.homework.astakhnovich.task1.Task1;
 import com.tms.homework.astakhnovich.task3.OneDimArray;
 import com.tms.homework.astakhnovich.task3.TwoDimArray;
 import com.tms.homework.astakhnovich.task6.Essence;
+import com.tms.homework.astakhnovich.task6.Human;
 import com.tms.homework.astakhnovich.task6.Monkey;
 
 public class Main {
@@ -12,7 +13,7 @@ public class Main {
 //        task1();
 //        oneDimArray();
 //        twoDimArray();
-
+        task6();
     }
 
     public static void task1() {
@@ -39,7 +40,9 @@ public class Main {
     }
 
     public static void task6(){
+        Essence essence = new Essence(200, 320);
         Monkey monkey1 = new Monkey(20, 60, 4);
-        Monkey monkey2 = new Monkey (15);
+        Human human = new Human(84, 188, 4, "Nikita", true);
+        System.out.println(human.toString());
     }
 }

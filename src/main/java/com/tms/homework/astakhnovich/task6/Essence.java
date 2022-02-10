@@ -9,6 +9,11 @@ public class Essence {
         this.height = height;
     }
 
-    public Essence() {
+    public Integer getWeight() {
+        return weight;
+    }
+
+    public Integer getHeight() {
+        return height;
     }
 }

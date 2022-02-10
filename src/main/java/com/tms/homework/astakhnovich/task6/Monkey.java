@@ -8,7 +8,8 @@ public class Monkey extends Essence{
         this.limbs = limbs;
     }
 
-    public Monkey(Integer limbs) {
-        this.limbs = limbs;
+    public Integer getLimbs() {
+        return limbs;
     }
+
 }
