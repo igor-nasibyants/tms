@@ -33,14 +33,6 @@ public final class Client extends Human {
     @Override
     public void print() {
 
-        try {
-
-        } catch (Exception e) {
-
-        } finally {
-
-        }
-
     }
 
     @Override
