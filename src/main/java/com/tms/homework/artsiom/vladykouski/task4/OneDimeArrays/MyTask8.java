@@ -1,4 +1,4 @@
-package com.tms.homework.artsiom.vladykouski.task8;
+package com.tms.homework.artsiom.vladykouski.task4.OneDimeArrays;
 import java.util.Random;
 
 

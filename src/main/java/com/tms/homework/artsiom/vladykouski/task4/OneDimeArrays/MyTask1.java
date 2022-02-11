@@ -1,4 +1,4 @@
-package com.tms.homework.artsiom.vladykouski.task1;
+package com.tms.homework.artsiom.vladykouski.task4.OneDimeArrays;
 
 public class MyTask1 {
     public static void main(String[] args) {

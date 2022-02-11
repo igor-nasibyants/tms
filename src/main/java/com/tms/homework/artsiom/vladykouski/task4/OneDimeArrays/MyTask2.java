@@ -1,4 +1,4 @@
-package com.tms.homework.artsiom.vladykouski.task2;
+package com.tms.homework.artsiom.vladykouski.task4.OneDimeArrays;
 
 import java.util.Arrays;
 import java.util.Collections;
