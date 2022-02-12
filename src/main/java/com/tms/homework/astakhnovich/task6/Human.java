@@ -1,6 +1,6 @@
 package com.tms.homework.astakhnovich.task6;
 
-public class Human extends Monkey{
+public class Human extends Monkey implements Moveable, Talkable{
     private String name;
     private boolean conscience;
 
@@ -9,10 +9,6 @@ public class Human extends Monkey{
         super(weight, height, limbs);
         this.name = name;
         this.conscience = conscience;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public boolean isConscience() {
@@ -27,5 +23,35 @@ public class Human extends Monkey{
                 ", height =" + getHeight()  +
                 ", limbs =" + getLimbs() +
                 ", conscience = " + isConscience();
+    }
+
+    @Override
+    public void run() {
+
+    }
+
+    @Override
+    public void jump() {
+
+    }
+
+    @Override
+    public void swim() {
+
+    }
+
+    @Override
+    public void shout() {
+
+    }
+
+    @Override
+    public void talk() {
+
+    }
+
+    @Override
+    public void whisper() {
+
     }
 }
