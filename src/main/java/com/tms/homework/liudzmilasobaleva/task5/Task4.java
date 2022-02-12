@@ -47,7 +47,7 @@ public class Task4 {
                 }
             }
         }
-        System.out.println("sum is " + sum);
+        System.out.println("Sum of even elements above the secondary diagonal (not including) is " + sum);
         System.out.println("=====================================================================================");
     }
 }
