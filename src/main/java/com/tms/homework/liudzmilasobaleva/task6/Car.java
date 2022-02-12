@@ -1,18 +1,5 @@
 package com.tms.homework.liudzmilasobaleva.task6;
 
-class Engine {
-    public void drive() {
-        System.out.println("Двигатель работает");
-    }
-}
-
-
-class Wheel {
-    public void drive() {
-        System.out.println("Колеса едут");
-    }
-}
-
 class Car {
     Engine engine;
     Wheel[] wheels;
@@ -30,7 +17,7 @@ class Car {
     }
 
     public static void main(String[] args) {
-        Car c = new Car();
-        c.drive();
+        Car volvo = new Car();
+        volvo.drive();
     }
 }
