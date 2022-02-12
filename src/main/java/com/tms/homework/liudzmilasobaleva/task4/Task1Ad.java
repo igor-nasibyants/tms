@@ -12,34 +12,20 @@ public class Task1Ad {
         //int[] array = {5, 5, 5, 5, 4, 5, 5, 5};
         //int[] array = {4, 0, 4, 4, 5, 4, 4, 4};
 
-        int count = 0;
-        for (int i = 0; i < array.length - 1; i++) {
-            if (array[i] % 3 == 0) {
-                count++;
-            }
-        }
-
-        //создаем второй массив из чисел первого массива кратных 3
-        int[] array2 = new int[count];
+        int mul = 1;
         int index = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 3 == 0) {
-                array2[index] = array[i];
+                array[index] = array[i];
+                mul = mul * array[i];
                 index++;
             }
         }
-        System.out.println();
-
-        //ищем произведение элементов второго массива (элементов первого массива, кратных 3)
-        int mult = 1;
-        for (int i = 0; i < array2.length; i++) {
-            mult = mult * array2[i];
-        }
-        if (mult == 1) {
+        if (mul == 1) {
             System.out.println("Array has not any multiple of 3");
         } else {
             System.out.print("Result of multiplication of multiples of 3: ");
-            System.out.println(mult);
+            System.out.println(mul);
         }
     }
 }
