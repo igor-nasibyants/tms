@@ -12,5 +12,6 @@ public class Main {
         int[][] array = new int [LongArray][WithArray];
         TwoDimensionalArrays.MatrixPrintout(array);
         TwoDimensionalArrays.SummArray(array);
+        TwoDimensionalArrays.DiagonalProduct(array);
     }
 }
