@@ -4,15 +4,21 @@ package com.tms.homework.nikitaelenski.task7;
      int size;
      String bread;
      String name;
-    void bark(){
-        if (size >  60 ){
+    public void bark() {
+        if (size > 60) {
             System.out.println("Гав! Гав! " + name);
-        }else if (size > 20) {
+        } else if (size > 20) {
             System.out.println("Вуф! Вуф! " + name);
-        }else{
+        } else {
             System.out.println("Тяф! Тяф! " + name);
         }
     }
+        public void barkReapeat(int numOfBark){
+            while(numOfBark >0) {
+                bark();
+                numOfBark--;
+            }
+        }
 
 
      public Dog(int size, String bread, String name) {
@@ -34,5 +40,29 @@ package com.tms.homework.nikitaelenski.task7;
                  ", bread='" + bread + '\'' +
                  ", name='" + name + '\'' +
                  '}';
+     }
+
+     public int getSize() {
+         return size;
+     }
+
+     public void setSize(int size) {
+         this.size = size;
+     }
+
+     public String getBread() {
+         return bread;
+     }
+
+     public void setBread(String bread) {
+         this.bread = bread;
+     }
+
+     public String getName() {
+         return name;
+     }
+
+     public void setName(String name) {
+         this.name = name;
      }
  }
