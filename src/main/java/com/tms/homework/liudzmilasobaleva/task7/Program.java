@@ -7,7 +7,7 @@ public class Program implements Printable {
 
     @Override
     public void print() {
-        System.out.println("asjkdfalsdflaskdf");
+        System.out.printf("asjkdfalsdflaskd, %s", "asdfsf");
     }
 
     public static void main(String[] args) {
@@ -21,12 +21,8 @@ public class Program implements Printable {
         ksu.run();
         ksu.eatMilk();
 
-        Printable p1 = new Printable() {
-            @Override
-            public void print() {
-                System.out.println("another way");
-            }
-        };
+        Printable p1 = () -> System.out.println("another way");
+
         p1.print();
         Pet asya = new Pet("Asya", 2);
         asya.PetsType = GUINEA_PIG;

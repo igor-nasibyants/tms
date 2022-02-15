@@ -1,12 +1,19 @@
 package com.tms.homework.maria.varabyova.task7;
 
 public class Book implements Printable {
-    String name;
-    String author;
+    private String name;
+    private String author;
 
     public Book(String name, String author) {
         this.name = name;
         this.author = author;
+    }
+
+    public Book(String name) {
+        this.name = name;
+    }
+
+    public Book() {
     }
 
     public String getName() {
@@ -24,8 +31,8 @@ public class Book implements Printable {
     public void setAuthor(String author) {
         this.author = author;
     }
-    public void print() {
 
+    public void print() {
         System.out.printf("%s (%s) \n", name, author);
     }
 }
