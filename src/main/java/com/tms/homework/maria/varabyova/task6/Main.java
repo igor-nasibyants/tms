@@ -1,9 +1,9 @@
-package com.tms.homework.maria.varabyova.task6;
+/*package com.tms.homework.maria.varabyova.task6;
 
-/*public class Main {
+public class Main {
     public static void main(String[] args){
 
-        Person bob = new Person();
+       Person bob = new Person();
         bob.displayInfo();
 
         Person tom = new Person("Tom");

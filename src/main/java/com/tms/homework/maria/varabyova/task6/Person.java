@@ -1,27 +1,25 @@
-package com.tms.homework.maria.varabyova.task6;
+/*package com.tms.homework.maria.varabyova.task6;
 
-/*public class Person {
+public class Person {
     String name;
     int age;
     Person()
     {
-        name = "Undefined";
-        age = 18;
+        this("Undefined", 18);
     }
-    Person(String n)
+    Person(String name)
     {
-        name = n;
-        age = 18;
+        this(name, 18);
     }
 
-    Person(String n, int a)
+    Person(String name, int age)
     {
-        name = n;
-        age = a;
+        this.name = name;
+        this.age = age;
     }
 
 
     void displayInfo(){
-        System.out.printf("Name: % \tAge: %d\n", name, age);
+        System.out.printf("Name: %s \t Age: %d\n"+ name + age);
     }
 }
