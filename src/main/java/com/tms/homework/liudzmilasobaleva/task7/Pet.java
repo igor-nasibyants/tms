@@ -1,12 +1,15 @@
 package com.tms.homework.liudzmilasobaleva.task7;
 
 public class Pet extends Mammal {
+
     public PetsType PetsType;
     private String name;
+    private int age;
 
     public Pet(String name, int age) {
-        super(age);
+
         this.name = name;
+        this.age = age;
     }
 
     @Override
@@ -19,5 +22,10 @@ public class Pet extends Mammal {
         super.eatMilk();
 
     }
+    @Override
+    public String toString() {
+        return "Pet " + name + " " + age;
+    }
+
 
 }
