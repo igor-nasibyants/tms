@@ -1,4 +1,4 @@
-/*package com.tms.homework.maria.varabyova.task6;
+package com.tms.homework.maria.varabyova.task6;
 
 public class Main {
     public static void main(String[] args){
@@ -14,4 +14,4 @@ public class Main {
 
 
     }
-}*/
+}
