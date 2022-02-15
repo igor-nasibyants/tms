@@ -21,7 +21,7 @@ public class Main {
 
                 switch (i) {
                     case 1:
-                        Enter.menu1();
+                        Enter.menu();
                         break;
                     case 2:
                         Arrprint.arrPrint();

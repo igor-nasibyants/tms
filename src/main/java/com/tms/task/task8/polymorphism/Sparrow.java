@@ -10,4 +10,10 @@ public class Sparrow extends Bird{
     public void sound(String voice) {
         System.out.println(voice);
     }
+
+    public void sound(String voice, Integer n) {
+        for (int i = 0; i < n; i++) {
+            sound(voice);
+        }
+    }
 }

@@ -5,12 +5,15 @@ import com.tms.task.task4.Task4;
 import static com.tms.task.task4.Task4.*;
 import com.tms.task.task5.Task5;
 import com.tms.task.task6.Person;
+import com.tms.task.task8.composition.Department;
+
 import static com.tms.task.task6.Person.*;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("==================================");
-        task6();
+//        task6();
+        System.out.println(Department.PartDepartment.n);
         System.out.println("==================================");
     }
 

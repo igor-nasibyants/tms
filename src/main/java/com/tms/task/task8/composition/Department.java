@@ -25,4 +25,8 @@ public class Department {
     public void setRooms(List<ActivityRoom> rooms) {
         this.rooms = rooms;
     }
+
+    public class PartDepartment {
+        public static final int n = 10;
+    }
 }
