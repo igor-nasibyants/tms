@@ -1,9 +1,10 @@
 package com.tms.homework.nikitaelenski.task7;
 
- public class Dog {
-     int size;
-     String bread;
-     String name;
+public class Dog {
+    private int size;
+    private String bread;
+    private String name;
+
     public void bark() {
         if (size > 60) {
             System.out.println("Гав! Гав! " + name);
@@ -13,56 +14,54 @@ package com.tms.homework.nikitaelenski.task7;
             System.out.println("Тяф! Тяф! " + name);
         }
     }
-        public void barkReapeat(int numOfBark){
-            while(numOfBark >0) {
-                bark();
-                numOfBark--;
-            }
+
+    public void barkReapeat(int numOfBark) {
+        while (numOfBark > 0) {
+            bark();
+            numOfBark--;
         }
+    }
 
 
-     public Dog(int size, String bread, String name) {
-         this.size = size;
-         this.bread = bread;
-         this.name = name;
-     }
+    public Dog(int size, String bread, String name) {
+        this.size = size;
+        this.bread = bread;
+        this.name = name;
+    }
 
-     public Dog() {
-         this.size = size;
-         this.bread = bread;
-         this.name = name;
-     }
+    public Dog() {
+    }
 
-     @Override
-     public String toString() {
-         return "Dog{" +
-                 "size=" + size +
-                 ", bread='" + bread + '\'' +
-                 ", name='" + name + '\'' +
-                 '}';
-     }
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "size=" + size +
+                ", bread='" + bread + '\'' +
+                ", name='" + name + '\'' +
+                '}';
+    }
 
-     public int getSize() {
-         return size;
-     }
+    public int getSize() {
+        return size;
+    }
 
-     public void setSize(int size) {
-         this.size = size;
-     }
+    public void setSize(int size) {
+        this.size = size;
+    }
 
-     public String getBread() {
-         return bread;
-     }
+    public String getBread() {
+        return bread;
+    }
 
-     public void setBread(String bread) {
-         this.bread = bread;
-     }
+    public void setBread(String bread) {
+        this.bread = bread;
+    }
 
-     public String getName() {
-         return name;
-     }
+    public String getName() {
+        return name;
+    }
 
-     public void setName(String name) {
-         this.name = name;
-     }
- }
+    public void setName(String name) {
+        this.name = name;
+    }
+}
