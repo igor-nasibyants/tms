@@ -10,7 +10,7 @@ public final class Cat {
     public Cat() {
     }
 
-    public String isTail() {
+    public String getTail() {
         return tail;
     }
 
