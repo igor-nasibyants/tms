@@ -10,5 +10,7 @@ public class Program implements Printable {
         ksu.run();
         ksu.eatMilk();
 
+        Printable.print();
+
     }
 }

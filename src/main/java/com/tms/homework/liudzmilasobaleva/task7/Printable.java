@@ -1,7 +1,8 @@
 package com.tms.homework.liudzmilasobaleva.task7;
 
 public interface Printable {
-    default void print() {
-
+    static void print() {
+        System.out.println("There is a new pet");
     }
+
 }
