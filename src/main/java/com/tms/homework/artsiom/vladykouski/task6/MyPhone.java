@@ -15,7 +15,6 @@ public class MyPhone extends Gadjet {
         this.operSystem = operSystem;
         this.ram = ram;
         this.hardDisk = hardDisk;
-
     }
 
     void MakeView() {

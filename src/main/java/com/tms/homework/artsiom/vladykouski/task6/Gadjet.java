@@ -5,6 +5,10 @@ public class Gadjet {
     private String color;
     private String price;
 
+    static {
+        System.out.println("alksdnkfkasdf");
+    }
+
     public Gadjet(String nameModel, String color, String price) {
         this.nameModel = nameModel;
         this.color = color;
