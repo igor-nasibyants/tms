@@ -65,12 +65,7 @@ public class task5 {
         }
         System.out.println("Сумма элементов по побочной диагонали = "+summ2);
 
-        System.out.println("Сортировка массива пузырьком");
-        for(int i=mass.length-1;i>0;i--){
-            for(int j=0; j<i; j++){
-                if(mass[j])<mass[j+1]
-            }
-        }
+
 
     }
 }
