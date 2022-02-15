@@ -1,6 +1,6 @@
 package com.tms.homework.asilius1.task4;
 
-public class Arrayprint {
+public class Arrprint {
 
     public static void arrPrint()
     {

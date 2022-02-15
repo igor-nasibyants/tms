@@ -1,7 +1,7 @@
 package com.tms.homework.asilius1;
 
 import com.tms.homework.asilius1.task1.Enter;
-import com.tms.homework.asilius1.task4.Arrayprint;
+import com.tms.homework.asilius1.task4.Arrprint;
 
 import java.util.Scanner;
 
@@ -24,7 +24,7 @@ public class Main {
                         Enter.menu1();
                         break;
                     case 2:
-                        Arrayprint.arrPrint();
+                        Arrprint.arrPrint();
                         break;
 
                     case 0:
