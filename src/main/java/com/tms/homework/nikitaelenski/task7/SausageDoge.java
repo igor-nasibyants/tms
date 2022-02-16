@@ -11,7 +11,6 @@ public class SausageDoge extends Dog implements Iron,Feed {
         this.hungry = hungry;
     }
 
-
     @Override
     public String toString() {
         return super.toString();
