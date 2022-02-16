@@ -5,9 +5,4 @@ public class Sedan extends EClass {
     public void drive() {
         super.drive();
     }
-
-    public static void main(String[] args) {
-        Car volvoS80 = new Car();
-        volvoS80.drive();
-    }
 }
