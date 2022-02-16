@@ -12,6 +12,10 @@ public class Pet extends Mammal {
         this.age = age;
     }
 
+    public Pet() {
+
+    }
+
     @Override
     public void run() {
         super.run();
