@@ -1,60 +1,47 @@
 package com.tms.homework.nikitaelenski.task7;
 
-public class Dog {
-    private int size;
-    private String bread;
+public abstract class Dog {
+    private Integer size;
+    private String eat;
     private String name;
 
-    public void bark() {
-        if (size > 60) {
-            System.out.println("Гав! Гав! " + name);
-        } else if (size > 20) {
-            System.out.println("Вуф! Вуф! " + name);
-        } else {
-            System.out.println("Тяф! Тяф! " + name);
-        }
-    }
-
-    public void barkReapeat(int numOfBark) {
-        while (numOfBark > 0) {
-            bark();
-            numOfBark--;
-        }
-    }
-
-
-    public Dog(int size, String bread, String name) {
+    public Dog(Integer size, String eat, String name) {
         this.size = size;
-        this.bread = bread;
+        this.eat = eat;
         this.name = name;
     }
 
     public Dog() {
+
+    }
+
+    public String sayDontEat(){
+        return ("А ну : брось");
     }
 
     @Override
     public String toString() {
-        return "Dog{" +
-                "size=" + size +
-                ", bread='" + bread + '\'' +
-                ", name='" + name + '\'' +
+        return "Собака {" +
+                "Размера=" + size +
+                ", Питаеться='" + eat +
+                ", С именем='" + name +
                 '}';
     }
 
-    public int getSize() {
+    public Integer getSize() {
         return size;
     }
 
-    public void setSize(int size) {
+    public void setSize(Integer size) {
         this.size = size;
     }
 
-    public String getBread() {
-        return bread;
+    public String getEat() {
+        return eat;
     }
 
-    public void setBread(String bread) {
-        this.bread = bread;
+    public void setEat(String eat) {
+        this.eat = eat;
     }
 
     public String getName() {
