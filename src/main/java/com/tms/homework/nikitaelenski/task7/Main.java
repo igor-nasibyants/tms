@@ -7,14 +7,14 @@ public class Main {
         myDogs[1] = new Dog(30 , "Мясо" , "Фред");
         myDogs[2] = new Dog(14 , "Овощи" , "Барт");
         System.out.print("имя последней собаки - ");
-        System.out.println(myDogs[myDogs.length-1].name);
+        System.out.println(myDogs[myDogs.length-1].getName());
         for( int x = 0 ; x < myDogs.length ; x ++){
             myDogs[x].bark();
         }
-        System.out.println(myDogs[0].size);
+        System.out.println(myDogs[0].getSize());
         int s = myDogs[0].getSize();
         myDogs[0].setSize(30);
-        System.out.println(myDogs[0].size);
+        System.out.println(myDogs[0].getSize());
         for( int x = 0 ; x < myDogs.length ; x ++){
             myDogs[x].bark();
         }
