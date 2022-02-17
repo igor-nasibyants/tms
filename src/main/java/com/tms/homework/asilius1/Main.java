@@ -2,6 +2,7 @@ package com.tms.homework.asilius1;
 
 import com.tms.homework.asilius1.task1.Enter;
 import com.tms.homework.asilius1.task4.Arrprint;
+import com.tms.homework.asilius1.task6.Cars;
 
 import java.util.Scanner;
 
@@ -15,6 +16,7 @@ public class Main {
                 System.out.println("Меню выбора задания, введите из клавиатуры число из списка:");
                 System.out.println("1. Задание с побитовыми операциями.");
                 System.out.println("2. Задание с двумерными массивами.");
+                System.out.println("3. Задание с классами.");
                 System.out.println("0. Выход");
 
                 i = readInput();
@@ -26,7 +28,8 @@ public class Main {
                     case 2:
                         Arrprint.arrPrint();
                         break;
-
+                    case 3:
+                        Cars.info();
                     case 0:
                         break;
                 }
