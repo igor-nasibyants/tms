@@ -13,7 +13,4 @@ public class Freight extends Consignor{
         return freightName;
     }
 
-
-
-
 }

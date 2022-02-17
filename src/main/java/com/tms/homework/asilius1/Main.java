@@ -2,7 +2,7 @@ package com.tms.homework.asilius1;
 
 import com.tms.homework.asilius1.task1.Enter;
 import com.tms.homework.asilius1.task4.Arrprint;
-import com.tms.homework.asilius1.task6.Cars;
+import com.tms.homework.asilius1.task6.Car;
 
 import java.util.Scanner;
 
@@ -29,7 +29,7 @@ public class Main {
                         Arrprint.arrPrint();
                         break;
                     case 3:
-                        Cars.info();
+                        Car.info();
                     case 0:
                         break;
                 }

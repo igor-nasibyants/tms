@@ -4,8 +4,8 @@ public class Consignor {
 
     private String consignorName;
 
-    public Consignor(String ConsignorName    ){
-        this.consignorName =ConsignorName;
+    public Consignor(String consignorName) {
+        this.consignorName = consignorName;
     }
 
     public String getConsignorName() {

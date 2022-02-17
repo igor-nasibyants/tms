@@ -10,9 +10,9 @@ public class Main {
         d.MakeView();
         System.out.println();
         MyWatch a = new MyWatch("Garmin Pay", "Garmin", "black", "200 USD");
-        a.Alarm();
+        a.alarm();
         System.out.println();
-        a.Pay();
+        a.pay();
 
     }
 }

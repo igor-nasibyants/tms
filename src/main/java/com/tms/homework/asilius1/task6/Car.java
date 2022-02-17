@@ -2,7 +2,7 @@ package com.tms.homework.asilius1.task6;
 import java.util.Scanner;
 
 
-public class Cars {
+public class Car {
 
     private static Scanner str = new Scanner(System.in);
 

@@ -1,17 +1,16 @@
 package com.tms.homework.artsiom.vladykouski.task6;
-import java.util.Random;
 import java.util.Scanner;
 
 public class MyWatch extends Gadjet {
 
-        private String Pay;
+        private String pay;
         int [] arr;
 
-        public MyWatch (String Pay, String nameModel, String color, String price){
+        public MyWatch (String pay, String nameModel, String color, String price){
             super(nameModel,color,price);
-            this.Pay = Pay;
+            this.pay = pay;
         }
-        void Alarm() {
+        void alarm() {
             int i;
             double [] arr = new double[24];
             Scanner sc = new Scanner(System.in);
@@ -25,9 +24,9 @@ public class MyWatch extends Gadjet {
                 }
             } else {System.out.print("Введите число меньше 24");}
         }
-        void Pay (){
-            Pay = "Garmin Pay";
-            System.out.print("Совершаем покупку с помощью  " + Pay);
+        void pay(){
+            pay = "Garmin Pay";
+            System.out.print("Совершаем покупку с помощью  " + pay);
         }
     }
 
