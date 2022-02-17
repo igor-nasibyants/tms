@@ -1,4 +1,8 @@
-package com.tms.homework.max.polevoy.task7;
+package com.tms.homework.max.polevoy.task7.printable;
+
+import com.tms.homework.max.polevoy.task7.printable.Book;
+import com.tms.homework.max.polevoy.task7.printable.Magazine;
+import com.tms.homework.max.polevoy.task7.printable.Printable;
 
 public class PrintableDemo {
     public static void main(String[] args) {

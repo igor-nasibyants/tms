@@ -1,6 +1,6 @@
-package com.tms.homework.max.polevoy.task7;
+package com.tms.homework.max.polevoy.task7.interfaceImplementation;
 
-public class Transport  implements Moveable {
+public class Transport implements Moveable {
     //методы интерфейса Moveable
     public void moveRight() {
         System.out.println("Транспорт поворачивает вправо.");
@@ -9,6 +9,7 @@ public class Transport  implements Moveable {
     public void moveLeft() {
         System.out.println("Транспорт поворачивает влево.");
     }
+
     //методы класса
     public void stop() {
         System.out.println("Транспорт останавливается.");

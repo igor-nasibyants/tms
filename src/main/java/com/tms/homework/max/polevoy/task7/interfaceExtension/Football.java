@@ -1,6 +1,4 @@
-package com.tms.homework.max.polevoy.task7;
-
-import com.tms.homework.max.polevoy.task7.sport.Sport;
+package com.tms.homework.max.polevoy.task7.interfaceExtension;
 
 public interface Football extends Sport, TVProgram {
     void homeTeamScored(int points);

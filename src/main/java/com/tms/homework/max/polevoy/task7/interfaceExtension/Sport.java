@@ -1,4 +1,4 @@
-package com.tms.homework.max.polevoy.task7.sport;
+package com.tms.homework.max.polevoy.task7.interfaceExtension;
 
 public interface Sport {
     void setHomeTeam(String name);

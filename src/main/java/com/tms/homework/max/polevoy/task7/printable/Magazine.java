@@ -1,11 +1,11 @@
-package com.tms.homework.max.polevoy.task7;
+package com.tms.homework.max.polevoy.task7.printable;
 
 import java.util.Objects;
 
-public class Book implements Printable {
-    private  String name;
+public class Magazine implements Printable {
+    private String name;
 
-    public Book(String name) {
+    public Magazine(String name) {
         this.name = name;
     }
 
@@ -19,15 +19,15 @@ public class Book implements Printable {
 
     @Override
     public void print() {
-        System.out.println("Printing Book" + getName());
+        System.out.println("Printing Magazine " +getName());
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Book book = (Book) o;
-        return Objects.equals(name, book.name);
+        Magazine magazine = (Magazine) o;
+        return Objects.equals(name, magazine.name);
     }
 
     @Override
@@ -37,7 +37,7 @@ public class Book implements Printable {
 
     @Override
     public String toString() {
-        return "Book{" +
+        return "Magazine{" +
                 "name='" + name + '\'' +
                 '}';
     }

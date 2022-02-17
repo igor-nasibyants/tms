@@ -1,4 +1,4 @@
-package com.tms.homework.max.polevoy.task7;
+package com.tms.homework.max.polevoy.task7.interfaceImplementation;
 
 public class TransportDemo  {
     public static void main(String[] args) {
@@ -12,6 +12,8 @@ public class TransportDemo  {
         moveable.moveLeft();
         System.out.println();
 
+        //вызов методов
+        //moveable.start(); ошибка так как в интерфейсе moveable нет метода start
         transport.start();
         transport.moveRight();
         transport.moveLeft();
