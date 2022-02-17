@@ -1,4 +1,4 @@
-package com.tms.homework.nnazarv.task1;
+package com.tms.homework.nnazarv.task1.task4;
 
 public class Task1 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.tms.homework.nnazarv.task1;
+package com.tms.homework.nnazarv.task1.task4;
 
 import java.util.Arrays;
 
