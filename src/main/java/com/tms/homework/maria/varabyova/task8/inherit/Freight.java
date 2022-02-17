@@ -2,15 +2,15 @@ package com.tms.homework.maria.varabyova.task8.inherit;
 
 public class Freight extends Consignor{
 
-    private String FreightName;
+    private String freightName;
 
-    public Freight (String FreightName, String ConsignorName){
-        super(ConsignorName);
-        this.FreightName = FreightName;
+    public Freight (String freightName, String consignorName){
+        super(consignorName);
+        this.freightName = freightName;
     }
 
     public String getFreightName() {
-        return FreightName;
+        return freightName;
     }
 
 

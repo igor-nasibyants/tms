@@ -2,14 +2,14 @@ package com.tms.homework.maria.varabyova.task8.inherit;
 
 public class Consignor {
 
-    private String ConsignorName;
+    private String consignorName;
 
     public Consignor(String ConsignorName    ){
-        this.ConsignorName=ConsignorName;
+        this.consignorName =ConsignorName;
     }
 
     public String getConsignorName() {
-        return ConsignorName;
+        return consignorName;
     }
 
 
