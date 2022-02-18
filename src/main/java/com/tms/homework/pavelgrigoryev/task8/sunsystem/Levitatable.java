@@ -1,6 +1,6 @@
 package com.tms.homework.pavelgrigoryev.task8.sunsystem;
 
-public interface MilkyWayable {
+public interface Levitatable {
     void introduce();
-    void flyInAVoid();
+    void flyInTheVoid();
 }

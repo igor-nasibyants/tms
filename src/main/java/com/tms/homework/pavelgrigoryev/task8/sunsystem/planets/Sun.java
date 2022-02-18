@@ -1,9 +1,9 @@
 package com.tms.homework.pavelgrigoryev.task8.sunsystem.planets;
 
-import com.tms.homework.pavelgrigoryev.task8.sunsystem.BigBang;
-import com.tms.homework.pavelgrigoryev.task8.sunsystem.MilkyWayable;
+import com.tms.homework.pavelgrigoryev.task8.sunsystem.Star;
+import com.tms.homework.pavelgrigoryev.task8.sunsystem.Levitatable;
 
-public final class Sun extends BigBang implements MilkyWayable {
+public final class Sun extends Star implements Levitatable {
 
 
     public Sun(long diameter, int temperature) {
@@ -16,7 +16,7 @@ public final class Sun extends BigBang implements MilkyWayable {
     }
 
     @Override
-    public void flyInAVoid() {
+    public void flyInTheVoid() {
         System.out.println("flying in the void");
     }
 }

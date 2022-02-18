@@ -15,22 +15,22 @@ public class Main {
         System.out.println("----------------------------------------------------------------------------------------");
         sun.introduce();
         System.out.println("diameter : " + sun.getDiameter() + " temperature : " + sun.getTemperature());
-        sun.flyInAVoid();
+        sun.flyInTheVoid();
         System.out.println("----------------------------------------------------------------------------------------");
         mercury.introduce();
         System.out.println("diameter : " + mercury.getDiameter() + " temperature : " + mercury.getTemperature() + " maximum distance : " + mercury.getMaxDistance() +
                 " minimum distance : " + mercury.getMinDistance() + " rotation period : " + mercury.getRotationPeriod());
-        mercury.flyInAVoid();
+        mercury.flyInTheVoid();
         System.out.println("----------------------------------------------------------------------------------------");
         earth.introduce();
         System.out.println("diameter : " + earth.getDiameter() + " temperature : " + earth.getTemperature() + " maximum distance : " + earth.getMaxDistance() +
                 " minimum distance : " + earth.getMinDistance() + " rotation period : " + earth.getRotationPeriod());
-        earth.flyInAVoid();
+        earth.flyInTheVoid();
         System.out.println("----------------------------------------------------------------------------------------");
         mars.introduce();
         System.out.println("diameter : " + mars.getDiameter() + " temperature : " + mars.getTemperature() + " maximum distance : " + mars.getMaxDistance() +
                 " minimum distance : " + mars.getMinDistance() + " rotation period : " + mars.getRotationPeriod());
-        mars.flyInAVoid();
+        mars.flyInTheVoid();
         System.out.println("----------------------------------------------------------------------------------------");
     }
 }

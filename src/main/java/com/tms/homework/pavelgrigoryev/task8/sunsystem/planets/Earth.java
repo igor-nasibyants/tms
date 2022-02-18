@@ -1,9 +1,9 @@
 package com.tms.homework.pavelgrigoryev.task8.sunsystem.planets;
 
-import com.tms.homework.pavelgrigoryev.task8.sunsystem.BigBang;
-import com.tms.homework.pavelgrigoryev.task8.sunsystem.MilkyWayable;
+import com.tms.homework.pavelgrigoryev.task8.sunsystem.Star;
+import com.tms.homework.pavelgrigoryev.task8.sunsystem.Levitatable;
 
-public class Earth extends BigBang implements MilkyWayable {
+public class Earth extends Star implements Levitatable {
     public Earth(long maxDistance, long minDistance, long diameter, double rotationPeriod, int temperature) {
         super(maxDistance, minDistance, diameter, rotationPeriod, temperature);
     }
@@ -14,7 +14,7 @@ public class Earth extends BigBang implements MilkyWayable {
     }
 
     @Override
-    public void flyInAVoid() {
+    public void flyInTheVoid() {
         System.out.println("flying around the Sun with Mercury");
     }
 }
