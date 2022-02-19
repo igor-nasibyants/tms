@@ -10,5 +10,10 @@ public class Main {
         ak47.type();
         ak47.defeatedTheEnemy();
 
+        System.out.print(AK74);
+        Rifle ak74 = new Rifle(AK74, 5.45, 1974);
+        System.out.println(AK47.toString());
+        ak74.type();
+        ak74.defeatedTheEnemy();
     }
 }
