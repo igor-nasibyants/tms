@@ -11,7 +11,10 @@ public class Task1 {
         System.out.println();
         for (int c : arrays) {
             System.out.println(c + " ");// в столбик
+
         }
 
     }
+
+
 }
