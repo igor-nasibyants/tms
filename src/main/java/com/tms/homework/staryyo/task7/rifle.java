@@ -3,9 +3,9 @@ package com.tms.homework.staryyo.task7;
 public class rifle extends assaultrifle{
     public rifletype rifletype;
     private String Name;
-    private int calibr;
+    private double calibr;
     private int year;
-    public rifle(String Name, int calibr, int year){
+    public rifle(String Name, double calibr, int year){
         this.year = year;
         this.Name = Name;
         this.calibr = calibr;
