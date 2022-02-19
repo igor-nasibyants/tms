@@ -1,6 +1,6 @@
 package com.tms.homework.staryyo.task7;
 
-public class assaultrifle extends armament{
+public class AssaultRifle extends Armament {
     @Override
     public void type() {
         super.type();

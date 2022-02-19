@@ -1,13 +1,13 @@
 package com.tms.homework.staryyo.task7;
 
-public class rifle extends assaultrifle{
-    public rifletype rifletype;
-    private String Name;
+public class Rifle extends AssaultRifle {
+    public RifleType rifleType;
     private double calibr;
     private int year;
-    public rifle(String Name, double calibr, int year){
+
+    public Rifle(RifleType rifleType, double calibr, int year){
         this.year = year;
-        this.Name = Name;
+        this.rifleType = rifleType;
         this.calibr = calibr;
     }
 
@@ -21,6 +21,6 @@ public class rifle extends assaultrifle{
         super.defeatedTheEnemy();
     }
     public String toString(){
-        return "rifle" + Name + "" + calibr + "" + year;
+        return "rifle " + rifleType + ", " + calibr + ", " + year;
     }
 }

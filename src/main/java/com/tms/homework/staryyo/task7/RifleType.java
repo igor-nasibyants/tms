@@ -1,6 +1,6 @@
 package com.tms.homework.staryyo.task7;
 
-public enum rifletype {
+public enum RifleType {
     AK47,
     AK74;
 }
