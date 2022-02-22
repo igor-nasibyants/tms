@@ -14,14 +14,14 @@ public class BoxDemo2 {
         myBox2.height = 10;
         myBox2.depth = 15;
 
-        volume= myBox1.height * myBox1.width * myBox1.depth;
+        volume = myBox1.height * myBox1.width * myBox1.depth;
         System.out.println("Объем myBox1 = " + volume);
 
-        volume= myBox2.height * myBox2.width * myBox2.depth;
+        volume = myBox2.height * myBox2.width * myBox2.depth;
         System.out.println("Объем myBox2 = " + volume);
 
-        myBox1.setDim(1,2,3);
-        myBox2.setDim(5,10,15);
+        myBox1.setDim(1, 2, 3);
+        myBox2.setDim(5, 10, 15);
 
         System.out.println("Объем myBox1 = " + myBox1.getVolume());
         System.out.println("Объем myBox2 = " + myBox2.getVolume());

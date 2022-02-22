@@ -5,7 +5,8 @@ public class AssaultRifle extends Armament {
     public void type() {
         super.type();
     }
-    public void defeatedTheEnemy(){
+
+    public void defeatedTheEnemy() {
         System.out.println("Defeated the enemy");
     }
 }

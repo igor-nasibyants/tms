@@ -7,5 +7,6 @@ public class Bird extends Chordal {
     }
 
 
-    private void fly() {}
+    private void fly() {
+    }
 }

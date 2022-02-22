@@ -26,6 +26,7 @@ public class Pet extends Mammal {
         super.eatMilk();
 
     }
+
     @Override
     public String toString() {
         return "Pet " + name + " " + age;

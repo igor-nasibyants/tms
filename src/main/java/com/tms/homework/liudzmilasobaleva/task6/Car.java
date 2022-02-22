@@ -11,7 +11,7 @@ class Car {
 
     public void drive() {
         engine.drive();
-        for (int i  = 0; i < this.wheels.length; i++) {
+        for (int i = 0; i < this.wheels.length; i++) {
             this.wheels[i].drive();
         }
     }

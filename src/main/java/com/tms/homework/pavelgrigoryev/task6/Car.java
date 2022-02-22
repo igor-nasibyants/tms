@@ -60,10 +60,12 @@ public class Car {
     public void setPrice(double price) {
         this.price = price;
     }
-    void drive(){
-        System.out.println("You drive the car " + getMake() + " " + getModel() );
+
+    void drive() {
+        System.out.println("You drive the car " + getMake() + " " + getModel());
     }
-    void brake(){
-        System.out.println("You step on the brakes " +getMake() + " " + getModel());
+
+    void brake() {
+        System.out.println("You step on the brakes " + getMake() + " " + getModel());
     }
 }

@@ -16,8 +16,8 @@ public class MyTask7 {
             System.out.print(" " + arrays[i] + " ");
         }
         System.out.println("");
-        for (i = 0; i < arrays.length-1; i++) {
-            if (arrays[i] >= arrays[i+1]) {
+        for (i = 0; i < arrays.length - 1; i++) {
+            if (arrays[i] >= arrays[i + 1]) {
                 max = i;
 
             }

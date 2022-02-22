@@ -1,7 +1,7 @@
 package com.tms.homework.pavelgrigoryev.task8.sunsystem.planets;
 
-import com.tms.homework.pavelgrigoryev.task8.sunsystem.Star;
 import com.tms.homework.pavelgrigoryev.task8.sunsystem.Levitatable;
+import com.tms.homework.pavelgrigoryev.task8.sunsystem.Star;
 
 public final class Sun extends Star implements Levitatable {
 

@@ -1,7 +1,8 @@
 package com.tms.homework.pavelgrigoryev.task9;
-import static java.lang.System.*;
 
-public class Woman extends Person{
+import static java.lang.System.out;
+
+public class Woman extends Person {
     public Woman(String name, int age, String speciality) {
         super(name, age, speciality);
     }

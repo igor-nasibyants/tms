@@ -7,10 +7,10 @@ import com.tms.homework.pavelgrigoryev.task8.sunsystem.planets.Sun;
 
 public class Main {
     public static void main(String[] args) {
-        Sun sun = new Sun(1392700,5778);
-        Mercury mercury = new Mercury(69700000,45900000,4878,87.97,350);
-        Earth earth = new Earth(152000000,147000000,12756,365.3,22);
-        Mars mars = new Mars(249000000,206700000,6794,687,-63);
+        Sun sun = new Sun(1392700, 5778);
+        Mercury mercury = new Mercury(69700000, 45900000, 4878, 87.97, 350);
+        Earth earth = new Earth(152000000, 147000000, 12756, 365.3, 22);
+        Mars mars = new Mars(249000000, 206700000, 6794, 687, -63);
 
         System.out.println("----------------------------------------------------------------------------------------");
         sun.introduce();

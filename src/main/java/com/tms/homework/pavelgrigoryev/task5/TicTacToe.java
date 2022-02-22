@@ -6,17 +6,17 @@ public class TicTacToe {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         char[][] board = {
-                {' ',' ',' '},
-                {' ',' ',' '},
-                {' ',' ',' '}};
+                {' ', ' ', ' '},
+                {' ', ' ', ' '},
+                {' ', ' ', ' '}};
         printBoard(board);
         while (true) {
-            playerOneTurn(board,scanner);
+            playerOneTurn(board, scanner);
             if (isGameFinished(board)) {
                 break;
             }
             printBoard(board);
-            playerTwoTurn(board,scanner);
+            playerTwoTurn(board, scanner);
             if (isGameFinished(board)) {
                 break;
             }
@@ -24,6 +24,7 @@ public class TicTacToe {
         }
         scanner.close();
     }
+
     private static boolean isGameFinished(char[][] board) {
         if (checkForAWinner(board, 'X')) {
             printBoard(board);
@@ -35,8 +36,8 @@ public class TicTacToe {
             System.out.println("Второй игрок победил!!!");
             return true;
         }
-        for (int i = 0; i < board.length; i++){
-            for (int j = 0; j < board[i].length; j++){
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
                 if (board[i][j] == ' ') {
                     return false;
                 }
@@ -46,21 +47,23 @@ public class TicTacToe {
         System.out.println("Ничья!!! :( ");
         return true;
     }
+
     private static boolean checkForAWinner(char[][] board, char symbol) {
-        if ((board[0][0] == symbol && board[0][1] == symbol && board[0][2] == symbol)||
-                (board[1][0] == symbol && board[1][1] == symbol && board[1][2] == symbol)||
-                (board[2][0] == symbol && board[2][1] == symbol && board[2][2] == symbol)||
+        if ((board[0][0] == symbol && board[0][1] == symbol && board[0][2] == symbol) ||
+                (board[1][0] == symbol && board[1][1] == symbol && board[1][2] == symbol) ||
+                (board[2][0] == symbol && board[2][1] == symbol && board[2][2] == symbol) ||
 
-                (board[0][0] == symbol && board[1][0] == symbol && board[2][0] == symbol)||
-                (board[0][1] == symbol && board[1][1] == symbol && board[2][1] == symbol)||
-                (board[0][2] == symbol && board[1][2] == symbol && board[2][2] == symbol)||
+                (board[0][0] == symbol && board[1][0] == symbol && board[2][0] == symbol) ||
+                (board[0][1] == symbol && board[1][1] == symbol && board[2][1] == symbol) ||
+                (board[0][2] == symbol && board[1][2] == symbol && board[2][2] == symbol) ||
 
-                (board[0][0] == symbol && board[1][1] == symbol && board[2][2] == symbol)||
-                (board[0][2] == symbol && board[1][1] == symbol && board[2][0] == symbol)){
+                (board[0][0] == symbol && board[1][1] == symbol && board[2][2] == symbol) ||
+                (board[0][2] == symbol && board[1][1] == symbol && board[2][0] == symbol)) {
             return true;
         }
         return false;
     }
+
     private static void playerOneTurn(char[][] board, Scanner scanner) {
         String userInput;
         while (true) {
@@ -72,8 +75,9 @@ public class TicTacToe {
                 System.err.println(userInput + " неправильный ввод");
             }
         }
-        placeMove(board, userInput,'X');
+        placeMove(board, userInput, 'X');
     }
+
     private static void playerTwoTurn(char[][] board, Scanner scanner) {
         String userInput;
         while (true) {
@@ -85,32 +89,34 @@ public class TicTacToe {
                 System.err.println(userInput + " неправильный ввод");
             }
         }
-        placeMove(board, userInput,'O');
+        placeMove(board, userInput, 'O');
     }
-    private static boolean isValidMove (char[][] board, String position) {
+
+    private static boolean isValidMove(char[][] board, String position) {
         switch (position) {
             case "1":
-                return  (board[0][0] == ' ');
+                return (board[0][0] == ' ');
             case "2":
-                return  (board[0][1] == ' ');
+                return (board[0][1] == ' ');
             case "3":
-                return  (board[0][2] == ' ');
+                return (board[0][2] == ' ');
             case "4":
-                return  (board[1][0] == ' ');
+                return (board[1][0] == ' ');
             case "5":
-                return  (board[1][1] == ' ');
+                return (board[1][1] == ' ');
             case "6":
-                return  (board[1][2] == ' ');
+                return (board[1][2] == ' ');
             case "7":
-                return  (board[2][0] == ' ');
+                return (board[2][0] == ' ');
             case "8":
-                return  (board[2][1] == ' ');
+                return (board[2][1] == ' ');
             case "9":
-                return  (board[2][2] == ' ');
+                return (board[2][2] == ' ');
             default:
                 return false;
         }
     }
+
     private static void placeMove(char[][] board, String position, char symbol) {
         switch (position) {
             case "1":
@@ -144,6 +150,7 @@ public class TicTacToe {
                 System.err.println(" Печалька :(");
         }
     }
+
     private static void printBoard(char[][] board) {
         System.out.println(board[0][0] + "|" + board[0][1] + "|" + board[0][2]);
         System.out.println("-+-+-");

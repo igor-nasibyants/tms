@@ -6,16 +6,17 @@ public class Freight {
     private String consignor;
     private String consignee;
 
-    public Freight(String goods, int weight, String consignor, String consignee){
+    public Freight(String goods, int weight, String consignor, String consignee) {
         this.goods = goods;
         this.weight = weight;
         this.consignor = consignor;
-        this.consignee= consignee;
+        this.consignee = consignee;
     }
 
     public String getGoods() {
         return goods;
     }
+
     public void setGoods(String freight) {
         this.goods = goods;
     }
@@ -23,6 +24,7 @@ public class Freight {
     public int getWeight() {
         return weight;
     }
+
     public void setWeight(int weight) {
         this.weight = weight;
     }
@@ -30,6 +32,7 @@ public class Freight {
     public String getConsignor() {
         return consignor;
     }
+
     public void setConsignor(String consignor) {
         this.consignor = consignor;
     }
@@ -37,6 +40,7 @@ public class Freight {
     public String getConsignee() {
         return consignee;
     }
+
     public void setConsignee(String consignee) {
         this.consignee = consignee;
     }

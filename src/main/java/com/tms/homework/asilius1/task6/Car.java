@@ -1,4 +1,5 @@
 package com.tms.homework.asilius1.task6;
+
 import java.util.Scanner;
 
 
@@ -6,8 +7,8 @@ public class Car {
 
     private static Scanner str = new Scanner(System.in);
 
-    public static void info(){
-        Engine diz =  new Engine();
+    public static void info() {
+        Engine diz = new Engine();
 
         System.out.println("Ввести тип двигателя ");
         diz.setType(str.next());

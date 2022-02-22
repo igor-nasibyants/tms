@@ -33,5 +33,6 @@ public abstract class Human {
     public String getEfficiency() {
         return efficiency;
     }
+
     public abstract void lunch();
 }

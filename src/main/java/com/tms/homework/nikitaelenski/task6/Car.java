@@ -3,9 +3,9 @@ package com.tms.homework.nikitaelenski.task6;
 import java.util.Objects;
 
 public class Car {
-    int ageCar ;
-    String carBranch ;
-    String carModel ;
+    int ageCar;
+    String carBranch;
+    String carModel;
 
     public Car(int ageCar, String carBranch, String carModel) {
         this.ageCar = ageCar;

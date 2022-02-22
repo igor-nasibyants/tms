@@ -21,8 +21,8 @@ public class MultiArray {
 
         array = new int[firstInput][secondInput];
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++){
-                array[i][j] =(int) (Math.random() * 50);
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j] = (int) (Math.random() * 50);
                 System.out.print(array[i][j] + " ");
             }
             System.out.println();

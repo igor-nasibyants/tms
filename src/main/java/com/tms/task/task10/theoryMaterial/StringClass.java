@@ -1,7 +1,5 @@
 package com.tms.task.task10.theoryMaterial;
 
-import java.util.Locale;
-
 public class StringClass {
     public static void main(String[] args) {
 
@@ -9,8 +7,8 @@ public class StringClass {
         //str1.toUpperCase(); не меняют (не оперируют) а возвращает новую строку (создает)
         String str1 = new String("JAva");
         String str2 = "Java";
-        String str3 = new String ("Hot Java");
-        String [] strings = str3.split("J");
+        String str3 = new String("Hot Java");
+        String[] strings = str3.split("J");
         String str4 = new String(" Cool Java ");
         String str6 = "Java";
         str6 = str6.toUpperCase();
@@ -29,14 +27,14 @@ public class StringClass {
         System.out.println(str1.isEmpty()); // возвращает true если строка = 0 "" если есть чтото в строке то false
         System.out.println(str1.length()); // возвращает длину строки число символов
 
-        for (String elements: strings )
-        System.out.println(elements); // принимает разделитель и возвращает масив стрингов
+        for (String elements : strings)
+            System.out.println(elements); // принимает разделитель и возвращает масив стрингов
 
-        System.out.println(str3.substring(2,6)); // извлекает из строки подстроку (со 2индекса по 6)
+        System.out.println(str3.substring(2, 6)); // извлекает из строки подстроку (со 2индекса по 6)
 
-        char [] charArray = str3.toCharArray();
-        for (char element: charArray){
-        System.out.println(element); // возвращает массив символов строку разбиваем посивольно
+        char[] charArray = str3.toCharArray();
+        for (char element : charArray) {
+            System.out.println(element); // возвращает массив символов строку разбиваем посивольно
         }
 
         System.out.println(str3.toLowerCase()); // приводит все ссимволы к прописным
@@ -48,14 +46,7 @@ public class StringClass {
         String str5 = String.valueOf(65);
 
 
-
-
         System.out.println();
-
-
-
-
-
 
 
     }

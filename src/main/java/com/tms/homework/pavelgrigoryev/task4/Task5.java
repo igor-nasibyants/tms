@@ -4,9 +4,10 @@ public class Task5 {
     public static void main(String[] args) {
         foo();
     }
+
     public static void foo() {
-        int[] firstArray = new int [5];
-        int[] secondArray = new int [5];
+        int[] firstArray = new int[5];
+        int[] secondArray = new int[5];
 
         double sumFirstArray = 0;
         double sumSecondArray = 0;
@@ -27,15 +28,15 @@ public class Task5 {
         sumSecondArray /= 5;
 
         if (sumFirstArray > sumSecondArray) {
-            System.out.println("Среднее арифметическое значение первого массива  " + sumFirstArray + " > " + sumSecondArray  + " Среднего арифметического значения второго массива");
+            System.out.println("Среднее арифметическое значение первого массива  " + sumFirstArray + " > " + sumSecondArray + " Среднего арифметического значения второго массива");
         } else if (sumFirstArray < sumSecondArray) {
-            System.out.println("Среднее арифметическое первого массива  " + sumFirstArray + " < " + sumSecondArray + " Среднего арифметического значения второго массива" );
+            System.out.println("Среднее арифметическое первого массива  " + sumFirstArray + " < " + sumSecondArray + " Среднего арифметического значения второго массива");
         } else {
-            System.out.println("Средние арифметические массивов равны  " + sumFirstArray );
+            System.out.println("Средние арифметические массивов равны  " + sumFirstArray);
         }
         System.out.println("Сжатый первый массив с нулями : ");
         for (int i = 0; i < firstArray.length; i++) {
-            if (i % 2 != 0){
+            if (i % 2 != 0) {
                 firstArray[i] = 0;
             }
             System.out.print(firstArray[i] + " ");
@@ -43,7 +44,7 @@ public class Task5 {
         System.out.println();
         System.out.println("Сжатый второй массив с нулями : ");
         for (int i = 0; i < secondArray.length; i++) {
-            if (i % 2 != 0){
+            if (i % 2 != 0) {
                 secondArray[i] = 0;
             }
             System.out.print(secondArray[i] + " ");

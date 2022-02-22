@@ -6,24 +6,23 @@ package com.tms.homework.maria.varabyova.task3;
  */
 
 public class OneDimArray07 {
-    public static void main(String args[]){
-        int a[]=new int[12];
+    public static void main(String args[]) {
+        int a[] = new int[12];
 
 
-        for(int i=0; i<a.length; i++) {
-            a[i]=(0+(int)(Math.random()*15));
-            System.out.print(a[i]+" ");
+        for (int i = 0; i < a.length; i++) {
+            a[i] = (0 + (int) (Math.random() * 15));
+            System.out.print(a[i] + " ");
         }
 
-        int max=a[0];
-        for(int i=0; i<a.length; i++){
-            if(a[i]>max){
-                max=a[i];
+        int max = a[0];
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] > max) {
+                max = a[i];
             }
         }
         System.out.println();
-        System.out.print("Max = "+max);
-
+        System.out.print("Max = " + max);
 
 
     }

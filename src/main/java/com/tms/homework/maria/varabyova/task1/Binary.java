@@ -70,8 +70,8 @@ public class Binary {
         int x = 0b101010; //42
         int y = 0b000010; //2
         int add = x + y;
-        System.out.println("Addition : "+ add);
-        System.out.println("Addition : "+ Integer.toBinaryString(add));
+        System.out.println("Addition : " + add);
+        System.out.println("Addition : " + Integer.toBinaryString(add));
         System.out.println("\n ");
         int sub = x - y;
         System.out.println("Subtraction : " + sub);

@@ -5,7 +5,7 @@ public class Task3 {
         int[] array = new int[15];
 
 
-        for (int i = 0; i <= array.length  - 1; i++){
+        for (int i = 0; i <= array.length - 1; i++) {
             int random_number = (int) (Math.random() * 99);
             array[i] = random_number;
             System.out.print(array[i] + " ");
@@ -13,8 +13,8 @@ public class Task3 {
 
         System.out.println();
 
-        for (int i = 0; i <= array.length  - 1; i++){
-            if (array[i] % 2 == 0){
+        for (int i = 0; i <= array.length - 1; i++) {
+            if (array[i] % 2 == 0) {
                 System.out.print(array[i] + " ");
             }
         }

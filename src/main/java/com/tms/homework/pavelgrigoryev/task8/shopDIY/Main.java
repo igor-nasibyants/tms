@@ -5,7 +5,7 @@ import com.tms.homework.pavelgrigoryev.task8.shopDIY.staff.*;
 
 public class Main {
     public static void main(String[] args) {
-        Cashier cashier = new Cashier("Татьяна", 35,"веселым", "высокой");
+        Cashier cashier = new Cashier("Татьяна", 35, "веселым", "высокой");
         separate();
         cashier.sale();
         StoreDepartments storeDepartments5 = StoreDepartments.DEPARTMENT_NUM_FIVE;
@@ -51,7 +51,7 @@ public class Main {
         System.out.println(storeDepartments1);
         separate();
 
-        Vendor vendor = new Vendor("Димас", 23,"грустным", "вялой");
+        Vendor vendor = new Vendor("Димас", 23, "грустным", "вялой");
         vendor.sale();
         StoreDepartments storeDepartments2 = StoreDepartments.DEPARTMENT_NUM_TWO;
         System.out.println(storeDepartments2);

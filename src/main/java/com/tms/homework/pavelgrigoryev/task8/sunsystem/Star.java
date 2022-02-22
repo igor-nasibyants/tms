@@ -14,22 +14,28 @@ public class Star {
         this.rotationPeriod = rotationPeriod;
         this.temperature = temperature;
     }
+
     public Star(long diameter, int temperature) {
         this.diameter = diameter;
         this.temperature = temperature;
     }
+
     public long getMaxDistance() {
         return maxDistance;
     }
+
     public long getMinDistance() {
         return minDistance;
     }
+
     public long getDiameter() {
         return diameter;
     }
+
     public double getRotationPeriod() {
         return rotationPeriod;
     }
+
     public int getTemperature() {
         return temperature;
     }

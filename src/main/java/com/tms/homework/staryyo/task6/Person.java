@@ -9,7 +9,8 @@ public class Person {
         this.age = age;
     }
 
-    public Person() { }
+    public Person() {
+    }
 
     public Integer getHeight() {
         return height;
@@ -27,7 +28,7 @@ public class Person {
         this.age = age;
     }
 
-    public void say (String name){
+    public void say(String name) {
         System.out.println("Привет, " + name);
     }
 }

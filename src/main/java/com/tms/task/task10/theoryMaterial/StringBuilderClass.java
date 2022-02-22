@@ -1,6 +1,5 @@
 package com.tms.task.task10.theoryMaterial;
 
-import java.util.Locale;
 //если много операций со строками то используем StringBuilder не создается новый объект
 public class StringBuilderClass {
     public static void main(String[] args) {

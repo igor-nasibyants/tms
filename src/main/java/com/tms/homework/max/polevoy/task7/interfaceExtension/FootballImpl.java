@@ -1,7 +1,5 @@
 package com.tms.homework.max.polevoy.task7.interfaceExtension;
 
-import com.tms.homework.max.polevoy.task7.interfaceExtension.Football;
-
 public class FootballImpl implements Football {
     //переопределение методов всех интерфейсов Football, TVProgram и Sport
     @Override

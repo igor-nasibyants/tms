@@ -1,6 +1,6 @@
 package com.tms.homework.astakhnovich.task6;
 
-public class Human extends Monkey implements Moveable, Talkable{
+public class Human extends Monkey implements Moveable, Talkable {
     private String name;
     private boolean conscience;
 
@@ -20,7 +20,7 @@ public class Human extends Monkey implements Moveable, Talkable{
         return "Human " +
                 "name = " + name +
                 ", weight = " + getWeight() +
-                ", height =" + getHeight()  +
+                ", height =" + getHeight() +
                 ", limbs =" + getLimbs() +
                 ", conscience = " + isConscience();
     }

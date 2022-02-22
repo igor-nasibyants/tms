@@ -1,12 +1,12 @@
 package com.tms.task.task8.inheritance.singlelevel;
 
-public class B extends A{
+public class B extends A {
 
     public B() {
         doSmth();
     }
 
-    public void init(){
+    public void init() {
         doSmth();
     }
 }

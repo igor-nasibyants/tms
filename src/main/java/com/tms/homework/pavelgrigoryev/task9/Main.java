@@ -1,5 +1,6 @@
 package com.tms.homework.pavelgrigoryev.task9;
-import static java.lang.System.*;
+
+import static java.lang.System.out;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,7 +17,7 @@ public class Main {
         woman.talk();
         separator();
 
-        Android android = new Android("Isak", "Tesla bot t-3010","Работарговец");
+        Android android = new Android("Isak", "Tesla bot t-3010", "Работарговец");
         out.println(android.getName() + " - " + android.getModel() + " - " + android.getSpeciality());
         android.work();
         android.talk();

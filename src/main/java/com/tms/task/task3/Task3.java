@@ -104,7 +104,7 @@ public class Task3 {
     }
 
     public void printTwice() {
-        for (int i = 1; i <= 7; i++){
+        for (int i = 1; i <= 7; i++) {
             System.out.println("Я выполняюсь перед continue");
             if (i > 2)
                 continue;

@@ -1,6 +1,7 @@
 package com.tms.homework.artsiom.vladykouski.task4.TwoDimeArrays;
-import java.util.Scanner;
+
 import java.util.Random;
+import java.util.Scanner;
 
 // Начало всех задач: Создаём квадратную матрицу, размер вводим с клавиатуры.
 // Заполняем случайными числами в диапазоне от 0 до 50.
@@ -18,10 +19,11 @@ public class MyArray {
                     arr[i][j] = r.nextInt(51);
                 }
             }
-        } else
-        {System.out.print(" Некорректное число");
+        } else {
+            System.out.print(" Некорректное число");
         }
     }
+
     public void getArr() {
         if (n > 2) {
             for (i = 0; i < n; i++) {
@@ -36,7 +38,8 @@ public class MyArray {
     public int getN() {
         return n;
     }
-    public int [][] getA(){
+
+    public int[][] getA() {
         return arr;
     }
 }

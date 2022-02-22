@@ -1,7 +1,5 @@
 package com.tms.homework.max.polevoy.task7.interfaceImplementation;
 
-import com.tms.homework.max.polevoy.task7.interfaceImplementation.Moveable;
-
 public abstract class Device implements Moveable {
     //реализация только одного метода интерфейса Moveable.
     //класс который реализует не все методы интерфейса  наз. абстрактным классом

@@ -12,7 +12,7 @@ public class Task1 {
                 a++;
             }
         }
-        for (i = 0; i < array.length; i++ ){
+        for (i = 0; i < array.length; i++) {
             System.out.print("\n" + array[i]);
         }
 

@@ -4,10 +4,11 @@ public class Task4 {
     public static void main(String[] args) {
         swim();
     }
-    public static void swim(){
+
+    public static void swim() {
         int[] array = new int[20];
-        for (int i = 0; i < array.length; i++){
-            array[i] = ((int)(Math.random() * 20) + 1);
+        for (int i = 0; i < array.length; i++) {
+            array[i] = ((int) (Math.random() * 20) + 1);
             System.out.print(array[i] + " ");
         }
         System.out.println();
@@ -20,7 +21,7 @@ public class Task4 {
             }
         }
         System.out.println("Наименьший нечетный элемент равен " + minValue);
-        for (int i = 0; i < array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 != 0) {
                 array[i] = 0;
             }

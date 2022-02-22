@@ -4,7 +4,8 @@ public class Task2 {
     public static void main(String[] args) {
         run();
     }
-    public static void run(){
+
+    public static void run() {
         int[] array = new int[99];
         int count = 0;
         int count2 = 0;
@@ -13,7 +14,7 @@ public class Task2 {
             array[i] = i + 1;
             System.out.print(array[i] + " ");
             count += array[i];
-            count2 ++;
+            count2++;
         }
         System.out.println();
         System.out.println("Вывод нечётных чисел в обратном порядке : ");
@@ -22,6 +23,6 @@ public class Task2 {
             System.out.print(array[i] + " ");
         }
         System.out.println();
-        System.out.println("Среднее арифметическое значение элементов с нечётными номерами равно : " + count/count2);
+        System.out.println("Среднее арифметическое значение элементов с нечётными номерами равно : " + count / count2);
     }
 }
