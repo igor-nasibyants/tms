@@ -60,5 +60,12 @@ public class Main {
             System.out.println(str1);
         }
 
+
+        String name1 = new String("name");
+        String name = "name";
+
+        if ("   Name     ".trim().toUpperCase().equalsIgnoreCase(name1)) {
+            System.out.println(name);
+        }
     }
 }

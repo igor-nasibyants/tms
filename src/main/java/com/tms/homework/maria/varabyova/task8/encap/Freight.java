@@ -1,5 +1,7 @@
 package com.tms.homework.maria.varabyova.task8.encap;
 
+import java.util.Objects;
+
 public class Freight {
     private String goods;
     private int weight;
@@ -43,5 +45,18 @@ public class Freight {
 
     public void setConsignee(String consignee) {
         this.consignee = consignee;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Freight freight = (Freight) o;
+        return weight == freight.weight && goods.equals(freight.goods) && consignor.equals(freight.consignor) && consignee.equals(freight.consignee);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(goods, weight, consignor, consignee);
     }
 }

@@ -4,6 +4,8 @@ public class FrightMain {
 
     public static void main(String args[]) {
         Freight load = new Freight("Wood", 18300, "Beryozovsky, Sverdlovsk Oblast, RUS", "Padova (PD), I");
+        load.setWeight(12300);
+        changeWeight(load, 18400);
         String loadGoods = load.getGoods();
         int loadWeight = load.getWeight();
         String loadConsignor = load.getConsignor();
@@ -24,5 +26,9 @@ public class FrightMain {
         System.out.println("============");
 
 
+    }
+
+    private static void changeWeight(Freight f, Integer w) {
+        f.setWeight(w);
     }
 }
