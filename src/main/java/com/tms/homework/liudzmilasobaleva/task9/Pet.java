@@ -1,6 +1,7 @@
 package com.tms.homework.liudzmilasobaleva.task9;
 
-public class Pet extends Mammal {
+// final class, not to be extended
+public final class Pet extends Mammal {
 
     private String name;
     private int age;

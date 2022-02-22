@@ -1,7 +1,8 @@
 package com.tms.homework.liudzmilasobaleva.task9;
 
 public abstract class Animal {
-    abstract void move(); // is to be overrided (abstract method)
+    // must be overriding (abstract method)
+    abstract void move();
 
     abstract void eat();
 }
