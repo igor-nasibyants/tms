@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class MyWatch extends Gadjet {
 
     private String pay;
-    int[] arr;
 
     public MyWatch(String pay, String nameModel, String color, String price) {
         super(nameModel, color, price);

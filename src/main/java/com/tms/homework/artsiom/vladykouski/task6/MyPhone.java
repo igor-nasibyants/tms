@@ -17,7 +17,7 @@ public class MyPhone extends Gadjet {
         this.hardDisk = hardDisk;
     }
 
-    void MakeView() {
+    void makeView() {
         cameraPix = 48;
         System.out.print(" Снимаем на фотокамеру с разрешением  " + cameraPix);
     }

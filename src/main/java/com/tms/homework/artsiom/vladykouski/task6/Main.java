@@ -7,7 +7,7 @@ public class Main {
         System.out.print("Мой телефон " + d.getNameModel() + " с основными характеристиками: " + "Операционная система " + d.operSystem + ", Размер внутренней памяти в гб: " + d.hardDisk + ", оперативная память устройства: " +
                 d.ram + " , Максимальное разрешение фотосъемки: " + d.cameraPix);
         System.out.println();
-        d.MakeView();
+        d.makeView();
         System.out.println();
         MyWatch a = new MyWatch("Garmin Pay", "Garmin", "black", "200 USD");
         a.alarm();
