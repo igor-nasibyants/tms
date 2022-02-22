@@ -1,8 +1,8 @@
 package com.tms.homework.nnazarv.task1.task9;
 
 public class Person {
-    private  String name;
-    private  int age;
+    private String name;
+    private int age;
 
     public Person() {
     }

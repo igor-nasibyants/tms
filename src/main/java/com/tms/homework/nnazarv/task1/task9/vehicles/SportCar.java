@@ -2,8 +2,8 @@ package com.tms.homework.nnazarv.task1.task9.vehicles;
 
 import com.tms.homework.nnazarv.task1.task9.Driver;
 
-public class SportCar extends Car{
-private double speed;
+public class SportCar extends Car {
+    private double speed;
 
     public SportCar(String producer, String aClass, double weight, Driver driver, Engine engine, double speed) {
         super(producer, aClass, weight, driver, engine);
