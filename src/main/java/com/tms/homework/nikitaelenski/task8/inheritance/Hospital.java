@@ -7,7 +7,7 @@ public class Hospital extends MedicaInstitutions {
     }
 
     @Override
-    public String Alarm() {
-        return super.Alarm();
+    public String alarm() {
+        return super.alarm();
     }
 }

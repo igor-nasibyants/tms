@@ -1,19 +1,20 @@
 package com.tms.homework.nikitaelenski.task8.encapsulation;
 
-public class MedicaInstitutions {
+public class MedicalInstitutions {
     private String address;
     private Integer NumberOfCabinets;
     private Integer NumberOfDoctors;
     private Integer SurnameOfTheHeadsOfTheDoctor;
 
-    public MedicaInstitutions(String address, Integer numberOfCabinets, Integer numberOfDoctors, Integer surnameOfTheHeadsOfTheDoctor) {
+    public MedicalInstitutions(String address, Integer numberOfCabinets, Integer numberOfDoctors,
+                               Integer surnameOfTheHeadsOfTheDoctor) {
         this.address = address;
         NumberOfCabinets = numberOfCabinets;
         NumberOfDoctors = numberOfDoctors;
         SurnameOfTheHeadsOfTheDoctor = surnameOfTheHeadsOfTheDoctor;
     }
 
-    public MedicaInstitutions(Integer surnameOfTheHeadsOfTheDoctor) {
+    public MedicalInstitutions(Integer surnameOfTheHeadsOfTheDoctor) {
 
     }
 

@@ -59,7 +59,7 @@ public class MedicaInstitutions {
                 " квадратных метров";
     }
 
-    public String Alarm() {
+    public String alarm() {
         return "Пожарная тревого";
     }
 }

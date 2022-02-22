@@ -11,8 +11,4 @@ public class PrivateClinic extends MedicaInstitutions {
         return super.toString();
     }
 
-    @Override
-    public String Alarm() {
-        return super.Alarm();
-    }
 }
