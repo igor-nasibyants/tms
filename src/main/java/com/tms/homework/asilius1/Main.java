@@ -7,7 +7,7 @@ import com.tms.homework.asilius1.task6.Car;
 import java.util.Scanner;
 
 public class Main {
-    private static Scanner str = new Scanner(System.in);
+    private static final Scanner str = new Scanner(System.in);
 
     public static void main(String[] args) {
 

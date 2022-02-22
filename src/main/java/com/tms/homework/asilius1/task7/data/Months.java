@@ -1,4 +1,4 @@
-package com.tms.homework.asilius1.task7.Data;
+package com.tms.homework.asilius1.task7.data;
 
 public enum Months {
     JANUARY,

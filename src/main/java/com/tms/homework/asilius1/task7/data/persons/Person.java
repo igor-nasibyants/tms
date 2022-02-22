@@ -1,7 +1,7 @@
-package com.tms.homework.asilius1.task7.Data.Persons;
+package com.tms.homework.asilius1.task7.data.persons;
 
-import com.tms.homework.asilius1.task7.Data.Months;
-import com.tms.homework.asilius1.task7.Data.Sex;
+import com.tms.homework.asilius1.task7.data.Months;
+import com.tms.homework.asilius1.task7.data.Sex;
 
 public abstract class Person {
 
@@ -9,7 +9,7 @@ public abstract class Person {
     private String secondName;
     private Integer birthNumber;
     private Months months;
-    private Integer yearofBirth;
+    private Integer yearOfBirth;
     private Sex sex;
 
 
@@ -19,7 +19,7 @@ public abstract class Person {
         this.secondName = secondName;
         this.birthNumber = birthNumber;
         this.months = months;
-        this.yearofBirth = yearofBirth;
+        this.yearOfBirth = yearofBirth;
         this.sex = sex;
 
     }
@@ -56,12 +56,12 @@ public abstract class Person {
         this.months = months;
     }
 
-    public Integer getYearofBirth() {
-        return yearofBirth;
+    public Integer getYearOfBirth() {
+        return yearOfBirth;
     }
 
-    public void setYearofBirth(Integer yearofBirth) {
-        this.yearofBirth = yearofBirth;
+    public void setYearOfBirth(Integer yearOfBirth) {
+        this.yearOfBirth = yearOfBirth;
     }
 
     public Sex getSex() {

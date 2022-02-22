@@ -1,7 +1,7 @@
-package com.tms.homework.asilius1.task7.Data.Documents;
+package com.tms.homework.asilius1.task7.data.documents;
 
 
-import com.tms.homework.asilius1.task7.Data.Months;
+import com.tms.homework.asilius1.task7.data.Months;
 
 abstract public class Document {
 
@@ -13,7 +13,7 @@ abstract public class Document {
     private Integer yearofExpiry;
     private String nationality;
 
-    Document(String seriesofDocument, Integer numberofDocument, Integer issueNumber, Months months, Integer yearofIssue, Integer yearofExpiry, String nationality) {
+    public Document(String seriesofDocument, Integer numberofDocument, Integer issueNumber, Months months, Integer yearofIssue, Integer yearofExpiry, String nationality) {
         this.seriesofDocument = seriesofDocument;
         this.numberofDocument = numberofDocument;
         this.issueNumber = issueNumber;
