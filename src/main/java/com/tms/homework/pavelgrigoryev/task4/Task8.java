@@ -10,8 +10,8 @@ public class Task8 {
         int secondMax = firstArray[0];
 
         for (int i = 0; i < firstArray.length; i++) {
-            firstArray[i] = (int)(Math.random() * 9 + 1);
-            secondArray[i] = (int)(Math.random() * 9 + 1);
+            firstArray[i] = (int) (Math.random() * 9 + 1);
+            secondArray[i] = (int) (Math.random() * 9 + 1);
             thirdArray[i] = (double) firstArray[i] / secondArray[i];
             System.out.print(firstArray[i] + " ");
             if (firstArray[i] > max) {

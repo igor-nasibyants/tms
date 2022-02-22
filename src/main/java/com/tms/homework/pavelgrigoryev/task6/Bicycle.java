@@ -54,10 +54,12 @@ public class Bicycle {
     public void setPrice(double price) {
         this.price = price;
     }
-    void drive(){
-        System.out.println("You drive the bicycle " + getMake() + " " + getModel() );
+
+    void drive() {
+        System.out.println("You drive the bicycle " + getMake() + " " + getModel());
     }
-    void brake(){
-        System.out.println("You step on the brakes " +getMake() + " " + getModel());
+
+    void brake() {
+        System.out.println("You step on the brakes " + getMake() + " " + getModel());
     }
 }

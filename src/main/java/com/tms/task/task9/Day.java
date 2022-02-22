@@ -19,7 +19,7 @@ public enum Day {
 
     public Day fromValue(String value) {
         Day result = Day.MONDAY;
-        for (Day day: Day.values()) {
+        for (Day day : Day.values()) {
             if (day.value.equals(value)) {
                 result = day;
             }

@@ -5,19 +5,18 @@ package com.tms.homework.maria.varabyova.task3;
 это количество на экран на отдельной строке.
  */
 
-import java.util.Random;
 public class OneDimArray3 {
-    public static void main(String args[]){
+    public static void main(String args[]) {
         int count = 0;
         int a[] = new int[15];
         for (int key : a) {
-            key= (0+(int)(Math.random() * 99));
-            System.out.print(key+ " ");
-            if (key % 2 ==0) {
+            key = (0 + (int) (Math.random() * 99));
+            System.out.print(key + " ");
+            if (key % 2 == 0) {
                 count++;
             }
         }
         System.out.println();
-        System.out.print("Количество чётных значений: "+count);
+        System.out.print("Количество чётных значений: " + count);
     }
 }

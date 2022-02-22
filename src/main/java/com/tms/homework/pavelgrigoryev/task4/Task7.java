@@ -4,6 +4,7 @@ public class Task7 {
     public static void main(String[] args) {
         go();
     }
+
     public static void go() {
         int[] array = new int[12];
         int maxValue = 0;
@@ -13,13 +14,13 @@ public class Task7 {
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) (Math.random() * 15);
             System.out.print(array[i] + " ");
-           if (maxValue <= array[i]) {
-               maxValue = array[i];
-               lastIndex = i;
-           }
-           if (array[i] == num){
-               count++;
-           }
+            if (maxValue <= array[i]) {
+                maxValue = array[i];
+                lastIndex = i;
+            }
+            if (array[i] == num) {
+                count++;
+            }
         }
         System.out.println();
         System.out.println(maxValue + " Является макисимальным элементом массива");

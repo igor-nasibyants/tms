@@ -11,7 +11,7 @@ public class DeputyHeadOfDepartment extends Human implements Managedable, Saleab
 
     @Override
     public void manage() {
-        System.out.println(getName() +  " выписывает лещей продавцам ");
+        System.out.println(getName() + " выписывает лещей продавцам ");
     }
 
     @Override

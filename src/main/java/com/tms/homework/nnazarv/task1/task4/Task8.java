@@ -10,19 +10,19 @@ import java.util.Arrays;
 
 public class Task8 {
     public static void main(String[] args) {
-        int[]arr1 = new int[10];
-        int[]arr2 = new int[10];
-        double[]arr3 = new double[10];
+        int[] arr1 = new int[10];
+        int[] arr2 = new int[10];
+        double[] arr3 = new double[10];
 
 
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 10; i++) {
             arr1[i] = (int) (Math.random() * 9);
             arr2[i] = (int) (Math.random() * 9);
         }
         System.out.println(Arrays.toString(arr1));
         System.out.println(Arrays.toString(arr2));
 
-        for (int i = 0; i < arr3.length; i++){
+        for (int i = 0; i < arr3.length; i++) {
             if (arr2[i] == 0) {
                 arr3[i] = 0;
             } else {
@@ -32,8 +32,8 @@ public class Task8 {
         System.out.println(Arrays.toString(arr3));
 
         int numInt = 0;
-        for (int i = 0; i < arr3.length; i++){
-            if ( arr3[i] % 1 == 0){
+        for (int i = 0; i < arr3.length; i++) {
+            if (arr3[i] % 1 == 0) {
                 numInt++;
             }
         }

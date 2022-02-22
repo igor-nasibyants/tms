@@ -2,7 +2,7 @@ package com.tms.homework.nikitaelenski.task7;
 
 import java.util.Random;
 
-public class SausageDoge extends Dog implements Iron,Feed {
+public class SausageDoge extends Dog implements Iron, Feed {
     private boolean hungry;
     private int i;
 
@@ -30,6 +30,7 @@ public class SausageDoge extends Dog implements Iron,Feed {
             System.out.println("Гладь смело");
         }
     }
+
     public void eatTheDog() {
         Random rnd = new Random();
         i = rnd.nextInt(10);

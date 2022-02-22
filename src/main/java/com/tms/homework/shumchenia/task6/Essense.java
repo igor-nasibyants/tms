@@ -4,7 +4,7 @@ public class Essense {
     private double weight;
     private double height;
     private int age;
-    public static int kolvoEsense=0;
+    public static int kolvoEsense = 0;
     private int numberEsense;
     private int energy;
 
@@ -13,8 +13,8 @@ public class Essense {
         this.height = height;
         this.age = age;
         kolvoEsense++;
-        this.numberEsense=kolvoEsense;
-        energy=0;
+        this.numberEsense = kolvoEsense;
+        energy = 0;
     }
 
     public double getWeight() {
@@ -40,13 +40,11 @@ public class Essense {
     public void run() {
     }
 
-    public void eat(Food food){
-        System.out.println("Кто-то съел "+food.getName());
-        energy+=food.getCalories();
+    public void eat(Food food) {
+        System.out.println("Кто-то съел " + food.getName());
+        energy += food.getCalories();
         food = null;
     }
-
-
 
 
 }

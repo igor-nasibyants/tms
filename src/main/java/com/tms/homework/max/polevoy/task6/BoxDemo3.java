@@ -13,6 +13,6 @@ public class BoxDemo3 {
         b2.width = 5;
 
         System.out.println("width " + b1.width);
-        System.out.println("width "+ b2.width);
+        System.out.println("width " + b2.width);
     }
 }

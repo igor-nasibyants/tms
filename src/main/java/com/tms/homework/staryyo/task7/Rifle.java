@@ -5,7 +5,7 @@ public class Rifle extends AssaultRifle {
     private double calibr;
     private int year;
 
-    public Rifle(RifleType rifleType, double calibr, int year){
+    public Rifle(RifleType rifleType, double calibr, int year) {
         this.year = year;
         this.rifleType = rifleType;
         this.calibr = calibr;
@@ -20,7 +20,8 @@ public class Rifle extends AssaultRifle {
     public void defeatedTheEnemy() {
         super.defeatedTheEnemy();
     }
-    public String toString(){
+
+    public String toString() {
         return "rifle " + rifleType + ", " + calibr + ", " + year;
     }
 }

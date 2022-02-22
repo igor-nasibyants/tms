@@ -58,7 +58,8 @@ public class MedicaInstitutions {
                 ", с общей площадью =" + SurnameOfTheHeadsOfTheDoctor +
                 " квадратных метров";
     }
-    public String Alarm(){
-        return"Пожарная тревого";
+
+    public String Alarm() {
+        return "Пожарная тревого";
     }
 }

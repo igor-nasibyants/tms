@@ -2,9 +2,11 @@ package com.tms.homework.maria.varabyova.task6;
 
 public class Person {
     private String name;
-   private int age;
+    private int age;
 
-    Person()    {this("Undefined", 18); }
+    Person() {
+        this("Undefined", 18);
+    }
 
 
     public String getName() {
@@ -23,12 +25,17 @@ public class Person {
         this.age = age;
     }
 
-    Person(String name)   {this(name, 18); }
+    Person(String name) {
+        this(name, 18);
+    }
 
-    Person(String name, int age)    {this.name = name; this.age = age;}
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 
 
-    void displayInfo(){
+    void displayInfo() {
         System.out.printf("Name: %s \tAge: %d\n", name, age);
     }
 }

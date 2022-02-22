@@ -10,7 +10,8 @@ public class Hospital extends MedicaInstitutions {
     public void Alarm() {
         System.out.println("У нас пожара нету ");
     }
-    public void Alarm(String say){
+
+    public void Alarm(String say) {
         System.out.println(say);
     }
 

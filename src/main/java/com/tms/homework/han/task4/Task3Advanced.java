@@ -18,6 +18,6 @@ public class Task3Advanced {
             }
         }
         System.out.println();
-        System.out.println("Среднее арифметическое значение элементов, превосходщее число " + from + ": " + (double)sum / count);
+        System.out.println("Среднее арифметическое значение элементов, превосходщее число " + from + ": " + (double) sum / count);
     }
 }

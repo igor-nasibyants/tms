@@ -10,6 +10,7 @@ public class Phone {
     void receiveCall(String name) {
         System.out.println("Calling " + name);
     }
+
     String getNumber() {
         return number;
     }

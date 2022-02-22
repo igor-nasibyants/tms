@@ -1,6 +1,6 @@
 package com.tms.homework.max.polevoy.task7.interfaceImplementation;
 
-public class TransportDemo  {
+public class TransportDemo {
     public static void main(String[] args) {
         Moveable moveable = new Transport();
         Transport transport = new Transport();

@@ -21,9 +21,8 @@ public class Task8 {
         for (int i = 0; i < thirdArr.length; i++) {
             if (firstArr[i] == 0 && secondArr[i] == 0) {
                 thirdArr[i] = 0;
-            }
-            else {
-                thirdArr[i] = (double)firstArr[i] / secondArr[i];
+            } else {
+                thirdArr[i] = (double) firstArr[i] / secondArr[i];
             }
             System.out.print(thirdArr[i] + " ");
             if (thirdArr[i] % 1 == 0) {

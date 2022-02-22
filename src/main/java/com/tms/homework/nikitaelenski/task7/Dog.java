@@ -10,11 +10,12 @@ public abstract class Dog {
         this.eat = eat;
         this.name = name;
     }
+
     public Dog() {
 
     }
 
-    public String sayDontEat(){
+    public String sayDontEat() {
         return ("А ну : брось");
     }
 

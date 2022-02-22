@@ -1,6 +1,7 @@
 package com.tms.homework.artsiom.vladykouski.task4.OneDimeArrays;
-import java.util.Scanner;
+
 import java.util.Random;
+import java.util.Scanner;
 
 public class MyTask10 {
     // 10)Пользователь вводит с клавиатуры число большее 3, которое сохраняется в переменную n.
@@ -39,8 +40,7 @@ public class MyTask10 {
                     System.out.print(" " + arrays2[j] + " ");
                 }
             }
-        }
-        else {
+        } else {
             System.out.print("Неподходящее число");
         }
     }

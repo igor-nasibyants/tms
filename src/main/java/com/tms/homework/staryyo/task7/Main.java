@@ -1,4 +1,5 @@
 package com.tms.homework.staryyo.task7;
+
 import static com.tms.homework.staryyo.task7.RifleType.AK47;
 import static com.tms.homework.staryyo.task7.RifleType.AK74;
 

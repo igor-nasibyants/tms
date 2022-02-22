@@ -11,7 +11,7 @@ public class Task3 {
         int[] arr = new int[15];
         System.out.print("Массив: ");
         for (int key : arr) {
-            key =  ((int)(Math.random() * 99));
+            key = ((int) (Math.random() * 99));
             System.out.print(key + " ");
             if (key % 2 == 0) {
                 count++;

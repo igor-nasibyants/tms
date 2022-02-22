@@ -17,6 +17,6 @@ public class Task7 {
                 maxValueIndex = i;
             }
         }
-        System.out.println("Максимальное значение в массиве находится по индексу: " + maxValueIndex );
+        System.out.println("Максимальное значение в массиве находится по индексу: " + maxValueIndex);
     }
 }

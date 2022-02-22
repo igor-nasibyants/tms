@@ -2,8 +2,8 @@ package com.tms.homework.pavelgrigoryev.task9;
 
 public abstract class Person {
     private final String name;
-    private  String model;
-    private  int age;
+    private String model;
+    private int age;
     private final String speciality;
 
     public Person(String name, int age, String speciality) {

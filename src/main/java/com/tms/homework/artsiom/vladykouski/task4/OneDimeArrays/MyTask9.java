@@ -1,4 +1,5 @@
 package com.tms.homework.artsiom.vladykouski.task4.OneDimeArrays;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -25,12 +26,12 @@ public class MyTask9 {
             for (j = 0; j < i / 2; j++) {
                 sum1 = sum1 + arrays[j];
             }
-            System.out.print("Сумма левой половины = " +sum1);
+            System.out.print("Сумма левой половины = " + sum1);
             System.out.println("");
             for (j = i / 2; j < i; j++) {
                 sum2 = sum2 + arrays[j];
             }
-            System.out.print("Сумма правой половины = " +sum2);
+            System.out.print("Сумма правой половины = " + sum2);
         } else {
             System.out.print(" Введено неподходящее число");
         }

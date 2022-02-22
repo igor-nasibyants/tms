@@ -13,7 +13,7 @@ abstract public class Document {
     private Integer yearofExpiry;
     private String nationality;
 
-    Document (String seriesofDocument, Integer numberofDocument, Integer issueNumber, Months months, Integer yearofIssue, Integer yearofExpiry, String nationality) {
+    Document(String seriesofDocument, Integer numberofDocument, Integer issueNumber, Months months, Integer yearofIssue, Integer yearofExpiry, String nationality) {
         this.seriesofDocument = seriesofDocument;
         this.numberofDocument = numberofDocument;
         this.issueNumber = issueNumber;

@@ -55,13 +55,15 @@ public class Tank {
         this.price = price;
     }
 
-    void drive(){
-        System.out.println("You drive the tank " + getMake() + " " + getModel() );
+    void drive() {
+        System.out.println("You drive the tank " + getMake() + " " + getModel());
     }
-    void brake(){
+
+    void brake() {
         System.out.println("You step on the brakes " + getMake() + " " + getModel());
     }
-    void fire(){
+
+    void fire() {
         System.out.println("You shoot from the tank " + getMake() + " " + getModel());
     }
 }

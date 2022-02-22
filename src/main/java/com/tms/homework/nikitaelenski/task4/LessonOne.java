@@ -21,6 +21,7 @@ public class LessonOne {
             System.out.println(Arr[s] + " ");
         }
     }
+
     public static void OddNumbers() {
         int num = 0;
         System.out.println("массив из всех нечётных чисел от 1 до 99");
@@ -45,6 +46,7 @@ public class LessonOne {
         }
 
     }
+
     public static void RandomNinetyNine() {
         int b = 0;
         int[] array = new int[15];
@@ -61,6 +63,7 @@ public class LessonOne {
         System.out.println(" ");
         System.out.print("в массиве " + b + " чётных элементов");
     }
+
     public static void ZeroReplecement() {
         Random rnd = new Random();
         int[] arr = new int[20];
@@ -78,6 +81,7 @@ public class LessonOne {
             System.out.print(arr[s] + " ");
         }
     }
+
     public static void RandomDoubleArr() {
         Random rand = new Random();
         int[] FirstArray = new int[5];
@@ -108,6 +112,7 @@ public class LessonOne {
 
 
     }
+
     public static int SummArray(int[] arr) {
         int j = 0;
         for (int d = 0; d < arr.length; d++) {
@@ -115,6 +120,7 @@ public class LessonOne {
         }
         return j / arr.length;
     }
+
     public static String ArrayIsStrictlyIncreasing() {
         Random rand = new Random();
         String y = " ";
@@ -132,6 +138,7 @@ public class LessonOne {
         }
         return y;
     }
+
     public static int MaximumArrayIndex() {
         int b = 0;
         int MaxValue = 0;
@@ -150,6 +157,7 @@ public class LessonOne {
         }
         return MaxValue;
     }
+
     public static void NumberOfIntegers() {
         int count = 0;
         int[] FirstArray = new int[10];
@@ -176,6 +184,7 @@ public class LessonOne {
         System.out.println("Количество целых элементов в 3 массиве: " + count);
 
     }
+
     public static void PrintRandomArrInt(int arr[]) {
         Random rnd = new Random();
         for (int i = 0; i < arr.length; i++) {
@@ -184,6 +193,7 @@ public class LessonOne {
         }
         System.out.println(" ");
     }
+
     public static void PrintRandomArrDouble(double arr[]) {
         Random rnd = new Random();
         for (int i = 0; i < arr.length; i++) {
@@ -192,6 +202,7 @@ public class LessonOne {
         }
         System.out.println(" ");
     }
+
     public static void LeftOrRrightMore(int ArraySize) {
         Scanner scanner = new Scanner(System.in);
         Random rnd = new Random();
@@ -213,41 +224,42 @@ public class LessonOne {
             }
         }
         System.out.println(" ");
-        if (LeftPart > RightPart ) {
+        if (LeftPart > RightPart) {
             System.out.println("Сумма чисел в левой части больше");
-        }else if (LeftPart < RightPart ) {
+        } else if (LeftPart < RightPart) {
             System.out.println("Сумма чисел в правой части больше");
-        }else {
+        } else {
             System.out.println("Сумма чисел равна");
 
         }
     }
-    public static void KeyboardInput () {
+
+    public static void KeyboardInput() {
         Random rnd = new Random();
         Scanner scan = new Scanner(System.in);
         System.out.println("В ведите число больше 3");
-        int RemainderOfTheDivision = 0 ;
+        int RemainderOfTheDivision = 0;
         int num = scan.nextInt();
-        while (num <= 3){
+        while (num <= 3) {
             System.out.println("Неверное число попробуй еще раз ");
             num = scan.nextInt();
         }
         System.out.println("Начальный массив");
-        int[] array = new int [num];
-        for(int i  = 0 ; i < array.length ; i++){
+        int[] array = new int[num];
+        for (int i = 0; i < array.length; i++) {
             array[i] = rnd.nextInt(num);
             System.out.print(array[i] + " ");
-            if (array[i] % 2 == 0){
-                RemainderOfTheDivision ++ ;
+            if (array[i] % 2 == 0) {
+                RemainderOfTheDivision++;
             }
 
         }
         System.out.println(" ");
         System.out.println("Массив с четными числами");
-        if (RemainderOfTheDivision != 0){
+        if (RemainderOfTheDivision != 0) {
             int[] LastArray = new int[RemainderOfTheDivision];
-            for (int j = 0 , s = 0; j < LastArray.length ; j ++ ){
-                if(array[s] % 2 ==0) {
+            for (int j = 0, s = 0; j < LastArray.length; j++) {
+                if (array[s] % 2 == 0) {
                     LastArray[s] = array[s];
                     s++;
                 }
