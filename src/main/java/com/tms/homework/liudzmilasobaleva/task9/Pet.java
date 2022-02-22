@@ -26,6 +26,11 @@ public final class Pet extends Mammal {
         System.out.println("I run at home");
     }
 
+    // it's not an overriding methods, but hiding methods
+    static void feedOnMilk() {                        // access static 'Mammal.eatMilk()' via class Mammal reference
+        System.out.println("I feed on milk, I am a Pet");
+    }
+
     @Override
     public String toString() {
         return "Pet " + name + ", " + age + " year(s)";

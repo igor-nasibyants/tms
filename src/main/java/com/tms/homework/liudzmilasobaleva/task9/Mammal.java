@@ -13,7 +13,7 @@ public class Mammal extends Animal {
 
     }
 
-    // static method (is to have Mammal.feedOnMilk reference)
+    // static method (cannot be overridden)
     static void feedOnMilk() {                        // access static 'Mammal.eatMilk()' via class Mammal reference
         System.out.println("I feed on milk");
     }
