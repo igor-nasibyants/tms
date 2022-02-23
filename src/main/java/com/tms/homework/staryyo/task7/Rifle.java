@@ -1,6 +1,6 @@
 package com.tms.homework.staryyo.task7;
 
-public class Rifle extends AssaultRifle {
+public class Rifle extends AssaultRifle implements Fire{
     public RifleType rifleType;
     private double calibr;
     private int year;
@@ -23,5 +23,10 @@ public class Rifle extends AssaultRifle {
 
     public String toString() {
         return "rifle " + rifleType + ", " + calibr + ", " + year;
+    }
+
+    @Override
+    public void fire() {
+        System.out.println("Fire");
     }
 }
