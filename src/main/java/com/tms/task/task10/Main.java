@@ -1,5 +1,7 @@
 package com.tms.task.task10;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,5 +69,7 @@ public class Main {
         if ("   Name     ".trim().toUpperCase().equalsIgnoreCase(name1)) {
             System.out.println(name);
         }
+
+        System.out.println(StringUtils.trim("   Name     "));
     }
 }
