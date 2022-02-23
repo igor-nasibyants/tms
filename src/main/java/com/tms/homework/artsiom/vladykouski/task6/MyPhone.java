@@ -9,8 +9,8 @@ public class MyPhone extends Gadjet {
 
 
     public MyPhone(String operSystem, int ram, int cameraPix, int hardDisk,
-                   String nameModel, String color, String price) {
-        super(nameModel, color, price);
+                   String nameModel,String color, String price) {
+        super(nameModel,color,price );
         this.cameraPix = cameraPix;
         this.operSystem = operSystem;
         this.ram = ram;
