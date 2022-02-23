@@ -8,6 +8,7 @@ public class Main {
         System.out.println();
         Rifle ak47 = new Rifle(AK47, 7.62, 1947);
         System.out.println(ak47.rifleType);
+        System.out.println(ak47);
         ak47.type();
         ak47.defeatedTheEnemy();
         ak47.fire();
@@ -15,6 +16,7 @@ public class Main {
         System.out.println();
         Rifle ak74 = new Rifle(AK74, 5.45, 1974);
         System.out.println(ak74.rifleType);
+        System.out.println(ak74);
         ak74.rifleType = AK74;
         ak74.type();
         ak74.defeatedTheEnemy();

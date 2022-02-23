@@ -21,12 +21,17 @@ public class Rifle extends AssaultRifle implements Fire{
         super.defeatedTheEnemy();
     }
 
-    public String toString() {
-        return "rifle " + rifleType + ", " + calibr + ", " + year;
-    }
-
     @Override
     public void fire() {
         System.out.println("Fire");
+    }
+
+    @Override
+    public String toString() {
+        return "Rifle{" +
+                "rifleType=" + rifleType +
+                ", calibr=" + calibr +
+                ", year=" + year +
+                '}';
     }
 }
