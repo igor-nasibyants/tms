@@ -6,7 +6,7 @@ public class Main {
         try {
             testException(0);
         } catch (MyException e) {
-            e.printStackTrace();
+            System.err.println(e.getMessage());
         }
     }
 

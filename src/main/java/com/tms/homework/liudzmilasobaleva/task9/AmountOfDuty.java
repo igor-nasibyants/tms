@@ -1,15 +1,15 @@
 package com.tms.homework.liudzmilasobaleva.task9;
 
-import java.util.Scanner;
 
-public class AmountOfDuty implements Readable, Countable {
+public class AmountOfDuty implements Countable {
 
     final double customsFee = 5; // фиксированный сбор (в Евро)
 
     @Override
-    public void count() {  //считаем сумму таможенных платежей
-        double costOfParcel = getCostOfParcel();
-        double weightOfParcel = getWeightOfParcel();
+    public void count(Parcel parcel) {  //считаем сумму таможенных платежей
+
+        double costOfParcel = parcel.getCostOfParcel();
+        double weightOfParcel = parcel.getWeightOfParcel();
         double amountOfDuty;
 
         if (costOfParcel < 22 && weightOfParcel < 10) {
@@ -36,40 +36,5 @@ public class AmountOfDuty implements Readable, Countable {
         }
     }
 
-    @Override
-    public void read() {
 
-        System.out.println("Please enter the cost and the weight of the parcel"); //вводим стоимость посылки с клавиатуры
-        Scanner sc = new Scanner(System.in);
-        double m = sc.nextDouble();
-        double n = sc.nextDouble();
-        System.out.println();
-
-        while (m <= 0) {      //проверяем, подходит ли число (для стоимости)
-            if (m < 0) {
-                System.out.println("Please enter a positive number");
-            }
-            if (m == 0) {
-                System.out.println("Please don't enter zero");
-            }
-            m = sc.nextDouble();
-        }
-
-        while (n <= 0) {      //проверяем, подходит ли число (для веса)
-            if (n < 0) {
-                System.out.println("Please enter a positive number");
-            }
-            if (n == 0) {
-                System.out.println("Please don't enter zero");
-            }
-            n = sc.nextDouble();
-        }
-
-        Parcel parcel = new Parcel();// если число подходит, создаем объект Parcel()
-
-        parcel.setCostOfParcel(m);
-        parcel.setWeightOfParcel(n);
-
-        System.out.println("Cost of parcel is " + m + ", " + "weight of parcel is " + n);
-    }
 }

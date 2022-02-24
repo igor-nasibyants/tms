@@ -1,5 +1,5 @@
 package com.tms.homework.liudzmilasobaleva.task9;
 
 public interface Countable{
-    void count();
+    void count(Parcel parcel);
 }
