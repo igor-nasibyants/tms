@@ -8,7 +8,7 @@ public class Program implements Readable {
         Program p = new Program();
         AmountOfDuty a = new AmountOfDuty();
         a.count(p.read());
-        System.out.println("result is - " + a.getValue());
+        System.out.println("Amount of duties is " + a.getValue());
     }
 
     @Override
