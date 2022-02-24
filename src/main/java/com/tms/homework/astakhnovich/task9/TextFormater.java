@@ -14,14 +14,16 @@ public class TextFormater {
 
     public boolean presenceOfPalindrome(String str){
         boolean flag = false;
-        String[] subStr = str.split("\\s");
-        for (String strings : subStr) {
-            StringBuilder reverseStringBuilder = new StringBuilder(strings).reverse();
-            String reverseString = String.valueOf(reverseStringBuilder);
-            if(reverseString.equals(strings)){
+        String[] strings = str.split("\\s");
+        StringBuilder reverseStringBuilder = new StringBuilder();
+        for (String st : strings) {
+            reverseStringBuilder.append(st).reverse();
+            String reverseString = reverseStringBuilder.toString();
+            if(reverseString.equals(st)){
                 flag = true;
                 break;
             }
+            reverseStringBuilder.delete(0, reverseString.length()-1);
         }
         return flag;
     }
