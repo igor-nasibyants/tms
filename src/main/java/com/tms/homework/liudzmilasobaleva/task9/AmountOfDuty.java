@@ -4,7 +4,7 @@ package com.tms.homework.liudzmilasobaleva.task9;
 public class AmountOfDuty implements Countable {
 
     private double value;
-    final double customsFee = 5; // фиксированный сбор (в Евро)
+    public static final double CUSTOMS_FEE = 5; // фиксированный сбор (в Евро)
 
     public double getValue() {
         return value;
@@ -20,17 +20,17 @@ public class AmountOfDuty implements Countable {
             amountOfDuty = 0;
         }
         if (costOfParcel > 22) {
-            amountOfDuty = customsFee + ((costOfParcel - 22) * 0.15);
+            amountOfDuty = CUSTOMS_FEE + ((costOfParcel - 22) * 0.15);
         }
         if (weightOfParcel > 10) {
-            amountOfDuty = customsFee + ((weightOfParcel - 10) * 2);
+            amountOfDuty = CUSTOMS_FEE + ((weightOfParcel - 10) * 2);
         }
         if (costOfParcel > 22 && weightOfParcel > 10) {
-            if ((customsFee + ((costOfParcel - 22) * 0.15)) > (customsFee + ((weightOfParcel - 10) * 2))) {
-                amountOfDuty = customsFee + ((costOfParcel - 22) * 0.15);
+            if ((CUSTOMS_FEE + ((costOfParcel - 22) * 0.15)) > (CUSTOMS_FEE + ((weightOfParcel - 10) * 2))) {
+                amountOfDuty = CUSTOMS_FEE + ((costOfParcel - 22) * 0.15);
             }
-            if ((customsFee + ((costOfParcel - 22) * 0.15)) < (customsFee + ((weightOfParcel - 10) * 2))) {
-                amountOfDuty = customsFee + ((weightOfParcel - 10) * 2);
+            if ((CUSTOMS_FEE + ((costOfParcel - 22) * 0.15)) < (CUSTOMS_FEE + ((weightOfParcel - 10) * 2))) {
+                amountOfDuty = CUSTOMS_FEE + ((weightOfParcel - 10) * 2);
             }
         }
         this.value = amountOfDuty;
