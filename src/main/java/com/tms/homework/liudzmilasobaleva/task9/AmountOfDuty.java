@@ -3,14 +3,18 @@ package com.tms.homework.liudzmilasobaleva.task9;
 
 public class AmountOfDuty implements Countable {
 
+    private double value;
     final double customsFee = 5; // фиксированный сбор (в Евро)
+
+    public double getValue() {
+        return value;
+    }
 
     @Override
     public void count(Parcel parcel) {  //считаем сумму таможенных платежей
-
         double costOfParcel = parcel.getCostOfParcel();
         double weightOfParcel = parcel.getWeightOfParcel();
-        double amountOfDuty;
+        double amountOfDuty = 0;
 
         if (costOfParcel < 22 && weightOfParcel < 10) {
             amountOfDuty = 0;
@@ -34,6 +38,7 @@ public class AmountOfDuty implements Countable {
                 System.out.println("Amount of duties is " + amountOfDuty);
             }
         }
+        this.value = amountOfDuty;
     }
 
 

@@ -5,6 +5,11 @@ public class Parcel {
     private double costOfParcel;
     private double weightOfParcel;
 
+    public Parcel(double costOfParcel, double weightOfParcel) {
+        this.costOfParcel = costOfParcel;
+        this.weightOfParcel = weightOfParcel;
+    }
+
     public double getCostOfParcel() {
         return costOfParcel;
     }

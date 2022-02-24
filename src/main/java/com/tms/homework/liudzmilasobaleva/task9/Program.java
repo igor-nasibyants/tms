@@ -6,11 +6,13 @@ import java.util.Scanner;
 public class Program implements Readable {
     public static void main(String[] args) {
         Program p = new Program();
-        p.read();
+        AmountOfDuty a = new AmountOfDuty();
+        a.count(p.read());
+        System.out.println("result is - " + a.getValue());
     }
 
     @Override
-    public void read() {
+    public Parcel read() {
 
         System.out.println("Please enter the cost and the weight of the parcel"); //вводим стоимость посылки с клавиатуры
         Scanner sc = new Scanner(System.in);
@@ -38,14 +40,8 @@ public class Program implements Readable {
             n = sc.nextDouble();
         }
 
-        Parcel parcel = new Parcel();// если число подходит, создаем объект Parcel()
-
-        parcel.setCostOfParcel(m);
-        parcel.setWeightOfParcel(n);
-
         System.out.println("Cost of parcel is " + m + ", " + "weight of parcel is " + n);
 
-        AmountOfDuty a = new AmountOfDuty();
-        a.count(parcel);
+        return new Parcel(m, n);// если число подходит, создаем объект Parcel()
     }
 }
