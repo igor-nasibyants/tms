@@ -1,4 +1,4 @@
-package com.tms.homework.nikitaelenski.task7;
+/*package com.tms.homework.nikitaelenski.task7;
 
 public class Main {
 
@@ -15,3 +15,4 @@ public class Main {
         System.out.println(smooth.repeat(10));
     }
 }
+*/
