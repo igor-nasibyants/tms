@@ -2,7 +2,7 @@ package com.tms.homework.pavelgrigoryev.task9;
 
 import static java.lang.System.out;
 
-public class Woman extends Person {
+public class Woman extends Person implements Clapable{
     public Woman(String name, int age, String speciality) {
         super(name, age, speciality);
     }
@@ -24,5 +24,13 @@ public class Woman extends Person {
             result = result * i;
         }
         return result;
+    }
+
+    @Override
+    public void clap() {
+        for (int i = 0; i < 10; i++) {
+            out.print("Flop! ");
+        }
+        out.println();
     }
 }
