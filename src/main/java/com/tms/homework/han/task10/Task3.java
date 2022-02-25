@@ -1,18 +1,33 @@
 package com.tms.homework.han.task10;
 
-import java.util.Arrays;
-
 public class Task3 {
     public static void main(String[] args) {
-        StringBuilder s = new StringBuilder(
-                "пупа \n" + "душа \n" + "шалаш \n" + "лупа \n" + "дед \n" + "колобок \n" + "боб \n" +
-                        "зарплата \n".trim());
-//        String str = "пупа \n" + "душа \n" + "шалаш \n" + "лупа \n" + "дед \n" + "колобок \n" + "боб \n" +
-//                "зарплата \n".trim();
-//        String[] str1 = str.split("\n");
-//        System.out.println(Arrays.toString(str1));
-//        for (String word : str1) {
-//
-//        }
+        String str = """
+                пачимутутвыводитэта\s
+                Madam\s
+                pop\s
+                friend\s
+                My\s
+                first\s
+                program\s
+                hello\s
+                world\s
+                replace\s
+                level\s
+                """;
+        String[] oneString = str.split("\n");
+        StringBuilder stringBuilder = new StringBuilder();
+        for (String word : oneString) {
+            if (isPalindrome(word)) {
+                stringBuilder.append(word);
+            }
+        }
+        System.out.println(stringBuilder);
+    }
+
+    public static boolean isPalindrome(String text) {
+        return text.replaceAll("\\W", "").
+                equalsIgnoreCase(new StringBuilder(text.replaceAll("\\W", ""))
+                        .reverse().toString());
     }
 }
