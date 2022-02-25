@@ -2,20 +2,10 @@ package com.tms.homework.han.task10;
 
 public class Task3 {
     public static void main(String[] args) {
-        String str = """
-                пачимутутвыводитэта\s
-                Madam\s
-                pop\s
-                friend\s
-                My\s
-                first\s
-                program\s
-                hello\s
-                world\s
-                replace\s
-                level\s
-                """;
-        String[] oneString = str.split("\n");
+        StringBuilder str = new StringBuilder();
+        str.append("пачимутутвыводитэта \n").append("Madam \n").append("pop \n").append("friend \n").append("My \n")
+                .append("first \n").append("program \n").append("hello \n").append("world \n").append("level \n");
+        String[] oneString = String.valueOf(str).split("\n");
         StringBuilder stringBuilder = new StringBuilder();
         for (String word : oneString) {
             if (isPalindrome(word)) {
@@ -26,8 +16,7 @@ public class Task3 {
     }
 
     public static boolean isPalindrome(String text) {
-        return text.replaceAll("\\W", "").
-                equalsIgnoreCase(new StringBuilder(text.replaceAll("\\W", ""))
-                        .reverse().toString());
+        return text.replaceAll("\\W", "")
+                .equalsIgnoreCase(new StringBuilder(text.replaceAll("\\W", "")).reverse().toString());
     }
 }
