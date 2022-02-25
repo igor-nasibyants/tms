@@ -1,6 +1,5 @@
 package com.tms.homework.liudzmilasobaleva.task9;
 
-
 import java.util.Scanner;
 
 public class Program implements Readable {

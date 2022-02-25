@@ -1,6 +1,5 @@
 package com.tms.homework.liudzmilasobaleva.task9;
 
-
 public class AmountOfDuty implements Countable {
 
     private double value;
@@ -35,6 +34,4 @@ public class AmountOfDuty implements Countable {
         }
         this.value = amountOfDuty;
     }
-
-
 }
