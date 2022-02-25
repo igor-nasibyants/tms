@@ -2,16 +2,15 @@ package com.tms.homework.pavelgrigoryev.task10;
 
 public class Task2 extends Task1 {
     public static void main(String[] args) {
-/*        String string = """
-                I am a world before I am a man
-                I was a creature before I could stand
-                I will remember before I forget
-                Before I forget that
-                I am a world before I am a man
-                I was a creature before I could stand
-                I will remember before I forget
-                Before I forget that""";
-        print(string);*/
+        String string = "I am a world before I am a man\n" +
+                "I was a creature before I could stand\n" +
+                "I will remember before I forget\n" +
+                "Before I forget that\n" +
+                "I am a world before I am a man\n" +
+                "I was a creature before I could stand\n" +
+                "I will remember before I forget\n" +
+                "Before I forget that";
+        print(string);
     }
     private static void print(String string) {
         separator();

@@ -1,10 +1,5 @@
 package com.tms.homework.astakhnovich.task9;
 
-import com.tms.task.task10.theoryMaterial.StringBuilderClass;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class TextFormater {
 
     public Integer numberOfWords(String str){
@@ -23,7 +18,7 @@ public class TextFormater {
                 flag = true;
                 break;
             }
-            reverseStringBuilder.delete(0, reverseString.length()-1);
+            reverseStringBuilder.delete(0, reverseString.length());
         }
         return flag;
     }

@@ -2,14 +2,13 @@ package com.tms.homework.pavelgrigoryev.task10;
 
 public class Task1 {
     public static void main(String[] args) {
-        /*StringBuilder stringBuilder = new StringBuilder("""
-                От печали я очнулся и невольно усмехнулся,
-                Видя важность этой птицы, жившей долгие года.
-                «Твой хохол ощипан славно и глядишь ты презабавно»,
-                Я промолвил, «но скажи мне: в царстве тьмы, где ночь всегда,
-                Как ты звался, гордый Ворон, там, где ночь царит всегда!»
-                Молвил Ворон: «Никогда».""");
-        print(stringBuilder);*/
+        StringBuilder stringBuilder = new StringBuilder("От печали я очнулся и невольно усмехнулся,\n" +
+                "Видя важность этой птицы, жившей долгие года.\n" +
+                "«Твой хохол ощипан славно и глядишь ты презабавно»,\n" +
+                "Я промолвил, «но скажи мне: в царстве тьмы, где ночь всегда,\n" +
+                "Как ты звался, гордый Ворон, там, где ночь царит всегда!»\n" +
+                "Молвил Ворон: «Никогда».");
+        print(stringBuilder);
     }
     private static void print(StringBuilder stringBuilder) {
         separator();
