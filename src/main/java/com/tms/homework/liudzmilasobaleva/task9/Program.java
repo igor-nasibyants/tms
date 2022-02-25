@@ -1,5 +1,6 @@
 package com.tms.homework.liudzmilasobaleva.task9;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Program implements Readable {
@@ -7,7 +8,10 @@ public class Program implements Readable {
         Program p = new Program();
         AmountOfDuty a = new AmountOfDuty();
         a.count(p.read());
-        System.out.println("Amount of duties is " + a.getValue());
+        double value = a.getValue();
+        DecimalFormat decimalFormat = new DecimalFormat("#.##");
+        String result = decimalFormat.format(value);
+        System.out.println("Amount of duties is " + result + " Euro");
     }
 
     @Override
