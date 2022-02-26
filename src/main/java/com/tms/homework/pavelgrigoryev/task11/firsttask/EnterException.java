@@ -4,7 +4,7 @@ package com.tms.homework.pavelgrigoryev.task11.firsttask;
 squareRectangle (int a, int b), which should throw an
 exception if the user enters negative value. Input values a and b
 from console. Check the squareRectangle method in the
-method main. Check to input nonnumeric value.*/
+method main. Check to input non-numeric value.*/
 
 import java.util.Scanner;
 
@@ -22,15 +22,15 @@ public class EnterException {
             if (scanner.hasNextInt()){
                 b = scanner.nextInt();
                 try {
-                    System.out.println("Square of rectangle = " + squareRectangle(a, b));
+                    System.out.println("Square of  a rectangle = " + squareRectangle(a, b));
                 } catch (LessThenZeroException e) {
                     e.printStackTrace();
                 }
             } else {
-                System.err.println("Non numeric value of B or not an Integer!");
+                System.err.println("Non-numeric value of B or not an Integer!");
             }
         } else {
-            System.err.println("Non numeric value of A  or not an Integer!");
+            System.err.println("Non-numeric value of A  or not an Integer!");
         }
     }
 
