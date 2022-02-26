@@ -10,21 +10,28 @@ public class TextReadAndWrite {
         this.text = text;
     }
 
-    public void textWriter(String fileName) throws IOException {
-        File file = new File(fileName);
-        FileWriter writer = new FileWriter(file);
-        writer.write(text);
-        writer.close();
+    public void textWriter(String fileName){
+        try {
+            File file = new File(fileName);
+            FileWriter writer = new FileWriter(file);
+            writer.write(text);
+            writer.close();
+        }catch (IOException e){
+            System.out.println("ups part 1");
+        }
     }
 
-    public void textReader(String fileName) throws IOException {
-        FileReader reader = new FileReader(fileName);
-        int i = 0;
-
-        while ((i = reader.read())!= -1){
-            newText.append((char)i);
+    public void textReader(String fileName){
+        try {
+            FileReader reader = new FileReader(fileName);
+            int i = 0;
+            while ((i = reader.read())!= -1){
+                newText.append((char)i);
+            }
+            reader.close();
+            System.out.println(newText);
+        }catch (IOException e){
+            System.out.println("ups part 2");
         }
-        reader.close();
-        System.out.println(newText);
     }
 }
