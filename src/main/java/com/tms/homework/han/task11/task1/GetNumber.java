@@ -14,10 +14,15 @@ public interface GetNumber extends CheckNegative, CheckNull {
                 CheckNull.checkNull(number, text);
             } catch (MyException e) {
                 e.printStackTrace();
+                System.exit(0);
             }
         } else {
-            System.err.println("В <" + text + "> вы ввели не число");
-            System.exit(0);
+            try {
+                throw new MyException("В <" + text + "> вы ввели не число");
+            } catch (MyException e) {
+                e.printStackTrace();
+                System.exit(0);
+            }
         }
         return number;
     }
