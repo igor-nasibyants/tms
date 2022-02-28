@@ -31,8 +31,9 @@ public class Main {
                 c.printStackTrace();
                 System.exit(0);
             }
-            if (enterColor.equalsIgnoreCase(plant.getColor().name())
-                    || enterType.equalsIgnoreCase(plant.getType().name())) {
+            if (enterColor.equalsIgnoreCase(plant.getColor().name()) ||
+                    enterType.equalsIgnoreCase(plant.getType().name()))
+            {
                 System.out.println(plant);
             }
         }
