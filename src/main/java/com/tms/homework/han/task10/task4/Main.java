@@ -9,8 +9,8 @@ public class Main extends TextFormatter {
                 .append(" Cras   *  ultrices non arcu.")
                 .append(" Suspendisse ?  ut         ornare lorem       . ")
                 .append("   Morbi  varius te llus    , sed   :   diam      egestas fringilla.")
-                .append("  Morbius    &         -    is a living   (^˵◕ω◕˵^)   vampire, very much alive    .    ")
-                .append("       Deadpool  =_=  sees everything   #  look @ ! say ^ AAAAAHHHH.")
+                .append("  Morbius    &         -    is a living     vampire, very much alive    .    ")
+                .append("       Deadpool  sees   everything   #  look @ ! say ^ AAAAAHHHH.")
                 .append(" first second,   third");
         System.out.println(getNumberLines(String.valueOf(sb)));
     }
