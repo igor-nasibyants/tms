@@ -3,14 +3,13 @@ package com.tms.homework.han.task11.task1;
 import java.util.Scanner;
 
 public interface GetNumber extends CheckNegative, CheckNull {
-    static int getNumber(String text) {
+    static double getNumber(String text) {
         Scanner scanner = new Scanner(System.in);
-        int number = 0;
+        double number = 0;
         System.out.println("Введите число " + text + ":");
-        if (scanner.hasNextInt()) {
-            number = scanner.nextInt();
+        if (scanner.hasNextDouble()) {
+            number = scanner.nextDouble();
             try {
-                CheckNegative.checkNegative(number, text);
                 CheckNull.checkNull(number, text);
             } catch (MyException e) {
                 e.printStackTrace();
@@ -18,7 +17,7 @@ public interface GetNumber extends CheckNegative, CheckNull {
             }
         } else {
             try {
-                throw new MyException("В <" + text + "> вы ввели не число");
+                throw new MyException("В значение <" + text + "> вы ввели не число");
             } catch (MyException e) {
                 e.printStackTrace();
                 System.exit(0);
