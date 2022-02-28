@@ -1,8 +1,18 @@
 package com.tms.homework.han.task11.task2;
 
+import java.util.Scanner;
+
+import static com.tms.homework.han.task11.task2.CheckColor.checkColor;
+import static com.tms.homework.han.task11.task2.CheckType.checkType;
+
 public class Plants {
     private int size;
     private Color color;
+
+    public Type getType() {
+        return type;
+    }
+
     private Type type;
 
     public Plants(int size, Color color, Type type) {
@@ -32,11 +42,4 @@ public class Plants {
         this.color = color;
     }
 
-    public Type getType() {
-        return type;
-    }
-
-    public void setType(Type type) {
-        this.type = type;
-    }
 }
