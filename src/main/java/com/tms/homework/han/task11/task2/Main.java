@@ -25,13 +25,13 @@ public class Main {
         System.out.println("Подходящие по характеритикам растения: ");
         for (Plants plant : plants) {
             try {
-                checkColor(plant, enterColor);
-                checkType(plant, enterType);
+                checkColor(enterColor);
+                checkType(enterType);
             } catch (ColorException | TypeException c) {
                 c.printStackTrace();
                 System.exit(0);
             }
-            if (enterColor.equalsIgnoreCase(plant.getColor().name()) ||
+            if (enterColor.equalsIgnoreCase(plant.getColor().name()) &&
                     enterType.equalsIgnoreCase(plant.getType().name()))
             {
                 System.out.println(plant);

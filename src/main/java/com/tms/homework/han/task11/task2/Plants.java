@@ -1,10 +1,5 @@
 package com.tms.homework.han.task11.task2;
 
-import java.util.Scanner;
-
-import static com.tms.homework.han.task11.task2.CheckColor.checkColor;
-import static com.tms.homework.han.task11.task2.CheckType.checkType;
-
 public class Plants {
     private int size;
     private Color color;
@@ -13,7 +8,7 @@ public class Plants {
         return type;
     }
 
-    private Type type;
+    private final Type type;
 
     public Plants(int size, Color color, Type type) {
         this.size = size;

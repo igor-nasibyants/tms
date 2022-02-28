@@ -1,7 +1,7 @@
 package com.tms.homework.han.task11.task2;
 
 public interface CheckColor {
-    static void checkColor(Plants plant, String color) throws ColorException {
+    static void checkColor(String color) throws ColorException {
         if (!(color.equalsIgnoreCase(Color.RED.name()))
                 && !(color.equalsIgnoreCase(Color.BLUE.name()))
                 && !(color.equalsIgnoreCase(Color.GREEN.name()))
