@@ -27,17 +27,26 @@ public class Main extends GetView implements CheckMore, CheckLess {
         int[] arr = new int[10];
         int enter;
         for (int i = 0; i < arr.length; ) {
-            System.out.println("Введите " + (i + 1) + " число [" + start + "..." + end + "]:");
-            enter = scanner.nextInt();
-            if (enter >= start && enter <= end) {
-                arr[i] = enter;
-                i++;
-            }
-            try {
-                CheckMore.checkMore(enter, end);
-                CheckLess.checkLess(enter, start);
-            } catch (MyException e) {
-                e.printStackTrace();
+            System.out.println("Введите " + (i + 1) + "целое число [" + start + "..." + end + "]:");
+            if (scanner.hasNextInt()) {
+                enter = scanner.nextInt();
+                if (enter >= start && enter <= end) {
+                    arr[i] = enter;
+                    i++;
+                }
+                try {
+                    CheckMore.checkMore(enter, end);
+                    CheckLess.checkLess(enter, start);
+                } catch (MyException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                try {
+                    throw new MyException("Вы ввели не число (или вещественное число)!!");
+                } catch (MyException e) {
+                    e.printStackTrace();
+                    System.exit(0);
+                }
             }
         }
         GetView viewArray = new GetView(arr);
