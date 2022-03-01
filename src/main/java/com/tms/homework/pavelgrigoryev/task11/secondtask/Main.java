@@ -7,7 +7,7 @@ public class Main {
         String[] types = new String[]{"mosses", "SEAWEED", "Сосна", "FERNs", "Цвяточык"};
         int[] sizes = new int[]{20, 30, 24, 55, 11};
 
-        for (int i = 0; i < 5; i ++) {
+        for (int i = 0; i < 5; i++) {
             try {
                 plants[i] = buildPlants(sizes[i], colors[i], types[i]);
             } catch (ColorException | TypeException e) {
