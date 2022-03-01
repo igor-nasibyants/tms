@@ -19,10 +19,15 @@ public class Main extends GetView implements CheckMore, CheckLess {
     }
 
     public static void main(String[] args) {
-        readNumber(0, 15);
+        try {
+            readNumber(0, 15);
+        } catch (MyException e) {
+            e.printStackTrace();
+            System.exit(0);
+        }
     }
 
-    public static void readNumber(int start, int end) {
+    public static void readNumber(int start, int end) throws MyException {
         Scanner scanner = new Scanner(System.in);
         int[] arr = new int[10];
         int enter;
@@ -41,12 +46,7 @@ public class Main extends GetView implements CheckMore, CheckLess {
                     e.printStackTrace();
                 }
             } else {
-                try {
-                    throw new MyException("Вы ввели не число (или вещественное число)!!");
-                } catch (MyException e) {
-                    e.printStackTrace();
-                    System.exit(0);
-                }
+                throw new MyException("Вы ввели не число (или вещественное число)!!");
             }
         }
         GetView viewArray = new GetView(arr);

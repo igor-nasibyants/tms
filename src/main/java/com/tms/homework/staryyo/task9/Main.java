@@ -1,4 +1,4 @@
-package com.tms.homework.staryyo.Task9;
+package com.tms.homework.staryyo.task9;
 // вырезаем подстроку
 
 public class Main {

@@ -10,53 +10,53 @@ public class Praktikum {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("РЎРєРѕР»СЊРєРѕ РґРµРЅРµРі Сѓ РІР°СЃ РѕСЃС‚Р°Р»РѕСЃСЊ РґРѕ Р·Р°СЂРїР»Р°С‚С‹?");
+        System.out.println("Сколько денег у вас осталось до зарплаты?");
         double moneyBeforeSalary = scanner.nextDouble();
 
-        System.out.println("РЎРєРѕР»СЊРєРѕ РґРЅРµР№ РґРѕ Р·Р°СЂРїР»Р°С‚С‹?");
+        System.out.println("Сколько дней до зарплаты?");
         int daysBeforeSalary = scanner.nextInt();
 
-        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРјР°РЅРґСѓ. Р”РѕСЃС‚СѓРїРЅС‹Рµ РєРѕРјР°РЅРґС‹: convert Рё advice.");
+        System.out.println("Введите команду. Доступные команды: convert и advice.");
         String command = scanner.next();
 
         if (command.equals("convert")) {
 
-            System.out.println("Р’ РєР°РєСѓСЋ РІР°Р»СЋС‚Сѓ С…РѕС‚РёС‚Рµ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ СЂСѓР±Р»Рё? Р”РѕСЃС‚СѓРїРЅС‹Рµ РІР°СЂРёР°РЅС‚С‹: USD, EUR, JPY.");
-            String currency = scanner.next(); // РЎС‡РёС‚Р°Р№С‚Рµ СЌС‚Рѕ Р·РЅР°С‡РµРЅРёРµ СЃ РїРѕРјРѕС‰СЊСЋ scanner
+            System.out.println("В какую валюту хотите конвертировать рубли? Доступные варианты: USD, EUR, JPY.");
+            String currency = scanner.next(); // Считайте это значение с помощью scanner
             if (currency.equals("USD")) {
-                System.out.println("Р’Р°С€Рё СЃР±РµСЂРµР¶РµРЅРёСЏ РІ РґРѕР»Р»Р°СЂР°С…: " + moneyBeforeSalary / rateUSD);
+                System.out.println("Ваши сбережения в долларах: " + moneyBeforeSalary / rateUSD);
             } else if (currency.equals("EUR")) {
-                System.out.println("Р’Р°С€Рё СЃР±РµСЂРµР¶РµРЅРёСЏ РІ РµРІСЂРѕ: " + moneyBeforeSalary / rateEUR);
+                System.out.println("Ваши сбережения в евро: " + moneyBeforeSalary / rateEUR);
             } else if (currency.equals("JPY")) {
-                System.out.println("Р’Р°С€Рё СЃР±РµСЂРµР¶РµРЅРёСЏ РІ РёРµРЅР°С…: " + moneyBeforeSalary / rateJPY);
+                System.out.println("Ваши сбережения в иенах: " + moneyBeforeSalary / rateJPY);
             } else {
-                System.out.println("Р’Р°Р»СЋС‚Р° РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ.");
+                System.out.println("Валюта не поддерживается.");
             }
 
         } else if (command.equals("advice")) {
             if (moneyBeforeSalary < 3000) {
-                System.out.println("РЎРµРіРѕРґРЅСЏ Р»СѓС‡С€Рµ РїРѕРµСЃС‚СЊ РґРѕРјР°. Р­РєРѕРЅРѕРјСЊС‚Рµ, Рё РІС‹ РґРѕС‚СЏРЅРµС‚Рµ РґРѕ Р·Р°СЂРїР»Р°С‚С‹!");
+                System.out.println("Сегодня лучше поесть дома. Экономьте, и вы дотянете до зарплаты!");
             } else if (moneyBeforeSalary < 10000) {
                 if (daysBeforeSalary < 10) {
-                    System.out.println("РћРєРµР№, РїРѕСЂР° РІ РњР°РєРґР°Рє!");
+                    System.out.println("Окей, пора в Макдак!");
                 } else {
-                    System.out.println("РЎРµРіРѕРґРЅСЏ Р»СѓС‡С€Рµ РїРѕРµСЃС‚СЊ РґРѕРјР°. Р­РєРѕРЅРѕРјСЊС‚Рµ, Рё РІС‹ РґРѕС‚СЏРЅРµС‚Рµ РґРѕ Р·Р°СЂРїР»Р°С‚С‹!");
+                    System.out.println("Сегодня лучше поесть дома. Экономьте, и вы дотянете до зарплаты!");
                 }
             } else if (moneyBeforeSalary < 30000) {
                 if (daysBeforeSalary < 10) {
-                    System.out.println("РќРµРїР»РѕС…Рѕ! РџСЂРёРєСѓРїРёС‚Рµ РґРѕР»Р»Р°СЂРѕРІ Рё Р·Р°Р№РґРёС‚Рµ РїРѕСѓР¶РёРЅР°С‚СЊ РІ РєР»Р°СЃСЃРЅРѕРµ РјРµСЃС‚Рѕ. :)");
+                    System.out.println("Неплохо! Прикупите долларов и зайдите поужинать в классное место. :)");
                 } else {
-                    System.out.println("РћРєРµР№, РїРѕСЂР° РІ РњР°РєРґР°Рє!");
+                    System.out.println("Окей, пора в Макдак!");
                 }
             } else {
                 if (daysBeforeSalary < 10) {
-                    System.out.println("РћС‚Р»РёС‡РЅРѕ! Р—Р°РєР°Р·С‹РІР°Р№С‚Рµ РєСЂР°Р±РѕРІ!");
+                    System.out.println("Отлично! Заказывайте крабов!");
                 } else {
-                    System.out.println("РќРµРїР»РѕС…Рѕ! РџСЂРёРєСѓРїРёС‚Рµ РґРѕР»Р»Р°СЂРѕРІ Рё Р·Р°Р№РґРёС‚Рµ РїРѕСѓР¶РёРЅР°С‚СЊ РІ РєР»Р°СЃСЃРЅРѕРµ РјРµСЃС‚Рѕ. :)");
+                    System.out.println("Неплохо! Прикупите долларов и зайдите поужинать в классное место. :)");
                 }
             }
         } else {
-            System.out.println("РР·РІРёРЅРёС‚Рµ, С‚Р°РєРѕР№ РєРѕРјР°РЅРґС‹ РїРѕРєР° РЅРµС‚.");
+            System.out.println("Извините, такой команды пока нет.");
         }
     }
 }
