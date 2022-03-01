@@ -10,7 +10,7 @@ public class FileExample {
     }
 
     private static void printDirList() {
-        File path = new File("src\\.");
+        File path = new File("src\\main\\java\\com\\tms\\homework");
         String[] list = path.list();
         Arrays.sort(list, String.CASE_INSENSITIVE_ORDER);
         for (String f : list) {
