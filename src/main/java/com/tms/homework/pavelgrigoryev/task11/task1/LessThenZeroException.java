@@ -1,4 +1,4 @@
-package com.tms.homework.pavelgrigoryev.task11.firsttask;
+package com.tms.homework.pavelgrigoryev.task11.task1;
 
 public class LessThenZeroException extends Exception{
 

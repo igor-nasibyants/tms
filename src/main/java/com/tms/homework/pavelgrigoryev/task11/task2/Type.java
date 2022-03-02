@@ -1,4 +1,4 @@
-package com.tms.homework.pavelgrigoryev.task11.secondtask;
+package com.tms.homework.pavelgrigoryev.task11.task2;
 
 public enum Type {
     SEAWEED, MOSSES, FERNS, CONIFEROUS, FLOWERING;

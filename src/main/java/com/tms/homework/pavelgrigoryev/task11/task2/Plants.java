@@ -1,4 +1,4 @@
-package com.tms.homework.pavelgrigoryev.task11.secondtask;
+package com.tms.homework.pavelgrigoryev.task11.task2;
 
 /*2. Create a class Plants, which includes fields int size, Color - color
         and Type - type, and constructor where these fields are initialized.

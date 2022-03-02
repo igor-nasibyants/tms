@@ -1,4 +1,4 @@
-package com.tms.homework.pavelgrigoryev.task11.thirdtask;
+package com.tms.homework.pavelgrigoryev.task11.task3;
 
 public class ThisIsNotADoubleException extends Exception{
     public ThisIsNotADoubleException(String message) {

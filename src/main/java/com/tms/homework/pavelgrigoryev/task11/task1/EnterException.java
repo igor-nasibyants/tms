@@ -1,4 +1,4 @@
-package com.tms.homework.pavelgrigoryev.task11.firsttask;
+package com.tms.homework.pavelgrigoryev.task11.task1;
 
 /* 1. Create a method for calculating the area of a rectangle int
 squareRectangle (int a, int b), which should throw an

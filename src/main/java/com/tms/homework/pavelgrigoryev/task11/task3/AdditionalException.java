@@ -1,4 +1,4 @@
-package com.tms.homework.pavelgrigoryev.task11.thirdtask;
+package com.tms.homework.pavelgrigoryev.task11.task3;
 
 /*• Create method div(), which calculates the dividing of two double
         numbers. In main method input 2 double numbers and call this
