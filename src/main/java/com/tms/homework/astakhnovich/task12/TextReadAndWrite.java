@@ -2,7 +2,7 @@ package com.tms.homework.astakhnovich.task12;
 
 import java.io.*;
 
-public class TextReadAndWrite {
+public class TextReadAndWrite{
     private String text;
     private StringBuilder newText = new StringBuilder();
 
