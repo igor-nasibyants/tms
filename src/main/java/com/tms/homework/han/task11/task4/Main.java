@@ -27,7 +27,7 @@ public class Main extends GetView implements CheckMore, CheckLess {
         int[] arr = new int[10];
         int enter;
         for (int i = 0; i < arr.length; ) {
-            System.out.println("Р’РІРµРґРёС‚Рµ " + (i + 1) + "С†РµР»РѕРµ С‡РёСЃР»Рѕ [" + start + "..." + end + "]:");
+            System.out.println("Введите " + (i + 1) + " целое число [" + start + "..." + end + "]:");
             if (scanner.hasNextInt()) {
                 enter = scanner.nextInt();
                 if (enter >= start && enter <= end) {
@@ -42,7 +42,7 @@ public class Main extends GetView implements CheckMore, CheckLess {
                 }
             } else {
                 try {
-                    throw new MyException("Р’С‹ РІРІРµР»Рё РЅРµ С‡РёСЃР»Рѕ (РёР»Рё РІРµС‰РµСЃС‚РІРµРЅРЅРѕРµ С‡РёСЃР»Рѕ)!!");
+                    throw new MyException("Вы ввели не число (или вещественное число)!!");
                 } catch (MyException e) {
                     e.printStackTrace();
                     System.exit(0);
@@ -50,6 +50,6 @@ public class Main extends GetView implements CheckMore, CheckLess {
             }
         }
         GetView viewArray = new GetView(arr);
-        System.out.println("Р РµР·СѓР»СЊС‚Р°С‚: " + viewArray);
+        System.out.println("Результат: " + viewArray);
     }
 }
