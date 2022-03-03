@@ -16,6 +16,30 @@ public final class Hero extends Essense implements Jumpable{
         this.magicEndurance = magicEndurance;
     }
 
+    @Override
+    public void moveLeft() {
+        super.moveLeft();
+    }
+
+    @Override
+    public void moveRight() {
+        super.moveRight();
+    }
+
+    @Override
+    public void moveUp() {
+        super.moveUp();
+    }
+
+    @Override
+    public void moveDown() {
+        super.moveDown();
+    }
+
+    @Override
+    public void attack() {
+        super.attack();
+    }
 
     @Override
     public void jump() {

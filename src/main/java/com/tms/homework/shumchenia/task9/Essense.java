@@ -77,8 +77,7 @@ public abstract class Essense implements Moveable,Attackable{
     }
 
     @Override
-    public void attack()
-    {
+    public void attack()    {
         if (getEndurance() > 9) {
             System.out.println("Атака");
             setEndurance(getEndurance() - 10);

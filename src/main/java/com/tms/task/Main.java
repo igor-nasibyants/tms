@@ -12,6 +12,7 @@ public class Main {
         System.out.println("==================================");
 //        task6();
         System.out.println(Department.PartDepartment.n);
+
         System.out.println("==================================");
     }
 

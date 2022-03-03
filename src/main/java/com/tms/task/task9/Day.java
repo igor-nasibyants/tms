@@ -17,6 +17,14 @@ public enum Day {
         this.number = number;
     }
 
+    public void setValue(String value) {
+        this.value = value;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
     public Day fromValue(String value) {
         Day result = Day.MONDAY;
         for (Day day : Day.values()) {
@@ -26,4 +34,5 @@ public enum Day {
         }
         return result;
     }
+
 }
