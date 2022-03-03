@@ -10,6 +10,7 @@ class DirFilter implements FilenameFilter {
     public DirFilter(String regex) {
         pattern = Pattern.compile(regex);
     }
+
     public DirFilter(File regex) {
         pattern = Pattern.compile(String.valueOf(regex));
     }
