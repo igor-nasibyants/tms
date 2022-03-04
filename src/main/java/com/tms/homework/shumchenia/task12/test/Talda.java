@@ -35,7 +35,8 @@ public class Talda implements Serializable {
         System.out.println("Before: \n" + partizanka);
 
         ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("Talda.out"));
-        out.writeObject(partizanka);
+//        out.writeObject(partizanka);
+        partizanka.writeObject(out);
         out.close();
 
         ObjectInputStream in = new ObjectInputStream(new FileInputStream("Talda.out"));

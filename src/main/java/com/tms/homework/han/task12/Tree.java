@@ -1,7 +1,7 @@
 package com.tms.homework.han.task12;
 
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.util.Arrays;
 
 public class Tree {
     public static void main(String[] args) {
