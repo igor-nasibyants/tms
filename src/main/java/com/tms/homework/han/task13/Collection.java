@@ -10,7 +10,7 @@ public class Collection {
         arrStr.add("second");
         arrStr.add("add");
         arrStr.add("Add");
-        Printable.printList(arrStr);
+        Printable.printCollection(arrStr);
 
         List<Integer> listInt = new LinkedList<>();
         for (int i = 0; i < 10; i++) {
@@ -20,13 +20,14 @@ public class Collection {
         listInt.removeIf(value -> value < 2);
         System.out.println("Filter arr: " + listInt);
         Collections.sort(listInt);
-        Printable.printList(listInt);
+        Printable.printCollection(listInt);
 
         Set<Integer> setInt = new HashSet<>(listInt);
         System.out.println("Set arr: " + setInt);
         setInt.add(2);
         setInt.add(8);
         setInt.add(6);
-        System.out.println("New set arr: " + setInt + "\nHave size: " + setInt.size());
+        setInt.add(0);
+        Printable.printCollection(setInt);
     }
 }
