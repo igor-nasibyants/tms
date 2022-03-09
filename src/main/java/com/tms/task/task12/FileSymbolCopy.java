@@ -4,7 +4,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class FileSymbolCopy {
+public class  FileSymbolCopy {
     public static void main(String args[]) throws IOException {
         FileReader fileIn = null;
         FileWriter fileOut = null;

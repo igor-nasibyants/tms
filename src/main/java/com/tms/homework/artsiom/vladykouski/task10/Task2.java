@@ -1,4 +1,4 @@
-package com.tms.homework.artsiom.vladykouski.task10.task1;
+package com.tms.homework.artsiom.vladykouski.task10;
 
 public class Task2 {
     public static void main (String [] args){
