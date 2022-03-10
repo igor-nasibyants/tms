@@ -22,5 +22,16 @@ public class MyTree {
         System.out.println("TailSet: " + set.tailSet("Japan"));
         System.out.println("FirstElement: " + set.first());
         System.out.println("LastElement: " + set.last());
+
+        animal();
+    }
+    public static void animal(){
+        TreeSet<Animal> animals = new TreeSet<>();
+        animals.add(new Animal("Boa constructor"));
+        animals.add(new Animal("Wolf"));
+        animals.add(new Animal("Dog"));
+        animals.add(new Animal("Tiger"));
+
+        System.out.println(animals);
     }
 }
