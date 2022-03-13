@@ -12,6 +12,7 @@ import com.tms.homework.astakhnovich.task9.TextFormater;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.function.Predicate;
 
 public class Main {
     public static void main(String[] args) {
@@ -47,7 +48,7 @@ public class Main {
 
     public static void task6() {
         Essence monkey1 = new Monkey(20, 60, 4);
-        Essence human = new Human(84, 188, 4, "Nikita", true);
+        Essence human = new Human(84, 188, 4, "Nikita");
         System.out.println(human.toString());
     }
 

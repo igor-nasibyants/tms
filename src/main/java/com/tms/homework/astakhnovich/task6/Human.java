@@ -2,17 +2,10 @@ package com.tms.homework.astakhnovich.task6;
 
 public class Human extends Monkey implements Moveable, Talkable {
     private String name;
-    private boolean conscience;
 
-
-    public Human(Integer weight, Integer height, Integer limbs, String name, boolean conscience) {
+    public Human(Integer weight, Integer height, Integer limbs, String name) {
         super(weight, height, limbs);
         this.name = name;
-        this.conscience = conscience;
-    }
-
-    public boolean isConscience() {
-        return conscience;
     }
 
     @Override
@@ -21,8 +14,11 @@ public class Human extends Monkey implements Moveable, Talkable {
                 "name = " + name +
                 ", weight = " + getWeight() +
                 ", height =" + getHeight() +
-                ", limbs =" + getLimbs() +
-                ", conscience = " + isConscience();
+                ", limbs =" + getLimbs();
+    }
+
+    public String getName() {
+        return name;
     }
 
     @Override
