@@ -6,8 +6,8 @@ import java.io.File;
 public class Text {
     public static void printOut (String[] list){
         Arrays.sort(list, String.CASE_INSENSITIVE_ORDER);
-        for (String f : list) {
-            System.out.println(f);
+        for (String print : list) {
+            System.out.println(print);
         }
     }
 }
