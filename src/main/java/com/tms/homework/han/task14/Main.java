@@ -7,6 +7,12 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("ВсеКотики бай (^˵◕ω◕˵^)");
+        System.out.println(getTime());
+        Catable.buyCat(getMapCats());
+    }
+
+    public static Map<Integer, String> getMapCats() {
         Cat<Integer, String> jula = new Cat<>(10, "Жуля");
         Cat<Integer, String> nik = new Cat<>(15, "Ник");
         Cat<Integer, String> barsik = new Cat<>(4, "Барсик");
@@ -18,13 +24,15 @@ public class Main {
         cats.put(barsik.getAge(), barsik.getName());
         cats.put(laska.getAge(), laska.getName());
         cats.put(orya.getAge(), orya.getName());
-        System.out.println("ВсеКотики бай (^˵◕ω◕˵^)");
+        return cats;
+    }
+
+    public static String getTime() {
         LocalDate dateNow = LocalDate.now();
         LocalTime timeNow = LocalTime.now();
         DateTimeFormatter formatterDate = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         DateTimeFormatter formatterTime = DateTimeFormatter.ofPattern("HH:mm");
-        System.out.println("Вы пришли " + dateNow.format(formatterDate) + " в " + timeNow.format(formatterTime));
-        Catable.buyCat(cats);
+        return "Вы пришли " + dateNow.format(formatterDate) + " в " + timeNow.format(formatterTime);
     }
 }
 
