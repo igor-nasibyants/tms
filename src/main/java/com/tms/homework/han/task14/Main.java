@@ -1,6 +1,7 @@
 package com.tms.homework.han.task14;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -28,11 +29,9 @@ public class Main {
     }
 
     public static String getTime() {
-        LocalDate dateNow = LocalDate.now();
-        LocalTime timeNow = LocalTime.now();
-        DateTimeFormatter formatterDate = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        DateTimeFormatter formatterTime = DateTimeFormatter.ofPattern("HH:mm");
-        return "Вы пришли " + dateNow.format(formatterDate) + " в " + timeNow.format(formatterTime);
+        LocalDateTime dateNow = LocalDateTime.now();
+        DateTimeFormatter formatterDate = DateTimeFormatter.ofPattern("dd.MM.yyyy в HH:mm");
+        return "Вы пришли " + dateNow.format(formatterDate);
     }
 }
 
