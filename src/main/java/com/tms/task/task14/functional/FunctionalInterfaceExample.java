@@ -7,9 +7,9 @@ public class FunctionalInterfaceExample {
         Car audiA3 = new Car("Audi", "A3", Boolean.TRUE, Boolean.FALSE);
 
         printTest(audiA3, Car::getFullDrive);
-        printTest(audiA3, car -> car.getGasEngine());
-        printTest(audiA6, car -> car.getFullDrive());
-        printTest(audiA6, car -> car.getGasEngine());
+        printTest(audiA3, Car::getGasEngine);
+        printTest(audiA6, Car::getFullDrive);
+        printTest(audiA6, Car::getGasEngine);
     }
 
 
