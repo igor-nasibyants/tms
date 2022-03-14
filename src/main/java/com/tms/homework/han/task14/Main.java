@@ -12,7 +12,9 @@ public class Main {
     }
 
     public static TreeSet<Cat> getSetCats() {
-        Comparator<Cat> catComparator = new CatNameComparator().thenComparing(new CatAgeComparator());
+        Comparator<Cat> CatNameComparator = Comparator.comparing(Cat::getName);
+        Comparator<Cat> CatAgeComparator = Comparator.comparing(Cat::getAge);
+        Comparator<Cat> catComparator = CatNameComparator.thenComparing(CatAgeComparator);
         TreeSet<Cat> cats = new TreeSet<>(catComparator);
         cats.add(new Cat(13, "Julya"));
         cats.add(new Cat(15, "Nik"));
