@@ -1,4 +1,4 @@
-package com.tms.homework.pavelgrigoryev.task14;
+package com.tms.homework.pavelgrigoryev.task14.date;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -23,5 +23,8 @@ public class MyLocalDateTime {
         dateTimes.put(4,april);
 
         dateTimes.forEach((number, date) -> System.out.println("Number : " + number + ", Date : " + date));
+        System.out.println();
+        System.out.println("compareTo : " + dayWhenThisWasStarted.compareTo(dayWhenThisWillEnd));
+        System.out.println("isBefore : " + dayWhenThisWasStarted.isBefore(dayWhenThisWillEnd));
     }
 }
