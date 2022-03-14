@@ -1,16 +1,12 @@
 package com.tms.homework.han.task14;
 
-public class Cat<T, E> {
-    private final T age;
-    private final E name;
+public class Cat {
+    private final Integer age;
+    private final String name;
 
-    public Cat(T age, E name) {
+    public Cat(Integer age, String name) {
         this.age = age;
         this.name = name;
-    }
-
-    public Cat() {
-        this(null, null);
     }
 
     @Override
@@ -18,11 +14,11 @@ public class Cat<T, E> {
         return "Cat " + name + " has " + age + " year";
     }
 
-    public T getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public E getName() {
+    public String getName() {
         return name;
     }
 }

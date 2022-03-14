@@ -6,30 +6,29 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("ВсеКотики бай (^˵◕ω◕˵^)");
+        System.out.println("All cats here BY (^˵◕ω◕˵^)");
         System.out.println(getTime());
-        Catable.buyCat(getMapCats());
+        Catable.buyCat(getSetCats());
     }
 
-    public static Map<Integer, String> getMapCats() {
-        Cat<Integer, String> jula = new Cat<>(10, "Жуля");
-        Cat<Integer, String> nik = new Cat<>(15, "Ник");
-        Cat<Integer, String> barsik = new Cat<>(4, "Барсик");
-        Cat<Integer, String> laska = new Cat<>(11, "Ласка");
-        Cat<Integer, String> orya = new Cat<>(3, "Оря");
-        Map<Integer, String> cats = new HashMap<>();
-        cats.put(jula.getAge(), jula.getName());
-        cats.put(nik.getAge(), nik.getName());
-        cats.put(barsik.getAge(), barsik.getName());
-        cats.put(laska.getAge(), laska.getName());
-        cats.put(orya.getAge(), orya.getName());
+    public static TreeSet<Cat> getSetCats() {
+        Comparator<Cat> catComparator = new CatNameComparator().thenComparing(new CatAgeComparator());
+        TreeSet<Cat> cats = new TreeSet<>(catComparator);
+        cats.add(new Cat(13, "Julya"));
+        cats.add(new Cat(15, "Nik"));
+        cats.add(new Cat(1, "Nik"));
+        cats.add(new Cat(10, "Julya"));
+        cats.add(new Cat(4, "Barsik"));
+        cats.add(new Cat(11, "Laska"));
+        cats.add(new Cat(4, "Julya"));
+        cats.add(new Cat(3, "Ori"));
         return cats;
     }
 
     public static String getTime() {
         LocalDateTime dateNow = LocalDateTime.now();
-        DateTimeFormatter formatterDate = DateTimeFormatter.ofPattern("dd.MM.yyyy в HH:mm");
-        return "Вы пришли " + dateNow.format(formatterDate);
+        DateTimeFormatter formatterDate = DateTimeFormatter.ofPattern("dd.MM.yyyy - HH:mm");
+        return "You've come: " + dateNow.format(formatterDate);
     }
 }
 
