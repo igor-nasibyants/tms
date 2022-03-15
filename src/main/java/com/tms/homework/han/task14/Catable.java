@@ -3,7 +3,7 @@ package com.tms.homework.han.task14;
 import java.util.Scanner;
 import java.util.TreeSet;
 
-public interface Catable extends ChangeNameYear {
+public interface Catable {
     static void buyCat(TreeSet<Cat> cats) {
         Scanner scanner = new Scanner(System.in);
         boolean isRepeat = true;
