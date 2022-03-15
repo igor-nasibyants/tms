@@ -1,6 +1,6 @@
 package com.tms.homework.astakhnovich.task6;
 
-public class Human extends Monkey implements Moveable, Talkable {
+public class Human extends Monkey implements Moveable, Talkable, Comparable<Human> {
     private String name;
 
     public Human(Integer weight, Integer height, Integer limbs, String name) {
@@ -49,5 +49,14 @@ public class Human extends Monkey implements Moveable, Talkable {
     @Override
     public void whisper() {
 
+    }
+
+    @Override
+    public int compareTo(Human o) {
+        if (this.getName().equals(o.getName())) {
+            return this.getHeight() - o.getHeight();
+        } else {
+            return this.getName().compareTo(o.getName());
+        }
     }
 }

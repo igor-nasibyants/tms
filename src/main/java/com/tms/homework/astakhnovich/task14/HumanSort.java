@@ -30,27 +30,18 @@ public class HumanSort {
         humanList.add(Serega1);
         humanList.add(Serega2);
         humanList.add(Vadim);
-        humanList.sort(new Comparator<Human>() {
-            @Override
-            public int compare(Human h1, Human h2) {
-                if (h1.getName().equals(h2.getName())) {
-                    return h1.getWeight().compareTo(h2.getWeight());
-                } else {
-                    return h1.getName().compareTo(h2.getName());
-                }
+        humanList.sort((h1, h2) -> {
+            if (h1.getName().equals(h2.getName())) {
+                return h1.getWeight().compareTo(h2.getWeight());
+            } else {
+                return h1.getName().compareTo(h2.getName());
             }
         });
 
         humanList.forEach(System.out::println);
         System.out.println();
 
-        Collections.sort(humanList, (h1, h2) -> {
-            if (h1.getName().equals(h2.getName())) {
-                return h1.getHeight() - h2.getHeight();
-            } else {
-                return h1.getName().compareTo(h2.getName());
-            }
-        });
+        Collections.sort(humanList, Human::compareTo);
         humanList.forEach(System.out::println);
     }
 }
