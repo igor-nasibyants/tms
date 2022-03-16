@@ -1,8 +1,6 @@
 package com.tms.homework.han.task14;
 
-import com.tms.homework.han.task15.AgeEndChangeble;
-
-public class Cat implements AgeEndChangeble {
+public class Cat {
     private final Integer age;
     private final String name;
 

@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("All cats here BY (^˵◕ω◕˵^)");
         System.out.println(getTime());
-        Catable.buyCat(getSetCats());
+        getNeedCats(getSetCats());
     }
 
     public static TreeSet<Cat> getSetCats() {
@@ -31,6 +31,40 @@ public class Main {
         LocalDateTime dateNow = LocalDateTime.now();
         DateTimeFormatter formatterDate = DateTimeFormatter.ofPattern("dd.MM.yyyy - HH:mm");
         return "You've come: " + dateNow.format(formatterDate);
+    }
+
+    public static void getNeedCats(TreeSet<Cat> cats) {
+        Scanner scanner = new Scanner(System.in);
+        boolean isRepeat = true;
+        while (isRepeat) {
+            System.out.println("Will you buy a cat? / Будете покупать котика? (Yes or No)");
+            String willBuyCat = scanner.nextLine();
+            if (willBuyCat.equalsIgnoreCase("Yes")) {
+                isRepeat = false;
+                System.out.println("Enter minimum age of the cat / Введите минимальный возраст котика");
+                int minAge = scanner.nextInt();
+                System.out.println("Cats for You (^˵◕ω◕˵^)");
+                cats.forEach(cat -> {
+                    if (cat.getAge() >= minAge) {
+                        changeNameYear(cat.getAge(), cat.getName());
+                    }
+                });
+            } else if (willBuyCat.equalsIgnoreCase("No")) {
+                System.out.println("Just look");
+                break;
+            }
+        }
+    }
+
+    public static void changeNameYear(Integer age, String name) {
+
+        if (age % 10 == 1 && age != 11) {
+            System.out.println("Котик " + name + ", " + age + " год / Cat " + name + ", " + age + " years old");
+        } else if (age % 10 > 1 && age < 5) {
+            System.out.println("Котик " + name + ", " + age + " года / Cat " + name + ", " + age + " years old");
+        } else {
+            System.out.println("Котик " + name + ", " + age + " лет / Cat " + name + ", " + age + " years old");
+        }
     }
 }
 
