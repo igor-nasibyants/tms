@@ -1,16 +1,39 @@
 package com.tms.homework.han.task15;
 
+import com.tms.homework.han.task14.Cat;
+
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import static com.tms.homework.han.task14.Main.getSetCats;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("NEW КотикиТут бай (^˵◕ω◕˵^)");
+        Map<Integer, String> catsMap = getSetCats().stream()
+                .filter(cat -> cat.getAge() >= 0 && cat.getAge() < 20)
+                .collect(Collectors.toMap(Cat::getAge, Cat::getName, (oldValue, newValue) -> newValue));
+        catsMap.forEach((k, v) -> System.out.println("Котику " + v + ", " + k + " " + changeEndOfAgeWord(k)));
+        System.out.println("==========================================================");
+
+        for (Map.Entry<Integer, String> cat : catsMap.entrySet()) {
+            System.out.println("Котику " + cat.getValue() + ", " + cat.getKey() + " " + changeEndOfAgeWord(cat.getKey()));
+        }
+        System.out.println("==========================================================");
+
         getSetCats().stream()
-                .filter(cat -> cat.getAge() > 0)
-                .collect(Collectors.toSet())
+                .filter(cat -> cat.getAge() >= 0 && cat.getAge() < 20)
+//                .collect(Collectors.toSet())
                 .forEach(cat -> System.out.println("Котику " + cat.getName() + ", " + cat.getAge() + " "
-                        + cat.changeEndOfAgeWord(cat.getAge())));
+                        + changeEndOfAgeWord(cat.getAge())));
+    }
+
+    public static String changeEndOfAgeWord(Integer age) {
+        if (age % 10 == 1 && age != 11) {
+            return "год";
+        } else if (age % 10 > 1 && age < 5) {
+            return "года";
+        } else {
+            return "лет";
+        }
     }
 }
