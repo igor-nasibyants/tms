@@ -11,6 +11,6 @@ public class Main {
                 .filter(cat -> cat.getAge() > 0)
                 .collect(Collectors.toSet())
                 .forEach(cat -> System.out.println("Котику " + cat.getName() + ", " + cat.getAge() + " "
-                        + ChangeEndWordAge.change(cat.getAge())));
+                        + cat.changeEndOfAgeWord(cat.getAge())));
     }
 }
