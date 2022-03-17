@@ -19,7 +19,7 @@ public class Main {
         cats.add(new Cat(13, "Julya"));
         cats.add(new Cat(15, "Nik"));
         cats.add(new Cat(1, "Nik"));
-        cats.add(new Cat(1, "Nik"));
+        cats.add(new Cat(1, "Nike"));
         cats.add(new Cat(10, "Julya"));
         cats.add(new Cat(4, "Barsik"));
         cats.add(new Cat());
