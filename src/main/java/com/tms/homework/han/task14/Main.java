@@ -16,16 +16,16 @@ public class Main {
         Comparator<Cat> CatAgeComparator = Comparator.comparing(Cat::getAge);
         Comparator<Cat> catComparator = CatNameComparator.thenComparing(CatAgeComparator);
         TreeSet<Cat> cats = new TreeSet<>(catComparator);
-        cats.add(new Cat(13, "Julya"));
-        cats.add(new Cat(15, "Nik"));
-        cats.add(new Cat(1, "Nik"));
-        cats.add(new Cat(1, "Nike"));
-        cats.add(new Cat(10, "Julya"));
-        cats.add(new Cat(4, "Barsik"));
+        cats.add(new Cat(1, 13, "Julya"));
+        cats.add(new Cat(2, 15, "Nik"));
+        cats.add(new Cat(3, 1, "Nik"));
+        cats.add(new Cat(4, 1, "Nike"));
+        cats.add(new Cat(5, 10, "Julya"));
+        cats.add(new Cat(6, 4, "Barsik"));
         cats.add(new Cat());
-        cats.add(new Cat(11, "Laska"));
-        cats.add(new Cat(4, "Julya"));
-        cats.add(new Cat(3, "Ori"));
+        cats.add(new Cat(7, 11, "Laska"));
+        cats.add(new Cat(8, 4, "Julya"));
+        cats.add(new Cat(9, 3, "Ori"));
         return cats;
     }
 

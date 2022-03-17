@@ -13,7 +13,7 @@ public class Main {
         Map<Integer, String> catsMap = new HashMap<>(30, 1);
         catsMap.putAll(getSetCats().stream()
                 .filter(cat -> cat.getAge() >= 0 && cat.getAge() < 20)
-                .collect(Collectors.toMap(Cat::getAge, Cat::getName, (oldValue, newValue) -> newValue)));
+                .collect(Collectors.toMap(Cat::getId, Cat::getName, (oldValue, newValue) -> newValue)));
         catsMap.forEach((k, v) -> System.out.println("Котику " + v + ", " + k + " " + changeEndOfAgeWord(k)));
         System.out.println("==========================================================");
 
@@ -25,6 +25,7 @@ public class Main {
         getSetCats().stream()
                 .filter(cat -> cat.getAge() >= 0 && cat.getAge() < 20)
                 .collect(Collectors.toSet())
+                .stream().sorted()
                 .forEach(cat -> System.out.println("Котику " + cat.getName() + ", " + cat.getAge() + " "
                         + changeEndOfAgeWord(cat.getAge())));
     }
