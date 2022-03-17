@@ -1,28 +1,20 @@
 package com.tms.homework.asilius1.task7.data.documents;
+import java.time.LocalDate;
 
-
-import com.tms.homework.asilius1.task7.data.Months;
 
 abstract public class Document {
 
     private String seriesOfDocument;
     private Integer numberOfDocument;
-    private Integer issueNumber;
-    private Months months;
-    private Integer yearOfIssue;
     private Integer yearOfExpiry;
+    private Dates dateOfBirth;
     private String nationality;
 
-    public Document(String seriesOfDocument, Integer numberOfDocument, Integer issueNumber,
-                    Months months, Integer yearofIssue, Integer yearofExpiry,
-                    String nationality) {
+    public Document(String seriesOfDocument, Integer numberOfDocument, Integer yearOfExpiry, Dates dateOfBirth) {
         this.seriesOfDocument = seriesOfDocument;
         this.numberOfDocument = numberOfDocument;
-        this.issueNumber = issueNumber;
-        this.months = months;
-        this.yearOfIssue = yearofIssue;
-        this.yearOfExpiry = yearofExpiry;
-        this.nationality = nationality;
+        this.yearOfExpiry = yearOfExpiry;
+        this.dateOfBirth = dateOfBirth;
     }
 
     public String getSeriesOfDocument() {
@@ -41,30 +33,6 @@ abstract public class Document {
         this.numberOfDocument = numberOfDocument;
     }
 
-    public Integer getIssueNumber() {
-        return issueNumber;
-    }
-
-    public void setIssueNumber(Integer issueNumber) {
-        this.issueNumber = issueNumber;
-    }
-
-    public Months getMonths() {
-        return months;
-    }
-
-    public void setMonths(Months months) {
-        this.months = months;
-    }
-
-    public Integer getYearOfIssue() {
-        return yearOfIssue;
-    }
-
-    public void setYearOfIssue(Integer yearOfIssue) {
-        this.yearOfIssue = yearOfIssue;
-    }
-
     public Integer getYearOfExpiry() {
         return yearOfExpiry;
     }
@@ -79,5 +47,16 @@ abstract public class Document {
 
     public void setNationality(String nationality) {
         this.nationality = nationality;
+    }
+
+    @Override
+    public String toString() {
+        return "Document{" +
+                "seriesOfDocument='" + seriesOfDocument + '\'' +
+                ", numberOfDocument=" + numberOfDocument +
+                ", yearOfExpiry=" + yearOfExpiry +
+                ", dateOfBirth=" + dateOfBirth +
+                ", nationality='" + nationality + '\'' +
+                '}';
     }
 }

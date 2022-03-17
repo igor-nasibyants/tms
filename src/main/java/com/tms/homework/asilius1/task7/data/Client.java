@@ -9,8 +9,8 @@ public class Client extends Person implements Checkable, Readable {
 
     private static final Scanner str = new Scanner(System.in);
 
-    public Client(String firstName, String secondName, Integer birthNumber, Months months, Integer yearOfBirth, Sex sex) {
-        super(firstName, secondName, birthNumber, months, yearOfBirth, sex);
+    public Client(String firstName, String secondName, Integer birthNumber,  Integer yearOfBirth, Sex sex) {
+        super(firstName, secondName, birthNumber, yearOfBirth, sex);
     }
 
     @Override
