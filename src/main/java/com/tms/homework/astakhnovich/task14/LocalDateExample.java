@@ -1,10 +1,8 @@
 package com.tms.homework.astakhnovich.task14;
 
-
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class LocalDateExample {
     private LocalTime presentTime;
@@ -12,7 +10,7 @@ public class LocalDateExample {
     public static void main(String[] args) {
         LocalDateExample l = new LocalDateExample();
 //        l.localTimeExample();
-            l.cycleForTenSeconds();
+//        l.cycleForTenSeconds();
     }
 
     public void localTimeExample(){
