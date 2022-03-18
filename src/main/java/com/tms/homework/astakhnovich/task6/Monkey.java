@@ -8,6 +8,10 @@ public class Monkey extends Essence {
         this.limbs = limbs;
     }
 
+    public Monkey(Integer weight, Integer height){
+        super(weight, height);
+    }
+
     public Integer getLimbs() {
         return limbs;
     }
