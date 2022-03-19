@@ -4,15 +4,17 @@ public class Human extends Monkey implements Moveable, Talkable, Comparable<Huma
     private String name;
     private Integer age;
     private Integer id = 0;
+    private Sex sex;
 
     public Human(Integer weight, Integer height, Integer limbs, String name) {
         super(weight, height, limbs);
         this.name = name;
     }
-    public Human(Integer weight, Integer height,  String name, Integer age,  Integer id) {
+    public Human(Integer weight, Integer height, String name, Integer age, Sex sex, Integer id) {
         super(weight, height);
         this.name = name;
         this.age = age;
+        this.sex = sex;
         this.id = id;
     }
 
@@ -20,8 +22,10 @@ public class Human extends Monkey implements Moveable, Talkable, Comparable<Huma
     @Override
     public String toString() {
         return "Human" +
-                " name='" + name + '\'' +
-                ", age=" + age;
+                " name = " + name +
+                ", age = " + age +
+                " weight = " + getWeight() +
+                ", height = " + getHeight();
     }
 
     public String getName() {
@@ -34,6 +38,26 @@ public class Human extends Monkey implements Moveable, Talkable, Comparable<Huma
 
     public int getId() {
         return id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Sex getSex() {
+        return sex;
+    }
+
+    public void setSex(Sex sex) {
+        this.sex = sex;
     }
 
     @Override
@@ -69,7 +93,7 @@ public class Human extends Monkey implements Moveable, Talkable, Comparable<Huma
     @Override
     public int compareTo(Human o) {
         if (this.getName().equals(o.getName())) {
-            return this.getHeight() - o.getHeight();
+            return this.getAge() - o.getAge();
         } else {
             return this.getName().compareTo(o.getName());
         }
