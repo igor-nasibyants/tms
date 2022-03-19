@@ -20,6 +20,9 @@ public class Houses implements Comparable<Houses>{
     public Integer getId() {
         return id;
     }
+    public Houses (){
+        this(null,0,null,null,null);
+    }
 
     public double getHeight() {
         return height;

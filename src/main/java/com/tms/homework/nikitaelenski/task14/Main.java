@@ -1,8 +1,6 @@
 package com.tms.homework.nikitaelenski.task14;
 
-
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -15,7 +13,7 @@ public class Main {
        housesList.add(new Houses(3 , 100.0 ,14 , 71,"ул.Славинского"  ));
        housesList.add(new Houses(4 , 100.4 ,14 , 44,"ул.Волшебная"  ));
        housesList.add(new Houses(5 , 77.77 ,11 , 71,"ул.Славинского"  ));
-       housesList.add(new Houses(6 , 99 ,13 , 70,"Переулок.святогоАнтона"));
+       housesList.add(new Houses(6 , 99 ,13 , 70,"Переулок.Святого Антона"));
                 housesList.stream()
                 .sorted(Houses::compareTo)
                 .forEach(System.out::println);
