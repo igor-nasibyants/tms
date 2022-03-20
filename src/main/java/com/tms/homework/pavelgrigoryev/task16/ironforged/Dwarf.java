@@ -1,4 +1,4 @@
-package com.tms.homework.pavelgrigoryev.task16;
+package com.tms.homework.pavelgrigoryev.task16.ironforged;
 
 public class Dwarf {
     private final String firstName;
@@ -37,12 +37,12 @@ public class Dwarf {
 
     @Override
     public String toString() {
-        return "Dwarf{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", id=" + id +
-                ", age=" + age +
-                ", role=" + role +
+        return "Дворф {" +
+                "Кличка ='" + firstName + '\'' +
+                ", Фамилия ='" + lastName + '\'' +
+                ", айди =" + id +
+                ", возраст =" + age +
+                ",  спек =" + role +
                 '}';
     }
 }
