@@ -8,10 +8,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Heroes Odet = new Heroes("Odett", "6", "Easy");
-        Heroes Zask = new Heroes("Zask", "5", "Medium");
-        Heroes Aldous = new Heroes("Aldous", "9", "Hard");
-        Heroes Lancelot = new Heroes("Lancelot", "10", "Hard");
+        Heroes Odet = new Heroes("Odett", 6, "Easy");
+        Heroes Zask = new Heroes("Zask", 5, "Medium");
+        Heroes Aldous = new Heroes("Aldous", 9, "Hard");
+        Heroes Lancelot = new Heroes("Lancelot", 10, "Hard");
 
 
 

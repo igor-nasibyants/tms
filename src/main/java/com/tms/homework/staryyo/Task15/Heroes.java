@@ -1,6 +1,7 @@
 package com.tms.homework.staryyo.Task15;
 import java.util.Objects;
-import java.util.Optional;
+
+import static java.lang.Integer.*;
 
 
 public class Heroes {
