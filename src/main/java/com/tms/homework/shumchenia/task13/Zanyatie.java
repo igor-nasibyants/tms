@@ -29,6 +29,9 @@ public class Zanyatie {
         System.out.println(hashMap.get(1));
         System.out.println(hashMap.get(2));
         System.out.println(hashMap.containsKey(1));
+        for(Map.Entry<Integer,Person> entry:hashMap.entrySet()){
+            System.out.println(entry.getKey()+" "+entry.getValue() );
+        }
 
     }
 
