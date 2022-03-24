@@ -118,7 +118,7 @@ public class Streams {
         sep();
     }
 
-    public void sep() {
+    public static void sep() {
         System.out.println("===============================O==(--------|||---------)==O===================================");
     }
 }
