@@ -21,4 +21,6 @@ public class Regex {
         Matcher m = p.matcher(date);
         System.out.println(m.replaceAll("$1-$2-$3"));
     }
+
+    //XSLT - почитать, XSD, XPath, StAX, JAXB, Marshaller - почитать, Jackson Mapper
 }
