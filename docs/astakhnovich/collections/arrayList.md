@@ -41,4 +41,4 @@
 - позволяет хранить любые значения в том числе и null;
 - не синхронизирован.
 
-> **[ArrayList hubr ](https://habr.com/ru/post/128269/)**
+> **[ArrayList habr ](https://habr.com/ru/post/128269/)**
