@@ -1,0 +1,4 @@
+<result xmlns="http://foobar.com">
+    <code>NOK</code>
+    <description>No book found</description>
+</result>

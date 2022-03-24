@@ -1,0 +1,17 @@
+<result xmlns="http://foobar.com">
+    <code>OK</code>
+    <books>
+        <book>
+            <bookId>ISBN01213209</bookId>
+            <author>Scott Mayers</author>
+            <title>Effective C++</title>
+            <cover>effective-cpp.png</cover>
+        </book>
+        <book>
+            <bookId>ISBN0993209</bookId>
+            <author>Joshua Bloch</author>
+            <title>Effective Java</title>
+            <cover>effective-java.png</cover>
+        </book>
+    </books>
+</result>

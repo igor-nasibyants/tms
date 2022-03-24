@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recipe name="Пицца" preptime="5" cooktime="180">
+    <title>Тесто для пиццы</title>
+    <ingredient amount="3" unit="стакан">Вода теплая</ingredient>
+    <ingredient amount="0.25" unit="грамм">Мука</ingredient>
+    <ingredient amount="1.5" unit="грамм">Дрожжи сухие</ingredient>
+    <ingredient amount="1" unit="чайная ложка">Оливковое масло</ingredient>
+    <instructions>
+        <step>Муку просеять в большую миску и сделать внутри углубление - кратер.</step>
+        <step>Всыпать в углубление дрожжи и добавить немного теплой воды. дать постоять 5-7 минут, чтобы дрожжи ожили и начали работу.</step>
+        <!-- <step>Почитать вчерашнюю газету.</step> - это сомнительный шаг... -->
+        <step>Добавить соль и оливковое масло и начать размешивать вилкой, постепенно добавляя теплую воду и замешивая тесто.</step>
+    </instructions>
+</recipe>

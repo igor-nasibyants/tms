@@ -1,0 +1,9 @@
+<result xmlns="http://foobar.com">
+    <code>OK</code>
+    <book>
+        <bookId>ISBN0993209</bookId>
+        <author>Joshua Bloch</author>
+        <title>Effective Java</title>
+        <cover>effective-java.png</cover>
+    </book>
+</result>

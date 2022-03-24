@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://foobar.com"
+           xmlns:tns= "http://foobar.com"
+           elementFormDefault="qualified">
+
+    <xs:simpleType name="codeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="OK"/>
+            <xs:enumeration value="NOK"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="bookType">
+        <xs:sequence>
+            <xs:element name="bookId" type="xs:string"/>
+            <xs:element name="author" type="xs:string"/>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="cover" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="bookListType">
+        <xs:sequence>
+            <xs:element name="book" type="tns:bookType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:element name="result">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="code" type="tns:codeType" minOccurs="1" maxOccurs="1" />
+                <xs:choice>
+                    <xs:element name="bookList"
+                                type="tns:bookListType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="book" type="tns:bookType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="bookId" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
