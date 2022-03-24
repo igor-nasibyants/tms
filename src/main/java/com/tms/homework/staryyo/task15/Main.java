@@ -1,8 +1,6 @@
-package com.tms.homework.staryyo.Task15;
+package com.tms.homework.staryyo.task15;
 
 
-import java.util.ArrayList;
-import java. util.List;
 import java.util.Scanner;
 
 public class Main {
