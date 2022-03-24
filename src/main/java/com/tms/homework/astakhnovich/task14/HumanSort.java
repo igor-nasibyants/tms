@@ -30,23 +30,23 @@ public class HumanSort {
         humanList.add(new Human(56, 178, "Petya", 85,  Sex.MAN,13));
         humanList.add(new Human(76, 168, "Grisha", 14, Sex.MAN, 14));
         humanList.add(new Human(49, 196, "Misha", 216, Sex.MAN, 15));
+        humanList.add(new Human(50, 160, "Masha", 26, Sex.WOMAN, 16));
+        humanList.add(new Human(62, 176, "Katya", 21, Sex.WOMAN, 17));
+        humanList.add(new Human(45, 165, "Anna", 17, Sex.WOMAN, 18));
+        humanList.add(new Human(53, 150, "Lana", 32, Sex.WOMAN, 19));
+        humanList.add(new Human(60, 170, "Masha", 61, Sex.WOMAN, 20));
 
         humanList.stream()
                 .sorted(Human::compareTo)
                 .forEach(System.out::println);
-
-//        humanList.sort(Human::compareTo);
-//        humanList.forEach(System.out::println);
     }
 
     public void humanListToMap(){
         HashMap<Integer, String> hashMap = new HashMap<>(humanList.stream()
-                .filter((a) -> (a.getAge() > 18 && a.getAge() < 65))
-                .filter((a) -> (a.getWeight() > 60 && a.getWeight() < 90))
-                .collect(Collectors.toMap(Human::getId, Human::getName)));
-        //как добавить объект в значение
-        //про filter
+                .filter((a) -> (a.getSex() == Sex.MAN) && (a.getAge() > 18 && a.getAge() < 65))
+                .filter((a) -> (a.getWeight() > 50 && a.getWeight() < 90))
+                .collect(Collectors.toMap(Human::getId, Human::toString)));
 
-        hashMap.forEach((k, v) -> System.out.println("id: " + k + "; name: " + v));
+        hashMap.forEach((k, v) -> System.out.println("id: " + k + ";  " + v));
     }
 }
