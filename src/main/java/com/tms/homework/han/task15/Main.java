@@ -14,6 +14,10 @@ public class Main {
         catsMap.putAll(getSetCats().stream()
                 .filter(cat -> cat.getAge() >= 0 && cat.getAge() < 20)
                 .collect(Collectors.toMap(Cat::getId, Cat::getName, (oldValue, newValue) -> newValue)));
+        //Это???
+        Cat n = new Cat(40, 10, "asas");
+        catsMap.put(n.getId(), n.getName());
+        //////////////////////////////
         catsMap.forEach((k, v) -> System.out.println("Котику " + v + ", " + k + " " + changeEndOfAgeWord(k)));
         System.out.println("==========================================================");
 
