@@ -1,8 +1,8 @@
 package com.tms.homework.han.task10.task4;
 
-import com.tms.homework.han.task10.Task3;
+import static com.tms.homework.han.task10.Task3.isPalindrome;
 
-public class TextFormatter extends Task3 implements Formatable {
+public class TextFormatter {
     public static String getNumberLines(String str) {
         StringBuilder stringBuilder = new StringBuilder();
         String[] arrStr = str.split("\\. ");
@@ -24,6 +24,8 @@ public class TextFormatter extends Task3 implements Formatable {
             }
         }
         System.out.println(stringBuilder);
-        return "Количество слов в строке: " + Formatable.formatting(str).split(" ").length;
+        return "Количество слов в строке: " + str.replaceAll("[^a-zA-Z ]", "")
+                .replaceAll("\\s+", " ")
+                .split(" ").length;
     }
 }
