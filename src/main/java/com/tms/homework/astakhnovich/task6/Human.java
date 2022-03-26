@@ -3,7 +3,7 @@ package com.tms.homework.astakhnovich.task6;
 public class Human extends Monkey implements Moveable, Talkable, Comparable<Human> {
     private String name;
     private Integer age;
-    private Integer id = 0;
+    private Integer id;
     private Sex sex;
 
     public Human(Integer weight, Integer height, Integer limbs, String name) {
