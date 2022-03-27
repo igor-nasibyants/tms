@@ -1,4 +1,6 @@
-package com.tms.homework.nikitaelenski.task14;
+package com.tms.homework.nikitaelenski.task14.houses;
+
+import com.tms.homework.nikitaelenski.task14.Houses;
 
 import java.util.ArrayList;
 import java.util.HashMap;

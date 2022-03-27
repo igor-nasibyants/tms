@@ -1,7 +1,5 @@
 package com.tms.homework.nikitaelenski.task14;
 
-import com.tms.homework.astakhnovich.task6.Human;
-
 public class Houses implements Comparable<Houses>{
     private Integer id ;
     private double height;
@@ -20,8 +18,10 @@ public class Houses implements Comparable<Houses>{
     public Integer getId() {
         return id;
     }
-    public Houses (){
-        this(null,0,null,null,null);
+
+    public Houses(Integer id, String address) {
+        this.id = id;
+        this.address = address;
     }
 
     public double getHeight() {
@@ -78,4 +78,5 @@ public class Houses implements Comparable<Houses>{
                 ", numberOfApartments= " + numberOfApartments +
                 ", address='" + address + '\'';
     }
+
 }

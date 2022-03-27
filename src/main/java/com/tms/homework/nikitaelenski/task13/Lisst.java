@@ -20,9 +20,7 @@ public class Lisst {
         arrStr.addFirst("изменения");
         System.out.println(arrStr.peekFirst());
         String[] arr = arrStr.toArray(new String[10]);
-        for (String num : arr) {
-            System.out.println(num);
-        }
+        arrStr.stream().forEach(System.out::println);
 
     }
 }
