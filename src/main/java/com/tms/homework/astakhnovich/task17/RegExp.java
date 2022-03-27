@@ -13,7 +13,6 @@ public class RegExp {
 
     public static void main(String[] args) {
         RegExp re = new RegExp();
-        re.createUser();
         re.checkUser();
     }
 
@@ -30,15 +29,17 @@ public class RegExp {
         userList.add(new User(9, "Masha", "Masha@mail.ruu", "Qwer+123"));
         userList.add(new User(10, "Gena", "Gena@mail.ru", "Ййцуу123"));
         userList.add(new User(11, "Lolka", "lolka1576-13.lolka@apple.com", "lolk35aLOL1567"));
-        userList.add(new User(11, "Katya", "Kat@gmail.com", "lolk35aLOL1567"));
+        userList.add(new User(12, "Katya", "Kat@gmail.com", "lolk35aLOL1567"));
     }
 
-    public void checkUser(){
-        HashMap<String, User> hashMapUser = new HashMap<>(userList.stream()
+    public HashMap<Integer, User> checkUser(){
+        createUser();
+        HashMap<Integer, User> hashMapUser = new HashMap<>(userList.stream()
                 .filter(a -> isValidEmail(a.getEmail()) && isValidPassword(a.getPassword()))
-                .collect(Collectors.toMap(User::getEmail, a -> a)));
+                .collect(Collectors.toMap(User::getId, a -> a)));
 
         hashMapUser.forEach((k,v) -> System.out.println("key: " + k + " value: " + v));
+        return hashMapUser;
     }
 
     public boolean isValidEmail(String email){

@@ -42,10 +42,10 @@ public class HumanSort {
     }
 
     public void humanListToMap(){
-        HashMap<Integer, String> hashMap = new HashMap<>(humanList.stream()
+        HashMap<Integer, Human> hashMap = new HashMap<>(humanList.stream()
                 .filter((a) -> (a.getSex() == Sex.MAN) && (a.getAge() > 18 && a.getAge() < 65))
                 .filter((a) -> (a.getWeight() > 50 && a.getWeight() < 90))
-                .collect(Collectors.toMap(Human::getId, Human::toString)));
+                .collect(Collectors.toMap(Human::getId, a -> a)));
 
         hashMap.forEach((k, v) -> System.out.println("id: " + k + ";  " + v));
     }
