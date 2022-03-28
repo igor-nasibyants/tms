@@ -34,26 +34,32 @@ public class testStreaAndOptionals {
 
         System.out.println(povtori);
 
-        String maximum = Stream.of("Никита" , "Галина" ).max(Comparator.comparing(x -> x)).get();
+//выбираем максимальное
+        String maximum = Stream.of("Никита" , "Галина" )
+                .max(Comparator.comparing(x -> x)).get();
         System.out.println(maximum);
 
         System.out.println(povtori);
 
+//убираем все повторяющиеся
         list.stream().distinct()
                 .forEach(System.out::println);
 
         System.out.println(povtori);
 
+//пропускаем первые 2 элемента в списке
         list.stream().skip(2)
                 .forEach(System.out::println);
 
         System.out.println(povtori);
 
+//сравним и выберем первый элемент который нужно найти
         String str = list.stream().filter(x->x.equals("six")).findAny().get();
         System.out.println(str);
 
         System.out.println(povtori);
 
+//важна последовательность
         Stream.of("aa1","aa2","bb1","bb2","cc1","cc2")
                 .filter(s->{
                     System.out.println("filter ; " + s);
@@ -72,6 +78,7 @@ public class testStreaAndOptionals {
 
         System.out.println(povtori);
 
+//новый лист
         List<Home> Homes = new ArrayList<>();
 
         Homes.add(new Home(6 ,"ул.Славинского"));
@@ -81,17 +88,53 @@ public class testStreaAndOptionals {
         Homes.add(new Home(2 ,"ул.Славинского"  ));
         Homes.add(new Home(8 ,"Переулок.Святого Антона"));
 
-        List<Home> sortedHome = Homes.stream()
+//фильтруем
+        List<Home> filterHome = Homes.stream()
                 .filter(p->p.getAddress().startsWith("ул.С"))
                 .collect(Collectors.toList());
-        System.out.println(sortedHome);
+        System.out.println(filterHome);
 
         System.out.println(povtori);
 
-        Map<Integer , List<Home>>  idHomes = Homes.stream()
-                .collect(Collectors.groupingBy(p->p.getId()));
+//из листа в мапу
+        Map<Integer, String>  idHomes = Homes.stream()
+                .collect(Collectors.toMap(Home::getId , Home::getAddress));
+
+        idHomes.entrySet().stream()
+                .map(elem -> elem.getKey() + " = " + elem.getValue())
+                .forEach(System.out::println);
 
         System.out.println(povtori);
+
+//Статистика по id
+        IntSummaryStatistics theAverageId = Homes.stream()
+                .collect(Collectors.summarizingInt(p-> p.getId()));
+        System.out.println(theAverageId);
+
+        System.out.println(povtori);
+
+//Обьединение
+        String phores = Homes.stream().filter(p->p.getAddress().startsWith("ул.С"))
+                .map(Home::getAddress)
+                .collect(Collectors.joining(" и ","В Минске адреса ", " присутствуют"));
+        System.out.println(phores);
+
+        System.out.println(povtori);
+
+        Optional<String> hello = Optional.ofNullable(null);
+
+        System.out.println(hello.isEmpty());
+        System.out.println(hello.isPresent());
+
+        hello.ifPresentOrElse(System.out::println,()->{
+            System.out.println("World");
+        });
+
+
+
+//
+
+
 
 
     }
