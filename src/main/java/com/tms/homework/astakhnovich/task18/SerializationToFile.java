@@ -1,28 +1,24 @@
 package com.tms.homework.astakhnovich.task18;
 
+import com.google.gson.Gson;
 import com.tms.homework.astakhnovich.task17.RegExp;
 import com.tms.homework.astakhnovich.task17.User;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
-
-
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
-import java.io.StringWriter;
-import java.util.HashMap;
+import java.io.*;
+import java.util.List;
 
 public class SerializationToFile {
 
 
     public static void main(String[] args)  {
         serializationToXML();
+        serializationToJson();
     }
 
     public static void serializationToXML() {
         RegExp regExp = new RegExp();
-        HashMap<Integer, User> hashMapUser = regExp.checkUser();
 
         try {
             StringWriter writer = new StringWriter();
@@ -30,9 +26,9 @@ public class SerializationToFile {
             Marshaller marshaller = context.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
             OutputStream os = new FileOutputStream("xml//UserList.xml" );
-            for (Integer key : hashMapUser.keySet()) {
-                marshaller.marshal(hashMapUser.get(key), os);
-                marshaller.marshal(hashMapUser.get(key), writer);
+            for (User user : regExp.checkUser()) {
+                marshaller.marshal(user, os);
+                marshaller.marshal(user, writer);
             }
             String result = writer.toString();
             System.out.println(result);
@@ -43,6 +39,19 @@ public class SerializationToFile {
 
     public static void serializationToJson() {
         RegExp regExp = new RegExp();
-        HashMap<Integer, User> hashMapUser = regExp.checkUser();
+        Gson gson = new Gson();
+        String json = gson.toJson(regExp.checkUser());
+//        System.out.println(json);
+        try {
+            FileWriter fw = new FileWriter("json//UserList.json");
+            fw.write(json);
+            fw.flush();
+            fw.close();
+        }catch (IOException e ){
+            System.out.println("Exception");
+        }
+
+        List newUserList = gson.fromJson(json, List.class);
+        newUserList.forEach(System.out::println);
     }
 }

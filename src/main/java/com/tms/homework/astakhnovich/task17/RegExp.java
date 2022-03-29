@@ -32,14 +32,12 @@ public class RegExp {
         userList.add(new User(12, "Katya", "Kat@gmail.com", "lolk35aLOL1567"));
     }
 
-    public HashMap<Integer, User> checkUser(){
+    public List<User> checkUser(){
         createUser();
-        HashMap<Integer, User> hashMapUser = new HashMap<>(userList.stream()
+        List<User> validUserList = new ArrayList<>(userList.stream()
                 .filter(a -> isValidEmail(a.getEmail()) && isValidPassword(a.getPassword()))
-                .collect(Collectors.toMap(User::getId, a -> a)));
-
-        hashMapUser.forEach((k,v) -> System.out.println("key: " + k + " value: " + v));
-        return hashMapUser;
+                .toList());
+        return validUserList;
     }
 
     public boolean isValidEmail(String email){

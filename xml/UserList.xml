@@ -7,6 +7,13 @@
 </user>
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <user>
+    <email>Oly.54a@gmail.ru</email>
+    <id>6</id>
+    <name>Olya</name>
+    <password>Olya32566</password>
+</user>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<user>
     <email>lolka1576-13.lolka@apple.com</email>
     <id>11</id>
     <name>Lolka</name>
@@ -18,11 +25,4 @@
     <id>12</id>
     <name>Katya</name>
     <password>lolk35aLOL1567</password>
-</user>
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<user>
-    <email>Oly.54a@gmail.ru</email>
-    <id>6</id>
-    <name>Olya</name>
-    <password>Olya32566</password>
 </user>
