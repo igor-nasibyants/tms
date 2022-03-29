@@ -1,6 +1,7 @@
 package com.tms.homework.astakhnovich.task18;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.tms.homework.astakhnovich.task17.RegExp;
 import com.tms.homework.astakhnovich.task17.User;
 import jakarta.xml.bind.JAXBContext;
@@ -39,8 +40,9 @@ public class SerializationToFile {
 
     public static void serializationToJson() {
         RegExp regExp = new RegExp();
-        Gson gson = new Gson();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String json = gson.toJson(regExp.checkUser());
+
 //        System.out.println(json);
         try {
             FileWriter fw = new FileWriter("json//UserList.json");
