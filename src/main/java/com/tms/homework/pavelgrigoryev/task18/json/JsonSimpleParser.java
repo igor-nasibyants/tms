@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JsonParser {
+public class JsonSimpleParser {
 
     private static final String TAG_NAME_MAIN = "name";
     private static final String TAG_PIZZAS = "pizzas";
@@ -38,13 +38,14 @@ public class JsonParser {
 
         bakery.setName(name);
         bakery.setPizzas(pizzaList);
+        reader.close();
         return bakery;
     }
 
     public static void main(String[] args) throws IOException, ParseException {
-        JsonParser jsonParser = new JsonParser();
+        JsonSimpleParser jsonParser = new JsonSimpleParser();
         Bakery bakery = jsonParser.parse();
 
-        System.out.println(bakery.toString());
+        System.out.println(bakery);
     }
 }
