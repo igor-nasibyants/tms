@@ -1,0 +1,17 @@
+{
+  "name": "ChessMinos",
+  "pizzas": [
+    {
+      "name": "pepperoni",
+      "size": 35
+    },
+    {
+      "name": "margarita",
+      "size": 27
+    },
+    {
+      "name": "special",
+      "size": 45
+    }
+  ]
+}
