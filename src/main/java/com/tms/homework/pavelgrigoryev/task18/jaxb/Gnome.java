@@ -10,6 +10,10 @@ public class Gnome {
     private String name;
     private int age;
 
+    public String getVersion() {
+        return "Gnome 1.0";
+    }
+
     public int getId() {
         return id;
     }

@@ -7,6 +7,10 @@ public class Dwarf {
     private final int age;
     private final Role role;
 
+    public String getVersion() {
+        return "Dwarf 1.0";
+    }
+
     public String getFirstName() {
         return firstName;
     }

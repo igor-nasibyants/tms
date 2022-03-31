@@ -1,0 +1,37 @@
+[ {
+  "id" : 20,
+  "name" : "Shtepsel",
+  "age" : 48,
+  "version" : "Gnome 1.0"
+}, {
+  "firstName" : "Brann",
+  "lastName" : "BronzeBeard",
+  "id" : 17,
+  "age" : 35,
+  "role" : "MELEE_DAMAGE_DEALER",
+  "version" : "Dwarf 1.0"
+}, {
+  "make" : "T-14",
+  "model" : "Армата",
+  "year" : 2015,
+  "color" : "military",
+  "price" : 1.5964494896546466E11,
+  "version" : "Tank 1.0"
+}, {
+  "id" : 1,
+  "name" : "Tony Stark",
+  "age" : 48,
+  "superPower" : "Money",
+  "speed" : 1000
+}, {
+  "id" : 11,
+  "name" : "Lolka",
+  "email" : "lolka1576-13.lolka@apple.com",
+  "password" : "lolk35aLOL1567"
+}, {
+  "id" : 6,
+  "height" : 99.0,
+  "umberOfFloors" : 13,
+  "numberOfApartments" : 70,
+  "address" : "Переулок.Святого Антона"
+} ]

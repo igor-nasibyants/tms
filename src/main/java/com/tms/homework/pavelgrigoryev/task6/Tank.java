@@ -15,6 +15,10 @@ public class Tank {
         this.price = price;
     }
 
+    public String getVersion() {
+        return "Tank 1.0";
+    }
+
     public String getMake() {
         return make;
     }
@@ -65,5 +69,16 @@ public class Tank {
 
     void fire() {
         System.out.println("You shoot from the tank " + getMake() + " " + getModel());
+    }
+
+    @Override
+    public String toString() {
+        return "Tank{" +
+                "make='" + make + '\'' +
+                ", model='" + model + '\'' +
+                ", year=" + year +
+                ", color='" + color + '\'' +
+                ", price=" + price +
+                '}';
     }
 }
