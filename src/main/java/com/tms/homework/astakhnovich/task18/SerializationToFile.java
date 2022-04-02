@@ -38,21 +38,22 @@ public class SerializationToFile {
         }
     }
 
-    public static void serializationToJson() {
+    public static void serializationToJson(){
         RegExp regExp = new RegExp();
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        String json = gson.toJson(regExp.checkUser());
+        Gson gson = new GsonBuilder()
+                .setPrettyPrinting()
+                .create();
+        String userJson = gson.toJson(regExp.checkUser());
 //        System.out.println(json);
         try {
-            FileWriter fw = new FileWriter("json//UserList.json");
-            fw.write(json);
-            fw.flush();
-            fw.close();
-        }catch (IOException e ){
+            FileOutputStream fileOutputStream = new FileOutputStream("json//UserList.json");
+            fileOutputStream.write(userJson.getBytes());
+            fileOutputStream.close();
+        }catch (IOException e){
             System.out.println("Exception");
         }
 
-        List newUserList = gson.fromJson(json, List.class);
+        List newUserList = gson.fromJson(userJson, List.class);
         newUserList.forEach(System.out::println);
     }
 }
