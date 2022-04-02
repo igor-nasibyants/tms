@@ -42,7 +42,6 @@ public class SerializationToFile {
         RegExp regExp = new RegExp();
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String json = gson.toJson(regExp.checkUser());
-
 //        System.out.println(json);
         try {
             FileWriter fw = new FileWriter("json//UserList.json");
