@@ -14,9 +14,8 @@ public class Hash {
         states.put("4","Геннадий");
         Collection<String> values = states.values();
 
-        for(Map.Entry<String ,String> item : states.entrySet()){
-            System.out.println(item.getValue() + " " + item.getKey());
-        }
+        states.forEach((key, value) -> System.out.println(value + " " + key));
+
         states.remove("2");
         states.replace("3","ххх");
         states.replace("5","qqq");
