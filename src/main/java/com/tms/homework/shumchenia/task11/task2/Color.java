@@ -10,7 +10,11 @@ public enum Color {
 
     private String color;
 
-    private Color(String color){this.color=color;}
+    private Color(String color){
+        if("WHITE".equalsIgnoreCase(color)||"BLACK".equalsIgnoreCase(color)||"BLUE".equalsIgnoreCase(color)||
+                "RED".equalsIgnoreCase(color)||"GREEN".equalsIgnoreCase(color)){this.color=color;}
+
+    }
 
     @Override
     public String toString() {
