@@ -1,1 +1,0 @@
-# [my conspect](D:\trash\tms\docs\astakhnovich\conspect.md)
