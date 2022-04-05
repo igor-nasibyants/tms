@@ -6,16 +6,30 @@ import java.io.Reader;
 public class Human extends Reader {
     private String name;
     private int age;
+    private Human[] friends;
 
-    public String[] getFriends() {
-        return friends;
-    }
-
-    public void setFriends(String[] friends) {
+    public Human(String name, int age, Human[] friends) {
+        this.name = name;
+        this.age = age;
         this.friends = friends;
     }
 
-    private String[] friends;
+    public void setFriends(Human[] friends) {
+        this.friends = friends;
+    }
+
+    public Human(Human[] friends) {
+        this.friends = friends;
+    }
+
+    public Human() {
+        this("Non", 0, new Human[]{});
+    }
+
+    public Human(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 
     public String getName() {
         return name;
@@ -41,5 +55,9 @@ public class Human extends Reader {
     @Override
     public void close() throws IOException {
 
+    }
+
+    public Human[] getFriends() {
+        return friends;
     }
 }
