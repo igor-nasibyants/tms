@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         var str = new String(".");
-
+        System.out.println(Runtime.version());
         if (str instanceof String) {
             str.lines();
         }

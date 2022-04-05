@@ -15,10 +15,10 @@ public class Zanyatie {
         //task4();
         //System.out.println("task 5");
         //task5();
-        System.out.println("task 6");
-        task6();
-
+        //System.out.println("task 6");
+        //task6();
     }
+
 
     private static void task6() {
         HashMap<Integer,Person> hashMap=new HashMap();
@@ -37,7 +37,7 @@ public class Zanyatie {
 
     private static void task5() {
         PersonComporator personComporator = new PersonComporator();
-        TreeSet<Person> treeSet = new TreeSet<>();
+        TreeSet<Person> treeSet = new TreeSet<>(personComporator);
         treeSet.add(new Person(1, "a", 15));
         treeSet.add(new Person(1, "x", 3));
         treeSet.add(new Person(2, "a", 15));
