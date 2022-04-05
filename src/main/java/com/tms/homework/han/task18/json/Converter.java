@@ -10,9 +10,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Converter {
+
+
     public static void main(String[] args) throws IOException {
-
-
         ObjectMapper objectMapper = new ObjectMapper();
 
         Human lera = new Human("Lera", 20);
