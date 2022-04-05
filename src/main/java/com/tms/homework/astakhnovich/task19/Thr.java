@@ -11,8 +11,12 @@ public class Thr implements Runnable {
     @Override
     public void run() {
         System.out.println("Potok" + i);
-        while (c < 900000000){
+
+        while (c < 100){
+
+            System.out.println("Potok" + i+" "+c);
             c++;
+
         }
         System.out.println("Potok " + i + " закончил");
     }
