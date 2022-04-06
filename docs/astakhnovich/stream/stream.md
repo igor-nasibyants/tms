@@ -48,3 +48,5 @@
 - counting() - Подсчитывает количество элементов
 
 [habr](https://habr.com/ru/company/luxoft/blog/270383/)
+
+[BACK](../docs/astakhnovich/conspect.md)

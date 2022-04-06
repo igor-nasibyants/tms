@@ -1,7 +1,6 @@
 package com.tms.homework.astakhnovich.task17;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -34,10 +33,8 @@ public class RegExp {
 
     public List<User> checkUser(){
         createUser();
-        List<User> validUserList = new ArrayList<>(userList.stream()
-                .filter(a -> isValidEmail(a.getEmail()) && isValidPassword(a.getPassword()))
-                .toList());
-        return validUserList;
+        return userList.stream()
+                .filter(a -> isValidEmail(a.getEmail()) && isValidPassword(a.getPassword())).collect(Collectors.toList());
     }
 
     public boolean isValidEmail(String email){

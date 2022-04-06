@@ -1,1 +1,0 @@
-# [my conspect](docs/astakhnovich/conspect.md)

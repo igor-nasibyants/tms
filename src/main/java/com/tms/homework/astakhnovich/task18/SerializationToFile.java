@@ -21,20 +21,24 @@ public class SerializationToFile {
     public static void serializationToXML() {
         RegExp regExp = new RegExp();
 
-        try {
-            StringWriter writer = new StringWriter();
+        try (OutputStream os = new FileOutputStream("xml//UserList.xml" )){
             JAXBContext context = JAXBContext.newInstance(User.class);
             Marshaller marshaller = context.createMarshaller();
-            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-            OutputStream os = new FileOutputStream("xml//UserList.xml" );
-            for (User user : regExp.checkUser()) {
-                marshaller.marshal(user, os);
-                marshaller.marshal(user, writer);
-            }
-            String result = writer.toString();
-            System.out.println(result);
-        }catch (JAXBException | FileNotFoundException j){
-            System.out.println("Exception");
+            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+            regExp.checkUser()
+                    .forEach(u -> {
+                        try {
+                            marshaller.marshal(u, os);
+                        } catch (JAXBException e) {
+                            System.out.println("Exception 1/2");
+                        }
+                    });
+//            for (User user : regExp.checkUser()) {
+//                marshaller.marshal(user, os);
+//                marshaller.marshal(user, System.out);
+//            }
+        } catch (JAXBException | IOException e) {
+            System.out.println("Exception 1");
         }
     }
 
@@ -44,13 +48,10 @@ public class SerializationToFile {
                 .setPrettyPrinting()
                 .create();
         String userJson = gson.toJson(regExp.checkUser());
-//        System.out.println(json);
-        try {
-            FileOutputStream fileOutputStream = new FileOutputStream("json//UserList.json");
+        try (FileOutputStream fileOutputStream = new FileOutputStream("json//UserList.json");){
             fileOutputStream.write(userJson.getBytes());
-            fileOutputStream.close();
         }catch (IOException e){
-            System.out.println("Exception");
+            System.out.println("Exception 2");
         }
 
         List newUserList = gson.fromJson(userJson, List.class);
