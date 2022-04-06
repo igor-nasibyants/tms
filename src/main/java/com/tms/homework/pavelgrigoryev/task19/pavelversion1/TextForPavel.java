@@ -3,6 +3,20 @@ package com.tms.homework.pavelgrigoryev.task19.pavelversion1;
 import java.util.stream.Stream;
 
 public class TextForPavel {
+    public static void textForLoading() {
+        Stream.of("\nДобро пожаловать в игру ...\n",
+                        "Введите int: \n \"1\" - Новая игра.\n \"2\" - Загрузить левую дверь.\n \"3\" - Загрузить правую дверь.\n")
+                .forEach(x -> {
+                    try {
+                        Thread.sleep(3000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    } finally {
+                        System.out.println(x);
+                    }
+                });
+    }
+
     public static void textForOpening() {
         Stream.of("\nЭта история о человеке по имени Павел!\n",
                         "Он работал в одной компании, занимающей огромное здание.\n",
@@ -26,7 +40,7 @@ public class TextForPavel {
     public static void textForLeftDoor() {
         Stream.of("За левой дверью была комната, в которой стоял человек державший за спиной свои руки ...\n",
                         "Он сжимал, не что странное в каждой руке\n",
-                        "Он предложил Павлу выбрать руку! Введите int:\n \"1\" - левая рука. \n \"2\" - правая рука.\n")
+                        "Он предложил Павлу выбрать руку! Введите int:\n \"1\" - левая рука. \n \"2\" - правая рука.\n \"3\" - сохранить игру.\n")
                 .forEach(x -> {
                     try {
                         Thread.sleep(3000);
@@ -42,7 +56,7 @@ public class TextForPavel {
         Stream.of("За правой дверью была комната с бездонной ямой. Дверь за Павлом захлопнулась," +
                                 " и стены начали сужаться!\n",
                         "Павел решил прыгнуть в яму или остаться в комнате?\n",
-                        "Введите int:\n \"1\" - прыгнуть в яму. \n \"2\" - остаться в комнате.\n")
+                        "Введите int:\n \"1\" - прыгнуть в яму. \n \"2\" - остаться в комнате.\n \"3\" - сохранить игру.\n")
                 .forEach(x -> {
                     try {
                         Thread.sleep(3000);
