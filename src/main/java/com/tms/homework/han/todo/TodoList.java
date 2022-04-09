@@ -12,7 +12,7 @@ public class TodoList implements UpdateTodo, ReadTodo, ConvertTodoToList {
     void createTodo() {
         Scanner scanner = new Scanner(System.in);
         TodoList todo = new TodoList();
-        getMapTodo();
+        //getMapTodo();
         System.out.println("Вы хотите создать ToDo лист? (yes, no)");
         switch (scanner.nextLine().toLowerCase()) {
             case "yes" -> {

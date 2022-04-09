@@ -1,8 +1,10 @@
 package com.tms.homework.nikitaelenski.task18;
 
+import java.io.IOException;
+import java.io.Reader;
 import java.util.Arrays;
 
-public class AngryBirds {
+public class AngryBirds extends Reader {
     private String birdName ;
     private String strength ;
     private String [] hats ;
@@ -56,6 +58,16 @@ public class AngryBirds {
                 ", hats=" + Arrays.toString(hats) +
                 ", power=" + power +
                 '}';
+    }
+
+    @Override
+    public int read(char[] cbuf, int off, int len) throws IOException {
+        return 0;
+    }
+
+    @Override
+    public void close() throws IOException {
+
     }
 }
 
