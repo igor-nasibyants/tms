@@ -2,22 +2,25 @@ package com.tms.homework.nikitaelenski.task18.tast.json;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
-        System.out.println(" ");
-        SomeDate();
+        System.out.println(SomeDate());
+ //     SomeDate();
         System.out.println(" ");
         SomeDateOne();
         System.out.println(" ");
         InnerObject();
         System.out.println(" ");
         reedValue();
+
     }
-    public static void SomeDate(){
+    public static String SomeDate(){
         ObjectMapper objectMapper = new ObjectMapper();
         SomeDate someDate = new SomeDate();
 
@@ -27,10 +30,12 @@ public class Main {
 
         try {
             String result = objectMapper.writeValueAsString(someDate);
-            System.out.println(result);
+            return result;
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        return null;
     }
     public static void SomeDateOne(){
 
@@ -75,10 +80,13 @@ public class Main {
         someDate.setInnerObject(innerObject);
 
         try {
-            String result = objectMapper.writeValueAsString(someDate);
+            String result = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(someDate);
             System.out.println(result);
             SomeDate Date = objectMapper.readValue(result,SomeDate.class);
             System.out.println(Date);
+            FileOutputStream fileOutputStream = new FileOutputStream("json//test.json");
+            fileOutputStream.write(result.getBytes(StandardCharsets.UTF_8));
+            fileOutputStream.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
