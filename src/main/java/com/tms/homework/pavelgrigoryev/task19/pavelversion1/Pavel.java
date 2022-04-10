@@ -1,5 +1,7 @@
 package com.tms.homework.pavelgrigoryev.task19.pavelversion1;
 
+import com.tms.homework.pavelgrigoryev.task19.pavelversion1.methods.*;
+import com.tms.homework.pavelgrigoryev.task19.pavelversion1.methods.Error;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
@@ -8,7 +10,8 @@ import jakarta.xml.bind.Unmarshaller;
 import java.io.File;
 import java.util.Scanner;
 
-public class Pavel extends TextForPavel implements MethodsForPavel {
+public class Pavel extends TextForPavel implements StartGame, ChooseTheFirstPath,
+        ChooseTheLeftDoorPath, ChooseTheRightDoorPath, Savable, Loadable, Error {
     public static final Scanner SCANNER = new Scanner(System.in);
     public static final Pavel PAVEL = new Pavel();
 
@@ -145,21 +148,20 @@ public class Pavel extends TextForPavel implements MethodsForPavel {
         Marshaller marshaller = context.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
         marshaller.marshal(staminaOfPavel, new File(filePath));
+        System.out.println("Сохранение завершено \n");
     }
 
     public void rightDoorSaveToXml() throws JAXBException {
         System.out.println("Сохраняемся...\n");
-
         String filePath = "xml//saveRightDoorPavel.xml";
         StaminaOfPavel staminaOfPavel = new StaminaOfPavel();
         staminaOfPavel.setName("RightDoorStamina");
         staminaOfPavel.setStamina(80);
-
         JAXBContext context = JAXBContext.newInstance(StaminaOfPavel.class);
         Marshaller marshaller = context.createMarshaller();
-
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
         marshaller.marshal(staminaOfPavel, new File(filePath));
+        System.out.println("Сохранение завершено \n");
     }
 
     public void loadSaveLeftDoor() throws JAXBException {
@@ -169,6 +171,7 @@ public class Pavel extends TextForPavel implements MethodsForPavel {
         Unmarshaller unmarshaller = context.createUnmarshaller();
         StaminaOfPavel staminaOfPavel = (StaminaOfPavel) unmarshaller.unmarshal(file);
         System.out.println(staminaOfPavel + "\n");
+        System.out.println("Загрузка завершена \n");
     }
 
     public void loadSaveRightDoor() throws JAXBException {
@@ -178,5 +181,6 @@ public class Pavel extends TextForPavel implements MethodsForPavel {
         Unmarshaller unmarshaller = context.createUnmarshaller();
         StaminaOfPavel staminaOfPavel = (StaminaOfPavel) unmarshaller.unmarshal(file);
         System.out.println(staminaOfPavel + "\n");
+        System.out.println("Загрузка завершена \n");
     }
 }
