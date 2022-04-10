@@ -21,8 +21,13 @@ public class Main {
         myThread1.join();
         for(int x = 0 ; x <= 10 ; x++) {
             Thread.sleep(300);
-            System.out.println(resource.i + " " + resource.j);
-            if (x == 10){
+            System.out.println(resource.i + " " + resource.j + "                                 " + resource.i + " " + resource.j);
+            if(x==9){
+                for(int s = 0 ; s < 18 ; s++) {
+                    Thread.sleep(300);
+                    System.out.print(resource.i + " ");
+                }
+            }else if (x == 10){
                 for(int s = 0 ; s < 20 ; s++) {
                     Thread.sleep(300);
                     System.out.print(resource.i + " ");
