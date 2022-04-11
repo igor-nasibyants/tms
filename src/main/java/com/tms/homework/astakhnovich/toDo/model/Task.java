@@ -34,4 +34,13 @@ public class Task {
     public void setDone(Boolean done) {
         isDone = done;
     }
+
+    @Override
+    public String toString() {
+        return "" +
+                "\nЗаголовок: '" + header +
+                "\nЗадача: " + text +
+                "\nВыполнена? " + isDone +
+                "\n\n";
+    }
 }

@@ -1,13 +1,12 @@
-package com.tms.homework.astakhnovich.toDo.controllers;
+package com.tms.homework.astakhnovich.toDo.controller;
 
 import com.tms.homework.astakhnovich.toDo.model.Task;
 import com.tms.homework.astakhnovich.toDo.taskRepo.TaskRepo;
 
 import java.util.Scanner;
 
-public class CreateTask {
-    private TaskRepo taskRepo = new TaskRepo();
-    private Task newTask;
+public class TaskMenuController {
+    Task newTask;
 
     public void taskMenu(){
         System.out.println("Меню: " +
@@ -26,16 +25,37 @@ public class CreateTask {
     public void createNewTask(){
         System.out.print("Введите заголовок: ");
         String header = validationInput();
+
         System.out.print("Введите задачу: ");
         String text = validationInput();
-        newTask = new Task(header, text, false);
-        taskRepo.addTaskToRepo(newTask);
 
-        taskRepo.getHashTasks()
-                .forEach((k,v) -> System.out.println(v));
+        newTask = new Task(header, text, false);
+
+        System.out.println("Новая задача:\n" + newTask + "\n Coхранить? 1 - да, 2 - нет");
+
+        String input = validationInput();
+        if (input.equals("1")){
+            saveTask();
+        }else{
+            taskMenu();
+        }
     }
 
+    public void  saveTask(){
+        System.out.println("Сохраненние...");
+        boolean flag = TaskRepo.addTaskToRepo(newTask);
+        if(flag){
+            System.out.println("Сохранено");
+        }else{
+            System.out.println("Ошибка сохранения");
+        }
+    }
+
+
     public void taskLists(){
+//        System.out.println("Текущие задачи:");
+//        TaskRepo.getTasksList()
+//                .forEach(System.out::println);
     }
 
     public void isBol(){
