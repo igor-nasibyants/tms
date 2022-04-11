@@ -1,13 +1,51 @@
 package com.tms.homework.pavelgrigoryev.task19.pavelversion1;
 
+import com.tms.homework.pavelgrigoryev.task19.pavelversion1.methods.*;
+import com.tms.homework.pavelgrigoryev.task19.pavelversion1.methods.Error;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
+import jakarta.xml.bind.Unmarshaller;
+
+import java.io.File;
 import java.util.Scanner;
 
-public class Pavel extends TextForPavel implements MethodsForPavel {
+public class Pavel extends TextForPavel implements StartGame, ChooseTheFirstPath,
+        ChooseTheLeftDoorPath, ChooseTheRightDoorPath, Savable, Loadable, Error {
     public static final Scanner SCANNER = new Scanner(System.in);
     public static final Pavel PAVEL = new Pavel();
 
     public static void main(String[] args) throws InterruptedException {
-        PAVEL.opening();
+        PAVEL.newGameOrLoading();
+    }
+
+    public void newGameOrLoading() {
+        textForLoading();
+        while (SCANNER.hasNextInt()) {
+            int loading = SCANNER.nextInt();
+            if (loading == 1) {
+                opening();
+                break;
+            } else if (loading == 2) {
+                try {
+                    loadSaveLeftDoor();
+                    leftDoor();
+                    break;
+                } catch (JAXBException e) {
+                    e.printStackTrace();
+                }
+            } else if (loading == 3) {
+                try {
+                    loadSaveRightDoor();
+                    rightDoor();
+                    break;
+                } catch (JAXBException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                error();
+            }
+        }
     }
 
     public void opening() {
@@ -40,6 +78,12 @@ public class Pavel extends TextForPavel implements MethodsForPavel {
                 System.out.println("Павел выбрал правую руку\n");
                 rightHand();
                 break;
+            } else if (leftDoorChoice == 3) {
+                try {
+                    leftDoorSaveToXml();
+                } catch (JAXBException e) {
+                    e.printStackTrace();
+                }
             } else {
                 error();
             }
@@ -58,6 +102,12 @@ public class Pavel extends TextForPavel implements MethodsForPavel {
                 System.out.println("Павел выбрал остаться в комнате...\n");
                 stayInTheRoomBehindTheRightDoor();
                 break;
+            } else if (rightDoorChoice == 3) {
+                try {
+                    rightDoorSaveToXml();
+                } catch (JAXBException e) {
+                    e.printStackTrace();
+                }
             } else {
                 error();
             }
@@ -88,4 +138,49 @@ public class Pavel extends TextForPavel implements MethodsForPavel {
         System.err.println("Вы ввели за Павла совсем не то что вас просили !!!");
     }
 
+    public void leftDoorSaveToXml() throws JAXBException {
+        System.out.println("Сохраняемся...\n");
+        String filePath = "xml//saveLeftDoorPavel.xml";
+        StaminaOfPavel staminaOfPavel = new StaminaOfPavel();
+        staminaOfPavel.setName("LeftDoorStamina");
+        staminaOfPavel.setStamina(75);
+        JAXBContext context = JAXBContext.newInstance(StaminaOfPavel.class);
+        Marshaller marshaller = context.createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+        marshaller.marshal(staminaOfPavel, new File(filePath));
+        System.out.println("Сохранение завершено \n");
+    }
+
+    public void rightDoorSaveToXml() throws JAXBException {
+        System.out.println("Сохраняемся...\n");
+        String filePath = "xml//saveRightDoorPavel.xml";
+        StaminaOfPavel staminaOfPavel = new StaminaOfPavel();
+        staminaOfPavel.setName("RightDoorStamina");
+        staminaOfPavel.setStamina(80);
+        JAXBContext context = JAXBContext.newInstance(StaminaOfPavel.class);
+        Marshaller marshaller = context.createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+        marshaller.marshal(staminaOfPavel, new File(filePath));
+        System.out.println("Сохранение завершено \n");
+    }
+
+    public void loadSaveLeftDoor() throws JAXBException {
+        System.out.println("Загружаемся ...\n");
+        File file = new File("xml//saveLeftDoorPavel.xml");
+        JAXBContext context = JAXBContext.newInstance(StaminaOfPavel.class);
+        Unmarshaller unmarshaller = context.createUnmarshaller();
+        StaminaOfPavel staminaOfPavel = (StaminaOfPavel) unmarshaller.unmarshal(file);
+        System.out.println(staminaOfPavel + "\n");
+        System.out.println("Загрузка завершена \n");
+    }
+
+    public void loadSaveRightDoor() throws JAXBException {
+        System.out.println("Загружаемся ...\n");
+        File file = new File("xml//saveRightDoorPavel.xml");
+        JAXBContext context = JAXBContext.newInstance(StaminaOfPavel.class);
+        Unmarshaller unmarshaller = context.createUnmarshaller();
+        StaminaOfPavel staminaOfPavel = (StaminaOfPavel) unmarshaller.unmarshal(file);
+        System.out.println(staminaOfPavel + "\n");
+        System.out.println("Загрузка завершена \n");
+    }
 }
