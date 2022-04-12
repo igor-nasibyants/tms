@@ -1,9 +1,15 @@
 package com.tms.homework.astakhnovich.toDo.model;
 
+import jakarta.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Task {
     private String header;
     private String text;
     private Boolean isDone;
+
+    public Task() {
+    }
 
     public Task(String header, String text, Boolean isDone) {
         this.header = header;
@@ -35,12 +41,13 @@ public class Task {
         isDone = done;
     }
 
+
     @Override
     public String toString() {
         return "" +
-                "\nЗаголовок: '" + header +
+                "\nЗаголовок: " + header +
                 "\nЗадача: " + text +
-                "\nВыполнена? " + isDone +
+                "\nЗадача выполнена? " + isDone +
                 "\n\n";
     }
 }
