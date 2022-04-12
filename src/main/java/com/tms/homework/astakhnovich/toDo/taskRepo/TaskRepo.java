@@ -10,7 +10,8 @@ public class TaskRepo {
 
     public static boolean addTaskToRepo(Task newTask){
         tasksList.add(newTask);
-        return serializeToXML();
+//        serializeToXML(newTask);
+        return true;
     }
 
     public static boolean serializeToXML() {
@@ -38,6 +39,18 @@ public class TaskRepo {
 //            return false;
 //        }
     }
+
+//    public static void serializeToXML(Task task) {
+//        try (OutputStream os = new FileOutputStream("xml//taskList.xml" )){
+//            JAXBContext context = JAXBContext.newInstance(Task.class);
+//            Marshaller marshaller = context.createMarshaller();
+//            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+//            marshaller.marshal(task, os);
+//        } catch (JAXBException | IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
+
 
 //    public static ArrayList<Task> getTasksList() {
 //        try {
