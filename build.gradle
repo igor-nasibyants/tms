@@ -1,3 +1,6 @@
+import java.nio.file.Files
+import java.nio.file.Paths
+
 plugins {
     id 'java'
 }
@@ -10,19 +13,22 @@ repositories {
 }
 
 dependencies {
-    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
-    implementation group: 'jakarta.xml.bind', name: 'jakarta.xml.bind-api', version: '3.0.1'
-    implementation group: 'org.glassfish.jaxb', name: 'jaxb-runtime', version: '3.0.1'
-    implementation 'com.google.code.gson:gson:2.9.0'
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
-    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
-    implementation 'one.util:streamex:0.8.1'
-    implementation 'mysql:mysql-connector-java:8.0.28'
-    implementation 'com.h2database:h2:1.4.193'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }
 
 test {
     useJUnitPlatform()
+}
+
+static def path(Project project, String folderName) {
+    Files.isDirectory(Paths.get(project.projectDir.absolutePath, "src", "main", folderName))
+}
+
+def javaProjects() {
+    return subprojects.findAll {path(it, "java")}
+}
+
+configure(javaProjects()) {
+    apply plugin: 'java-library'
 }
