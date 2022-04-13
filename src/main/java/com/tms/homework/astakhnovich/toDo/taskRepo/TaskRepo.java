@@ -11,19 +11,21 @@ import java.util.List;
 
 
 public class TaskRepo {
-    private List<Task> tasksList = new ArrayList<>();
+    private List<Task> tasksList;
+    private List<Task> unmodifiableTasksList;
+
 
     public boolean addTaskToRepo(Task newTask){
+        tasksList = new ArrayList<>(getTasksList());
         tasksList.add(newTask);
         return serializeToJson();
 
     }
 
     public boolean serializeToJson() {
-        try {
+        try (FileOutputStream fileOutputStream = new FileOutputStream("json//TaskList.json");){
             ObjectMapper objectMapper = new ObjectMapper();
             String result = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(tasksList);
-            FileOutputStream fileOutputStream = new FileOutputStream("json//TaskList.json");
             fileOutputStream.write(result.getBytes());
             return true;
         }catch (IOException e){
@@ -38,7 +40,8 @@ public class TaskRepo {
             ObjectMapper objectMapper = new ObjectMapper();
             byte[] arrayFromJson = Files.readAllBytes(Paths.get("json//TaskList.json"));
             Task [] listFromJson =  objectMapper.readValue(arrayFromJson, Task[].class);
-            return tasksList = Arrays.stream(listFromJson).toList();
+            tasksList = Arrays.stream(listFromJson).toList();
+            return unmodifiableTasksList = new ArrayList<>(tasksList);
         } catch (IOException e) {
             e.printStackTrace();
             return new ArrayList<>();
@@ -56,7 +59,7 @@ public class TaskRepo {
 
 
 
-    //        try (OutputStream os = new FileOutputStream("xml//taskList.xml" )){
+//        try (OutputStream os = new FileOutputStream("xml//taskList.xml" )){
 //            JAXBContext context = JAXBContext.newInstance(Task.class);
 //            Marshaller marshaller = context.createMarshaller();
 //            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
@@ -71,7 +74,7 @@ public class TaskRepo {
 //        }
 
 
-    //    public static ArrayList<Task> getTasksList() {
+//    public static ArrayList<Task> getTasksList() {
 //        try {
 //            JAXBContext context = JAXBContext.newInstance(Task.class);
 //            Unmarshaller unmarshaller = context.createUnmarshaller();
@@ -87,7 +90,7 @@ public class TaskRepo {
 //    }
 
 
-    //    public static void serializeToXML(Task task) {
+//    public static void serializeToXML(Task task) {
 //        try (OutputStream os = new FileOutputStream("xml//taskList.xml" )){
 //            JAXBContext context = JAXBContext.newInstance(Task.class);
 //            Marshaller marshaller = context.createMarshaller();

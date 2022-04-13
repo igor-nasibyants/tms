@@ -71,15 +71,33 @@ public class TaskController {
             System.out.println(i + ". " + header);
         }
         int choice = Integer.parseInt(validationInput()) - 1;
-        System.out.println(choice);
 
         for (int i = 0; i < taskRepo.getTasksList().size(); i++){
             if(i == choice){
                 taskRepo.getTasksList().get(i).setDoneTrue();
                 taskRepo.serializeToJson();
+                break;
             }
         }
+        taskMenu();
+//        System.out.println("Do you want to delete task? 1 - yes; 2 - no");
+//
+//        String deleteChoice = validationInput();
+//        if (deleteChoice.equals("1")){
+//            deleteTask(choice);
+//        }else {
+//            taskMenu();
+//        }
     }
+
+//    public void deleteTask(int choice){
+//        for (int i = 0; i < taskRepo.getTasksList().size(); i++){
+//            if(i == choice){
+//                taskRepo.getTasksList().remove(i+1);
+//                taskRepo.serializeToJson();
+//            }
+//        }
+//    }
 
     public static String validationInput(){
         String text;
@@ -94,3 +112,4 @@ public class TaskController {
         return text;
     }
 }
+
