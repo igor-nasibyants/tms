@@ -15,15 +15,11 @@ public class TaskRepo {
 
     public boolean addTaskToRepo(Task newTask){
         tasksList.add(newTask);
-        boolean flag = serializeToXML();
-        if(flag){
-            return true;
-        }else{
-            return false;
-        }
+        return serializeToJson();
+
     }
 
-    public  boolean serializeToXML() {
+    public boolean serializeToJson() {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             String result = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(tasksList);
@@ -45,7 +41,7 @@ public class TaskRepo {
             return tasksList = Arrays.stream(listFromJson).toList();
         } catch (IOException e) {
             e.printStackTrace();
-            return null;
+            return new ArrayList<>();
         }
     }
 }

@@ -1,17 +1,14 @@
 package com.tms.homework.astakhnovich.toDo.model;
 
-import jakarta.xml.bind.annotation.XmlRootElement;
-
-
 public class Task {
     private String header;
     private String text;
-    private Boolean isDone;
+    private boolean isDone;
 
     public Task() {
     }
 
-    public Task(String header, String text, Boolean isDone) {
+    public Task(String header, String text, boolean isDone) {
         this.header = header;
         this.text = text;
         this.isDone = isDone;
@@ -37,16 +34,19 @@ public class Task {
         return isDone;
     }
 
-    public void setDone(Boolean done) {
+    public void setDone(boolean done) {
         isDone = done;
     }
 
+    public void setDoneTrue() {
+        isDone = true;
+    }
 
     @Override
     public String toString() {
         return "" +
-                "\nЗаголовок: " + header +
-                "\nЗадача: " + text +
-                "\nЗадача выполнена? " + isDone;
+                "\nheader: " + header +
+                "\ntask: " + text +
+                "\ntask completed? " + isDone;
     }
 }
