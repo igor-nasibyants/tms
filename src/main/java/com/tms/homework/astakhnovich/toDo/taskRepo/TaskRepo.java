@@ -1,46 +1,97 @@
 package com.tms.homework.astakhnovich.toDo.taskRepo;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tms.homework.astakhnovich.toDo.model.Task;
-import jakarta.xml.bind.*;
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 
 public class TaskRepo {
-    private static ArrayList<Task> tasksList = new ArrayList<>();
+    private List<Task> tasksList = new ArrayList<>();
 
-    public static boolean addTaskToRepo(Task newTask){
+    public boolean addTaskToRepo(Task newTask){
         tasksList.add(newTask);
-//        serializeToXML(newTask);
-        return true;
+        boolean flag = serializeToXML();
+        if(flag){
+            return true;
+        }else{
+            return false;
+        }
     }
 
-    public static boolean serializeToXML() {
-        try (OutputStream os = new FileOutputStream("xml//taskList.xml" )){
-            JAXBContext context = JAXBContext.newInstance(Task.class);
-            Marshaller marshaller = context.createMarshaller();
-            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-
-            for (Task task : tasksList) {
-                marshaller.marshal(task, os);
-            }
+    public  boolean serializeToXML() {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            String result = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(tasksList);
+            FileOutputStream fileOutputStream = new FileOutputStream("json//TaskList.json");
+            fileOutputStream.write(result.getBytes());
             return true;
-        } catch (JAXBException | IOException e) {
+        }catch (IOException e){
             e.printStackTrace();
             return false;
         }
-//        Gson gson = new GsonBuilder()
-//                .setPrettyPrinting()
-//                .create();
-//        String taskJson = gson.toJson(tasksList);
-//        try (FileOutputStream fileOutputStream = new FileOutputStream("json//TaskList.json");){
-//            fileOutputStream.write(taskJson.getBytes());
-//            return true;
-//        }catch (IOException e){
-//            return false;
-//        }
     }
 
-//    public static void serializeToXML(Task task) {
+
+    public List<Task> getTasksList() {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            byte[] arrayFromJson = Files.readAllBytes(Paths.get("json//TaskList.json"));
+            Task [] listFromJson =  objectMapper.readValue(arrayFromJson, Task[].class);
+            return tasksList = Arrays.stream(listFromJson).toList();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+    //        try (OutputStream os = new FileOutputStream("xml//taskList.xml" )){
+//            JAXBContext context = JAXBContext.newInstance(Task.class);
+//            Marshaller marshaller = context.createMarshaller();
+//            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+//
+//            for (Task task : tasksList) {
+//                marshaller.marshal(task, os);
+//            }
+//            return true;
+//        } catch (JAXBException | IOException e) {
+//            e.printStackTrace();
+//            return false;
+//        }
+
+
+    //    public static ArrayList<Task> getTasksList() {
+//        try {
+//            JAXBContext context = JAXBContext.newInstance(Task.class);
+//            Unmarshaller unmarshaller = context.createUnmarshaller();
+//            Task taskFromXML = (Task) unmarshaller.unmarshal(new File("xml//taskList.xml"));
+//            ArrayList<Task> newTasksList = new ArrayList<>();
+//            newTasksList.add(taskFromXML);
+//            tasksList.addAll(newTasksList);
+//            return tasksList;
+//        } catch (JAXBException e) {
+//            e.printStackTrace();
+//            return null;
+//        }
+//    }
+
+
+    //    public static void serializeToXML(Task task) {
 //        try (OutputStream os = new FileOutputStream("xml//taskList.xml" )){
 //            JAXBContext context = JAXBContext.newInstance(Task.class);
 //            Marshaller marshaller = context.createMarshaller();
@@ -50,36 +101,3 @@ public class TaskRepo {
 //            e.printStackTrace();
 //        }
 //    }
-
-
-//    public static ArrayList<Task> getTasksList() {
-//        try {
-//            JAXBContext context = JAXBContext.newInstance(StaminaOfPavel.class);
-//            Unmarshaller unmarshaller = context.createUnmarshaller();
-//            ArrayList<Task> listofTasks = (ArrayList<Task>) unmarshaller.unmarshal(new File("xml//taskList.xml"));
-//            return true;
-//        } catch (JAXBException e) {
-//            return false;
-//        }
-//    }
-
-
-    public static ArrayList<Task> getTasksList() {
-        try {
-            JAXBContext context = JAXBContext.newInstance(Task.class);
-            Unmarshaller unmarshaller = context.createUnmarshaller();
-            Task taskFromXML = (Task) unmarshaller.unmarshal(new File("xml//taskList.xml"));
-            ArrayList<Task> newTasksList = new ArrayList<>();
-            newTasksList.add(taskFromXML);
-            tasksList.addAll(newTasksList);
-            return tasksList;
-        } catch (JAXBException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-    public static void setTasksList(ArrayList<Task> tasksList) {
-        TaskRepo.tasksList = tasksList;
-    }
-}

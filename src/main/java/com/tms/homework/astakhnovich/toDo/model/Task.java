@@ -2,7 +2,7 @@ package com.tms.homework.astakhnovich.toDo.model;
 
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement
+
 public class Task {
     private String header;
     private String text;
@@ -47,7 +47,6 @@ public class Task {
         return "" +
                 "\nЗаголовок: " + header +
                 "\nЗадача: " + text +
-                "\nЗадача выполнена? " + isDone +
-                "\n\n";
+                "\nЗадача выполнена? " + isDone;
     }
 }

@@ -2,15 +2,15 @@ package com.tms.homework.astakhnovich.toDo.controller;
 
 import com.tms.homework.astakhnovich.toDo.model.Task;
 import com.tms.homework.astakhnovich.toDo.taskRepo.TaskRepo;
-
 import java.util.Objects;
 import java.util.Scanner;
 
-public class TaskMenuController {
+public class TaskController {
     Task newTask;
+    TaskRepo taskRepo = new TaskRepo();
 
     public void taskMenu(){
-        System.out.println("Меню: " +
+        System.out.println("\nМеню: " +
                 "\n 1 - создать новую задачу; " +
                 "\n 2 - посмотреть текущие задачи; " +
                 "\n 3 - поставить отметку о выполнении;");
@@ -19,13 +19,12 @@ public class TaskMenuController {
         if(number.equals("1") || number.equals("2") || number.equals("3")){
             switch (number) {
                 case "1" -> createNewTask();
-                case "2" -> taskLists();
+                case "2" -> taskList();
                 case "3" -> isBol();
             }
         }else{
             taskMenu();
         }
-
     }
 
     public void createNewTask(){
@@ -33,11 +32,10 @@ public class TaskMenuController {
         String header = validationInput();
 
         System.out.print("Введите задачу: ");
-        String text = validationInput();
+        String taskText = validationInput();
 
-        newTask = new Task(header, text, false);
-
-        System.out.println("\nНовая задача:" + newTask + "\n Coхранить? 1 - да, 2 - нет");
+        newTask = new Task(header, taskText, false);
+        System.out.println("\nНовая задача:" + newTask + "\n\nCoхранить? 1 - да, 2 - нет");
 
         String input = validationInput();
         if (input.equals("1")){
@@ -49,20 +47,22 @@ public class TaskMenuController {
 
     public void  saveTask(){
         System.out.println("Сохраненние...");
-          boolean flag = TaskRepo.addTaskToRepo(newTask);
+          boolean flag = taskRepo.addTaskToRepo(newTask);
         if(flag){
             System.out.println("Сохранено\n");
             taskMenu();
         }else{
             System.out.println("Ошибка сохранения");
+            taskMenu();
         }
     }
 
 
-    public void taskLists(){
+    public void taskList(){
         System.out.println("Текущие задачи:");
-        Objects.requireNonNull(TaskRepo.getTasksList())
+        Objects.requireNonNull(taskRepo.getTasksList())
                 .forEach(System.out::println);
+        taskMenu();
     }
 
     public void isBol(){
