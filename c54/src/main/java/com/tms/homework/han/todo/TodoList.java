@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class TodoList implements ListFromFile, PrintFile, UpdateFile {
-    String path = "D:\\Java\\TMS\\tms\\c54\\src\\main\\java\\com\\tms\\homework\\han\\todo\\todo-list.txt";
+    String path = "c54\\src\\main\\java\\com\\tms\\homework\\han\\todo\\todo-list.txt";
     void createTodo() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Вы хотите добавить задачу? (yes, no)");
