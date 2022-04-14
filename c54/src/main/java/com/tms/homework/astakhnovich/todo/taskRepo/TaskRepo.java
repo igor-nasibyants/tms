@@ -1,7 +1,7 @@
-package com.tms.homework.astakhnovich.toDo.taskRepo;
+package com.tms.homework.astakhnovich.todo.taskRepo;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.tms.homework.astakhnovich.toDo.model.Task;
+import com.tms.homework.astakhnovich.todo.model.Task;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;

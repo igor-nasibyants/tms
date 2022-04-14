@@ -1,6 +1,6 @@
-package com.tms.homework.astakhnovich.toDo;
+package com.tms.homework.astakhnovich.todo;
 
-import com.tms.homework.astakhnovich.toDo.controller.TaskController;
+import com.tms.homework.astakhnovich.todo.controller.TaskController;
 
 import java.io.IOException;
 
