@@ -3,3 +3,4 @@ rootProject.name = 'tms'
 include "c54"
 include "servlet"
 include "vladykouski:servlet"
+include "vladykouski:jsp"
