@@ -22,23 +22,14 @@ public class SerializationToFile {
         RegExp regExp = new RegExp();
 
         try (OutputStream os = new FileOutputStream("xml//UserList.xml" )){
-            JAXBContext context = JAXBContext.newInstance(User.class);
+            JAXBContext context = JAXBContext.newInstance(UsersDTO.class);
             Marshaller marshaller = context.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-            regExp.checkUser()
-                    .forEach(u -> {
-                        try {
-                            marshaller.marshal(u, os);
-                        } catch (JAXBException e) {
-                            System.out.println("Exception 1/2");
-                        }
-                    });
-//            for (User user : regExp.checkUser()) {
-//                marshaller.marshal(user, os);
-//                marshaller.marshal(user, System.out);
-//            }
+            UsersDTO usersDTO = new UsersDTO(regExp.checkUser());
+            marshaller.marshal(usersDTO, os);
         } catch (JAXBException | IOException e) {
             System.out.println("Exception 1");
+            e.printStackTrace();
         }
     }
 
