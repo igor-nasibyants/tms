@@ -1,7 +1,7 @@
 package com.tms.homework.pavelgrigoryev.task18.jackson;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.tms.homework.astakhnovich.task17.User;
+import com.tms.homework.astakhnovich.task1to19.task17.User;
 import com.tms.homework.han.task18.hero.IronMan;
 import com.tms.homework.nikitaelenski.task14.Houses;
 import com.tms.homework.pavelgrigoryev.task16.ironforged.Dwarf;

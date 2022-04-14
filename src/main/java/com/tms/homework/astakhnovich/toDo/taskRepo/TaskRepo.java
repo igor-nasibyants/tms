@@ -9,11 +9,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-
 public class TaskRepo {
+    private ObjectMapper objectMapper = new ObjectMapper();
     private List<Task> tasksList;
     private List<Task> unmodifiableTasksList;
-
 
     public boolean addTaskToRepo(Task newTask){
         tasksList = new ArrayList<>(getTasksList());
@@ -23,8 +22,7 @@ public class TaskRepo {
     }
 
     public boolean serializeToJson() {
-        try (FileOutputStream fileOutputStream = new FileOutputStream("json//TaskList.json");){
-            ObjectMapper objectMapper = new ObjectMapper();
+        try (FileOutputStream fileOutputStream = new FileOutputStream("json//TaskList.json")){
             String result = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(tasksList);
             fileOutputStream.write(result.getBytes());
             return true;
@@ -34,10 +32,8 @@ public class TaskRepo {
         }
     }
 
-
     public List<Task> getTasksList() {
         try {
-            ObjectMapper objectMapper = new ObjectMapper();
             byte[] arrayFromJson = Files.readAllBytes(Paths.get("json//TaskList.json"));
             Task [] listFromJson =  objectMapper.readValue(arrayFromJson, Task[].class);
             tasksList = Arrays.stream(listFromJson).toList();
@@ -46,6 +42,10 @@ public class TaskRepo {
             e.printStackTrace();
             return new ArrayList<>();
         }
+    }
+
+    public void deleteTask(){
+        tasksList = new ArrayList<>(unmodifiableTasksList);
     }
 }
 
