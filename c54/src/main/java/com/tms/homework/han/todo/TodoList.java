@@ -1,61 +1,74 @@
 package com.tms.homework.han.todo;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.*;
+import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
-public class TodoList implements UpdateTodo, ReadTodo, ConvertTodoToList {
-
+public class TodoList implements ListFromFile, PrintFile, UpdateFile {
+    String path = "D:\\Java\\TMS\\tms\\c54\\src\\main\\java\\com\\tms\\homework\\han\\todo\\todo-list.txt";
     void createTodo() {
         Scanner scanner = new Scanner(System.in);
-        TodoList todo = new TodoList();
-        //getMapTodo();
-        System.out.println("Вы хотите создать ToDo лист? (yes, no)");
+        System.out.println("Вы хотите добавить задачу? (yes, no)");
+        List<String> list = new ArrayList<>(getListFromFile(path));
         switch (scanner.nextLine().toLowerCase()) {
             case "yes" -> {
-                todo.createTodoFile();
-                todo.readTodo();
+                addToList(list);
+                getFileTodo(list);
+                printFile(path);
             }
             case "no" -> {
-                try {
-                    if (Files.lines(Paths.get("todo-list.txt")).findAny().isPresent()) {
-                        todo.readTodo();
-                    }
-                } catch (IOException e) {
-                    System.out.println("Действующих задач нет");
+                printFile(path);
+                System.out.println("Вы выполнили задание?");
+                String input = scanner.nextLine();
+                if (input.equalsIgnoreCase("yes")) {
+                    updateFile(list, path);
+                    readyTask(list);
+                    printFile(path);
+                } else if (input.equalsIgnoreCase("no")) {
+                    System.out.println("Выполняйте задания!");
+                    printFile(path);
+                } else {
+                    System.out.println("Что вы вводите?");
                 }
             }
             default -> System.out.println("Вы ввели не то, что вас просили");
         }
     }
 
-    void createTodoFile() {
+    private static void addToList(List<String> list) {
+        System.out.println("Введите задание, которое нужно добавить");
         Scanner scanner = new Scanner(System.in);
-        FileOutputStream file = null;
-        try {
-            file = new FileOutputStream("todo-list.txt", true);
-        } catch (FileNotFoundException e) {
-            System.err.println("Ошибка создания файла");
-            e.printStackTrace();
-        }
-        System.out.print("Введите занятие: ");
-        getUpdateTodo(Objects.requireNonNull(file), "\n" + getCountTasks() + ") " + scanner.nextLine());
-        scanner.close();
+        list.add(scanner.nextLine());
     }
 
-    static long getCountTasks() {
+    private void getFileTodo(List<String> list) {
+        Path file = Path.of(path);
+        String lastElement = list.get(list.size() - 1);
         try {
-            if (Files.lines(Paths.get("todo-list.txt")).findAny().isEmpty()) {
-                return 1;
-            }
-            return Files.lines(Paths.get("todo-list.txt")).count();
+            Files.write(file, (list.size() + ") " + lastElement + "\n")
+                    .getBytes(), StandardOpenOption.APPEND);
         } catch (IOException e) {
-            System.err.println("Ошибка подсчета тасков");
-            e.printStackTrace();
+            try {
+                FileOutputStream newFile = new FileOutputStream(path, true);
+                Files.write(file, (list.size() + ") " + lastElement + "\n")
+                        .getBytes(), StandardOpenOption.APPEND);
+                newFile.close();
+            } catch (IOException ex) {
+                System.err.println("Ошибка записи при создании файла");
+                throw new RuntimeException(ex);
+            }
         }
-        return 0;
+    }
+
+    private void readyTask(List<String> list) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите номер выполенного задания:");
+        int number = scanner.nextInt();
+        list.set(number - 1, list.get(number - 1) + " is DONE");
+        updateFile(list, path);
     }
 }
