@@ -1,7 +1,7 @@
-package com.tms.homework.astakhnovich.toDo.controller;
+package com.tms.homework.astakhnovich.todo.controller;
 
-import com.tms.homework.astakhnovich.toDo.model.Task;
-import com.tms.homework.astakhnovich.toDo.taskRepo.TaskRepo;
+import com.tms.homework.astakhnovich.todo.model.Task;
+import com.tms.homework.astakhnovich.todo.taskRepo.TaskRepo;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ public class TaskController {
     Task newTask;
     TaskRepo taskRepo = new TaskRepo();
 
-    public void taskMenu(){
+    public void taskMenu() {
         System.out.println("\nMenu: " +
                 "\n 1 - create a new task; " +
                 "\n 2 - view current tasks; " +
@@ -19,7 +19,7 @@ public class TaskController {
 
 
         String number = validationInput();
-        if(number.equals("1") || number.equals("2") || number.equals("3") ||  number.equals("4") || number.equals("q")){
+        if (number.equals("1") || number.equals("2") || number.equals("3") || number.equals("4") || number.equals("q")) {
             switch (number) {
                 case "1" -> createNewTask();
                 case "2" -> taskList();
@@ -27,12 +27,12 @@ public class TaskController {
                 case "4" -> deleteFromeUser();
                 case "q" -> exitАpplication();
             }
-        }else{
+        } else {
             taskMenu();
         }
     }
 
-    public void createNewTask(){
+    public void createNewTask() {
         System.out.print("Enter header: ");
         String header = validationInput();
 
@@ -43,39 +43,39 @@ public class TaskController {
         System.out.println("\nNew task:" + newTask + "\n\nSave? 1 - yes, 2 - no");
 
         String input = validationInput();
-        if (input.equals("1")){
+
+        if (input.equals("1")) {
             saveTask();
-        }else{
+        } else {
             taskMenu();
         }
     }
 
-    public void  saveTask(){
-        System.out.println("Saveing...");
-        if(taskRepo.addTaskToRepo(newTask)){
+    public void saveTask() {
+        System.out.println("Saving...");
+        if (taskRepo.addTaskToRepo(newTask)) {
             System.out.println("Saved");
             taskMenu();
-        }else{
+        } else {
             System.out.println("Save error");
             taskMenu();
         }
     }
 
-
-    public void taskList(){
+    public void taskList() {
         System.out.println("Current tasks:");
         taskRepo.getTasksList()
                 .forEach(System.out::println);
         taskMenu();
     }
 
-    public void isСompleted(){
+    public void isСompleted() {
         System.out.println("\n Select a task to mark as done");
         showHeader();
         int choice = Integer.parseInt(validationInput()) - 1;
 
-        for (int i = 0; i < taskRepo.getTasksList().size(); i++){
-            if(i == choice){
+        for (int i = 0; i < taskRepo.getTasksList().size(); i++) {
+            if (i == choice) {
                 taskRepo.getTasksList().get(i).setDoneTrue();
                 taskRepo.serializeToJson();
                 System.out.println("\n The task " + taskRepo.getTasksList().get(i).getHeader() + " is completed!");
@@ -85,42 +85,42 @@ public class TaskController {
         System.out.println("Do you want to delete task? 1 - yes; 2 - no");
 
         String deleteChoice = validationInput();
-        if (deleteChoice.equals("1")){
-            if(deleteTask(choice)){
+        if (deleteChoice.equals("1")) {
+            if (deleteTask(choice)) {
                 taskRepo.serializeToJson();
                 System.out.println("Deleted successfully");
-            }else{
+            } else {
                 System.out.println("Delete error");
             }
         }
         taskMenu();
     }
 
-    public void deleteFromeUser(){
+    public void deleteFromeUser() {
         System.out.println("\nSelect the task to delete");
         showHeader();
         int choice = Integer.parseInt(validationInput()) - 1;
 
-        for (int i = 0; i < taskRepo.getTasksList().size(); i++){
-            if(i == choice && deleteTask(choice)){
-                    taskRepo.serializeToJson();
-                    System.out.println("Deleted successfully");
+        for (int i = 0; i < taskRepo.getTasksList().size(); i++) {
+            if (i == choice && deleteTask(choice)) {
+                taskRepo.serializeToJson();
+                System.out.println("Deleted successfully");
                 break;
             }
         }
         taskMenu();
     }
 
-    public void showHeader(){
-        for (int i = 1; i <= taskRepo.getTasksList().size(); i++){
-            String header = taskRepo.getTasksList().get(i-1).getHeader();
+    public void showHeader() {
+        for (int i = 1; i <= taskRepo.getTasksList().size(); i++) {
+            String header = taskRepo.getTasksList().get(i - 1).getHeader();
             System.out.println(i + ". " + header);
         }
     }
 
-    public boolean deleteTask(int choice){
-        for (int i = 0; i < taskRepo.getTasksList().size(); i++){
-            if(i == choice){
+    public boolean deleteTask(int choice) {
+        for (int i = 0; i < taskRepo.getTasksList().size(); i++) {
+            if (i == choice) {
                 taskRepo.getTasksList().remove(i);
                 taskRepo.deleteTask();
                 taskRepo.serializeToJson();
@@ -130,20 +130,20 @@ public class TaskController {
         return false;
     }
 
-    public static String validationInput(){
+    public static String validationInput() {
         String text;
-        try{
+        try {
             Scanner scanner = new Scanner(System.in);
             text = scanner.nextLine();
             text = text.trim();
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Input Error");
             text = "";
         }
         return text;
     }
 
-    private static void exitАpplication(){
+    private static void exitАpplication() {
     }
 }
 

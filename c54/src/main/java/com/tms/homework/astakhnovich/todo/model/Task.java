@@ -1,4 +1,4 @@
-package com.tms.homework.astakhnovich.toDo.model;
+package com.tms.homework.astakhnovich.todo.model;
 
 public class Task {
     private String header;
