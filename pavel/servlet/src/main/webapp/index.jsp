@@ -14,6 +14,19 @@
 <h1>
     Today's date: <%= (new Date()).toString()%>
 </h1>
-<a href="test">Click this please</a>
+<h2>
+    <a href="test">
+        <button style="background-color: crimson;color: black; font-size: 50px">
+            Click this please
+        </button>
+    </a>
+</h2>
+<h2>
+    <a href="https://youtu.be/7iKjSCTxke8">
+        <button style="background-color: chocolate; color: black; font-size: 50px" onclick="alert('Are you sure ?');">
+            Dont click this please
+        </button>
+    </a>
+</h2>
 </body>
 </html>
