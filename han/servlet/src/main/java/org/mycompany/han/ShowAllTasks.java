@@ -61,10 +61,6 @@ public class ShowAllTasks extends HttpServlet {
         ResultSet resultSet;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
-        } catch (Exception ex) {
-            System.err.println("Невозможно зарегестрировать драйвер");
-            ex.printStackTrace();
-
             try (Connection connection = DriverManager.getConnection(url, username, password)) {
                 Statement statement = connection.createStatement();
                 try {
@@ -80,10 +76,10 @@ public class ShowAllTasks extends HttpServlet {
                     System.err.println("Невозможно выбрать таблицу из БД");
                     e.printStackTrace();
                 }
-            } catch (SQLException e) {
-                System.err.println("Невозможно подключиться к БД");
-                e.printStackTrace();
             }
+        } catch (Exception ex) {
+            System.err.println("Невозможно зарегестрировать драйвер");
+            ex.printStackTrace();
         }
         return tasks;
     }
