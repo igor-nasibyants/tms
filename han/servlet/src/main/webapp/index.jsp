@@ -21,26 +21,28 @@
 </h2>
 <div id="root">
 
-    <div class="d-flex gap-2 py-2 mt-2">
+    <div class="d-flex gap-2 py-2 mt-2 flex-wrap justify-content-around">
         <form action="addTask">
-            <button class="d-flex justify-content-center badge bg-info text-wrap
-            text-decoration-none text fs-3" name="add"
-                    style="width: 100px; height: 50px">Add
+            <button class="d-flex justify-content-center badge bg-info
+            text-decoration-none text fs-3" name="add">Add
             </button>
         </form>
-        <form action="delete">
-            <button class="d-flex justify-content-center badge bg-white text-wrap
-            text-decoration-none text fs-3 text-info" name="delete"
-                    style="width: 100px; height: 50px">Delete
+        <form action="deleteAll">
+            <button class="d-flex justify-content-center badge bg-white
+            text-decoration-none text fs-3 text-info" name="delete">Delete All
             </button>
         </form>
-        <div class="input-group mb-3" style="height: 50px; max-width: 1050px">
+        <div class="input-group mb-3" style="height: 50px; max-width: 1000px; min-width: 150px">
             <input name="names" type="text" class="form-control" aria-label="Text input with checkbox">
         </div>
     </div>
+    <form action="showAll">
+        <button class="d-flex justify-content-center badge bg-white text-wrap
+            text-decoration-none text fs-3 text-info" name="show">Show All
+        </button>
+    </form>
+
+    <h3 class="d-flex justify-content-center text-danger">Your Tasks</h3>
 </div>
-<footer class="d-flex justify-content-end">
-    Simple toDo list by Han
-</footer>
 </body>
 </html>

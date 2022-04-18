@@ -5,7 +5,6 @@ public class Task {
     private String nameTask;
     private boolean Status;
 
-
     public int getId() {
         return id;
     }
