@@ -4,6 +4,9 @@ import java.io.*;
 
 public class File {
 
+    public File(String s) {
+    }
+
     public static void main(String args[]) {
 
         try {
