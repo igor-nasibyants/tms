@@ -1,0 +1,17 @@
+<Doc-type>web-app xmlns="http://java.sun.com/xml/ns/javaee"
+
+    <web-app>
+
+    <servlet>
+        <servlet-name>Data</servlet-name>
+        <servlet-class>org.mycompany.date.Data</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Data</servlet-name>
+        <servlet-url>/date</servlet-url>
+    </servlet-mapping>
+
+    </web-app>
+
+    </Doc-type>
