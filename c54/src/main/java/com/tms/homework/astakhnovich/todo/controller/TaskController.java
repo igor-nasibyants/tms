@@ -74,18 +74,18 @@ public class TaskController {
     }
 
     public void isСompleted() {
-        System.out.println("\n Select a task to mark as done");
+        System.out.println("\nSelect a task to mark as done\n");
         showHeader();
         int choice = Integer.parseInt(validationInput()) - 1;
-
-        for (int i = 0; i < taskRepo.getTasksList().size(); i++) {
-            if (i == choice) {
-                taskRepo.getTasksList().get(i).setDoneTrue();
+        AtomicInteger i = new AtomicInteger(0);
+        taskRepo.getTasksList().forEach(v -> {
+            if (i.get() == choice) {
+                taskRepo.getTasksList().get(i.get()).setDoneTrue();
                 taskRepo.serializeToJson();
-                System.out.println("\n The task " + taskRepo.getTasksList().get(i).getHeader() + " is completed!");
-                break;
+                System.out.println("\nThe task " + taskRepo.getTasksList().get(i.get()).getHeader() + " is completed!");
             }
-        }
+            i.incrementAndGet();
+        });
         taskMenu();
     }
 
@@ -93,11 +93,17 @@ public class TaskController {
         System.out.println("\nSelect the task to delete");
         showHeader();
         int choice = Integer.parseInt(validationInput()) - 1;
-        if(deleteTask(choice)){
-            System.out.println("deleted successfully");
-        }else {
-            System.out.println("deletion error");
-        }
+
+        AtomicInteger i = new AtomicInteger(0);
+        taskRepo.getTasksList().forEach(v -> {
+            if (i.get() == choice) {
+                taskRepo.getTasksList().remove(i.get());
+                if(taskRepo.serializeToJson()) {
+                    System.out.println("deleted successfully");
+                }
+            }
+            i.incrementAndGet();
+        });
         taskMenu();
     }
 
@@ -106,17 +112,6 @@ public class TaskController {
         taskRepo.getTasksList().stream()
                 .map(Task::getHeader)
                 .forEach(v -> System.out.println(i.getAndIncrement() + ". " + v));
-    }
-
-    public boolean deleteTask(int choice) {
-        for (int i = 0; i < taskRepo.getTasksList().size(); i++) {
-            if (i == choice) {
-                taskRepo.getTasksList().remove(i);
-                taskRepo.serializeToJson();
-                return true;
-            }
-        }
-        return false;
     }
 
     public static String validationInput() {
