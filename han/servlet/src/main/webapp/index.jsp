@@ -20,7 +20,6 @@
     ToDo List
 </h2>
 <div id="root">
-
     <div class="d-flex gap-2 py-2 mt-2 flex-wrap justify-content-around">
         <form action="addTask">
             <button class="d-flex justify-content-center badge bg-info
@@ -33,16 +32,29 @@
             </button>
         </form>
         <div class="input-group mb-3" style="height: 50px; max-width: 1000px; min-width: 150px">
-            <input name="names" type="text" class="form-control" aria-label="Text input with checkbox">
+            <input property="nameTask" type="text" class="form-control" aria-label="Text input with checkbox">
         </div>
     </div>
-    <form action="showAll">
-        <button class="d-flex justify-content-center badge bg-white text-wrap
+    <div class="d-flex gap-3">
+        <form action="showAll">
+            <button class="d-flex justify-content-center badge bg-white text-wrap
             text-decoration-none text fs-3 text-info" name="show">Show All
-        </button>
-    </form>
+            </button>
+        </form>
 
+        <form action="showCompleted">
+            <button class="d-flex justify-content-center badge bg-info
+            text-decoration-none text fs-3" name="show">Show Completed
+            </button>
+        </form>
+        <form action="deleteLast">
+            <button class="d-flex justify-content-center badge bg-white text-wrap
+            text-decoration-none text fs-3 text-info" name="show">Delete Last
+            </button>
+        </form>
+    </div>
     <h3 class="d-flex justify-content-center text-danger">Your Tasks</h3>
+    <form id="tasks"></form>
 </div>
 </body>
 </html>
