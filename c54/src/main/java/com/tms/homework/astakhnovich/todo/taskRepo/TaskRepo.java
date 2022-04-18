@@ -2,17 +2,25 @@ package com.tms.homework.astakhnovich.todo.taskRepo;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tms.homework.astakhnovich.todo.model.Task;
+import com.tms.task.task12.File;
 import java.io.*;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class TaskRepo {
     private ObjectMapper objectMapper = new ObjectMapper();
     private List<Task> tasksList;
-    private List<Task> unmodifiableTasksList;
+
+    {
+        Path path = Paths.get("json//TaskList.json");
+        if(Files.exists(path)){
+        }else{
+            File file = new File("json//TaskList.json");
+        }
+    }
 
     public boolean addTaskToRepo(Task newTask){
         tasksList = new ArrayList<>(getTasksList());
@@ -22,6 +30,7 @@ public class TaskRepo {
     }
 
     public boolean serializeToJson() {
+
         try (FileOutputStream fileOutputStream = new FileOutputStream("json//TaskList.json")){
             String result = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(tasksList);
             fileOutputStream.write(result.getBytes());
@@ -35,17 +44,12 @@ public class TaskRepo {
     public List<Task> getTasksList() {
         try {
             byte[] arrayFromJson = Files.readAllBytes(Paths.get("json//TaskList.json"));
-            Task [] listFromJson =  objectMapper.readValue(arrayFromJson, Task[].class);
-            tasksList = Arrays.stream(listFromJson).toList();
-            return unmodifiableTasksList = new ArrayList<>(tasksList);
+            return tasksList = objectMapper.readValue(arrayFromJson, objectMapper.getTypeFactory()
+                    .constructCollectionType(List.class, Task.class));
         } catch (IOException e) {
             e.printStackTrace();
             return new ArrayList<>();
         }
-    }
-
-    public void deleteTask(){
-        tasksList = new ArrayList<>(unmodifiableTasksList);
     }
 }
 
@@ -57,7 +61,11 @@ public class TaskRepo {
 
 
 
+//    private List<Task> unmodifiableTasksList;
 
+//            Task [] listFromJson =  objectMapper.readValue(arrayFromJson, Task[].class);
+//            tasksList = Arrays.stream(listFromJson).toList();
+//            return unmodifiableTasksList = new ArrayList<>(tasksList);
 
 //        try (OutputStream os = new FileOutputStream("xml//taskList.xml" )){
 //            JAXBContext context = JAXBContext.newInstance(Task.class);
