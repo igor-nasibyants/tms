@@ -5,15 +5,17 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
-import java.io.File;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import static org.mycompany.han.UtilsFunction.*;
+import java.util.List;
 
+import static org.mycompany.han.UtilsFunction.addTaskToHTML;
+import static org.mycompany.han.UtilsFunction.getTasks;
 
-@WebServlet("/showAll")
-public class ShowAllTasks extends HttpServlet {
-
+@WebServlet("/showCompleted")
+public class ShowCompletedTasks extends HttpServlet {
     //Разобраться с путями
     String HTMLString = """
             <html lang="en">
@@ -83,6 +85,7 @@ public class ShowAllTasks extends HttpServlet {
     public void doGet(HttpServletRequest httpServletRequest,
                       HttpServletResponse httpServletResponse) {
         httpServletResponse.setContentType("text/html;charset=UTF-8");
-        addTaskToHTML(httpServletResponse, HTMLString, getTasks(), element);
+        List<Task> tasks = getTasks().stream().filter(Task::isStatus).toList();
+        addTaskToHTML(httpServletResponse, HTMLString, tasks, element);
     }
 }

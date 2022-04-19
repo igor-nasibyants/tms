@@ -2,7 +2,11 @@
         "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
         "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
-<web-app>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
     <display-name>DayToday</display-name>
 
     <servlet>
@@ -12,7 +16,27 @@
 
     <servlet-mapping>
         <servlet-name>MyDateServlet</servlet-name>
-        <url-pattern>/test</url-pattern>
+        <url-pattern>/date</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>OrcServlet</servlet-name>
+        <servlet-class>org.superpaulscompany.pavel.OrcServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>OrcServlet</servlet-name>
+        <url-pattern>/orc</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ForwardServlet</servlet-name>
+        <servlet-class>org.superpaulscompany.pavel.ForwardServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>ForwardServlet</servlet-name>
+        <url-pattern>/forward</url-pattern>
     </servlet-mapping>
 
 </web-app>
