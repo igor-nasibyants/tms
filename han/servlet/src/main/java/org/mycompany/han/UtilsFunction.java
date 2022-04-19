@@ -11,22 +11,44 @@ import java.util.List;
 import java.util.Objects;
 
 public class UtilsFunction {
-    public static void addTaskToHTML(HttpServletResponse httpServletResponse,
-                                     String HTMLString, List<Task> tasks, Element element) {
+    public static void updateTodo(HttpServletResponse httpServletResponse,
+                                  String HTMLString, List<Task> tasks, Element element) {
         try (PrintWriter out = httpServletResponse.getWriter()) {
             out.append(HTMLString);
-            out.append("<h4>");
-            tasks.forEach(task -> out.append("<br>")
-                    .append(String.valueOf(task.getId()))
-                    .append(") ")
-                    .append(task.getNameTask())
-                    .append(". Status: ")
-                    .append(String.valueOf(task.isStatus())));
-            out.append("</h4>");
+            out.append("<div class = \"d-flex flex-column gap-2\">");
+            tasks.forEach(task -> {
+                String mark = "<div class = \"d-flex justify-content-between" +
+                        " gap-1 border border-danger py-2 px-4 rounded-3 text-break\"" +
+                        " style = \"min-width: 150px \">";
+                if (task.isStatus()) {
+                    mark = "<div class = \"d-flex justify-content-between" +
+                            " gap-1 border border-danger bg-danger py-2 px-4 rounded-3 text-break text-white\"" +
+                            " style = \"min-width: 150px \">";
+                }
+                out.
+                        append(mark)
+                        .append("<div class = \"\">")
+                        .append(String.valueOf(task.getId()))
+                        .append(") ")
+                        .append(task.getNameTask())
+                        .append("</div>")
+                        .append("<div class = \"d-flex gap-2\">")
+                        .append("<div class = \"d-flex align-items-center\">")
+                        .append("<input type=\"checkbox\" name=\"checkbox\"/>")
+                        .append("</div>")
+                        .append("<div class = \"d-flex align-items-center\">")
+                        .append("<button class = \"btn btn-close\">")
+                        .append("</div>")
+                        .append("</div>")
+                        .append("</div>");
+            });
+            out.append("</div>");
             element.append(String.valueOf(out));
-        } catch (IOException e) {
+        } catch (
+                IOException e) {
             e.printStackTrace();
         }
+
     }
 
     public static List<Task> getTasks() {
@@ -61,5 +83,10 @@ public class UtilsFunction {
             e.printStackTrace();
         }
         return tasks;
+    }
+
+    public static void main(String[] args) {
+        List<Task> tasks = getTasks();
+        //        httpServletRequest.getParameter("checkbox") != null ||
     }
 }
