@@ -15,7 +15,7 @@
     Today's date: <%= (new Date()).toString()%>
 </h1>
 <h2>
-    <a href="test">
+    <a href="date">
         <button style="background-color: crimson;color: black; font-size: 50px">
             Click this please
         </button>
@@ -29,9 +29,16 @@
     </a>
 </h2>
 <h2>
-    <a href="text">
+    <a href="orc">
         <button style="background-color: aquamarine; color: black; font-size: 50px">
             Register orcs
+        </button>
+    </a>
+</h2>
+<h2>
+    <a href="forward">
+        <button style="background-color: darkmagenta; color: black; font-size: 50px">
+            forward() to date
         </button>
     </a>
 </h2>
