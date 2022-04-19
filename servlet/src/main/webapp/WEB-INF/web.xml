@@ -15,6 +15,16 @@
         <url-pattern>/test</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>FileUploadDemo</servlet-name>
+        <servlet-class>org.mycompany.myname.demo.FileUploadDemo</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FileUploadDemo</servlet-name>
+        <url-pattern>/FileUploadDemo</url-pattern>
+    </servlet-mapping>
+
     <filter>
         <filter-name>logFilter</filter-name>
         <filter-class>org.mycompany.myname.filter.LogFilter</filter-class>
