@@ -12,12 +12,12 @@
 </head>
 <body>
 <h1>
-    Today's date: <%= (new Date()).toString()%>
+    Today's date in Minsk: <%= (new Date()).toString()%>
 </h1>
 <h2>
     <a href="date">
         <button style="background-color: crimson;color: black; font-size: 50px">
-            Click this please
+            Local time in other Towns
         </button>
     </a>
 </h2>
