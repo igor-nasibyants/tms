@@ -31,7 +31,7 @@ public class UtilsFunction {
                         .append(String.valueOf(task.getId()))
                         .append(") ")
                         .append(task.getNameTask())
-                        .append(".</div>")
+                        .append("</div>")
                         .append("<div class = \"d-flex gap-2\">")
                         .append("<div class = \"d-flex align-items-center\">")
                         .append("<input type=\"checkbox\" name=\"checkbox\"/>")
