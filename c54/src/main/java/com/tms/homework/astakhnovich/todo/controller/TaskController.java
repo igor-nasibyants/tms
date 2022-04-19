@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class TaskController {
     private Task newTask;
     private TaskRepo taskRepo = new TaskRepo();
-    private String [] selection = {"1","2","3","4","q"};
+    private String[] selection = {"1", "2", "3", "4", "q"};
 
 
     public void taskMenu() {
@@ -98,7 +98,7 @@ public class TaskController {
         taskRepo.getTasksList().forEach(v -> {
             if (i.get() == choice) {
                 taskRepo.getTasksList().remove(i.get());
-                if(taskRepo.serializeToJson()) {
+                if (taskRepo.serializeToJson()) {
                     System.out.println("deleted successfully");
                 }
             }

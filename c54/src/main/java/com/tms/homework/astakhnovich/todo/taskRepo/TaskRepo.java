@@ -2,7 +2,7 @@ package com.tms.homework.astakhnovich.todo.taskRepo;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tms.homework.astakhnovich.todo.model.Task;
-import com.tms.task.task12.File;
+
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -16,26 +16,30 @@ public class TaskRepo {
 
     {
         Path path = Paths.get("json//TaskList.json");
-        if(Files.exists(path)){
-        }else{
+        if (Files.exists(path)) {
+        } else {
             File file = new File("json//TaskList.json");
+            try (FileOutputStream fileOutputStream = new FileOutputStream("json//TaskList.json")) {
+                String s = "[ ]";
+                fileOutputStream.write(s.getBytes());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
-    public boolean addTaskToRepo(Task newTask){
+    public boolean addTaskToRepo(Task newTask) {
         tasksList = new ArrayList<>(getTasksList());
         tasksList.add(newTask);
         return serializeToJson();
-
     }
 
     public boolean serializeToJson() {
-
-        try (FileOutputStream fileOutputStream = new FileOutputStream("json//TaskList.json")){
+        try (FileOutputStream fileOutputStream = new FileOutputStream("json//TaskList.json")) {
             String result = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(tasksList);
             fileOutputStream.write(result.getBytes());
             return true;
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
             return false;
         }
