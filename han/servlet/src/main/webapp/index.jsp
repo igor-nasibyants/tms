@@ -21,19 +21,24 @@
 </h2>
 <div id="root">
     <div class="d-flex gap-2 py-2 mt-2 flex-wrap justify-content-around">
-        <form action="addTask">
-            <button class="d-flex justify-content-center badge bg-info
-            text-decoration-none text fs-3" name="add">Add
-            </button>
-        </form>
         <form action="deleteAll">
             <button class="d-flex justify-content-center badge bg-white
             text-decoration-none text fs-3 text-info" name="delete">Delete All
             </button>
         </form>
-        <div class="input-group mb-3" style="height: 50px; max-width: 1000px; min-width: 150px">
+        <form action="deleteLast">
+            <button class="d-flex justify-content-center badge bg-white text-wrap
+            text-decoration-none text fs-3 text-info" name="show">Delete Last
+            </button>
+        </form>
+        <div class="input-group mb-3" style="height: 50px; max-width: 800px; min-width: 150px">
             <input property="nameTask" type="text" class="form-control" aria-label="Text input with checkbox">
         </div>
+        <form action="addTask">
+            <button class="d-flex justify-content-center badge bg-info
+            text-decoration-none text fs-3" name="add">Add
+            </button>
+        </form>
     </div>
     <div class="d-flex gap-3">
         <form action="showAll">
@@ -44,12 +49,7 @@
 
         <form action="showCompleted">
             <button class="d-flex justify-content-center badge bg-info
-            text-decoration-none text fs-3" name="show">Show Completed
-            </button>
-        </form>
-        <form action="deleteLast">
-            <button class="d-flex justify-content-center badge bg-white text-wrap
-            text-decoration-none text fs-3 text-info" name="show">Delete Last
+            text-decoration-none text fs-3 text-wrap" name="show">Show Completed
             </button>
         </form>
     </div>
