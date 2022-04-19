@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class UtilsFunction {
-    public static void addTaskToHTML(HttpServletResponse httpServletResponse,
+    public static void updateTodo(HttpServletResponse httpServletResponse,
                                      String HTMLString, List<Task> tasks, Element element) {
         try (PrintWriter out = httpServletResponse.getWriter()) {
             out.append(HTMLString);
