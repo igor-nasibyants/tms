@@ -32,8 +32,13 @@ public class UtilsFunction {
                         .append(") ")
                         .append(task.getNameTask())
                         .append(".</div>")
+                        .append("<div class = \"d-flex gap-2\">")
                         .append("<div class = \"d-flex align-items-center\">")
                         .append("<input type=\"checkbox\" name=\"checkbox\"/>")
+                        .append("</div>")
+                        .append("<div class = \"d-flex align-items-center\">")
+                        .append("<button class = \"btn btn-close\">")
+                        .append("</div>")
                         .append("</div>")
                         .append("</div>");
             });
