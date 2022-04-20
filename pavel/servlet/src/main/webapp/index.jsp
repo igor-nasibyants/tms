@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>Current Date</title>
+    <title>Pauls Site</title>
 </head>
 <body style="color: darkmagenta;background-color: darkkhaki">
 <h1 style="color: darkred;text-align: center">
@@ -49,5 +49,12 @@
         </button>
     </a>
 </h2>
+<h2 style="text-align: center">
+    <a href="students">
+        <button style="background-color: darkblue; color: white; font-size: 50px">
+            SELECT * FROM MySQL
+        </button>
+    </a>
+</h2>>
 </body>
 </html>

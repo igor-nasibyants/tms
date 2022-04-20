@@ -33,10 +33,20 @@
         <servlet-name>ForwardServlet</servlet-name>
         <servlet-class>org.superpaulscompany.pavel.ForwardServlet</servlet-class>
     </servlet>
-    
+
     <servlet-mapping>
         <servlet-name>ForwardServlet</servlet-name>
         <url-pattern>/forward</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>StudentsServlet</servlet-name>
+        <servlet-class>org.superpaulscompany.pavel.StudentsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>StudentsServlet</servlet-name>
+        <url-pattern>/students</url-pattern>
     </servlet-mapping>
 
 </web-app>
