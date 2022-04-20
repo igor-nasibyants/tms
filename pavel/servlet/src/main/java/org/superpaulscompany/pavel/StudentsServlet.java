@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class StudentsServlet extends HttpServlet {
     private static final String URL = "jdbc:mysql://localhost/studentsc54";
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "pagymubuj8991";
+    private static final String PASSWORD = "мой пороль";
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {

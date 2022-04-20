@@ -10,7 +10,7 @@
 <head>
     <title>Pauls Site</title>
 </head>
-<body style="color: darkmagenta;background-color: darkkhaki">
+<body style="background-color: darkkhaki">
 <h1 style="color: darkred;text-align: center">
     Today's date in Minsk: <%= (new Date()).toString()%>
 </h1>
@@ -18,6 +18,13 @@
     <a href="date">
         <button style="background-color: crimson;color: black; font-size: 50px;">
             Local time in other Towns
+        </button>
+    </a>
+</h2>
+<h2 style="text-align: center">
+    <a href="homework23.jsp">
+        <button style="background-color: darkblue; color: white; font-size: 50px">
+            Homework23
         </button>
     </a>
 </h2>
@@ -49,12 +56,5 @@
         </button>
     </a>
 </h2>
-<h2 style="text-align: center">
-    <a href="students">
-        <button style="background-color: darkblue; color: white; font-size: 50px">
-            SELECT * FROM MySQL
-        </button>
-    </a>
-</h2>>
 </body>
 </html>
