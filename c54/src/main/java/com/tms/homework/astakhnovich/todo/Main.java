@@ -1,7 +1,6 @@
 package com.tms.homework.astakhnovich.todo;
 
 import com.tms.homework.astakhnovich.todo.controller.TaskController;
-
 import java.io.IOException;
 
 public class Main {

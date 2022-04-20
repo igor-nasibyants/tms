@@ -2,7 +2,6 @@ package com.tms.homework.astakhnovich.todo.controller;
 
 import com.tms.homework.astakhnovich.todo.model.Task;
 import com.tms.homework.astakhnovich.todo.taskRepo.TaskRepo;
-
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -10,7 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class TaskController {
     private Task newTask;
     private TaskRepo taskRepo = new TaskRepo();
-    private String[] selection = {"1", "2", "3", "4", "q"};
+    private final String [] selection = {"1","2","3","4","q"};
 
 
     public void taskMenu() {
@@ -98,7 +97,7 @@ public class TaskController {
         taskRepo.getTasksList().forEach(v -> {
             if (i.get() == choice) {
                 taskRepo.getTasksList().remove(i.get());
-                if (taskRepo.serializeToJson()) {
+                if(taskRepo.serializeToJson()) {
                     System.out.println("deleted successfully");
                 }
             }
