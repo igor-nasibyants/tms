@@ -19,7 +19,6 @@ public class MyDateServlet extends HttpServlet {
         resp.setContentType("text/html");
 
         PrintWriter printWriter = resp.getWriter();
-        printWriter.println("Fool, you're lost in time.\n");
 
         MyDate paris = new MyDate("Paris", LocalDateTime.now(ZoneId.of("Europe/Paris")));
         MyDate darwin = new MyDate("Darwin", LocalDateTime.now(ZoneId.of("Australia/Darwin")));
@@ -29,6 +28,9 @@ public class MyDateServlet extends HttpServlet {
         Collections.addAll(localDateTimeArrayList, paris, darwin, jakarta);
 
         localDateTimeArrayList
-                .forEach(x -> printWriter.println("<html>" + "<h1>" + x + "</h1>" + "</html>"));
+                .forEach(x -> printWriter.println("<html>" + "<h1 style=\"color: darkred;text-align: center\">"
+                        + x + "</h1>" + "</html>"));
+
+        resp.setIntHeader("Refresh",1);
     }
 }
