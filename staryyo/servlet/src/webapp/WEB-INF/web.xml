@@ -1,0 +1,45 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+    <display-name>Archetype Created Web Application</display-name>
+
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>org.tms.sergey.HelloServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
+
+<web-app>
+<display-name>Servlets Tutorial</display-name>
+
+<servlet>
+    <servlet-name>SimpleServlet</servlet-name>
+    <servlet-class>net.proselyte.servletstutorial.SimpleServlet</servlet-class>
+</servlet>
+
+<servlet>
+    <servlet-name>DateTimeDemo</servlet-name>
+    <servlet-class>net.proselyte.servletstutorial.DateTimeDemo</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>SimpleServlet</servlet-name>
+    <url-pattern>/SimpleServlet</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>DateTimeDemo</servlet-name>
+    <url-pattern>/DateTimeDemo</url-pattern>
+</servlet-mapping>
+</web-app>
