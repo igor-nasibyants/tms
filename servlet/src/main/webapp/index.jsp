@@ -7,6 +7,7 @@
         <title>Стартовая страница</title>
     </head>
     <body>
+        <a href="test">Click here to see servlet</a>
        <p><input type="submit" value="Авторизация" 
                  onclick="window.location='login.jsp';" />  
           <br />
