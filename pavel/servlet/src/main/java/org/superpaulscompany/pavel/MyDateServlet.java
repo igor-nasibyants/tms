@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 
 public class MyDateServlet extends HttpServlet {
@@ -23,14 +24,28 @@ public class MyDateServlet extends HttpServlet {
         MyDate paris = new MyDate("Paris", LocalDateTime.now(ZoneId.of("Europe/Paris")));
         MyDate darwin = new MyDate("Darwin", LocalDateTime.now(ZoneId.of("Australia/Darwin")));
         MyDate jakarta = new MyDate("Jakarta", LocalDateTime.now(ZoneId.of("Asia/Jakarta")));
+        MyDate indianapolis = new MyDate("Indianapolis", LocalDateTime.now(ZoneId.of("America/Indiana/Indianapolis")));
+        MyDate cairo = new MyDate("Cairo", LocalDateTime.now(ZoneId.of("Africa/Cairo")));
+        MyDate buenos_aires = new MyDate("Buenos Aires", LocalDateTime.now(ZoneId.of("America/Argentina/Buenos_Aires")));
+        MyDate kolkata = new MyDate("Kolkata", LocalDateTime.now(ZoneId.of("Asia/Kolkata")));
 
         ArrayList<MyDate> localDateTimeArrayList = new ArrayList<>();
-        Collections.addAll(localDateTimeArrayList, paris, darwin, jakarta);
+        Collections.addAll(localDateTimeArrayList, paris, darwin, jakarta, indianapolis, cairo, buenos_aires, kolkata);
 
-        localDateTimeArrayList
+        printWriter.println("<html>" + "<h1 style=\"text-align: center\">" + "Sorted by city name => " + "</h1>" + "</html>");
+
+        localDateTimeArrayList.stream()
+                .sorted(Comparator.comparing(MyDate::name))
                 .forEach(x -> printWriter.println("<html>" + "<h1 style=\"color: darkred;text-align: center\">"
                         + x + "</h1>" + "</html>"));
 
-        resp.setIntHeader("Refresh",1);
+        printWriter.println("<html>" + "<h1 style=\"text-align: center\">" + "Sorted by city time => " + "</h1>" + "</html>");
+
+        localDateTimeArrayList.stream()
+                .sorted(Comparator.comparing(MyDate::localDateTime))
+                .forEach(x -> printWriter.println("<html>" + "<h1 style=\"color: crimson;text-align: center\">"
+                        + x + "</h1>" + "</html>"));
+
+        resp.setIntHeader("Refresh", 1);
     }
 }
