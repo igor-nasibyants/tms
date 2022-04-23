@@ -12,9 +12,9 @@
 </head>
 <body style="background-color: darkkhaki">
 <h2 style="text-align: center">
-    <a href="login.jsp">
+    <a href="let'sGoToTheParty.jsp">
         <button style="background-color: darkred; color: white; font-size: 50px">
-            Login
+            Let's get this party started
         </button>
     </a>
 </h2>
