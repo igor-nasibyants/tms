@@ -16,7 +16,7 @@
     Do you remember what to do ?
 </h1>
 <form action="year" method="POST" style="color: black;font-size: 30px">
-    <b> Enter a date please in pattern "dd.MM.yyyy" | example 20.05.1999 :</b><br><br>
+    <b> Enter a date, please, in pattern "dd.MM.yyyy" | example 20.05.1999 :</b><br><br>
     <label>
         <input name="userDate" style="color: black;font-size: 30px">
     </label>
