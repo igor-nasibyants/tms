@@ -11,7 +11,7 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 
 @WebServlet("/party")
-public class LoginServlet extends HttpServlet {
+public class LoginToPartyServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.setContentType("text/html");
