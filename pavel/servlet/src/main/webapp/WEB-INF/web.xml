@@ -20,26 +20,6 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>OrcServlet</servlet-name>
-        <servlet-class>org.superpaulscompany.pavel.OrcServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>OrcServlet</servlet-name>
-        <url-pattern>/orc</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>ForwardServlet</servlet-name>
-        <servlet-class>org.superpaulscompany.pavel.ForwardServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>ForwardServlet</servlet-name>
-        <url-pattern>/forward</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
         <servlet-name>StudentsServlet</servlet-name>
         <servlet-class>org.superpaulscompany.pavel.StudentsServlet</servlet-class>
     </servlet>

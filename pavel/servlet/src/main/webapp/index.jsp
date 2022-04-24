@@ -36,20 +36,6 @@
     </a>
 </h2>
 <h2 style="text-align: center">
-    <a href="orc">
-        <button style="background-color: aquamarine; color: black; font-size: 50px">
-            Register orcs
-        </button>
-    </a>
-</h2>
-<h2 style="text-align: center">
-    <a href="forward">
-        <button style="background-color: darkmagenta; color: black; font-size: 50px">
-            forward() to date
-        </button>
-    </a>
-</h2>
-<h2 style="text-align: center">
     <a href="1639741489_sticker.jpg" download="Take this motivation">
         <button style="background-color: orange;color: black; font-size: 50px">
             Download Cat
