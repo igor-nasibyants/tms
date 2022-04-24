@@ -67,7 +67,12 @@
         <input type="checkbox" name="provisions" value="Tonic" style="color: black;font-size: 30px"/>
     </label>Tonic
     <br><br>
+    <label>Your wishes :<br>
+        <textarea name="comments" cols="40" rows="3" style="color: darkviolet;font-size: 30px"></textarea>
+    </label>
+    <br><br>
     <input type="submit" value="Submit" style="font-size: 30px"/>
+    <input type="reset" value="Reset" style="font-size: 30px"/>
 </form>
 </body>
 </html>

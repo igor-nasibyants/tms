@@ -23,8 +23,9 @@ public class LoginServlet extends HttpServlet {
         String gender = req.getParameter("gender");
         String country = req.getParameter("country");
         String[] provisions = req.getParameterValues("provisions");
+        String[] comments = req.getParameterValues("comments");
 
-        PartyMember partyMember = new PartyMember(name,surname,age,gender,country,provisions);
+        PartyMember partyMember = new PartyMember(name,surname,age,gender,country,provisions,comments);
 
         printWriter.println("<h1 style=\"color: black;text-align: center\">A member of our party and his provisions: </h1>");
         printWriter.println("<h1><p style=\"color: crimson;text-align: center\">Name: " + partyMember.name() + "</p></h1>");
@@ -34,5 +35,7 @@ public class LoginServlet extends HttpServlet {
         printWriter.println("<h1><p style=\"color: darkgreen;text-align: center\">Country: " + partyMember.country() + "</p></h1>");
         printWriter.println("<h1 style=\"color: crimson;text-align: center\">Provisions =></h1>");
         Arrays.stream(provisions).forEach(x -> printWriter.println("<h2><li style=\"color: black;text-align: center\">" + x + "</li></h2>"));
+        printWriter.println("<h1 style=\"color: crimson;text-align: center\">Comments =></h1>");
+        Arrays.stream(comments).forEach(x -> printWriter.println("<h2><li style=\"color: black;text-align: center\">" + x + "</li></h2>"));
     }
 }

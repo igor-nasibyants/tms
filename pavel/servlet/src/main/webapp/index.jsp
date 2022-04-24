@@ -15,9 +15,9 @@
     Today's date in Minsk: <%= (new Date()).toString()%>
 </h1>
 <h2 style="text-align: center">
-    <a href="date">
+    <a href="homework22.jsp">
         <button style="background-color: crimson;color: black; font-size: 50px;">
-            Local time in other Towns
+            Homework22
         </button>
     </a>
 </h2>
