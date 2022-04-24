@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
 
-@WebServlet("/hello")
+@WebServlet("/party")
 public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -25,9 +25,9 @@ public class LoginServlet extends HttpServlet {
         String[] provisions = req.getParameterValues("provisions");
         String[] comments = req.getParameterValues("comments");
 
-        PartyMember partyMember = new PartyMember(name,surname,age,gender,country,provisions,comments);
+        PartyMember partyMember = new PartyMember(name, surname, age, gender, country, provisions, comments);
 
-        printWriter.println("<h1 style=\"color: black;text-align: center\">A member of our party and his provisions: </h1>");
+        printWriter.println("<h1 style=\"color: black;text-align: center\">A member of our party: </h1>");
         printWriter.println("<h1><p style=\"color: crimson;text-align: center\">Name: " + partyMember.name() + "</p></h1>");
         printWriter.println("<h1><p style=\"color: crimson;text-align: center\">Surname: " + partyMember.surname() + "</p></h1>");
         printWriter.println("<h1><p style=\"color: crimson;text-align: center\">Age: " + partyMember.age() + "</p></h1>");

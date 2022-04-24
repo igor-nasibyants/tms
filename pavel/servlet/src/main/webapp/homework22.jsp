@@ -11,7 +11,13 @@
     <title>Homework22</title>
 </head>
 <body style="background-color: darkkhaki">
-
+<h2 style="text-align: center">
+    <a href="DayOfTheWeek.jsp">
+        <button style="background-color: forestgreen;color: black; font-size: 50px;">
+            Day of the week
+        </button>
+    </a>
+</h2>
 <h2 style="text-align: center">
     <a href="date">
         <button style="background-color: crimson;color: black; font-size: 50px;">

@@ -14,7 +14,7 @@
 <h1>
     Quickly register for a party!
 </h1>
-<form action="hello" method="POST" style="color: crimson;font-size: 30px">
+<form action="party" method="POST" style="color: crimson;font-size: 30px">
     Name: <label>
     <input name="userName" style="color: black;font-size: 30px"/>
 </label>
