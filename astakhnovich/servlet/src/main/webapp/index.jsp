@@ -3,6 +3,8 @@
     <title>AAA</title>
 </head>
 <body>
-Кнопка
+<form action = "knopka">
+<button>AAAA</button>
+</form>
 </body>
 </html>
