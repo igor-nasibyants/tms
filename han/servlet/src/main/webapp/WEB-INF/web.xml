@@ -4,15 +4,4 @@
 
 <web-app>
     <display-name>ToDo List</display-name>
-
-<!--    <servlet>-->
-<!--        <servlet-name>AddTask</servlet-name>-->
-<!--        <servlet-class>org.mycompany.han.AddTask</servlet-class>-->
-<!--    </servlet>-->
-
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>AddTask</servlet-name>-->
-<!--        <url-pattern>/add</url-pattern>-->
-<!--    </servlet-mapping>-->
-
 </web-app>

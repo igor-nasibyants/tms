@@ -60,19 +60,30 @@
         </form>
     </div>
     <h3 class="d-flex justify-content-center text-danger">Your Tasks</h3>
-    <%
-        List<Task> tasks = getTasks();
-        request.setAttribute("tasks", tasks);
-    %>
-    <ur>
-        <c:forEach var="task" items="${tasks}">
-            <li>
-                    ${task.id}
-                    ${task.nameTask}
-                    ${task.status}
-            </li>
-        </c:forEach>
-    </ur>
+
+       <% List<Task> tasks = getTasks();
+        request.setAttribute("tasks", tasks); %>
+        <div class = "d-flex flex-column gap-2">
+        <% for (Task task: tasks) { %>
+        <div class = 'd-flex justify-content-between gap-1 border border-danger py-2 px-4 rounded-3 text-break' style = 'min-width: 150px '>
+        <div class = "">
+         <%= task.getId() %>
+         <span>) </span>
+         <%= task.getNameTask() %>
+         <span> Status: </span>
+         <%= task.isStatus() %>
+         </div>
+         <div class = "d-flex gap-2">
+         <div class = "d-flex align-items-center">
+         <input type="checkbox" name="checkbox"/>
+         </div>
+         <div class = "d-flex align-items-center">
+         <button class = "btn btn-close">
+         </div>
+         </div>
+         </div>
+        <% } %>
+        </div>
 </div>
 </body>
 </html>

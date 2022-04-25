@@ -1,16 +1,11 @@
 package org.mycompany.han;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.sql.*;
 import java.util.List;
 
@@ -19,33 +14,11 @@ import static org.mycompany.han.UtilsFunction.*;
 @WebServlet("/addTask")
 public class AddTask extends HttpServlet {
 
-    //Разобраться с путями
-    String HTMLString;
-
-    {
-        try {
-            HTMLString = String.valueOf(Jsoup.parse(new File("D:\\Java\\TMS\\tms\\han\\servlet\\src\\main\\webapp\\index.jsp"),
-                    "ISO-8859-1"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     final String url = "jdbc:mysql://localhost/tododb";
     final String username = "mysql";
     final String password = "mysql";
-    Document html = Jsoup.parseBodyFragment(HTMLString);
-    Element element = html.getElementById("tasks");
-
     public void doGet(HttpServletRequest httpServletRequest,
-                      HttpServletResponse httpServletResponse) {
-        String nameTask = null;
-        try {
-            httpServletRequest.setCharacterEncoding("utf-8");
-            nameTask = httpServletRequest.getParameter("nameTask");
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
+                      HttpServletResponse httpServletResponse) throws ServletException, IOException {
         List<Task> tasks = getTasks();
         try (Connection connection = DriverManager.getConnection(url, username, password)) {
             try (final PreparedStatement statement =
@@ -58,6 +31,7 @@ public class AddTask extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        updateTodo(httpServletResponse, HTMLString, getTasks(), element);
+        httpServletRequest.setAttribute("tasks", tasks);
+        getServletContext().getRequestDispatcher("/index.jsp").forward(httpServletRequest, httpServletResponse);
     }
 }
