@@ -43,9 +43,8 @@
     </a>
 </h2>
 <h1 style="color: rebeccapurple; text-align: center">
-    Filter пишет логи<br>
-    Они выводятся в командной строке идеи<br>
-    и сохраняются в <br><u style="color: firebrick"> "LogsList.json" </u><br>
+    Внимание Filter пишет логи<br>
+    Логи сохраняются в <br><u style="color: firebrick"> "LogsList.json" </u><br>
     который будет находиться<br> в папке Tomcat 9.0/bin .
 </h1>
 </body>

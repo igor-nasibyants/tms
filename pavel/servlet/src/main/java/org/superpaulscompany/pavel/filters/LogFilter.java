@@ -1,5 +1,6 @@
 package org.superpaulscompany.pavel.filters;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.superpaulscompany.pavel.model.LogsModel;
 
@@ -14,17 +15,23 @@ import java.util.Date;
 
 @WebFilter(urlPatterns = "/*")
 public class LogFilter implements Filter {
+    private final ArrayList<LogsModel> logsArrayList = new ArrayList<>();
+    private final ObjectMapper objectMapper = new ObjectMapper();
+
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) request;
 
-        ArrayList<LogsModel> logsArrayList = new ArrayList<>();
         LogsModel logsModel = new LogsModel(new Date().toString(), req.getServletPath(), req.getRequestURL());
         logsArrayList.add(logsModel);
 
-        ObjectMapper objectMapper = new ObjectMapper();
-        String toJson = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(logsArrayList);
+        writeJson();
 
+        chain.doFilter(request, response);
+    }
+
+    private void writeJson() throws JsonProcessingException {
+        String toJson = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(logsArrayList);
         logsArrayList.forEach(x -> {
             try (FileOutputStream fileOutputStream = new FileOutputStream("LogsList.json")) {
                 fileOutputStream.write(toJson.getBytes(StandardCharsets.UTF_8));
@@ -32,9 +39,5 @@ public class LogFilter implements Filter {
                 e.printStackTrace();
             }
         });
-
-        logsArrayList.forEach(System.out::println);
-
-        chain.doFilter(request, response);
     }
 }
