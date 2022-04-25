@@ -1,3 +1,8 @@
+<%@ page import="java.util.List" %>
+<%@ page import="org.mycompany.han.Task" %>
+<%@ page import="static org.mycompany.han.UtilsFunction.getTasks" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
@@ -10,6 +15,7 @@
             crossorigin="anonymous"
     />
     <title>ToDo List</title>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 </head>
 <body class="container d-flex justify-content-center flex-column
     bg-white bg-gradient">
@@ -54,7 +60,19 @@
         </form>
     </div>
     <h3 class="d-flex justify-content-center text-danger">Your Tasks</h3>
-    <form id="tasks"></form>
+    <%
+        List<Task> tasks = getTasks();
+        request.setAttribute("tasks", tasks);
+    %>
+    <ur>
+        <c:forEach var="task" items="${tasks}">
+            <li>
+                    ${task.id}
+                    ${task.nameTask}
+                    ${task.status}
+            </li>
+        </c:forEach>
+    </ur>
 </div>
 </body>
 </html>
