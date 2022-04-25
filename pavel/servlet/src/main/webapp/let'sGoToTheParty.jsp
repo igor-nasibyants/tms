@@ -74,5 +74,10 @@
     <input type="submit" value="Submit" style="font-size: 30px"/>
     <input type="reset" value="Reset" style="font-size: 30px"/>
 </form>
+<h1 style="color: rebeccapurple">
+    После регистрации вся информация сохранится в<br>
+    <u style="color: firebrick">"PartyMember.json"<br></u>
+    который будет находиться в папке Tomcat 9.0/bin .
+</h1>
 </body>
 </html>

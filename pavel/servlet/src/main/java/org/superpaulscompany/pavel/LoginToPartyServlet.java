@@ -1,13 +1,17 @@
 package org.superpaulscompany.pavel;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.superpaulscompany.pavel.model.PartyMember;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 @WebServlet("/party")
@@ -37,5 +41,19 @@ public class LoginToPartyServlet extends HttpServlet {
         Arrays.stream(provisions).forEach(x -> printWriter.println("<h2><li style=\"color: black;text-align: center\">" + x + "</li></h2>"));
         printWriter.println("<h1 style=\"color: crimson;text-align: center\">Comments =></h1>");
         Arrays.stream(comments).forEach(x -> printWriter.println("<h2><li style=\"color: black;text-align: center\">" + x + "</li></h2>"));
+
+        ArrayList<PartyMember> partyMemberArrayList = new ArrayList<>();
+        partyMemberArrayList.add(partyMember);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        String toJson = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(partyMemberArrayList);
+
+        partyMemberArrayList.forEach(x -> {
+            try (FileOutputStream fileOutputStream = new FileOutputStream("PartyMember.json")) {
+                fileOutputStream.write(toJson.getBytes(StandardCharsets.UTF_8));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
     }
 }
