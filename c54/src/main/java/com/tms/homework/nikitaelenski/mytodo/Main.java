@@ -18,6 +18,9 @@ public class Main {
                     break;
                 }
             }
+        } else if (scanner.hasNextLine()) {
+            System.err.println("Не корректный ввод ");
         }
     }
+
 }
