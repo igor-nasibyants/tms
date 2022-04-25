@@ -49,7 +49,7 @@ public class LoginToPartyServlet extends HttpServlet {
         String toJson = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(partyMemberArrayList);
 
         partyMemberArrayList.forEach(x -> {
-            try (FileOutputStream fileOutputStream = new FileOutputStream("PartyMember.json")) {
+            try (FileOutputStream fileOutputStream = new FileOutputStream(name + "PartyMember.json")) {
                 fileOutputStream.write(toJson.getBytes(StandardCharsets.UTF_8));
             } catch (IOException e) {
                 e.printStackTrace();
