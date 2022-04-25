@@ -11,7 +11,6 @@ public class TaskController {
     private TaskRepo taskRepo = new TaskRepo();
     private final String [] selection = {"1","2","3","4","q"};
 
-
     public void taskMenu() {
         System.out.println("\nMenu: " +
                 "\n 1 - create a new task; " +
