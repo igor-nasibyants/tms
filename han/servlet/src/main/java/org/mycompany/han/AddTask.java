@@ -17,7 +17,7 @@ public class AddTask extends HttpServlet {
     final String url = "jdbc:mysql://localhost/tododb";
     final String username = "mysql";
     final String password = "mysql";
-    public void doGet(HttpServletRequest httpServletRequest,
+    public void doPost(HttpServletRequest httpServletRequest,
                       HttpServletResponse httpServletResponse) throws ServletException, IOException {
         List<Task> tasks = getTasks();
         try (Connection connection = DriverManager.getConnection(url, username, password)) {

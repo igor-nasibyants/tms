@@ -18,13 +18,7 @@ public class UtilsFunction {
                 Statement statement = connection.createStatement();
                 try {
                     resultSet = statement.executeQuery("select * from task");
-                    while (Objects.requireNonNull(resultSet).next()) {
-                        Task task = new Task();
-                        task.setId(resultSet.getInt("id"));
-                        task.setNameTask(resultSet.getString("name"));
-                        task.setStatus(resultSet.getBoolean("status"));
-                        tasks.add(task);
-                    }
+                    addToList(tasks, resultSet);
                 } catch (SQLException e) {
                     System.err.println("Ошибка записи из БД в массив");
                     e.printStackTrace();
@@ -38,5 +32,15 @@ public class UtilsFunction {
             e.printStackTrace();
         }
         return tasks;
+    }
+
+    public static void addToList(List<Task> arr, ResultSet resultSet ) throws SQLException {
+        while (Objects.requireNonNull(resultSet).next()) {
+            Task task = new Task();
+            task.setId(resultSet.getInt("id"));
+            task.setNameTask(resultSet.getString("name"));
+            task.setStatus(resultSet.getBoolean("status"));
+            arr.add(task);
+        }
     }
 }
