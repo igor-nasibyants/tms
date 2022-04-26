@@ -17,53 +17,62 @@
     <title>ToDo List</title>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 </head>
-<body class="container">
-<h2 class="header_title">
+<body class="container d-flex justify-content-center flex-column
+    bg-white bg-gradient mb-5">
+<h2 class="d-flex flex-column align-items-center gap-3
+        py-4 mt-4 border border-3 border-danger text-danger rounded-pill">
     ToDo List
 </h2>
 <div id="root">
-    <div class="add_with_input">
+    <div class="d-flex gap-2 py-2 mt-2 flex-wrap justify-content-center">
         <div class="input-group mb-3" style="height: 50px; max-width: 800px; min-width: 150px">
             <input property="nameTask" type="text" class="form-control" aria-label="Text input with checkbox">
         </div>
         <form action="addTask" method="post">
-            <button class="button_add" name="add">Add
+            <button class="d-flex justify-content-center badge bg-info
+            text-decoration-none text fs-3" name="add">Add
             </button>
         </form>
     </div>
-    <div class="buttons_div">
+    <div class="d-flex gap-3 justify-content-center flex-wrap">
         <form action="showAll">
-            <button class="button" name="show">Show All
+            <button class="d-flex justify-content-center badge bg-white text-wrap
+            text-decoration-none text fs-3 text-info" name="show">Show All
             </button>
         </form>
         <form action="showCompleted">
-            <button class="button" name="show">Show Completed
+            <button class="d-flex justify-content-center badge bg-white text-wrap
+            text-decoration-none text fs-3 text-info" name="show">Show Completed
             </button>
         </form>
         <form action="deleteAll" method="post">
-            <button class="button" name="delete">Delete All
+            <button class="d-flex justify-content-center badge bg-white
+            text-decoration-none text fs-3 text-info" name="delete">Delete All
             </button>
         </form>
         <form action="deleteLast" method="post">
-            <button class="button" name="show">Delete Last
+            <button class="d-flex justify-content-center badge bg-white text-wrap
+            text-decoration-none text fs-3 text-info" name="show">Delete Last
             </button>
         </form>
     </div>
-    <h3 class="tasks_header">Your Tasks</h3>
+    <h3 class="d-flex justify-content-center text-danger">Your Tasks</h3>
     <% List<Task> tasks = getTasks();
         request.setAttribute("tasks", tasks);
         String mark = "";
     %>
-    <div class="tasks_div">
+    <div class="d-flex flex-column gap-3">
         <% for (Task task : tasks) {
             if (task.isStatus()) {
-                mark = " task_completed";
+                mark = "d-flex justify-content-between bg-danger gap-1" +
+                        " border border-dark py-2 px-4 rounded-3 text-break text-white fs-4";
             } else {
-                mark = "task_not_completed";
+                mark = "d-flex justify-content-between bg-info gap-1" +
+                        " border border-danger py-2 px-4 rounded-3 text-break fs-4";
             }
             request.setAttribute("mark", mark);
         %>
-        <div class="${mark}">
+        <div class="${mark}" style="min-width: 150px">
             <div class="">
                 <%= task.getId() + ") " + task.getNameTask()%>
             </div>
