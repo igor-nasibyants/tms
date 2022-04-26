@@ -15,9 +15,9 @@
     Today's date in Minsk: <%= (new Date()).toString()%>
 </h1>
 <h2 style="text-align: center">
-    <a href="date">
+    <a href="homework22.jsp">
         <button style="background-color: crimson;color: black; font-size: 50px;">
-            Local time in other Towns
+            Homework22
         </button>
     </a>
 </h2>
@@ -36,25 +36,16 @@
     </a>
 </h2>
 <h2 style="text-align: center">
-    <a href="orc">
-        <button style="background-color: aquamarine; color: black; font-size: 50px">
-            Register orcs
-        </button>
-    </a>
-</h2>
-<h2 style="text-align: center">
-    <a href="forward">
-        <button style="background-color: darkmagenta; color: black; font-size: 50px">
-            forward() to date
-        </button>
-    </a>
-</h2>
-<h2 style="text-align: center">
-    <a href="1639741489_sticker.jpg" download="Take this motivation">
+    <a href="WebContent/images/1639741489_sticker.jpg" download="Take this motivation">
         <button style="background-color: orange;color: black; font-size: 50px">
             Download Cat
         </button>
     </a>
 </h2>
+<h1 style="color: rebeccapurple; text-align: center">
+    Внимание Filter пишет логи<br>
+    Логи сохраняются в <br><u style="color: firebrick"> "LogsList.json" </u><br>
+    который будет находиться<br> в папке Tomcat 9.0/bin .
+</h1>
 </body>
 </html>

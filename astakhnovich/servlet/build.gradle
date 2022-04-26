@@ -11,4 +11,5 @@ dependencies {
     implementation group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
     implementation 'mysql:mysql-connector-java:8.0.28'
     implementation 'org.jsoup:jsoup:1.11.3'
+
 }

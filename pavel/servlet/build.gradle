@@ -11,7 +11,8 @@ dependencies {
     implementation group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
     implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.28'
     implementation 'com.google.code.gson:gson:2.9.0'
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.6.1'
     implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
-
+    implementation group: 'javax.servlet.jsp.jstl', name: 'jstl-api', version: '1.2'
+    compileOnly group: 'javax.servlet', name: 'jsp-api', version: '2.0'
 }

@@ -5,6 +5,21 @@ public class Task {
     private String nameTask;
     private boolean Status;
 
+    public Task(int i, String a, boolean b) {
+    }
+
+    @Override
+    public String toString() {
+        return "Task{" +
+                "id=" + id +
+                ", nameTask='" + nameTask + '\'' +
+                ", Status=" + Status +
+                '}';
+    }
+
+    public Task() {
+    }
+
     public int getId() {
         return id;
     }
