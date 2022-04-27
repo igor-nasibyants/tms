@@ -1,0 +1,40 @@
+div{
+    font-family: "Ink Free","MV Boli", sans-serif;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+}
+h1{
+    text-align: center;
+    padding: 25px;
+    background-color: black;
+    color: white;
+    border-color: black;
+
+    text-shadow: 1px 1px 3px yellow, 1px -5px 5px red;
+    box-shadow: 10px 10px 5px #666666;
+}
+button{
+    animation: myColorAnimation, myRotateAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes myColorAnimation {
+    0%{background-color: red}
+    20%{background-color: orange}
+    40%{background-color: yellow}
+    60%{background-color: green}
+    80%{background-color: blue}
+    100%{background-color: purple}
+}
+@keyframes myRotateAnimation {
+    100%{transform: rotateX(360deg)}
+}
+@keyframes myTranslateAnimation {
+    50%{transform: translate(500px, 0px)}
+}
+@keyframes myFontSizeAnimation {
+    0%{font-size: 50px}
+    50%{font-size: 25px}
+    100%{font-size: 50px}
+}
