@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Day number in the year</title>
 </head>
 <body style="background-color: darkkhaki;text-align: center">

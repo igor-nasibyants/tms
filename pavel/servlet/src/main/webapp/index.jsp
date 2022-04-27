@@ -8,48 +8,43 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
     <title>Pauls Site</title>
 </head>
-<body style="background-color: darkkhaki">
+<body style="background-color: darkkhaki" >
 <h1 style="color: darkred;text-align: center">
     Today's date in Minsk: <%= (new Date()).toString()%>
 </h1>
-<div class="container">
-<h2 style="text-align: center">
+<br>
+<div class="d-grid gap-3 col-2 mx-auto" >
     <a href="homework22.jsp">
-        <button class="btn btn-primary" style="font-size: 50px">
+        <button class="btn btn-primary" style="font-size: 50px; color: black">
             Homework22
         </button>
     </a>
-</h2>
-</div>
-<h2 style="text-align: center">
     <a href="homework23.jsp">
-        <button style="background-color: darkblue; color: white; font-size: 50px">
+        <button class="btn btn-primary" style="font-size: 50px; color: black">
             Homework23
         </button>
     </a>
-</h2>
-<h2 style="text-align: center">
     <a href="https://youtu.be/1sMGoClxv8w">
-        <button style="background-color: chocolate; color: black; font-size: 50px" onclick="alert('Are you sure ?');">
+        <button class="btn btn-primary" style="font-size: 50px; color: black" onclick="alert('Are you sure ?');">
             Dont click this please
         </button>
     </a>
-</h2>
-<h2 style="text-align: center">
     <a href="WebContent/images/1639741489_sticker.jpg" download="Take this motivation">
-        <button style="background-color: orange;color: black; font-size: 50px">
+        <button class="btn btn-primary" style="font-size: 50px; color: black">
             Download Cat
         </button>
     </a>
-</h2>
+</div>
 <h1 style="color: rebeccapurple; text-align: center">
     Внимание Filter пишет логи<br>
     Логи сохраняются в <br><u style="color: firebrick"> "LogsList.json" </u><br>
