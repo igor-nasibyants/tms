@@ -34,7 +34,11 @@ public class UtilsFunction {
         return tasks;
     }
 
-    public static void addToList(List<Task> arr, ResultSet resultSet ) throws SQLException {
+    public List<Task> getCompletedTasks(List<Task> tasks) {
+        return tasks.stream().filter(Task::isStatus).toList();
+    }
+
+    public static void addToList(List<Task> arr, ResultSet resultSet) throws SQLException {
         while (Objects.requireNonNull(resultSet).next()) {
             Task task = new Task();
             task.setId(resultSet.getInt("id"));

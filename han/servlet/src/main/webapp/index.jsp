@@ -57,8 +57,10 @@
         </form>
     </div>
     <h3 class="d-flex justify-content-center text-danger">Your Tasks</h3>
-    <% List<Task> tasks = getTasks();
-        request.setAttribute("tasks", tasks);
+    <% List<Task> tasks = (List<Task>) request.getAttribute("tasks");
+        if (tasks == null) {
+            tasks = getTasks();
+        }
         String mark = "";
     %>
     <div class="d-flex flex-column gap-3">
