@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.superpaulscompany.pavel.model.LogsModel;
 
 import javax.servlet.*;
-import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -13,7 +12,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Date;
 
-@WebFilter(urlPatterns = "/*")
 public class LogFilter implements Filter {
     private final ArrayList<LogsModel> logsArrayList = new ArrayList<>();
     private final ObjectMapper objectMapper = new ObjectMapper();
