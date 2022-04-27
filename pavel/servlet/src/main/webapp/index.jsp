@@ -18,12 +18,14 @@
             crossorigin="anonymous"></script>
     <title>Pauls Site</title>
 </head>
-<body style="background-color: darkkhaki" >
-<h1 style="color: darkred;text-align: center">
-    Today's date in Minsk: <%= (new Date()).toString()%>
-</h1>
+<body style="background-color: darkkhaki">
+<div>
+    <h1 style="color: darkred">
+        Today's date in Minsk: <%= (new Date()).toString()%>
+    </h1>
+</div>
 <br>
-<div class="d-grid gap-3 col-2 mx-auto" >
+<div class="d-grid gap-3 col-2 mx-auto">
     <a href="homework22.jsp">
         <button class="btn btn-primary" style="font-size: 50px; color: black">
             Homework22
@@ -45,10 +47,13 @@
         </button>
     </a>
 </div>
-<h1 style="color: rebeccapurple; text-align: center">
-    Внимание Filter пишет логи<br>
-    Логи сохраняются в <br><u style="color: firebrick"> "LogsList.json" </u><br>
-    который будет находиться<br> в папке Tomcat 9.0/bin .
-</h1>
+<br>
+<div>
+    <h1>
+        Внимание Filter пишет логи<br>
+        Логи сохраняются в <br><u> "LogsList.json" </u><br>
+        который будет находиться<br> в папке Tomcat 9.0/bin .
+    </h1>
+</div>
 </body>
 </html>

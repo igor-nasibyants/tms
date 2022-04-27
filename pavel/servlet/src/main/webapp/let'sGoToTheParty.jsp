@@ -12,9 +12,11 @@
     <title>Let's go to the party</title>
 </head>
 <body style="background-color: darkkhaki; text-align: center">
-<h1>
-    Quickly register for a party!
-</h1>
+<div>
+    <h1>
+        Quickly register for a party!
+    </h1>
+</div>
 <form action="party" method="POST" style="color: crimson;font-size: 30px">
     Name: <label>
     <input name="userName" style="color: black;font-size: 30px"/>
@@ -67,18 +69,20 @@
     <label>
         <input type="checkbox" name="provisions" value="Tonic" style="color: black;font-size: 30px"/>
     </label>Tonic
-    <br><br>
+    <br>
     <label>Your wishes :<br>
         <textarea name="comments" cols="40" rows="3" style="color: darkviolet;font-size: 30px"></textarea>
     </label>
-    <br><br>
+    <br>
     <input type="submit" value="Submit" style="font-size: 30px"/>
     <input type="reset" value="Reset" style="font-size: 30px"/>
 </form>
-<h1 style="color: rebeccapurple">
-    После регистрации вся информация сохранится в<br>
-    <u style="color: firebrick">"PartyMember.json"<br></u>
-    который будет находиться в папке Tomcat 9.0/bin .
-</h1>
+<div>
+    <h1>
+        После регистрации вся информация сохранится в<br>
+        <u>"PartyMember.json"<br></u>
+        который будет находиться в папке Tomcat 9.0/bin .
+    </h1>
+</div>
 </body>
 </html>

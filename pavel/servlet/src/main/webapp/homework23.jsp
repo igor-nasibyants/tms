@@ -19,9 +19,11 @@
     <title>Homework23</title>
 </head>
 <body style="background-color: darkkhaki">
-<h1 style="color: darkred;text-align: center">
-    Today's date in Minsk: <%= (new Date()).toString()%>
-</h1>
+<div>
+    <h1 style="color: darkred;text-align: center">
+        Today's date in Minsk: <%= (new Date()).toString()%>
+    </h1>
+</div>
 <br>
 <div class="d-grid gap-3 col-2 mx-auto">
     <a href="let'sGoToTheParty.jsp">
