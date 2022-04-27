@@ -8,12 +8,13 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 
 @WebServlet("/date")
-public class Data extends HttpServlet {
-    LocalDateTime time = LocalDateTime.now();
+public class DataServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
+        resp.setContentType("text/html");
+        LocalDateTime time = LocalDateTime.now();
         resp.getWriter().println(time);
     }
 }
