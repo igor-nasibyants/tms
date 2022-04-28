@@ -23,7 +23,8 @@ public class LogFilter implements Filter {
         LogsModel logsModel = new LogsModel(new Date().toString(), req.getServletPath(), req.getRequestURL());
         logsArrayList.add(logsModel);
 
-        writeJson();
+       // writeJson();
+        System.out.println(logsModel);
 
         chain.doFilter(request, response);
     }
