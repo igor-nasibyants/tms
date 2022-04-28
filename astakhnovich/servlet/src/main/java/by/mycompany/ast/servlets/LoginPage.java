@@ -15,6 +15,6 @@ public class LoginPage extends HttpServlet {
         String login = req.getParameter("login");
         String password = req.getParameter("password");
         User user = new User(login, password);
-        resp.getWriter().print(user);
+//        resp.getWriter().print(user);
     }
 }
