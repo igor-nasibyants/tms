@@ -8,7 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
     <title>Let's go to the party</title>
 </head>
 <body style="background-color: darkkhaki; text-align: center">
@@ -17,65 +24,72 @@
         Quickly register for a party!
     </h1>
 </div>
-<form action="party" method="POST" style="color: crimson;font-size: 30px">
-    Name: <label>
-    <input name="userName" style="color: black;font-size: 30px"/>
-</label>
-    <br><br>
-    Surname: <label>
-    <input name="userSurname" style="color: black;font-size: 30px"/>
-</label>
-    <br><br>
-    Age: <label>
-    <input name="userAge" style="color: black;font-size: 30px"/>
-</label>
-    <br><br>
-    Gender: <label>
-    <input type="radio" name="gender" value="Female" style="font-size: 30px"/>
-</label>Female
+<br>
+<form action="party" method="POST">
     <label>
-        <input type="radio" name="gender" value="Male" style="font-size: 30px"/>
-    </label>Male
-    <label>
-        <input type="radio" name="gender" value="Transgender" style="font-size: 30px"/>
-    </label>Transgender
-    <br><br>
-    Country: <label>
-    <select name="country" style="font-size: 30px">
-        <option style="color: green;font-size: 30px">Belarus</option>
-        <option style="color: gold;font-size: 30px">Indonesia</option>
-        <option style="color: black;font-size: 30px">Burma</option>
-        <option style="color: orangered;font-size: 30px">Mexico</option>
-        <option style="color: rebeccapurple; font-size: 30px">Vietnam</option>
-    </select>
-</label>
-    <br><br>
-    Provisions:
-    <label>
-        <input type="checkbox" name="provisions" value="Beer" style="color: black;font-size: 30px"/>
-    </label>Beer
-    <label>
-        <input type="checkbox" name="provisions" value="Vodka" style="color: black;font-size: 30px"/>
-    </label>Vodka
-    <label>
-        <input type="checkbox" name="provisions" value="Whiskey" style="color: black;font-size: 30px"/>
-    </label>Whiskey
-    <label>
-        <input type="checkbox" name="provisions" value="Cola" style="color: black;font-size: 30px"/>
-    </label>Cola
-    <label>
-        <input type="checkbox" name="provisions" value="Jean" style="color: black;font-size: 30px"/>
-    </label>Jean
-    <label>
-        <input type="checkbox" name="provisions" value="Tonic" style="color: black;font-size: 30px"/>
-    </label>Tonic
-    <br>
-    <label>Your wishes :<br>
-        <textarea name="comments" cols="40" rows="3" style="color: darkviolet;font-size: 30px"></textarea>
+        <input name="userName" type="text" class="form-control" placeholder="Name"
+               style="color: black;font-size: 25px"/>
     </label>
-    <br>
-    <input type="submit" value="Submit" style="font-size: 30px"/>
-    <input type="reset" value="Reset" style="font-size: 30px"/>
+    <br><br>
+    <label>
+        <input name="userSurname" type="text" class="form-control" placeholder="Surname"
+               style="color: black;font-size: 25px"/>
+    </label>
+    <br><br>
+    <label>
+        <input name="userAge" type="number" class="form-control" placeholder="Age"
+               style="color: black;font-size: 25px"/>
+    </label>
+    <br><br>
+    <p class="btn-group btn-group-lg" role="group">
+        <input type="radio" name="gender" class="btn-check" id="female" value="Female" autocomplete="off"/>
+        <label class="btn btn-outline-primary" for="female">Female</label>
+
+        <input type="radio" name="gender" class="btn-check" id="male" value="Male" autocomplete="off"/>
+        <label class="btn btn-outline-primary" for="male">Male</label>
+
+        <input type="radio" name="gender" class="btn-check" id="trans" value="Transgender" autocomplete="off"/>
+        <label class="btn btn-outline-primary" for="trans">Transgender</label>
+    </p>
+    <br><br>
+    <label>
+        <select name="country" class="form-select" style="color:black;font-size: 25px">
+            <option selected style="color: darkgreen">Belarus</option>
+            <option style="color: green">Turkey</option>
+            <option style="color: orangered">Indonesia</option>
+            <option style="color: darkred">Burma</option>
+            <option style="color: rebeccapurple">Mexico</option>
+            <option style="color: darkmagenta">Vietnam</option>
+        </select>
+    </label>
+    <br><br>
+    <p class="btn-group btn-group-lg" role="group">
+        <input type="checkbox" name="provisions" class="btn-check" id="beer" value="Beer" autocomplete="off"/>
+        <label class="btn btn-outline-primary" for="beer">Beer</label>
+
+        <input type="checkbox" name="provisions" class="btn-check" id="vodka" value="Vodka" autocomplete="off"/>
+        <label class="btn btn-outline-primary" for="vodka">Vodka</label>
+
+        <input type="checkbox" name="provisions" class="btn-check" id="whiskey" value="Whiskey" autocomplete="off"/>
+        <label class="btn btn-outline-primary" for="whiskey">Whiskey</label>
+
+        <input type="checkbox" name="provisions" class="btn-check" id="cola" value="Cola" autocomplete="off"/>
+        <label class="btn btn-outline-primary" for="cola">Cola</label>
+
+        <input type="checkbox" name="provisions" class="btn-check" id="jean" value="Jean" autocomplete="off"/>
+        <label class="btn btn-outline-primary" for="jean">Jean</label>
+
+        <input type="checkbox" name="provisions" class="btn-check" id="tonic" value="Tonic" autocomplete="off"/>
+        <label class="btn btn-outline-primary" for="tonic">Tonic</label>
+    </p>
+    <br><br>
+    <label>
+        <textarea name="comments" class="form-control" placeholder="Leave your wishes here" cols="40" rows="1"
+                  style="color: darkviolet;font-size: 25px"></textarea>
+    </label>
+    <br><br>
+    <input type="submit" class="btn btn-success" value="Submit" style="font-size: 25px"/>
+    <input type="reset" class="btn btn-danger" value="Reset" style="font-size: 25px"/>
 </form>
 <div>
     <h1>
