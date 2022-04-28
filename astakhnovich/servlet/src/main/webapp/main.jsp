@@ -1,8 +1,8 @@
 <html>
     <head>
-        <title>Registration</title>
+        <title>main page</title>
     </head>
     <body>
-
+    welcome
     </body>
 </html>

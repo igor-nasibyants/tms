@@ -5,10 +5,10 @@
 <web-app>
     <display-name>Servlet</display-name>
 
-    <servlet>
-        <servlet-name>Test</servlet-name>
-        <servlet-class>by.mycompany.nnazarv.HelloServlet</servlet-class>
-    </servlet>
+<!--    <servlet>-->
+<!--        <servlet-name>Test</servlet-name>-->
+<!--        <servlet-class>by.mycompany.nnazarv.HelloServlet</servlet-class>-->
+<!--    </servlet>-->
 
 
 
