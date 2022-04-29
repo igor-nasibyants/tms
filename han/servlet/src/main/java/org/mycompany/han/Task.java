@@ -72,6 +72,16 @@ public class Task {
         }
     }
 
+    public static List<Task> getCompletedTask() {
+        List<Task> tasks = getTasks();
+        return tasks.stream().filter(Task::isStatus).toList();
+    }
+
+    public static List<Task> getActiveTasks() {
+        List<Task> tasks = getTasks();
+        return tasks.stream().filter(task -> !task.isStatus()).toList();
+    }
+
     @Override
     public String toString() {
         return "Task{" +

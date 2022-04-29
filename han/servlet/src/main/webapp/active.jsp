@@ -1,3 +1,6 @@
+<%@ page import="org.mycompany.han.Task" %>
+<%@ page import="java.util.List" %>
+<%@ page import="static org.mycompany.han.Task.*" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -26,20 +29,40 @@
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link" id="ex1-tab-1" data-mdb-toggle="tab" href="all.jsp"
                                    role="tab"
-                                   aria-controls="ex1-tabs-1">All</a>
+                                   aria-controls="ex1-tabs-1" aria-selected="true">All</a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="ex1-tab-2" data-mdb-toggle="tab" href="active.jsp" role="tab"
+                                <a class="nav-link active" id="ex1-tab-2" data-mdb-toggle="tab" href="#active.jsp"
+                                   role="tab"
                                    aria-controls="ex1-tabs-2" aria-selected="false">Active</a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="ex1-tab-3" data-mdb-toggle="tab" href="completed.jsp" role="tab"
+                                <a class="nav-link" id="ex1-tab-3" data-mdb-toggle="tab" href="completed.jsp"
+                                   role="tab"
                                    aria-controls="ex1-tabs-3" aria-selected="false">Completed</a>
                             </li>
                         </ul>
                         <div class="tab-content" id="ex1-content">
                             <div class="tab-pane fade show active" id="ex1-tabs-1" role="tabpanel"
                                  aria-labelledby="ex1-tab-1">
+                                <ul class="list-group mb-0">
+                                    <%
+                                        List<Task> tasks = getActiveTasks();
+                                        for (Task task : tasks) {
+                                    %>
+                                    <li class="list-group-item d-flex justify-content-between border-0 mb-2 rounded"
+                                        style="background-color: #f4f6f7;">
+                                        <div class="d-flex align-items-center gap-3"
+                                             style="min-width: 150px">
+                                            <input class="form-check-input m-0" type="checkbox" value=""
+                                                   aria-label="..."/>
+                                            <div class=""><%=task.getNameTask()%>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-close"></button>
+                                    </li>
+                                    <%}%>
+                                </ul>
                             </div>
                         </div>
                     </div>
