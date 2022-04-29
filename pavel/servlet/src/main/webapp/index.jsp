@@ -75,7 +75,7 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <a href="homework22.jsp">
-                <img src="WebContent/images/mainWallpaper1.jpg" class="d-block w-100" alt="...">
+                <img src="WebContent/images/1920x810/mainWallpaper1.jpg" class="d-block w-100" alt="...">
             </a>
             <div class="carousel-caption">
                 <h2>Домашняя работа №22</h2>
@@ -83,7 +83,7 @@
         </div>
         <div class="carousel-item">
             <a href="homework23.jsp">
-                <img src="WebContent/images/mainWallpaper2.jpg" class="d-block w-100" alt="...">
+                <img src="WebContent/images/1920x810/mainWallpaper2.jpg" class="d-block w-100" alt="...">
             </a>
             <div class="carousel-caption">
                 <h2>Домашняя работа №23</h2>
@@ -91,7 +91,7 @@
         </div>
         <div class="carousel-item">
             <a href="#">
-                <img src="WebContent/images/mainWallpaper3.jpg" class="d-block w-100"
+                <img src="WebContent/images/1920x810/mainWallpaper3.jpg" class="d-block w-100"
                      alt="...">
             </a>
             <div class="carousel-caption">
@@ -100,7 +100,7 @@
         </div>
         <div class="carousel-item">
             <a href="#">
-                <img src="WebContent/images/mainWallpaper4.jpg" class="d-block w-100" alt="...">
+                <img src="WebContent/images/1920x810/mainWallpaper4.jpg" class="d-block w-100" alt="...">
             </a>
             <div class="carousel-caption">
                 <h2>Домашняя работа №25</h2>
@@ -108,7 +108,7 @@
         </div>
         <div class="carousel-item">
             <a href="#">
-                <img src="WebContent/images/mainWallpaper5.jpg"
+                <img src="WebContent/images/1920x810/mainWallpaper5.jpg"
                      class="d-block w-100" alt="...">
             </a>
             <div class="carousel-caption">
