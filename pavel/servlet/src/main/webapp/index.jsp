@@ -20,7 +20,7 @@
 <body>
 <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.jsp">Домой</a>
+        <a class="navbar-brand" href="index.jsp">Домашняя страница сайта Павлика</a>
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -30,28 +30,32 @@
         <div class="navbar-collapse collapse" id="navbarsExample01">
             <ul class="navbar-nav me-auto mb-2">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.jsp">Домой</a>
+                    <a class="nav-link" aria-current="page" href="homework22.jsp">Домашняя работа №22</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://youtu.be/1sMGoClxv8w">Техник</a>
+                    <a class="nav-link" href="homework23.jsp">Домашняя работа №23</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="WebContent/images/1639741489_sticker.jpg" download="Take this motivation">Скачать
-                        котика</a>
+                    <a class="nav-link" href="#">Домашняя работа №24</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Домашняя работа №25</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Домашняя работа №26</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
-                       aria-expanded="false">Dropdown</a>
+                       aria-expanded="false">Полезные ссылки</a>
                     <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="https://youtu.be/1sMGoClxv8w">Техник</a></li>
+                        <li><a class="dropdown-item" href="WebContent/images/Kitty.jpg"
+                               download="Take this motivation">Скачать
+                            котика</a></li>
+                        <li><a class="dropdown-item" href="https://google.com">Google</a></li>
                     </ul>
                 </li>
             </ul>
-            <form>
-                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-            </form>
         </div>
     </div>
 </nav>
@@ -71,7 +75,7 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <a href="homework22.jsp">
-                <img src="WebContent/images/8hvJbQVHj3Q.jpg" class="d-block w-100" alt="...">
+                <img src="WebContent/images/mainWallpaper1.jpg" class="d-block w-100" alt="...">
             </a>
             <div class="carousel-caption">
                 <h2>Домашняя работа №22</h2>
@@ -79,7 +83,7 @@
         </div>
         <div class="carousel-item">
             <a href="homework23.jsp">
-                <img src="WebContent/images/151171.jpg" class="d-block w-100" alt="...">
+                <img src="WebContent/images/mainWallpaper2.jpg" class="d-block w-100" alt="...">
             </a>
             <div class="carousel-caption">
                 <h2>Домашняя работа №23</h2>
@@ -87,7 +91,7 @@
         </div>
         <div class="carousel-item">
             <a href="#">
-                <img src="WebContent/images/Battlefield_1_Rain_Ruins_War_523662_1920x810.jpg" class="d-block w-100"
+                <img src="WebContent/images/mainWallpaper3.jpg" class="d-block w-100"
                      alt="...">
             </a>
             <div class="carousel-caption">
@@ -96,7 +100,7 @@
         </div>
         <div class="carousel-item">
             <a href="#">
-                <img src="WebContent/images/560203-anime-girl-wallpaper.jpg" class="d-block w-100" alt="...">
+                <img src="WebContent/images/mainWallpaper4.jpg" class="d-block w-100" alt="...">
             </a>
             <div class="carousel-caption">
                 <h2>Домашняя работа №25</h2>
@@ -104,7 +108,7 @@
         </div>
         <div class="carousel-item">
             <a href="#">
-                <img src="WebContent/images/1920x810-px-artwork-desert-digital-art-fantasy-art-planet-1021983-wallhere.com.jpg"
+                <img src="WebContent/images/mainWallpaper5.jpg"
                      class="d-block w-100" alt="...">
             </a>
             <div class="carousel-caption">
@@ -123,9 +127,9 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
-<footer>
-    <div style="text-align:right; background:#2a2a2a; padding:1em; color: #fff;">
-        © PaulsMegaCompany.by <br>2021-2022
+<footer class="footer footer-dark bg-dark">
+    <div style="text-align:right; padding:1em; color: #fff;">
+        © SuperPaulsCompany.org <br>2021-2022
     </div>
 </footer>
 </body>
