@@ -22,10 +22,18 @@
 <div>
     <h1 style="color: darkred;text-align: center">
         Today's date in Minsk: <%= (new Date()).toString()%>
+        <p>Основное задание: 1. Создать сервлет для вывода текущей даты и времени.</p>
+        <p>Дополнительное задание : 2. Создать сервлет для вывода дня недели по введенной дате.</p>
+        <p>Дополнительное задание : 3. Создать сервлет для вывода номера дня в году по введенной дате</p>
     </h1>
 </div>
 <br>
 <div class="d-grid gap-3 col-2 mx-auto">
+    <a href="date">
+        <button class="btn btn-danger" style="font-size: 50px; color: black">
+            Local time in other Towns
+        </button>
+    </a>
     <a href="DayOfTheWeek.jsp">
         <button class="btn btn-danger" style="font-size: 50px; color: black">
             Day of the week
@@ -34,11 +42,6 @@
     <a href="DayNumberInTheYear.jsp">
         <button class="btn btn-danger" style="font-size: 50px; color: black">
             Day number in the year
-        </button>
-    </a>
-    <a href="date">
-        <button class="btn btn-danger" style="font-size: 50px; color: black">
-            Local time in other Towns
         </button>
     </a>
 </div>
