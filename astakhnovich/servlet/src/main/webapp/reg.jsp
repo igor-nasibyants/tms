@@ -4,9 +4,9 @@
     </head>
     <body>
         <form action = "reg" method="post">
-            <div><input name="regLogin" placeholder="Login"></div>
-            <div><input name="regPassword1" placeholder="Password"></div>
-            <div><input name="regPassword2" placeholder="Password"></div>
+            <div><input name="name" placeholder="name"></div>
+            <div><input name="login" placeholder="login"></div>
+            <div><input name="password" placeholder="password"></div>
             <div>
                 <button type="submit">Send</button>
             </div>

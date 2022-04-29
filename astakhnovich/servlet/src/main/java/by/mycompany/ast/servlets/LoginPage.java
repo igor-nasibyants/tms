@@ -17,11 +17,10 @@ public class LoginPage extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         String login = req.getParameter("login");
         String password = req.getParameter("password");
-        User user = new User(login, password);
-        if(UserRepo.getUserList().contains(user)){
+//        if
             getServletContext().getRequestDispatcher("/main.jsp").forward(req, resp);
-        }else {
+
             getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
-        }
+//        }
     }
 }

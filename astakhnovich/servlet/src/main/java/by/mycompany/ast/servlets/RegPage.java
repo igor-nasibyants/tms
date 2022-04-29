@@ -14,13 +14,11 @@ import java.io.IOException;
 public class RegPage extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-        String login = req.getParameter("regLogin");
-        String password1 = req.getParameter("regPassword1");
-        String password2 = req.getParameter("regPassword2");
-        if(password1.equals(password2)){
-            User newUser = new User(login, password1);
-            UserRepo.addUserToList(newUser);
-        }
+        String name = req.getParameter("name");
+        String login = req.getParameter("login");
+        String password = req.getParameter("password");
+        User newUser = new User(name, login, password);
+//        UserRepo.addUserToList(newUser);
 //        resp.getWriter().print(UserRepo.getUserList());
         getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
     }

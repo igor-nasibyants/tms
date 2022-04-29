@@ -14,8 +14,8 @@ public class MainPage extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        for (User user: UserRepo.getUserList()) {
-            resp.getWriter().println(user.toString());
-        }
+//        for (User user: UserRepo.getUserList()) {
+//            resp.getWriter().println(user.toString());
+//        }
     }
 }

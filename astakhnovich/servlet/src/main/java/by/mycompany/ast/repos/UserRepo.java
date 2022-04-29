@@ -1,17 +1,9 @@
 package by.mycompany.ast.repos;
 
 import by.mycompany.ast.entity.User;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 public class UserRepo {
-    public static List<User> userList = new ArrayList<>();
+    private HashMap<String, User> userMap = new HashMap<>();
 
-    public static List<User> getUserList() {
-        return userList;
-    }
-
-    public static void addUserToList(User user){
-        userList.add(user);
-    }
 }
