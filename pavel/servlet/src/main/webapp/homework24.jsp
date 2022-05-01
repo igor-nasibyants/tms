@@ -69,7 +69,7 @@
 
     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
         <div class="col">
-            <a href="#" style="text-decoration: none">
+            <a href="HTML/MainTask24.html" style="text-decoration: none">
                 <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
                      style="background-image: url('WebContent/images/400x400/forhomework24/snow400x400.jpg'); width: 400px; height: 400px">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">

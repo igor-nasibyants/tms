@@ -79,4 +79,13 @@
         <url-pattern>/week</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>HtmlServlet</servlet-name>
+        <servlet-class>org.superpaulscompany.pavel.HtmlServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HtmlServlet</servlet-name>
+        <url-pattern>/html</url-pattern>
+    </servlet-mapping>
 </web-app>
