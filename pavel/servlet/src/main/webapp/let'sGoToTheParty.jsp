@@ -1,14 +1,13 @@
 <%--
   Created by IntelliJ IDEA.
   User: Undeadsanta
-  Date: 4/20/2022
-  Time: 8:24 PM
+  Date: 5/01/2022
+  Time: 10:04 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -18,85 +17,197 @@
             crossorigin="anonymous"></script>
     <title>Let's go to the party</title>
 </head>
-<body style="background-color: darkkhaki; text-align: center">
-<div>
-    <h1>
-        Quickly register for a party!
-    </h1>
+<body>
+<nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.jsp">Домашняя страница сайта Павлика</a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarsExample01">
+            <ul class="navbar-nav me-auto mb-2">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="homework22.jsp">Домашняя работа №22</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="homework23.jsp">Домашняя работа №23</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Домашняя работа №24</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Домашняя работа №25</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Домашняя работа №26</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
+                       aria-expanded="false">Полезные ссылки</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                        <li><a class="dropdown-item" href="https://youtu.be/1sMGoClxv8w">Техник</a></li>
+                        <li><a class="dropdown-item" href="WebContent/images/Kitty.jpg"
+                               download="Take this motivation">Скачать
+                            котика</a></li>
+                        <li><a class="dropdown-item" href="https://google.com">Google</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container col-xl-10 col-xxl-8 px-4 py-5 bg-light">
+    <main>
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="WebContent/images/icons/BigP.jpg" alt="" width="80"
+                 height="80">
+            <h2>Регаемся на вечеринку</h2>
+            <p class="lead">Пишем имя, фамилию, возраст, ориентацию, страну проживания, национальность, свои
+                предпочтения по бухлу и
+                пожелания</p>
+        </div>
+        <div>
+            <h4 class="mb-3">Здравствуй друг!</h4>
+            <hr class="my-4 bg-success">
+            <form action="party" method="POST">
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <label for="firstName" class="form-label">First name</label>
+                        <input name="userName" type="text" class="form-control" id="firstName" placeholder="Имя"
+                               value="" required="">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="lastName" class="form-label">Last name</label>
+                        <input name="userSurname" type="text" class="form-control" id="lastName" placeholder="Фамилия"
+                               value=""
+                               required="">
+                    </div>
+
+                    <hr class="my-4 bg-success">
+
+                    <div class="col-md-6">
+                        <label for="age" class="form-label">Age</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text"> От 18 лет </span>
+                            <input name="userAge" type="number" class="form-control" id="age" placeholder="Возраст"
+                                   required="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text">@</span>
+                            <input name="userEmail" type="email" class="form-control" id="email" placeholder="Email"
+                                   required="">
+                        </div>
+                    </div>
+
+                    <hr class="my-4 bg-success">
+
+                    <div class="col-md-12 py-4 btn-group btn-group-lg" role="group">
+                        <input type="radio" name="gender" class="btn-check" id="female" value="Женщина"
+                               autocomplete="off"/>
+                        <label class="btn btn-outline-danger" for="female">Женщина</label>
+
+                        <input type="radio" name="gender" class="btn-check" id="male" value="Мужчина"
+                               autocomplete="off"/>
+                        <label class="btn btn-outline-danger" for="male">Мужчина</label>
+
+                        <input type="radio" name="gender" class="btn-check" id="trans" value="Трансгендер"
+                               autocomplete="off"/>
+                        <label class="btn btn-outline-danger" for="trans">Трансгендер</label>
+                    </div>
+
+                    <hr class="my-4 bg-success">
+
+                    <div class="col-md-6">
+                        <label for="country" class="form-label">Country</label>
+                        <select name="country" class="form-select" id="country" required="">
+                            <option selected>Беларусь</option>
+                            <option>Турция</option>
+                            <option>Индонезия</option>
+                            <option>Бирма</option>
+                            <option>Мексика</option>
+                            <option>Вьетнам</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="nationality" class="form-label">Nationality</label>
+                        <select name="nationality" class="form-select" id="nationality" required="">
+                            <option selected>беларус</option>
+                            <option>турок</option>
+                            <option>индеец</option>
+                            <option>индус</option>
+                            <option>мексиканец</option>
+                            <option>вьетнамец</option>
+                        </select>
+                    </div>
+                </div>
+
+                <hr class="my-4 bg-success">
+
+                <div class="w-100 btn-group btn-group-lg" role="group">
+                    <input type="checkbox" name="provisions" class="btn-check" id="beer" value="Пиво"
+                           autocomplete="off"/>
+                    <label class="btn btn-outline-danger" for="beer">Пиво</label>
+
+                    <input type="checkbox" name="provisions" class="btn-check" id="vodka" value="Водка"
+                           autocomplete="off"/>
+                    <label class="btn btn-outline-danger" for="vodka">Водка</label>
+
+                    <input type="checkbox" name="provisions" class="btn-check" id="whiskey" value="Виски"
+                           autocomplete="off"/>
+                    <label class="btn btn-outline-danger" for="whiskey">Виски</label>
+
+                    <input type="checkbox" name="provisions" class="btn-check" id="cola" value="Кола"
+                           autocomplete="off"/>
+                    <label class="btn btn-outline-danger" for="cola">Кола</label>
+
+                    <input type="checkbox" name="provisions" class="btn-check" id="jean" value="Джин"
+                           autocomplete="off"/>
+                    <label class="btn btn-outline-danger" for="jean">Джин</label>
+
+                    <input type="checkbox" name="provisions" class="btn-check" id="tonic" value="Тоник"
+                           autocomplete="off"/>
+                    <label class="btn btn-outline-danger" for="tonic">Тоник</label>
+                </div>
+
+                <hr class="my-4 bg-success">
+
+                <h4 class="mb-3">Пожелания: </h4>
+
+                <div class="row gy-3">
+                    <div class="col-md-12">
+                        <label for="wishes" class="form-label">К примеру: "Не навижу веганов"</label>
+                        <input name="comments" type="text" class="form-control" id="wishes" placeholder="" required="">
+                        <small class="text-muted">Ну всё ты попал</small>
+                    </div>
+                </div>
+
+                <hr class="my-4 bg-success">
+
+                <div class="form-floating mb-3">
+                    <button class="w-100 btn btn-success btn-lg" type="submit">Потверждаю</button>
+                </div>
+                <div class="form-floating mb-3">
+                    <button class="w-100 btn btn-dark btn-lg" type="reset">Ну нахер такую пати</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
 </div>
-<br>
-<form action="party" method="POST">
-    <label>
-        <input name="userName" type="text" class="form-control" placeholder="Name"
-               style="color: black;font-size: 25px"/>
-    </label>
-    <br><br>
-    <label>
-        <input name="userSurname" type="text" class="form-control" placeholder="Surname"
-               style="color: black;font-size: 25px"/>
-    </label>
-    <br><br>
-    <label>
-        <input name="userAge" type="number" class="form-control" placeholder="Age"
-               style="color: black;font-size: 25px"/>
-    </label>
-    <br><br>
-    <p class="btn-group btn-group-lg" role="group">
-        <input type="radio" name="gender" class="btn-check" id="female" value="Female" autocomplete="off"/>
-        <label class="btn btn-outline-primary" for="female">Female</label>
 
-        <input type="radio" name="gender" class="btn-check" id="male" value="Male" autocomplete="off"/>
-        <label class="btn btn-outline-primary" for="male">Male</label>
-
-        <input type="radio" name="gender" class="btn-check" id="trans" value="Transgender" autocomplete="off"/>
-        <label class="btn btn-outline-primary" for="trans">Transgender</label>
-    </p>
-    <br><br>
-    <label>
-        <select name="country" class="form-select" style="color:black;font-size: 25px">
-            <option selected style="color: darkgreen">Belarus</option>
-            <option style="color: green">Turkey</option>
-            <option style="color: orangered">Indonesia</option>
-            <option style="color: darkred">Burma</option>
-            <option style="color: rebeccapurple">Mexico</option>
-            <option style="color: darkmagenta">Vietnam</option>
-        </select>
-    </label>
-    <br><br>
-    <p class="btn-group btn-group-lg" role="group">
-        <input type="checkbox" name="provisions" class="btn-check" id="beer" value="Beer" autocomplete="off"/>
-        <label class="btn btn-outline-primary" for="beer">Beer</label>
-
-        <input type="checkbox" name="provisions" class="btn-check" id="vodka" value="Vodka" autocomplete="off"/>
-        <label class="btn btn-outline-primary" for="vodka">Vodka</label>
-
-        <input type="checkbox" name="provisions" class="btn-check" id="whiskey" value="Whiskey" autocomplete="off"/>
-        <label class="btn btn-outline-primary" for="whiskey">Whiskey</label>
-
-        <input type="checkbox" name="provisions" class="btn-check" id="cola" value="Cola" autocomplete="off"/>
-        <label class="btn btn-outline-primary" for="cola">Cola</label>
-
-        <input type="checkbox" name="provisions" class="btn-check" id="jean" value="Jean" autocomplete="off"/>
-        <label class="btn btn-outline-primary" for="jean">Jean</label>
-
-        <input type="checkbox" name="provisions" class="btn-check" id="tonic" value="Tonic" autocomplete="off"/>
-        <label class="btn btn-outline-primary" for="tonic">Tonic</label>
-    </p>
-    <br><br>
-    <label>
-        <textarea name="comments" class="form-control" placeholder="Leave your wishes here" cols="40" rows="1"
-                  style="color: darkviolet;font-size: 25px"></textarea>
-    </label>
-    <br><br>
-    <input type="submit" class="btn btn-success" value="Submit" style="font-size: 25px"/>
-    <input type="reset" class="btn btn-danger" value="Reset" style="font-size: 25px"/>
-</form>
-<div>
-    <h1>
-        После регистрации вся информация сохранится в<br>
-        <u>"PartyMember.json"<br></u>
-        который будет находиться в папке Tomcat 9.0/bin .
-    </h1>
-</div>
+<footer class="footer footer-dark bg-dark">
+    <div style="text-align:right; padding:1em; color: #fff;">
+        © SuperPaulsCompany.org <br>2021-2022
+    </div>
+</footer>
 </body>
 </html>

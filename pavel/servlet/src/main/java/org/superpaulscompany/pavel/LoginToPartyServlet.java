@@ -20,18 +20,21 @@ public class LoginToPartyServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        resp.setContentType("text/html");
+        req.setCharacterEncoding("UTF8");
+        resp.setContentType("text/html;charset=UTF-8");
         PrintWriter printWriter = resp.getWriter();
 
         String name = req.getParameter("userName");
         String surname = req.getParameter("userSurname");
         int age = Integer.parseInt(req.getParameter("userAge"));
+        String email = req.getParameter("userEmail");
         String gender = req.getParameter("gender");
         String country = req.getParameter("country");
+        String nationality = req.getParameter("nationality");
         String[] provisions = req.getParameterValues("provisions");
-        String[] comments = req.getParameterValues("comments");
+        String comments = req.getParameter("comments");
 
-        PartyMember partyMember = new PartyMember(name, surname, age, gender, country, provisions, comments);
+        PartyMember partyMember = new PartyMember(name, surname, age, email, gender, country, nationality, provisions, comments);
         partyMemberArrayList.add(partyMember);
 
         writeJson();
@@ -40,12 +43,14 @@ public class LoginToPartyServlet extends HttpServlet {
         printWriter.println("<h1><p style=\"color: crimson;text-align: center\">Name: " + partyMember.name() + "</p></h1>");
         printWriter.println("<h1><p style=\"color: crimson;text-align: center\">Surname: " + partyMember.surname() + "</p></h1>");
         printWriter.println("<h1><p style=\"color: crimson;text-align: center\">Age: " + partyMember.age() + "</p></h1>");
+        printWriter.println("<h1><p style=\"color: crimson;text-align: center\">Email: " + partyMember.email() + "</p></h1>");
         printWriter.println("<h1><p style=\"color: darkblue;text-align: center\">Gender: " + partyMember.gender() + "</p></h1>");
         printWriter.println("<h1><p style=\"color: darkgreen;text-align: center\">Country: " + partyMember.country() + "</p></h1>");
+        printWriter.println("<h1><p style=\"color: darkgreen;text-align: center\">Nationality: " + partyMember.nationality() + "</p></h1>");
         printWriter.println("<h1 style=\"color: crimson;text-align: center\">Provisions =></h1>");
         Arrays.stream(provisions).forEach(x -> printWriter.println("<h2><li style=\"color: black;text-align: center\">" + x + "</li></h2>"));
         printWriter.println("<h1 style=\"color: crimson;text-align: center\">Comments =></h1>");
-        Arrays.stream(comments).forEach(x -> printWriter.println("<h2><li style=\"color: black;text-align: center\">" + x + "</li></h2>"));
+        printWriter.println("<h2><li style=\"color: black;text-align: center\">" + partyMember.comments() + "</li></h2>");
     }
 
     private void writeJson() throws JsonProcessingException {
