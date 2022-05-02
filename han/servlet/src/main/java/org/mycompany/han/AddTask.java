@@ -25,20 +25,24 @@ public class AddTask extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         String taskName = req.getParameter("form2");
+        String out = Character.toUpperCase(taskName.charAt(0)) + taskName.substring(1);
         List<Task> tasks = getTasks();
-        try (Connection connection = DriverManager.getConnection(url, username, password)) {
-            try (final PreparedStatement statement =
-                         connection.prepareStatement("insert task(id, name, status)" +
-                                 " value(?, ?, false)")) {
-                int id = tasks.size() == 0 ? 1 : tasks.get(tasks.size() - 1).getId() + 1;
-                statement.setInt(1, id);
-                statement.setString(2, taskName);
-                statement.executeUpdate();
+        if (out.trim().length() != 0) {
+            try (Connection connection = DriverManager.getConnection(url, username, password)) {
+                try (final PreparedStatement statement =
+                             connection.prepareStatement("insert task(id, name, status)" +
+                                     " value(?, ?, false)")) {
+                    int id = tasks.size() == 0 ? 1 : tasks.get(tasks.size() - 1).getId() + 1;
+                    statement.setInt(1, id);
+                    statement.setString(2, out);
+                    statement.executeUpdate();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
+            resp.sendRedirect("/all.jsp");
+        } else {
+            resp.sendRedirect("/all.jsp");
         }
-        req.setAttribute("tasks", tasks);
-        getServletContext().getRequestDispatcher("/all.jsp").forward(req, resp);
     }
 }

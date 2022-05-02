@@ -18,8 +18,8 @@ public class DeleteLastTask extends HttpServlet {
     final String username = "mysql";
     final String password = "mysql";
 
-    public void doPost(HttpServletRequest httpServletRequest,
-                       HttpServletResponse httpServletResponse) throws ServletException, IOException {
+    public void doPost(HttpServletRequest req,
+                       HttpServletResponse resp) throws ServletException, IOException {
         List<Task> tasks = getTasks();
         try (Connection connection = DriverManager.getConnection(url, username, password)) {
             try (final PreparedStatement statement =
@@ -30,7 +30,6 @@ public class DeleteLastTask extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        httpServletRequest.setAttribute("tasks", tasks);
-        getServletContext().getRequestDispatcher("/all.jsp").forward(httpServletRequest, httpServletResponse);
+        resp.sendRedirect("/all.jsp");
     }
 }

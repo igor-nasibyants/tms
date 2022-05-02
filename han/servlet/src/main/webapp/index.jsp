@@ -18,30 +18,29 @@
                     <div class="card-body p-5">
                         <form class="d-flex mb-4" action="addTask" method="post">
                             <div class="d-flex form-outline flex-fill align-items-center">
-                                <input type="text" name="form2" class="form-control" placeholder="Enter task"/>
+                                <input type="text" name="form2" class="form-control" placeholder="Enter task"
+                                       required=""/>
                             </div>
                             <button type="submit" class="btn btn-info ms-2">Add</button>
                         </form>
                         <ul class="nav nav-tabs mb-4 pb-2" id="ex1" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="ex1-tab-1" data-mdb-toggle="tab" href="all.jsp"
+                                <a class="nav-link animation_title_link" id="ex1-tab-1" data-mdb-toggle="tab"
+                                   href="all.jsp"
                                    role="tab"
-                                   aria-controls="ex1-tabs-1">All</a>
+                                   aria-controls="ex1-tabs-1" aria-selected="true">All</a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="ex1-tab-2" data-mdb-toggle="tab" href="active.jsp" role="tab"
+                                <a class="nav-link animation_title_link" id="ex1-tab-2" data-mdb-toggle="tab"
+                                   href="active.jsp" role="tab"
                                    aria-controls="ex1-tabs-2" aria-selected="false">Active</a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="ex1-tab-3" data-mdb-toggle="tab" href="completed.jsp" role="tab"
+                                <a class="nav-link animation_title_link" id="ex1-tab-3" data-mdb-toggle="tab"
+                                   href="completed.jsp" role="tab"
                                    aria-controls="ex1-tabs-3" aria-selected="false">Completed</a>
                             </li>
                         </ul>
-                        <div class="tab-content" id="ex1-content">
-                            <div class="tab-pane fade show active" id="ex1-tabs-1" role="tabpanel"
-                                 aria-labelledby="ex1-tab-1">
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

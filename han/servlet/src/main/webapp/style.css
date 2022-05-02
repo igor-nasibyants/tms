@@ -6,3 +6,64 @@
     radial-gradient(100% 148.07% at 0% 0%, #fff500 0%, #51d500 100%);
     background-blend-mode: screen, color-dodge, overlay, difference, normal;
 }
+
+.close_button {
+    z-index: 1;
+    position: relative;
+    font-size: inherit;
+    font-family: inherit;
+    color: white;
+    padding: 0.5em 1em;
+    outline: none;
+    border: none;
+    background-color: hsl(0, 0%, 0%);
+}
+
+.close_button:hover {
+    cursor: pointer;
+}
+
+.close_button::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 2px solid hsl(0, 0%, 0%);
+    transform-origin: center;
+    transform: scale(1);
+}
+
+.close_button:hover::before {
+    transition: all 0.75s ease-in-out;
+    transform-origin: center;
+    transform: scale(1.75);
+    opacity: 0;
+}
+
+
+.animation_title_link {
+    position: relative;
+}
+
+.animation_title_link::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    opacity: 0;
+    background-color: #2292a8;
+    transform-origin: center;
+    transform: translate(-50%, 0) scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.animation_title_link:hover::before {
+    transform: translate(-50%, 0) scaleX(1);
+    opacity: 1;
+}
+
