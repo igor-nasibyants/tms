@@ -19,10 +19,6 @@
                             <h2>Registration</h2>
                         </div>
                         <form action = "reg" method="post">
-                            <label>Name:
-                                <input type="text" name="name" ><br />
-                            </label>
-
                             <label>Login:
                                 <input type="text" name="login"><br />
                             </label>

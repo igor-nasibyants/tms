@@ -30,45 +30,42 @@ public class RegServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String name = req.getParameter("name");
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 //        if(isValidPassword(password)) {
-        User user = new User(name, login, password);
-//            Model model = Model.getInstance();
-//            model.add(user);
+        User user = new User(login, password);
 //        Repo.insert(user);
-        try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)){
-            try(PreparedStatement preparedStatement =
-                        conn.prepareStatement("insert users(name, login, password) value(?, ?, ?)")){
-                preparedStatement.setString(1, user.getName());
-                preparedStatement.setString(2, user.getLogin());
-                preparedStatement.setString(3, user.getPassword());
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        if(ebanaBaza(user)) {
+            resp.sendRedirect("/siteservlet/list");
+        }else {
+            resp.sendRedirect("/siteservlet/login");
         }
-        resp.sendRedirect("/siteservlet/list");
+
 //        }else {
 //            req.setAttribute("notValid", name);
 //            doGet(req, resp);
 //        }
     }
 
-    public static void main(String[] args) {
-        User user = new User("123", "123", "123");
+//    public static void main(String[] args) {
+//        String login = "1";
+//        String password = "1";
+//        User user = new User(login, password);
+//        System.out.println(ebanaBaza(user));
+//    }
+
+    static boolean ebanaBaza(User user){
         try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)){
             try(PreparedStatement preparedStatement =
-                        conn.prepareStatement("INSERT INTO users (name, login, password) VALUES (2, 2, 2)")){
-//                preparedStatement.setString(1, user.getName());
-//                preparedStatement.setString(2, user.getLogin());
-//                preparedStatement.setString(3, user.getPassword());
+                        conn.prepareStatement("INSERT INTO users (login, password) VALUES (?, ?)")){
+                preparedStatement.setString(1, user.getLogin());
+                preparedStatement.setString(2, user.getPassword());
                 preparedStatement.executeUpdate();
-            }catch (SQLException e) {
-                e.printStackTrace();
+                return true;
             }
         } catch (SQLException e) {
             e.printStackTrace();
+            return false;
         }
     }
 

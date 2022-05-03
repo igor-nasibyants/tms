@@ -4,25 +4,15 @@ import java.io.Serializable;
 import java.util.Objects;
 
 public class User implements Serializable {
-    private String name;
     private String login;
     private String password;
 
     public User() {
     }
 
-    public User(String name, String login, String password) {
-        this.name = name;
+    public User(String login, String password) {
         this.login = login;
         this.password = password;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getLogin() {
@@ -46,18 +36,18 @@ public class User implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(name, user.name) && Objects.equals(login, user.login) && Objects.equals(password, user.password);
+        return Objects.equals(login, user.login) && Objects.equals(password, user.password);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, login, password);
+        return Objects.hash(login, password);
     }
 
     @Override
     public String toString() {
         return "User " +
-                "name = " + name +
-                ", login= " + login;
+                ", login = " + login +
+                ", password = " + password;
     }
 }
