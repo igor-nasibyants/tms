@@ -24,7 +24,7 @@ public class LoginServlet extends HttpServlet {
         String password = req.getParameter("password");
         Model model = Model.getInstance();
         if(model.getIsUser(login,password)) {
-            resp.sendRedirect("/testservlet/list");
+            resp.sendRedirect("/siteservlet/list");
         }else{
             getServletContext().getRequestDispatcher("views/login.jsp").forward(req, resp);
         }

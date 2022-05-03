@@ -35,7 +35,7 @@
                     </div>
         </div>
         <div>
-        <button onclick="location.href='/testservlet'">Back to main</button>
+        <button onclick="location.href='/siteservlet'">Back to main</button>
         </div>
     </body>
 </html>
