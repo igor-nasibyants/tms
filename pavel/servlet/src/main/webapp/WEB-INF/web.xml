@@ -88,4 +88,15 @@
         <servlet-name>HtmlServlet</servlet-name>
         <url-pattern>/html</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SaveRequestServlet</servlet-name>
+        <servlet-class>org.superpaulscompany.pavel.SaveRequestServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SaveRequestServlet</servlet-name>
+        <url-pattern>/saveRequest</url-pattern>
+    </servlet-mapping>
+
 </web-app>

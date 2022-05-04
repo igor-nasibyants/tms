@@ -67,7 +67,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <a href="#">
+            <a href="homework26.jsp">
                 <img src="WebContent/images/1920x810/mainWallpaper5.jpg"
                      class="d-block w-100" alt="...">
             </a>
