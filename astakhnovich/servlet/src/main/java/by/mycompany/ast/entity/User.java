@@ -1,14 +1,16 @@
 package by.mycompany.ast.entity;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class User {
-    private String name;
+public class User implements Serializable {
     private String login;
     private String password;
 
-    public User(String name, String login, String password) {
-        this.name = name;
+    public User() {
+    }
+
+    public User(String login, String password) {
         this.login = login;
         this.password = password;
     }
