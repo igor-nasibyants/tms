@@ -5,14 +5,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 public class SaveRequestServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         req.setCharacterEncoding("UTF8");
         resp.setContentType("text/html;charset=UTF-8");
-        PrintWriter printWriter = resp.getWriter();
 
         String name = req.getParameter("userName");
         String nickName = req.getParameter("userNickName");
