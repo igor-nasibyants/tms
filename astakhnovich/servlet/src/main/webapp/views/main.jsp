@@ -23,7 +23,8 @@
     <div>
         <div>
             <div class="fs-3 text-center">Users</div>
-            <table class="table">
+            <div class = "d-flex justify-content-center align-items-center" style = "height:80%">
+            <table class="table" style="width:50%">
                   <thead>
                       <tr>
                         <th scope="col">#</th>
@@ -52,6 +53,7 @@
                     %>
                 </tbody>
             </table>
+            </div>
         </div>
     </div>
 <div>
