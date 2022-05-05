@@ -23,35 +23,37 @@
     </nav>
 </head>
 <body>
-<div>
-    <div class="mt-3">
-        <%
-            if (request.getAttribute("exSaveDB") != null) {
-                out.println(request.getAttribute("exSaveDB"));
-            }
-        %>
-
-        <form action="registration" method="post">
-            <div class="d-flex flex-column">
-                <div class="input-group input-group-sm mb-3 d-flex justify-content-center">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Login</span>
-                    <input name="login" type="text" class="form-control" style='min-width: 20%; max-width: 70%'
-                           aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-                </div>
-                <div class="input-group input-group-sm mb-3 d-flex justify-content-center">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Password</span>
-                    <input name="password" type="password" class="form-control"
-                           style='min-width: 20%; max-width: 70%'>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="btn btn-outline-success" style="width: 10%">Submit</button>
-                </div>
+    <div>
+        <div class="fs-3 text-center">Sign-up</div>
+            <div class="mt-3">
+                <%
+                    if (request.getAttribute("exSaveDB") != null) {
+                        out.println(request.getAttribute("exSaveDB"));
+                    }
+                %>
+                <div>
+                    <form action="registration" method="post">
+                        <div class="d-flex flex-column">
+                            <div class="input-group input-group-sm mb-3 d-flex justify-content-center">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Login</span>
+                                <input name="login" type="text" class="form-control" style='min-width: 20%; max-width: 70%'
+                                       aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                            <div class="input-group input-group-sm mb-3 d-flex justify-content-center">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Password</span>
+                                <input name="password" type="password" class="form-control"
+                                       style='min-width: 20%; max-width: 70%'>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-outline-success" style="width: 10%">Save</button>
+                            </div>
+                        </div>
+                    </form>
+                <div>
             </div>
-        </form>
     </div>
-</div>
-<div class="text-center">
-    <button type="button" class="btn btn-outline-dark" onclick="location.href='/servlet'">Back to index</button>
-</div>
+    <div class="text-center">
+        <button type="button" class="btn btn-outline-dark" onclick="location.href='/servlet'">Back to index</button>
+    </div>
 </body>
 </html>

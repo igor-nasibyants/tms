@@ -17,10 +17,7 @@ public class MainServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<String> users = UserRepo.select().stream()
-                .map(User::toString)
-                .toList();
-        req.setAttribute("userList", users);
+        req.setAttribute("userList", UserRepo.select());
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/main.jsp");
         requestDispatcher.forward(req, resp);
     }
