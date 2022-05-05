@@ -32,7 +32,7 @@
                     <a class="nav-link" href="homework24.jsp">Домашняя работа №24</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Домашняя работа №25</a>
+                    <a class="nav-link" href="homework25.jsp">Домашняя работа №25</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="homework26.jsp">Домашняя работа №26</a>
