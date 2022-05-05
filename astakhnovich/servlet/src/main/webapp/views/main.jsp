@@ -1,6 +1,4 @@
 <%@ page import="java.util.List" %>
-<%@ page import="by.mycompany.ast.repos.UserRepo" %>
-<%@ page import="static by.mycompany.ast.repos.UserRepo.select" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -14,22 +12,22 @@
             <h2>Users</h2>
         </div>
         <%
-            List<Test> testList = select();
-            String username = "";
-            String password = "";
-            for (Test test : testList) {
-                login = test.getLogin();
-                password = test.getPassword();
-                request.setAttribute("login", login);
-                request.setAttribute("password", password);
+            List<String> users = (List<String>) request.getAttribute("userList");
+            if (users != null && !users.isEmpty()) {
+                out.println("<ui>");
+                for (String s : users) {
+                out.println("<li>" + s + "</li>");
+            }
+            out.println("</ui>");
+            }else{
+                out.println("<p>There are no users yet!</p>");
+            }
         %>
-        <div>${login} ${password}</div>
-        <%}%>
     </div>
 </div>
 
 <div>
-    <button onclick="location.href='/servlet'">Back to main</button>
+    <button onclick="location.href='/servlet'">Back to index</button>
 </div>
 </body>
 </html>

@@ -27,7 +27,7 @@
             </div>
         </div>
         <div>
-        <button onclick="location.href='/siteservlet'">Back to main</button>
+        <button onclick="location.href='/servlet'">Back to index</button>
         </div>
     </body>
 </html>

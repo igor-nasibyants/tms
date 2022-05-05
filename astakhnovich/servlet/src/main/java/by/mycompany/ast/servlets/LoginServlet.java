@@ -2,7 +2,6 @@ package by.mycompany.ast.servlets;
 
 import by.mycompany.ast.entity.User;
 import by.mycompany.ast.repo.UserRepo;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,12 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/registration")
-public class RegistrationServlet extends HttpServlet {
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/registration.jsp");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/login.jsp");
         requestDispatcher.forward(req, resp);
     }
 
@@ -25,11 +24,15 @@ public class RegistrationServlet extends HttpServlet {
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
-        User user = new User(login, password);
-        if(UserRepo.insert(user)){
-            resp.sendRedirect("main");
+        User userIn = new User(login, password);
+
+        if(UserRepo.select()
+                .stream()
+                .filter(v -> v.getLogin().contains(userIn.getLogin()))
+                .anyMatch(v -> v.getPassword().equals(userIn.getPassword()))) {
+                resp.sendRedirect("main");
         }else {
-            req.setAttribute("exSaveDB", "DB exception");
+            req.setAttribute("notContainsUser", "User not found");
             doGet(req, resp);
         }
     }
