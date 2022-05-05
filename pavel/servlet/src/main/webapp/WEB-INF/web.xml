@@ -99,4 +99,14 @@
         <url-pattern>/saveRequest</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>SaveRequestServletWithDB</servlet-name>
+        <servlet-class>org.superpaulscompany.pavel.SaveRequestServletWithSQL</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SaveRequestServletWithDB</servlet-name>
+        <url-pattern>/saveWithSQL</url-pattern>
+    </servlet-mapping>
+
 </web-app>
