@@ -27,7 +27,7 @@ public class RegistrationServlet extends HttpServlet {
 
         User user = new User(login, password);
         if(UserRepo.insert(user)){
-            resp.sendRedirect("main");
+            resp.sendRedirect("login");
         }else {
             req.setAttribute("exSaveDB", "DB exception");
             doGet(req, resp);

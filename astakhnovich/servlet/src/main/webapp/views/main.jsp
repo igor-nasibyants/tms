@@ -34,32 +34,37 @@
                                 <th scope="col">Role</th>
                               </tr>
                           </thead>
+
                           <tbody>
-                            <%
-                                List<User> users = (List<User>) request.getAttribute("userList");
-                                if (users != null && !users.isEmpty()) {
-                                int i = 1;
-                                    for (User s : users) {
-                                    out.println("<tr>");
-                                    out.println("<th scope=\"row\">" + i++ + "</th>");
-                                    out.println("<td>" + s.getId() + "</td>");
-                                    out.println("<td>" + s.getLogin() + "</td>");
-                                    out.println("<td>" + s.getPassword() + "</td>");
-                                    out.println("<td>" + s.getRole() + "</td>");
-                                    out.println("</tr>");
-                                }
-                                out.println("</tr>");
-                                }else{
-                                    out.println("<p>There are no users yet!</p>");
-                                }
-                            %>
+                                <%
+                                    List<User> users = (List<User>) request.getAttribute("userList");
+                                    if (users != null && !users.isEmpty()) {
+                                    int i = 1;
+                                        for (User s : users) {
+                                        out.println("<tr>");
+                                        out.println("<th scope=\"row\">" + i++ + "</th>");
+                                        out.println("<td>" + s.getId() + "</td>");
+                                        out.println("<td>" + s.getLogin() + "</td>");
+                                        out.println("<td>" + s.getPassword() + "</td>");
+                                        out.println("<td>" + s.getRole() + "</td>");
+                                        out.println("</tr>");
+
+                                    }
+                                    }else{
+                                        out.println("<tr>");
+                                        out.println("<td>There are no users yet!</td>");
+                                        out.println("</tr>");
+                                    }
+                                %>
                         </tbody>
                     </table>
+                </div>
+                <div class = "d-flex justify-content-center align-items-center">
                     <div>
                         <button type="button" class="btn btn-outline-dark" onclick="location.href='/servlet'">Back to index</button>
                     </div>
                 </div>
+            </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>

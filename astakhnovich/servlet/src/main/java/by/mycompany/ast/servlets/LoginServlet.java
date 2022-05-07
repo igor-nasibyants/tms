@@ -8,10 +8,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
+
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -21,16 +23,20 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        HttpSession session = req.getSession();
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
         User userIn = new User(login, password);
+        User userFromDB = UserRepo.selectOne(login);
 
-        if(UserRepo.select()
-                .stream()
-                .filter(v -> v.getLogin().contains(userIn.getLogin()))
-                .anyMatch(v -> v.getPassword().equals(userIn.getPassword()))) {
-                resp.sendRedirect("main");
+        if(userIn.getPassword().equals(userFromDB.getPassword())){
+            session.setAttribute("id", userFromDB.getId());
+            session.setAttribute("login", userFromDB.getLogin());
+            session.setAttribute("password", userFromDB.getPassword());
+            session.setAttribute("role", userFromDB.getRole());
+
+            resp.sendRedirect("main");
         }else {
             req.setAttribute("notContainsUser", "User not found");
             doGet(req, resp);

@@ -2,6 +2,7 @@ package by.mycompany.ast.repo;
 
 import by.mycompany.ast.entity.Role;
 import by.mycompany.ast.entity.User;
+import by.mycompany.ast.servlets.LoginServlet;
 
 import java.lang.reflect.InvocationTargetException;
 import java.sql.*;
@@ -44,11 +45,11 @@ public class UserRepo {
                 ResultSet resultSet = statement.executeQuery("SELECT * FROM users");
 
                 while(resultSet.next()){
-                    int id = resultSet.getInt(1);
-                    String login = resultSet.getString(2);
-                    String password = resultSet.getString(3);
-                    Role role =  Role.getRoleByString(resultSet.getString(4));
-                    User user = new User(id, login, password, role);
+                    int idFromDB = resultSet.getInt(1);
+                    String loginFromDB = resultSet.getString(2);
+                    String passwordFromDB = resultSet.getString(3);
+                    Role roleFromDB =  Role.getRoleByString(resultSet.getString(4));
+                    User user = new User(idFromDB, loginFromDB, passwordFromDB, roleFromDB);
                     users.add(user);
                 }
             }
@@ -57,6 +58,33 @@ public class UserRepo {
             System.out.println(ex);
         }
         return users;
+    }
+
+    public static User selectOne(String login){
+        User user = new User(0,"null", "null", Role.USER);
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
+            try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)){
+                try(PreparedStatement preparedStatement =
+                            conn.prepareStatement("SELECT * FROM users WHERE login=?")){
+                    preparedStatement.setString(1, login);
+                    ResultSet resultSet = preparedStatement.executeQuery();
+
+                    if(resultSet.next()){
+                        int IdFromDB = resultSet.getInt(1);
+                        String loginFromDB = resultSet.getString(2);
+                        String passwordFromDB = resultSet.getString(3);
+                        Role roleFromDB =  Role.getRoleByString(resultSet.getString(4));
+
+                        user = new User(IdFromDB, loginFromDB, passwordFromDB, roleFromDB);
+                    }
+                }
+            }
+        }
+        catch(Exception ex){
+            System.out.println(ex);
+        }
+        return user;
     }
 
     //    public static int delete(int id) {
@@ -98,31 +126,5 @@ public class UserRepo {
 //
 
 
-//    public static User selectOne(int id) {
-//
-//        User user = new User(0,"null", "null", "null");
-//        try{
-//            Class.forName(JDBC_DRIVER).getDeclaredConstructor().newInstance();
-//            try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)){
-//                try(PreparedStatement preparedStatement =
-//                            conn.prepareStatement("SELECT * FROM users WHERE id=?")){
-//                    preparedStatement.setInt(1, id);
-//                    ResultSet resultSet = preparedStatement.executeQuery();
-//                    if(resultSet.next()){
-//
-//                        int userId = resultSet.getInt(1);
-//                        String name = resultSet.getString(2);
-//                        String login = resultSet.getString(3);
-//                        String password = resultSet.getString(4);
-//
-//                        user = new User(userId, name, login, password);
-//                    }
-//                }
-//            }
-//        }
-//        catch(Exception ex){
-//            System.out.println(ex);
-//        }
-//        return user;
-//    }
+
 }
