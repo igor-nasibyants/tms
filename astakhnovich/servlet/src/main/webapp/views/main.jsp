@@ -22,42 +22,44 @@
 <body>
     <div>
         <div>
-            <div class="fs-3 text-center">Users</div>
-            <div class = "d-flex justify-content-center align-items-center" style = "height:80%">
-            <table class="table" style="width:50%">
-                  <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">id</th>
-                        <th scope="col">Login</th>
-                        <th scope="col">Password</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                    <%
-                        List<User> users = (List<User>) request.getAttribute("userList");
-                        if (users != null && !users.isEmpty()) {
-                        int i = 1;
-                            for (User s : users) {
-                            out.println("<tr>");
-                            out.println("<th scope=\"row\">" + i++ + "</th>");
-                            out.println("<td>" + s.getId() + "</td>");
-                            out.println("<td>" + s.getLogin() + "</td>");
-                            out.println("<td>" + s.getPassword() + "</td>");
-                            out.println("</tr>");
-                        }
-                        out.println("</tr>");
-                        }else{
-                            out.println("<p>There are no users yet!</p>");
-                        }
-                    %>
-                </tbody>
-            </table>
-            </div>
+            <div class="fs-3 text-center"> Users </div>
+                <div class = "d-flex justify-content-center align-items-center" style = "height:80%">
+                    <table class="table" style="width:50%">
+                          <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">id</th>
+                                <th scope="col">Login</th>
+                                <th scope="col">Password</th>
+                                <th scope="col">Role</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                            <%
+                                List<User> users = (List<User>) request.getAttribute("userList");
+                                if (users != null && !users.isEmpty()) {
+                                int i = 1;
+                                    for (User s : users) {
+                                    out.println("<tr>");
+                                    out.println("<th scope=\"row\">" + i++ + "</th>");
+                                    out.println("<td>" + s.getId() + "</td>");
+                                    out.println("<td>" + s.getLogin() + "</td>");
+                                    out.println("<td>" + s.getPassword() + "</td>");
+                                    out.println("<td>" + s.getRole() + "</td>");
+                                    out.println("</tr>");
+                                }
+                                out.println("</tr>");
+                                }else{
+                                    out.println("<p>There are no users yet!</p>");
+                                }
+                            %>
+                        </tbody>
+                    </table>
+                    <div>
+                        <button type="button" class="btn btn-outline-dark" onclick="location.href='/servlet'">Back to index</button>
+                    </div>
+                </div>
         </div>
     </div>
-<div>
-    <button type="button" class="btn btn-outline-dark" onclick="location.href='/servlet'">Back to index</button>
-</div>
 </body>
 </html>

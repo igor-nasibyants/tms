@@ -1,12 +1,14 @@
 package by.mycompany.ast.entity;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 
 public class User implements Serializable {
     private int id;
     private String login;
     private String password;
+    private Role role;
 
     public User() {
     }
@@ -16,10 +18,11 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public User(int id, String login, String password) {
+    public User(int id, String login, String password, Role role) {
         this.id = id;
         this.login = login;
         this.password = password;
+        this.role = role;
     }
 
     public int getId() {
@@ -46,11 +49,20 @@ public class User implements Serializable {
         this.password = password;
     }
 
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
     @Override
     public String toString() {
         return "User id : " + id +
-                ", login = '" + login +
-                ", password = '" + password;
+                ", login = " + login +
+                ", password = " + password +
+                ", role = " + role;
     }
 
     @Override
@@ -58,11 +70,11 @@ public class User implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return id == user.id && Objects.equals(login, user.login) && Objects.equals(password, user.password);
+        return id == user.id && Objects.equals(login, user.login) && Objects.equals(password, user.password) && role == user.role;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, login, password);
+        return Objects.hash(id, login, password, role);
     }
 }
