@@ -14,7 +14,6 @@ import java.io.IOException;
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/login.jsp");
@@ -24,6 +23,7 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
+
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
@@ -32,11 +32,9 @@ public class LoginServlet extends HttpServlet {
 
         if(userIn.getPassword().equals(userFromDB.getPassword())){
             session.setAttribute("id", userFromDB.getId());
-            session.setAttribute("login", userFromDB.getLogin());
-            session.setAttribute("password", userFromDB.getPassword());
+            session.setAttribute("name", userFromDB.getName());
             session.setAttribute("role", userFromDB.getRole());
-
-            resp.sendRedirect("main");
+            resp.sendRedirect("userList");
         }else {
             req.setAttribute("notContainsUser", "User not found");
             doGet(req, resp);

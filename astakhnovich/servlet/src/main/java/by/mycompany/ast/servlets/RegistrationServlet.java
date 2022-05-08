@@ -22,10 +22,11 @@ public class RegistrationServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String name = req.getParameter("name");
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
-        User user = new User(login, password);
+        User user = new User(name, login, password);
         if(UserRepo.insert(user)){
             resp.sendRedirect("login");
         }else {

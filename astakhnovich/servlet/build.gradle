@@ -9,6 +9,7 @@ repositories {
 
 dependencies {
     implementation group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+    implementation 'org.thymeleaf:thymeleaf:3.1.0.M1'
     implementation 'mysql:mysql-connector-java:8.0.28'
     implementation 'org.jsoup:jsoup:1.11.3'
     implementation group: 'org.freemarker', name: 'freemarker', version: '2.3.14'

@@ -6,6 +6,7 @@ import java.util.Objects;
 
 public class User implements Serializable {
     private int id;
+    private String name;
     private String login;
     private String password;
     private Role role;
@@ -18,8 +19,15 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public User(int id, String login, String password, Role role) {
+    public User(String name, String login, String password) {
+        this.name = name;
+        this.login = login;
+        this.password = password;
+    }
+
+    public User(int id, String name, String login, String password, Role role) {
         this.id = id;
+        this.name = name;
         this.login = login;
         this.password = password;
         this.role = role;
@@ -31,6 +39,14 @@ public class User implements Serializable {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getLogin() {
@@ -59,7 +75,9 @@ public class User implements Serializable {
 
     @Override
     public String toString() {
-        return "User id : " + id +
+        return "User" +
+                " id = " + id +
+                ", name = " + name +
                 ", login = " + login +
                 ", password = " + password +
                 ", role = " + role;
@@ -70,11 +88,11 @@ public class User implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return id == user.id && Objects.equals(login, user.login) && Objects.equals(password, user.password) && role == user.role;
+        return id == user.id && Objects.equals(name, user.name) && Objects.equals(login, user.login) && Objects.equals(password, user.password) && role == user.role;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, login, password, role);
+        return Objects.hash(id, name, login, password, role);
     }
 }

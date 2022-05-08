@@ -2,9 +2,6 @@ package by.mycompany.ast.repo;
 
 import by.mycompany.ast.entity.Role;
 import by.mycompany.ast.entity.User;
-import by.mycompany.ast.servlets.LoginServlet;
-
-import java.lang.reflect.InvocationTargetException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,24 +12,30 @@ public class UserRepo {
     private static final String PASS = "root";
 
     public static boolean insert(User user) {
-        List<User> userList = select();
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
-            try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASS)) {
-                try (final PreparedStatement statement =
-                             connection.prepareStatement("insert users(id, login, password, role) value(?, ?, ?, ?)")) {
-                    int id = userList.size() == 0 ? 1 : userList.size() + 1;
-                    statement.setInt(1, id);
-                    statement.setString(2, user.getLogin());
-                    statement.setString(3, user.getPassword());
-                    statement.setObject(4, "USER");
-                    statement.executeUpdate();
-                    return true;
-                }
-            }
-        }catch(Exception ex){
-            System.out.println(ex);
+        if(UserRepo.selectOne(user.getLogin()).getLogin().equals(user.getLogin())){
             return false;
+        }else{
+            List<User> userList = select();
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
+                try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASS)) {
+                    try (final PreparedStatement statement =
+                                 connection.prepareStatement("insert users(id, name, login, password, role)" +
+                                         " value(?, ?, ?, ?, ?)")) {
+                        int id = userList.size() == 0 ? 1 : userList.size() + 1;
+                        statement.setInt(1, id);
+                        statement.setString(2, user.getName());
+                        statement.setString(3, user.getLogin());
+                        statement.setString(4, user.getPassword());
+                        statement.setObject(5, "USER");
+                        statement.executeUpdate();
+                        return true;
+                    }
+                }
+            }catch(Exception ex){
+                System.out.println(ex);
+                return false;
+            }
         }
     }
 
@@ -46,10 +49,11 @@ public class UserRepo {
 
                 while(resultSet.next()){
                     int idFromDB = resultSet.getInt(1);
-                    String loginFromDB = resultSet.getString(2);
-                    String passwordFromDB = resultSet.getString(3);
-                    Role roleFromDB =  Role.getRoleByString(resultSet.getString(4));
-                    User user = new User(idFromDB, loginFromDB, passwordFromDB, roleFromDB);
+                    String nameFromDB = resultSet.getString(2);
+                    String loginFromDB = resultSet.getString(3);
+                    String passwordFromDB = resultSet.getString(4);
+                    Role roleFromDB =  Role.getRoleByString(resultSet.getString(5));
+                    User user = new User(idFromDB, nameFromDB, loginFromDB, passwordFromDB, roleFromDB);
                     users.add(user);
                 }
             }
@@ -61,7 +65,7 @@ public class UserRepo {
     }
 
     public static User selectOne(String login){
-        User user = new User(0,"null", "null", Role.USER);
+        User user = new User(0,"null", "null", "null", Role.USER);
         try{
             Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
             try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)){
@@ -72,11 +76,12 @@ public class UserRepo {
 
                     if(resultSet.next()){
                         int IdFromDB = resultSet.getInt(1);
-                        String loginFromDB = resultSet.getString(2);
-                        String passwordFromDB = resultSet.getString(3);
-                        Role roleFromDB =  Role.getRoleByString(resultSet.getString(4));
+                        String nameFromDB = resultSet.getString(2);
+                        String loginFromDB = resultSet.getString(3);
+                        String passwordFromDB = resultSet.getString(4);
+                        Role roleFromDB =  Role.getRoleByString(resultSet.getString(5));
 
-                        user = new User(IdFromDB, loginFromDB, passwordFromDB, roleFromDB);
+                        user = new User(IdFromDB,nameFromDB, loginFromDB, passwordFromDB, roleFromDB);
                     }
                 }
             }
