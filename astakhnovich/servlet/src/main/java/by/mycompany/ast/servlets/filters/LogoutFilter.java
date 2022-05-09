@@ -1,22 +1,17 @@
 package by.mycompany.ast.servlets.filters;
 
-import by.mycompany.ast.entity.User;
+import by.mycompany.ast.servlets.LoginServlet;
+import by.mycompany.ast.servlets.RegistrationServlet;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.FilterConfig;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.ServletException;
+import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebFilter("/userList")
-public class LoginFilter implements Filter {
+//@WebFilter("/login")
+public class LogoutFilter implements Filter {
     private FilterConfig filterConfig;
 
     @Override
@@ -30,12 +25,12 @@ public class LoginFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
         HttpSession session = req.getSession(false);
-        boolean loggedIn = session != null && ((User)session.getAttribute("user")) != null
-                && ((User)session.getAttribute("user")).getRole() != null;
-        if (loggedIn) {
-            filterChain.doFilter(req, res);
+        boolean loggedOut = session != null && session.getAttribute("id") != null
+                && session.getAttribute("role") != null;
+        if (loggedOut) {
+            res.sendRedirect("/servlet");
         } else {
-            res.sendRedirect("/servlet/login");
+            filterChain.doFilter(req, res);
         }
     }
 
@@ -44,3 +39,4 @@ public class LoginFilter implements Filter {
         filterConfig = null;
     }
 }
+

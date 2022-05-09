@@ -2,38 +2,46 @@ package by.mycompany.ast.servlets;
 
 import by.mycompany.ast.entity.User;
 import by.mycompany.ast.repo.UserRepo;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet("/registration")
-public class RegistrationServlet extends HttpServlet {
+@WebServlet("/settings")
+public class SettingsServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/registration.jsp");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/settings.jsp");
+        HttpSession session = req.getSession();
+        req.setAttribute("userForSettings", session.getAttribute("user"));
         requestDispatcher.forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        HttpSession session = req.getSession(false);
+        User user = (User) session.getAttribute("user");
+
         String name = req.getParameter("name");
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
-        User user = new User(name, login, password);
-        if(UserRepo.insert(user)){
-            user.getName();
-            req.setAttribute("userAdded", "User " + user.getName() + " added");
-            doGet(req, resp);
-        }else {
-            req.setAttribute("exSaveDB", "User exist");
-            doGet(req, resp);
+        if(name != null){
+            user.setName(name);
+        }else if (login != null){
+            user.setLogin(login);
+        }else if(password != null){
+            user.setPassword(password);
+        }
+        if (UserRepo.update(user)){
+            session.setAttribute("user", UserRepo.selectOne(user.getLogin()));
+            req.setAttribute("userUpdate", "User update");
+            resp.sendRedirect("settings");
         }
     }
 }

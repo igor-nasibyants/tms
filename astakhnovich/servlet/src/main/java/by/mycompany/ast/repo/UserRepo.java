@@ -92,44 +92,41 @@ public class UserRepo {
         return user;
     }
 
-    //    public static int delete(int id) {
-//        try{
-//            Class.forName(JDBC_DRIVER).getDeclaredConstructor().newInstance();
-//            try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)){
-//                try(PreparedStatement preparedStatement =
-//                            conn.prepareStatement("DELETE FROM products WHERE id = ?")){
-//                    preparedStatement.setInt(1, id);
-//                    return  preparedStatement.executeUpdate();
-//                }
-//            }
-//        }
-//        catch(Exception ex){
-//            System.out.println(ex);
-//        }
-//        return 0;
-//    }
+    public static boolean update(User user) {
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
+            try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)){
+                try(PreparedStatement preparedStatement =
+                            conn.prepareStatement("UPDATE users SET name = ?, login = ?, password = ? WHERE id = ?")){
+                    preparedStatement.setString(1, user.getName());
+                    preparedStatement.setString(2, user.getLogin());
+                    preparedStatement.setString(3, user.getPassword());
+                    preparedStatement.setInt(4, user.getId());
+                    preparedStatement.executeUpdate();
+                    return true;
+                }
+            }
+        }
+        catch(Exception ex){
+            System.out.println(ex);
+            return false;
+        }
+    }
 
-    //    public static int update(User user) {
-//        try{
-//            Class.forName(JDBC_DRIVER).getDeclaredConstructor().newInstance();
-//            try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)){
-//                try(PreparedStatement preparedStatement =
-//                            conn.prepareStatement("UPDATE products SET name = ?, login = ?, password = ? WHERE id = ?")){
-//                    preparedStatement.setString(1, user.getName());
-//                    preparedStatement.setString(2, user.getLogin());
-//                    preparedStatement.setString(3, user.getPassword());
-//                    preparedStatement.setInt(4, user.getId());
-//                    return  preparedStatement.executeUpdate();
-//                }
-//            }
-//        }
-//        catch(Exception ex){
-//            System.out.println(ex);
-//        }
-//        return 0;
-//    }
-//
-
-
-
+    public static int delete(int id) {
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
+            try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)){
+                try(PreparedStatement preparedStatement =
+                            conn.prepareStatement("DELETE FROM products WHERE id = ?")){
+                    preparedStatement.setInt(1, id);
+                    return  preparedStatement.executeUpdate();
+                }
+            }
+        }
+        catch(Exception ex){
+            System.out.println(ex);
+        }
+        return 0;
+    }
 }

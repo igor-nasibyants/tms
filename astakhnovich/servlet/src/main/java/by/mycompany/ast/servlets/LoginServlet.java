@@ -31,9 +31,7 @@ public class LoginServlet extends HttpServlet {
         User userFromDB = UserRepo.selectOne(login);
 
         if(userIn.getPassword().equals(userFromDB.getPassword())){
-            session.setAttribute("id", userFromDB.getId());
-            session.setAttribute("name", userFromDB.getName());
-            session.setAttribute("role", userFromDB.getRole());
+            session.setAttribute("user", userFromDB);
             resp.sendRedirect("userList");
         }else {
             req.setAttribute("notContainsUser", "User not found");
