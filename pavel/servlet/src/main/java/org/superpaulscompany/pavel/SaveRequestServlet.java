@@ -4,6 +4,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class SaveRequestServlet extends HttpServlet {
@@ -11,6 +12,7 @@ public class SaveRequestServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         req.setCharacterEncoding("UTF8");
         resp.setContentType("text/html;charset=UTF-8");
+        HttpSession httpSession = req.getSession();
 
         String name = req.getParameter("userName");
         String nickName = req.getParameter("userNickName");
@@ -26,6 +28,10 @@ public class SaveRequestServlet extends HttpServlet {
         } else if (wish.equals("")) {
             getServletContext().getRequestDispatcher("/save-request.jsp").forward(req, resp);
         } else {
+            httpSession.setAttribute("userName", name);
+            httpSession.setAttribute("userNickName", nickName);
+            httpSession.setAttribute("userAge", age);
+            httpSession.setAttribute("userWish", wish);
             getServletContext().getRequestDispatcher("/saved.jsp").forward(req, resp);
         }
     }

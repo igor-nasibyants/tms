@@ -18,7 +18,7 @@
     <title>Let's go to the party</title>
 </head>
 <body>
-<%@include file="navBar.jsp"%>
+<%@include file="navBar.jsp" %>
 <div class="container col-xl-10 col-xxl-8 px-4 py-5 bg-light">
     <main>
         <div class="py-5 text-center">
@@ -53,7 +53,8 @@
                         <label for="age" class="form-label">Age</label>
                         <div class="input-group has-validation">
                             <span class="input-group-text"> От 18 лет </span>
-                            <input name="userAge" type="number"  min="1" class="form-control" id="age" placeholder="Возраст"
+                            <input name="userAge" type="number" min="18" class="form-control" id="age"
+                                   placeholder="Возраст"
                                    required="">
                         </div>
                     </div>
@@ -163,6 +164,6 @@
     </main>
 
 </div>
-<%@include file="footer.jsp"%>
+<%@include file="footer.jsp" %>
 </body>
 </html>

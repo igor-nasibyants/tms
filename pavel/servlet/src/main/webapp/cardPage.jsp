@@ -27,8 +27,7 @@
                 <h1 class="fw-light">SuperPaulsCompany.org</h1>
                 <p class="lead text-muted">Наша компания может работь, а может и не работать</p>
                 <p>
-                    <a href="https://youtu.be/YAK0aSKdPHc" class="btn btn-primary my-2">Позвонить в компанию</a>
-                    <a href="https://youtu.be/Qzk6E3jx5kw" class="btn btn-secondary my-2">Послать Email</a>
+                    <a href="https://youtu.be/YAK0aSKdPHc" class="btn btn-primary my-2">Подать заявку в компанию</a>
                 </p>
             </div>
         </div>
@@ -41,21 +40,21 @@
                 <div class="col">
                     <div class="card shadow-sm">
                         <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                             role="img" aria-label="Placeholder: Thumbnail"
                              preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
                             <rect width="100%" height="100%" fill="#55595c"></rect>
-                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Ин Девелопмент</text>
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">GitHub</text>
                         </svg>
 
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text">Наша компания поможет каждому.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    <a href="https://github.com/igor-nasibyants/tms">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Глянуть</button>
+                                    </a>
                                 </div>
-                                <small class="text-muted">9 mins</small>
+                                <small class="text-muted">37 sec</small>
                             </div>
                         </div>
                     </div>
@@ -63,21 +62,21 @@
                 <div class="col">
                     <div class="card shadow-sm">
                         <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                             role="img" aria-label="Placeholder: Thumbnail"
                              preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
                             <rect width="100%" height="100%" fill="#55595c"></rect>
-                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Ин Девелопмент</text>
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Индия</text>
                         </svg>
 
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text">Мы предлагаем всякую дичь.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    <a href="https://habr.com/ru/post/664872/">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Глянуть</button>
+                                    </a>
                                 </div>
-                                <small class="text-muted">9 mins</small>
+                                <small class="text-muted">11 sec</small>
                             </div>
                         </div>
                     </div>
@@ -85,21 +84,21 @@
                 <div class="col">
                     <div class="card shadow-sm">
                         <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                             role="img" aria-label="Placeholder: Thumbnail"
                              preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
                             <rect width="100%" height="100%" fill="#55595c"></rect>
-                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Ин Девелопмент</text>
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Знание</text>
                         </svg>
 
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text">Мы обучим вас всему.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    <a href="https://youtu.be/5YLA29EybMo">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Глянуть</button>
+                                    </a>
                                 </div>
-                                <small class="text-muted">9 mins</small>
+                                <small class="text-muted">1h 32 min 20sec</small>
                             </div>
                         </div>
                     </div>

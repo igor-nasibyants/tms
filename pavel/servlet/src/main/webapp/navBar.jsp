@@ -37,6 +37,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="homework26.jsp">Домашняя работа №26</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Домашняя работа №27</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
                        aria-expanded="false">Полезные ссылки</a>

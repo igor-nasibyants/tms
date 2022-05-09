@@ -24,6 +24,10 @@
         <div class="py-1 text-center">
             <br><br>
             <h3>"Заявка успешно сохранена"</h3>
+            <h4>Имя: ${userName}</h4>
+            <h4>Кликуха: ${userNickName}</h4>
+            <h4>Возраст: ${userAge}</h4>
+            <h4>Пожелание: ${userWish}</h4>
             <br><br>
         </div>
     </main>

@@ -15,4 +15,6 @@ dependencies {
     implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
     implementation group: 'javax.servlet.jsp.jstl', name: 'jstl-api', version: '1.2'
     compileOnly group: 'javax.servlet', name: 'jsp-api', version: '2.0'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '2.6.7'
+    implementation group: 'org.thymeleaf', name: 'thymeleaf', version: '3.1.0.M1'
 }

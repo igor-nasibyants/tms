@@ -18,7 +18,7 @@
     <title>PaulsSite</title>
 </head>
 <body>
-<%@include file="navBar.jsp"%>
+<%@include file="navBar.jsp" %>
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -31,6 +31,8 @@
                 aria-label="Slide 4"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
                 aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                aria-label="Slide 6"></button>
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -75,6 +77,15 @@
                 <h2>Домашняя работа №26</h2>
             </div>
         </div>
+        <div class="carousel-item">
+            <a href="#">
+                <img src="WebContent/images/1920x810/mainWallpaper6.jpg"
+                     class="d-block w-100" alt="...">
+            </a>
+            <div class="carousel-caption">
+                <h2>Домашняя работа №27</h2>
+            </div>
+        </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev">
@@ -87,6 +98,6 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
-<%@include file="footer.jsp"%>
+<%@include file="footer.jsp" %>
 </body>
 </html>
