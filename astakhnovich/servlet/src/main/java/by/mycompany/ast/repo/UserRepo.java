@@ -19,7 +19,7 @@ public class UserRepo {
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
                 try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASS)) {
-                    try (final PreparedStatement statement =
+                    try (PreparedStatement statement =
                                  connection.prepareStatement("insert users(id, name, login, password, role)" +
                                          " value(?, ?, ?, ?, ?)")) {
                         int id = userList.size() == 0 ? 1 : userList.size() + 1;
@@ -113,20 +113,22 @@ public class UserRepo {
         }
     }
 
-    public static int delete(int id) {
+    public static boolean delete(int id) {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
             try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)){
                 try(PreparedStatement preparedStatement =
-                            conn.prepareStatement("DELETE FROM products WHERE id = ?")){
+                            conn.prepareStatement("DELETE FROM users WHERE id = ?")){
                     preparedStatement.setInt(1, id);
-                    return  preparedStatement.executeUpdate();
+                    preparedStatement.executeUpdate();
+                    return true;
                 }
             }
         }
         catch(Exception ex){
             System.out.println(ex);
+            return false;
         }
-        return 0;
+
     }
 }

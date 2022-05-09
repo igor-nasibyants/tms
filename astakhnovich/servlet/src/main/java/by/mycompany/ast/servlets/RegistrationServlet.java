@@ -28,7 +28,6 @@ public class RegistrationServlet extends HttpServlet {
 
         User user = new User(name, login, password);
         if(UserRepo.insert(user)){
-            user.getName();
             req.setAttribute("userAdded", "User " + user.getName() + " added");
             doGet(req, resp);
         }else {
