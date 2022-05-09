@@ -51,7 +51,7 @@
         </div>
 
         <div class="col">
-            <a href="DayOfTheWeek.jsp" style="text-decoration: none">
+            <a href="dayOfTheWeek.jsp" style="text-decoration: none">
                 <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
                      style="background-image: url('WebContent/images/400x400/forhomework22/Lion400x400.jpg'); width: 400px; height: 400px">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
@@ -76,7 +76,7 @@
         </div>
 
         <div class="col">
-            <a href="DayNumberInTheYear.jsp" style="text-decoration: none">
+            <a href="dayNumberInTheYear.jsp" style="text-decoration: none">
                 <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
                      style="background-image: url('WebContent/images/400x400/forhomework22/fox400x400.jpg'); width: 400px; height: 400px">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">

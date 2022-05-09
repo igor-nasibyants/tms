@@ -1,4 +1,4 @@
-package org.superpaulscompany.pavel;
+package org.superpaulscompany.pavel.servlets.homework23;
 
 import org.superpaulscompany.pavel.model.Student;
 

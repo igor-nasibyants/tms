@@ -11,7 +11,7 @@
 
     <servlet>
         <servlet-name>MyDateServlet</servlet-name>
-        <servlet-class>org.superpaulscompany.pavel.MyDateServlet</servlet-class>
+        <servlet-class>org.superpaulscompany.pavel.servlets.homework22.MyDateServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -21,7 +21,7 @@
 
     <servlet>
         <servlet-name>StudentsServlet</servlet-name>
-        <servlet-class>org.superpaulscompany.pavel.StudentsServlet</servlet-class>
+        <servlet-class>org.superpaulscompany.pavel.servlets.homework23.StudentsServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -31,7 +31,7 @@
 
     <servlet>
         <servlet-name>CountServlet</servlet-name>
-        <servlet-class>org.superpaulscompany.pavel.CountServlet</servlet-class>
+        <servlet-class>org.superpaulscompany.pavel.servlets.homework23.CountServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -51,7 +51,7 @@
 
     <servlet>
         <servlet-name>LoginToPartyServlet</servlet-name>
-        <servlet-class>org.superpaulscompany.pavel.LoginToPartyServlet</servlet-class>
+        <servlet-class>org.superpaulscompany.pavel.servlets.homework23.LoginToPartyServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -61,7 +61,7 @@
 
     <servlet>
         <servlet-name>DayNumberInTheYearServlet</servlet-name>
-        <servlet-class>org.superpaulscompany.pavel.DayNumberInTheYearServlet</servlet-class>
+        <servlet-class>org.superpaulscompany.pavel.servlets.homework22.DayNumberInTheYearServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -71,7 +71,7 @@
 
     <servlet>
         <servlet-name>DayOfTheWeekServlet</servlet-name>
-        <servlet-class>org.superpaulscompany.pavel.DayOfTheWeekServlet</servlet-class>
+        <servlet-class>org.superpaulscompany.pavel.servlets.homework22.DayOfTheWeekServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -81,7 +81,7 @@
 
     <servlet>
         <servlet-name>HtmlServlet</servlet-name>
-        <servlet-class>org.superpaulscompany.pavel.HtmlServlet</servlet-class>
+        <servlet-class>org.superpaulscompany.pavel.servlets.homework24.HtmlServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -91,7 +91,7 @@
 
     <servlet>
         <servlet-name>SaveRequestServlet</servlet-name>
-        <servlet-class>org.superpaulscompany.pavel.SaveRequestServlet</servlet-class>
+        <servlet-class>org.superpaulscompany.pavel.servlets.homework26.SaveRequestServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -101,7 +101,7 @@
 
     <servlet>
         <servlet-name>SaveRequestServletWithDB</servlet-name>
-        <servlet-class>org.superpaulscompany.pavel.SaveRequestServletWithSQL</servlet-class>
+        <servlet-class>org.superpaulscompany.pavel.servlets.homework26.SaveRequestServletWithSQL</servlet-class>
     </servlet>
 
     <servlet-mapping>

@@ -1,4 +1,4 @@
-package org.superpaulscompany.pavel;
+package org.superpaulscompany.pavel.servlets.homework26;
 
 import org.superpaulscompany.pavel.model.Application;
 
@@ -15,7 +15,7 @@ import java.sql.PreparedStatement;
 public class SaveRequestServletWithSQL extends HttpServlet {
     private static final String URL = "jdbc:mysql://localhost/application";
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "pagymubuj8991";
+    private static final String PASSWORD = "мой пороль";
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -1,4 +1,4 @@
-package org.superpaulscompany.pavel;
+package org.superpaulscompany.pavel.servlets.homework26;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
