@@ -1,4 +1,4 @@
-package by.mycompany.ast.servlets;
+package by.mycompany.ast.servlets.loginservlets;
 
 import by.mycompany.ast.entity.User;
 import by.mycompany.ast.repo.UserRepo;
@@ -19,7 +19,7 @@ public class ListServlet extends HttpServlet {
         HttpSession session = req.getSession();
         req.setAttribute("name", ((User)session.getAttribute("user")).getName());
         req.setAttribute("userList", UserRepo.select());
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/userList.jsp");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/login/userList.jsp");
         requestDispatcher.forward(req, resp);
     }
 }

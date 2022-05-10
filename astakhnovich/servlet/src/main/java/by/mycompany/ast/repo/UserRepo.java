@@ -20,14 +20,14 @@ public class UserRepo {
                 Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
                 try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASS)) {
                     try (PreparedStatement statement =
-                                 connection.prepareStatement("insert users(id, name, login, password, role)" +
-                                         " value(?, ?, ?, ?, ?)")) {
-                        int id = userList.size() == 0 ? 1 : userList.size() + 1;
-                        statement.setInt(1, id);
-                        statement.setString(2, user.getName());
-                        statement.setString(3, user.getLogin());
-                        statement.setString(4, user.getPassword());
-                        statement.setObject(5, "USER");
+                                 connection.prepareStatement("insert users( name, login, password, role)" +
+                                         " value( ?, ?, ?, ?)")) {
+//                        int id = userList.size() == 0 ? 1 : userList.size() + 1;
+//                        statement.setInt(1, id);
+                        statement.setString(1, user.getName());
+                        statement.setString(2, user.getLogin());
+                        statement.setString(3, user.getPassword());
+                        statement.setObject(4, "USER");
                         statement.executeUpdate();
                         return true;
                     }

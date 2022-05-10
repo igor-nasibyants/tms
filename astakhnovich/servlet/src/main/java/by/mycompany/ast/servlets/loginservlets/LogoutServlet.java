@@ -1,4 +1,4 @@
-package by.mycompany.ast.servlets;
+package by.mycompany.ast.servlets.loginservlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

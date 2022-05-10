@@ -1,4 +1,4 @@
-package by.mycompany.ast.servlets;
+package by.mycompany.ast.servlets.loginservlets;
 
 import by.mycompany.ast.entity.User;
 import by.mycompany.ast.repo.UserRepo;
@@ -16,9 +16,10 @@ public class SettingsServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/settings.jsp");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/login/settings.jsp");
         HttpSession session = req.getSession();
         req.setAttribute("userForSettings", session.getAttribute("user"));
+        req.setAttribute("name", ((User)session.getAttribute("user")).getName());
         requestDispatcher.forward(req, resp);
     }
 

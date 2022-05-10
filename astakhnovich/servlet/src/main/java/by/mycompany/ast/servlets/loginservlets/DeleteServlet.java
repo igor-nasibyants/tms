@@ -1,4 +1,4 @@
-package by.mycompany.ast.servlets;
+package by.mycompany.ast.servlets.loginservlets;
 
 import by.mycompany.ast.entity.User;
 import by.mycompany.ast.repo.UserRepo;

@@ -28,10 +28,8 @@
                     }
                     %>
                 </a>
-
-
-
                 <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="">
+                    <li><a class="dropdown-item" href="/servlet/newPost">New Post</a></li>
                     <li><a class="dropdown-item" href="#">Profile</a></li>
                     <li><a class="dropdown-item" href="/servlet/settings">Settings</a></li>
                     <li>

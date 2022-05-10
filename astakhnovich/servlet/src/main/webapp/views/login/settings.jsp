@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Settings</title>
-    <jsp:include page="headerIn.jsp"/>
+    <jsp:include page="../headerIn.jsp"/>
 </head>
 <body>
     <div class="fs-3 text-center"> User Settings</div>

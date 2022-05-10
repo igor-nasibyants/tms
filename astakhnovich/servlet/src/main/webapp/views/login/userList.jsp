@@ -4,7 +4,7 @@
 <html>
     <head>
         <title>Main</title>
-        <jsp:include page="headerIn.jsp"/>
+        <jsp:include page="../headerIn.jsp"/>
     </head>
 <body>
     <div>
