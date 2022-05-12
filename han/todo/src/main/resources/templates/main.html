@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<p>Get your greeting <a href="/greeting">here</a></p>
+<form method="post">
+    <input type="text" name="name" placeholder="Enter todo">
+    <button type="submit">OK</button>
+</form>
+<div>Список Дел</div>
+<div th:each="task: ${tasks}">
+    <div>
+        <b th:text="${task.id}"></b>
+        <span th:text="${task.name}"></span>
+        <b th:text="${task.status}"></b>
+    </div>
+</div>
+</body>
+</html>
