@@ -48,9 +48,9 @@ public final class Client extends Human {
         return Objects.hash(status);
     }
 
-    @Override
-    protected void finalize() throws Throwable {
-        super.finalize();
-        System.out.println("Я удалился");
-    }
+//    @Override
+//    protected void finalize() throws Throwable {
+//        super.finalize();
+//        System.out.println("Я удалился");
+//    }
 }
