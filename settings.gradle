@@ -21,4 +21,6 @@ include "nnazarv:servlet"
 include "jstl"
 include 'pavel:spring'
 findProject(':pavel:spring')?.name = 'spring'
+include 'pavel:kotlin'
+findProject(':pavel:kotlin')?.name = 'kotlin'
 
