@@ -17,8 +17,8 @@ fun main() {
     println("Positive numbers :$positive")
     println("Negative numbers :$negative")
 
-    val result = listOf("Java", "Kotlin", "Groovy", "Php")
+    listOf("Java", "Kotlin", "Groovy", "Php")
             .groupBy { it.length }
             .toSortedMap()
-    println(result) // Hashmap отсортированный
+            .forEach { x -> print(x) }
 }

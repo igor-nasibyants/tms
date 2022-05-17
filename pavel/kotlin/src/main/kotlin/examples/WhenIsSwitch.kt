@@ -13,6 +13,7 @@ fun testWhen(input: Any) {
         2 -> println("Number Two")
         in 10..20 -> println("Number from 10 to 20")
         is String -> println("This is a string and it's length is : ${input.length}")
+        is Int -> println("This is number: $input")
         else -> println("Jakarta")
     }
 }
