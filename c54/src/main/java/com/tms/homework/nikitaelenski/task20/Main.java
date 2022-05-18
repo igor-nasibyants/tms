@@ -20,7 +20,6 @@ public class Main {
                 System.out.print(resultSet.getInt(1) + " ");
                 System.out.print( resultSet.getString(2) + " ");
                 System.out.print( resultSet.getString(3));
-
                 System.out.println("");
             }
         }
