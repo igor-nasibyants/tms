@@ -18,7 +18,16 @@ fun main() {
     println("Negative numbers :$negative")
 
     listOf("Java", "Kotlin", "Groovy", "Php")
-            .groupBy { it.length }
-            .toSortedMap()
-            .forEach { x -> print(x) }
+        .groupBy { it.length }
+        .toSortedMap()
+        .forEach { x -> print(x) }
+
+    println()
+
+    val fruits = listOf("банан", "авокадо", "яблоко", "киви")
+    fruits
+        .filter { it.startsWith("а") }
+        .sortedBy { it }
+        .map { it.uppercase() }
+        .forEach { println(it) }
 }
