@@ -1,5 +1,6 @@
-package com.tms.homework.nikitaelenski.task30.patterns.abstractfactory;
+package com.tms.homework.nikitaelenski.task30.patterns.abstractfactory.main;
 
+import com.tms.homework.nikitaelenski.task30.patterns.abstractfactory.*;
 import com.tms.homework.nikitaelenski.task30.patterns.abstractfactory.plantMAZ.MAZWorkingProcess;
 
 public class Main {
