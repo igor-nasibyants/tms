@@ -19,6 +19,7 @@ include "nikitos"
 include "nikitos:servlet"
 include "nnazarv:servlet"
 include "jstl"
+include "nikitos:testServlet"
 include 'pavel:spring'
 findProject(':pavel:spring')?.name = 'spring'
 include 'pavel:kotlin'

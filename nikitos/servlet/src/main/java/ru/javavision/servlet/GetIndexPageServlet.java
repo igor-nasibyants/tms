@@ -19,8 +19,6 @@ public class GetIndexPageServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         users = new CopyOnWriteArrayList<>();
-        users.add(new User("Java", 10));
-        users.add(new User("Vision", 20));
     }
 
     @Override
