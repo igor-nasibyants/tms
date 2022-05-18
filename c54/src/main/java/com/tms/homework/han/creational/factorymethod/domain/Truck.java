@@ -5,4 +5,9 @@ public class Truck implements IProduction{
     public void release() {
         System.out.println("New truck is here");
     }
+
+    @Override
+    public void development() {
+        System.out.println("Truck in development");
+    }
 }

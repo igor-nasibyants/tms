@@ -1,11 +1,10 @@
 package com.tms.homework.han.creational.factorymethod.factories;
 
 import com.tms.homework.han.creational.factorymethod.domain.Car;
-import com.tms.homework.han.creational.factorymethod.domain.IProduction;
 
-public class CarWorkShop implements IWorkShop{
+public class CarWorkShop implements IWorkShop<Car>{
     @Override
-    public IProduction create() {
+    public Car create() {
         return new Car();
     }
 }
