@@ -7,6 +7,4 @@ public class ProxyPatternClient {
 
         access.grantInternetAccess();
     }
-
-
 }

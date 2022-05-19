@@ -12,11 +12,9 @@ public abstract class Logger {
 
     protected Logger nextLevelLogger;
 
-
     public void setNextLevelLogger(Logger nextLevelLogger) {
         this.nextLevelLogger = nextLevelLogger;
     }
-
 
     public void logMessage(int levels, String msg) {
         if (this.levels <= levels) {
@@ -27,8 +25,5 @@ public abstract class Logger {
         }
     }
 
-
     protected abstract void displayLogInfo(String msg);
-
-
 }
