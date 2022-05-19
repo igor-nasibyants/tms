@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public class Person implements Humanable {
 
-    private String name;
-    private Integer age;
+    private final String name;
+    private final Integer age;
     private Sex sex;
     private Status status;
 

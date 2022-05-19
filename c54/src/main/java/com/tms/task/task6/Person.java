@@ -21,6 +21,10 @@ public class Person {
         this(18, "Tom");
     }
 
+    public static void printDefault() {
+        System.out.println("new Person()");
+    }
+
     public int getAge() {
         return age;
     }
@@ -39,10 +43,6 @@ public class Person {
 
     public String getInfo() {
         return name + ", " + age;
-    }
-
-    public static void printDefault() {
-        System.out.println("new Person()");
     }
 
     public void printChangedPerson() {

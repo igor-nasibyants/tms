@@ -8,7 +8,7 @@ import javax.xml.transform.Result;
 import java.io.StringReader;
 
 public class TestJaxb {
-    private static String TEST_XML="<?xml version = \"1.0\" ?>" +
+    private static final String TEST_XML = "<?xml version = \"1.0\" ?>" +
             "<result xmlns=\"http://foobar.com\">" +
             "<code>NOK</code>" +
             "<description>abc</description></result>";

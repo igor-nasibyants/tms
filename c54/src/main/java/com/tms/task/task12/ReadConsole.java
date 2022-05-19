@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class ReadConsole {
-    public static void main(String args[]) throws IOException {
+    public static void main(String[] args) throws IOException {
         InputStreamReader inStRe = null;
 
         try {
@@ -14,8 +14,8 @@ public class ReadConsole {
             do {
                 a = (char) inStRe.read();
                 System.out.print(a);
-            } while(a != 'q');
-        }finally {
+            } while (a != 'q');
+        } finally {
             if (inStRe != null) {
                 inStRe.close();
             }

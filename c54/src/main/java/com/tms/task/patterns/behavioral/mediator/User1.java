@@ -2,8 +2,8 @@ package com.tms.task.patterns.behavioral.mediator;
 
 public class User1 extends Participant {
 
-    private String name;
     private final ApnaChatRoom chat;
+    private String name;
 
     public User1(ApnaChatRoom chat) {
         this.chat = chat;

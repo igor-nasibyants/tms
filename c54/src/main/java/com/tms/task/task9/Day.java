@@ -10,19 +10,19 @@ public enum Day {
     SUNDAY("Sunday", 7);
 
     private String value;
-    private int number;
+    private final int number;
 
     Day(String value, int number) {
         this.value = value;
         this.number = number;
     }
 
-    public void setValue(String value) {
-        this.value = value;
-    }
-
     public String getValue() {
         return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
     }
 
     public Day fromValue(String value) {

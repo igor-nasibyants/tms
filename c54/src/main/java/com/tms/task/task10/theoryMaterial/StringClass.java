@@ -5,11 +5,11 @@ public class StringClass {
 
         //типы данных String неизменяются immutable класс не изменяемый
         //str1.toUpperCase(); не меняют (не оперируют) а возвращает новую строку (создает)
-        String str1 = new String("JAva");
+        String str1 = "JAva";
         String str2 = "Java";
-        String str3 = new String("Hot Java");
+        String str3 = "Hot Java";
         String[] strings = str3.split("J");
-        String str4 = new String(" Cool Java ");
+        String str4 = " Cool Java ";
         String str6 = "Java";
         str6 = str6.toUpperCase();
         System.out.println(str6);
@@ -42,7 +42,7 @@ public class StringClass {
         System.out.println(str4.trim()); // обрезает пробелы в начале и в конце строки
 
         //статические методы
-        System.out.println(String.valueOf(65)); //преобразует переменные заданного типа в строку
+        System.out.println(65); //преобразует переменные заданного типа в строку
         String str5 = String.valueOf(65);
 
 

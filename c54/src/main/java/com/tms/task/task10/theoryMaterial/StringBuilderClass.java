@@ -7,12 +7,12 @@ public class StringBuilderClass {
         System.out.println(str1);
         str1.append(" Cool");
         str1.append(" Java");
-        System.out.println(str1.toString());
+        System.out.println(str1);
 
         StringBuilder str2 = new StringBuilder("Max");
         System.out.println(str2);
         str2.append(" Cool").append(" Max");
-        System.out.println(str2.toString());
+        System.out.println(str2);
 
 
     }

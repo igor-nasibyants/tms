@@ -12,12 +12,12 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 
 public class SaxParser extends HandlerBase {
-    private PrintWriter out;
+    private final PrintWriter out;
     private int elements;
     private int attributes;
     private int characters;
     private int ignorableWhitespace;
-    private String url;
+    private final String url;
 
     public SaxParser(String url_str) {
         url = url_str;
@@ -25,6 +25,28 @@ public class SaxParser extends HandlerBase {
             out = new PrintWriter(new OutputStreamWriter(System.out, "koi8-r"));
         } catch (UnsupportedEncodingException e) {
             throw new RuntimeException(e); // нет вывода - нет работы!
+        }
+    }
+
+    // =======================================================
+// Обработка XML документа
+// ========================
+//public class SaxSample {
+    public static void main(String[] argv) {
+        try {
+            SaxParser sample = new SaxParser("sample.xml");
+            // так не правельно
+            // Parser parser = ParserFactory.makeParser("com.ibm.xml.parsers.SAXParser");
+            // parser.setDocumentHandler(sample);
+            // parser.setErrorHandler(sample);
+            // parser.parse(argv[0]);
+
+            SAXParserFactory factory = SAXParserFactory.newInstance();
+            SAXParser saxParser = factory.newSAXParser();
+            saxParser.parse("sample.xml", sample);
+            sample.printInfo();
+        } catch (Exception e) {
+            e.printStackTrace(System.err);
         }
     }
 
@@ -76,22 +98,22 @@ public class SaxParser extends HandlerBase {
     }
 
     // Текстовые символы
-    public void characters(char ch[], int start, int length) {
+    public void characters(char[] ch, int start, int length) {
         characters += length;
         out.println(new String(ch, start, length));
     }
 
     // Не обрабатываемые символы(например, содержимое секции CDATA)
-    public void ignorableWhitespace(char ch[], int start, int length) {
+    public void ignorableWhitespace(char[] ch, int start, int length) {
         characters(ch, start, length);
     }
 
     public void processingInstruction(String target, String data) {
         out.print(" ");
-                out.print(' ');
+        out.print(' ');
         out.print(data);
-            out.print("?>");
-}
+        out.print("?>");
+    }
 
     // ===================================================
     // Методы интерфейса ErrorHandler
@@ -123,27 +145,5 @@ public class SaxParser extends HandlerBase {
         System.out.println("Элементов : " + elements);
         System.out.println("Атрибутов : " + attributes);
         System.out.println("Символов  : " + characters);
-    }
-
-// =======================================================
-// Обработка XML документа
-// ========================
-//public class SaxSample {
-    public static void main(String argv[]) {
-        try {
-            SaxParser sample = new SaxParser("sample.xml");
-            // так не правельно
-            // Parser parser = ParserFactory.makeParser("com.ibm.xml.parsers.SAXParser");
-            // parser.setDocumentHandler(sample);
-            // parser.setErrorHandler(sample);
-            // parser.parse(argv[0]);
-
-            SAXParserFactory factory = SAXParserFactory.newInstance();
-            SAXParser saxParser = factory.newSAXParser();
-            saxParser.parse("sample.xml", sample);
-            sample.printInfo();
-        } catch (Exception e) {
-            e.printStackTrace(System.err);
-        }
     }
 }

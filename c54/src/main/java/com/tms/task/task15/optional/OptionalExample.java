@@ -10,10 +10,10 @@ import java.util.function.Consumer;
 
 public class OptionalExample {
 
-    private static final Map<String, User> repository = new HashMap<>(){{
-       put("1", new User(null, "Igor"));
-       put("2", new User(null,"Mike"));
-       put("3", new User(null,"Julia"));
+    private static final Map<String, User> repository = new HashMap<>() {{
+        put("1", new User(null, "Igor"));
+        put("2", new User(null, "Mike"));
+        put("3", new User(null, "Julia"));
     }};
 
     public static void main(String[] args) {

@@ -19,11 +19,12 @@ public class SAXParserDemo {
                 handler);
 
         //Printing the list of employees obtained from XML
-        for ( Employee emp : handler.empList){
+        for (Employee emp : handler.empList) {
             System.out.println(emp);
         }
     }
 }
+
 /**
  * The Handler for SAX Events.
  */
@@ -32,13 +33,14 @@ class SAXHandler extends DefaultHandler {
     List<Employee> empList = new ArrayList<>();
     Employee emp = null;
     String content = null;
+
     @Override
     //Triggered when the start of tag is found.
     public void startElement(String uri, String localName,
                              String qName, Attributes attributes)
             throws SAXException {
 
-        switch(qName){
+        switch (qName) {
             //Create a new Employee object when the start tag is found
             case "employee":
                 emp = new Employee();
@@ -50,7 +52,7 @@ class SAXHandler extends DefaultHandler {
     @Override
     public void endElement(String uri, String localName,
                            String qName) throws SAXException {
-        switch(qName){
+        switch (qName) {
             //Add the employee to list once end tag is found
             case "employee":
                 empList.add(emp);

@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Group {
 
-    private String groupName;
-    private List<Person> persons;
+    private final String groupName;
+    private final List<Person> persons;
 
     public Group(String groupName, List<Person> persons) {
         this.groupName = groupName;

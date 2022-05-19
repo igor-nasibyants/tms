@@ -282,17 +282,12 @@ class JDBCSingletonDemo {
                     }
                     System.out.println("Press Enter key to continue...");
                     System.in.read();
-
                 }// end of case 4
                 break;
 
                 default:
                     return;
             }
-
         } while (choice != 4);
-
-
     }
 }
-

@@ -11,7 +11,7 @@ public class SavedGame implements Serializable {
     private String[] resourcesInfo;
     private String[] diplomacyInfo;
 
-    public SavedGame(String[] territoriesInfo, String[] resourcesInfo, String[] diplomacyInfo){
+    public SavedGame(String[] territoriesInfo, String[] resourcesInfo, String[] diplomacyInfo) {
         this.territoriesInfo = territoriesInfo;
         this.resourcesInfo = resourcesInfo;
         this.diplomacyInfo = diplomacyInfo;

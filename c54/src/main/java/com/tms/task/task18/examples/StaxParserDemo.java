@@ -18,16 +18,16 @@ public class StaxParserDemo {
                 factory.createXMLStreamReader(
                         ClassLoader.getSystemResourceAsStream("employees.xml"));
 
-        while(reader.hasNext()){
+        while (reader.hasNext()) {
             int event = reader.next();
 
-            switch(event){
+            switch (event) {
                 case XMLStreamConstants.START_ELEMENT:
-                    if ("employee".equals(reader.getLocalName())){
+                    if ("employee".equals(reader.getLocalName())) {
                         currEmp = new Employee();
                         currEmp.id = reader.getAttributeValue(0);
                     }
-                    if("employees".equals(reader.getLocalName())){
+                    if ("employees".equals(reader.getLocalName())) {
                         empList = new ArrayList<>();
                     }
                     break;
@@ -37,7 +37,7 @@ public class StaxParserDemo {
                     break;
 
                 case XMLStreamConstants.END_ELEMENT:
-                    switch(reader.getLocalName()){
+                    switch (reader.getLocalName()) {
                         case "employee":
                             empList.add(currEmp);
                             break;
@@ -61,7 +61,7 @@ public class StaxParserDemo {
         }
 
         //Print the employee list populated from XML
-        for ( Employee emp : empList){
+        for (Employee emp : empList) {
             System.out.println(emp);
         }
 

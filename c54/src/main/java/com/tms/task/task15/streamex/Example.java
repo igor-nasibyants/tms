@@ -15,16 +15,17 @@ public class Example {
     private static final Role user = new Role("user", Boolean.TRUE);
     private static final Role admin = new Role("admin", Boolean.TRUE);
     private static final List<User> users = Arrays.asList(new User(admin, "Igor"), new User(user, "Andrew"));
-    private static final Map<String, Role> nameToRole = new HashMap<>(){{
+    private static final Map<String, Role> nameToRole = new HashMap<>() {{
         put("Igor", admin);
         put("Andrew", admin);
     }};
+    Map<String, Group> nameToGroup;
 
     public static void main(String[] args) {
 
         List<String> userNames = StreamEx.of(users).map(User::getName).toList();
         Map<Role, List<User>> role2users = StreamEx.of(users).groupingBy(User::getRole);
-        StreamEx.of(1,2,3).joining("; "); // "1; 2; 3"
+        StreamEx.of(1, 2, 3).joining("; "); // "1; 2; 3"
     }
 
     public List<Element> elementsOf(NodeList nodeList) {
@@ -41,7 +42,7 @@ public class Example {
     }
 
     public void copyNonEmptyLines(Reader reader, Writer writer) throws IOException {
-        for(String line : StreamEx.ofLines(reader).remove(String::isEmpty)) {
+        for (String line : StreamEx.ofLines(reader).remove(String::isEmpty)) {
             writer.write(line);
             writer.write(System.lineSeparator());
         }
@@ -59,8 +60,6 @@ public class Example {
         return EntryStream.of(map).mapKeys(String::valueOf)
                 .mapValues(String::valueOf).toMap();
     }
-
-    Map<String, Group> nameToGroup;
 
     public Map<String, List<User>> getGroupMembers(Collection<String> groupNames) {
         return StreamEx.of(groupNames).mapToEntry(nameToGroup::get)

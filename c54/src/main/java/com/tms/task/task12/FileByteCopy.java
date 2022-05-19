@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class FileByteCopy {
 
-    public static void main(String args[]) throws IOException {
+    public static void main(String[] args) throws IOException {
         FileInputStream fileIn = null;
         FileOutputStream fileOut = null;
 

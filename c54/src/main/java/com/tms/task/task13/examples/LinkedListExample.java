@@ -1,7 +1,6 @@
 package com.tms.task.task13.examples;
 
 import java.util.LinkedList;
-import java.util.List;
 
 public class LinkedListExample {
 

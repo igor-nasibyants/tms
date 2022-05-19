@@ -18,7 +18,7 @@ public class Main {
         System.out.println(savedGame);
     }
 
-    private static void writeGameToFile()  throws IOException{
+    private static void writeGameToFile() throws IOException {
         //создаем наш объект
         String[] territoryInfo = {"У Испании 6 провинций", "У России 10 провинций", "У Франции 8 провинций"};
         String[] resourcesInfo = {"У Испании 100 золота", "У России 80 золота", "У Франции 90 золота"};

@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 public class Main {
 
     public static void main(String[] args) {
-        List<Integer> numbers = Arrays.asList(1,2,4,5,6,7,3,9,8);
+        List<Integer> numbers = Arrays.asList(1, 2, 4, 5, 6, 7, 3, 9, 8);
         Integer sumOdd = numbers.stream().filter(n -> n % 2 == 0).reduce(Integer::sum).orElse(0);
         Integer sumOddParallel = numbers.parallelStream().filter(n -> n % 2 == 0).reduce(Integer::sum).orElse(0);
         Integer sumOddParallel1 = numbers.stream().parallel().filter(n -> n % 2 == 0).reduce(Integer::sum).orElse(0);
@@ -35,7 +35,7 @@ public class Main {
         System.out.println("streamFromValues = " + streamFromValues.collect(Collectors.toList())); // напечатает streamFromValues = [a1, a2, a3]
 
         // Создание стрима из массива
-        String[] array = {"a1","a2","a3"};
+        String[] array = {"a1", "a2", "a3"};
         Stream<String> streamFromArrays = Arrays.stream(array);
         System.out.println("streamFromArrays = " + streamFromArrays.collect(Collectors.toList())); // напечатает streamFromArrays = [a1, a2, a3]
 
@@ -62,7 +62,7 @@ public class Main {
         // Создание числового стрима из строки
         IntStream streamFromString = "123".chars();
         System.out.print("streamFromString = ");
-        streamFromString.forEach((e)->System.out.print(e + " , ")); // напечатает streamFromString = 49 , 50 , 51 ,
+        streamFromString.forEach((e) -> System.out.print(e + " , ")); // напечатает streamFromString = 49 , 50 , 51 ,
         System.out.println();
 
         // С помощью Stream.builder

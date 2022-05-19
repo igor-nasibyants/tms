@@ -17,7 +17,7 @@ public class Main {
                 "1. Метод принимает строку и возвращает кол-во слов в строке.\n" +
                 "2. Метод принимает строку и проверяет есть ли в строке слово-палиндром. Если\n" +
                 "есть возвращает true, если нет false";
-        String s2 = new String("string 123");
+        String s2 = "string 123";
 
         s1 = s1 + " 123";
 
@@ -63,7 +63,7 @@ public class Main {
         }
 
 
-        String name1 = new String("name");
+        String name1 = "name";
         String name = "name";
 
         if ("   Name     ".trim().toUpperCase().equalsIgnoreCase(name1)) {

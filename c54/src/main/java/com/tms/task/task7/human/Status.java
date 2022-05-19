@@ -6,7 +6,7 @@ public enum Status {
     DIWORSED("Разведен"),
     ALL_COMPLICATED("Все сложно");
 
-    private String status;
+    private final String status;
 
     Status(String status) {
         this.status = status;

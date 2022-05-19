@@ -18,9 +18,9 @@ public class H2JdbcDemo {
 
     public static void main(String[] args) {
         // Open a connection
-        try(Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
-            Statement stmt = conn.createStatement();
-           ) {
+        try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+             Statement stmt = conn.createStatement()
+        ) {
             stmt.execute(QUERY_CREATE);
             stmt.execute(QUERY_INSERT);
             ResultSet rs = stmt.executeQuery(QUERY);

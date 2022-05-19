@@ -4,8 +4,8 @@ import com.tms.task.task7.Printable;
 
 public abstract class Human implements Printable {
 
-    private String name;
-    private Integer age;
+    private final String name;
+    private final Integer age;
     private Sex sex;
 
     public Human(String name, Integer age, Sex sex) {

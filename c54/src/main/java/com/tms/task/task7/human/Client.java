@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public final class Client extends Human {
     public static final float PI = 3.14f;
-    private Status status = Status.SINGLE;
+    private final Status status = Status.SINGLE;
 
     public Client(String name, Integer age, Sex sex) {
         super(name, age, sex);

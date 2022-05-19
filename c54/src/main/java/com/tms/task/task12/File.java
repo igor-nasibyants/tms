@@ -7,10 +7,10 @@ public class File {
     public File(String s) {
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         try {
-            char c[] = {'a', 'b', 'c'};
+            char[] c = {'a', 'b', 'c'};
             OutputStream output = new FileOutputStream("file.txt"); // Создание текстового файла
             for (int i = 0; i < c.length; i++) {
                 output.write(c[i]); // Запись каждого символа в текстовый файл

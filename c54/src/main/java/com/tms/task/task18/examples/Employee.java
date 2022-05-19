@@ -8,6 +8,6 @@ public class Employee {
 
     @Override
     public String toString() {
-        return firstName+" "+lastName+"("+id+")"+location;
+        return firstName + " " + lastName + "(" + id + ")" + location;
     }
 }

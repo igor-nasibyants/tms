@@ -1,6 +1,6 @@
 package com.tms.task.task19;
 
-public class JoinRunnable extends Thread{
+public class JoinRunnable extends Thread {
     public JoinRunnable(String name) {
         super(name);
     }

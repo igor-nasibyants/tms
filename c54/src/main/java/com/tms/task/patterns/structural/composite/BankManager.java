@@ -6,10 +6,10 @@ import java.util.List;
 
 public class BankManager implements Employee {
 
-    List<Employee> employees = new ArrayList<Employee>();
     private final int id;
     private final String name;
     private final double salary;
+    List<Employee> employees = new ArrayList<Employee>();
 
     public BankManager(int id, String name, double salary) {
         this.id = id;

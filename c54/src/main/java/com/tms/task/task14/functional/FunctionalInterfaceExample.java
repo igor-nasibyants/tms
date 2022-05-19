@@ -13,7 +13,6 @@ public class FunctionalInterfaceExample {
     }
 
 
-
     private static void printTest(Car car, CheckCar check) {
         if (check.test(car)) {
             System.out.println(car);

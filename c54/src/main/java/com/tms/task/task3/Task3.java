@@ -5,6 +5,15 @@ import java.util.List;
 
 public class Task3 {
 
+    public static void printAtLeastOnce() {
+        int i = 10;
+        do {
+            System.out.println("Число i имеет значение " + i);
+            i--;
+            if (i < -10) break;
+        } while (i < 3);
+    }
+
     public Boolean validateMonth(Integer days) {
         System.out.println("Input parameter days = " + days);
         if (days < 31) {
@@ -110,14 +119,5 @@ public class Task3 {
                 continue;
             System.out.println("Я выполняюсь всего дважды");
         }
-    }
-
-    public static void printAtLeastOnce() {
-        int i = 10;
-        do {
-            System.out.println("Число i имеет значение " + i);
-            i--;
-            if (i < -10) break;
-        } while (i < 3);
     }
 }

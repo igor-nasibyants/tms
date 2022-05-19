@@ -71,7 +71,7 @@ public class PreparedStatementDemo {
             if (preparedStatement != null) {
                 preparedStatement.close();
             }
-            if(connection!=null){
+            if (connection != null) {
                 connection.close();
             }
         }

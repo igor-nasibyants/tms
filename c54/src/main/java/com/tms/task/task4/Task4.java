@@ -2,7 +2,7 @@ package com.tms.task.task4;
 
 public class Task4 {
 
-    private Integer integer;
+    private final Integer integer;
 
     public Task4(Integer i) {
         this.integer = i;
@@ -71,8 +71,8 @@ public class Task4 {
         int lengthRight = right - mid;
 
         // создаем временные подмассивы
-        int leftArray[] = new int[lengthLeft];
-        int rightArray[] = new int[lengthRight];
+        int[] leftArray = new int[lengthLeft];
+        int[] rightArray = new int[lengthRight];
 
         // копируем отсортированные массивы во временные
         for (int i = 0; i < lengthLeft; i++)
