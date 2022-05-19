@@ -1,5 +1,7 @@
-package com.tms.homework.han.creational.builder.bmw;
+package com.tms.homework.han.creational.builder;
 
+import com.tms.homework.han.creational.builder.car.Audi;
+import com.tms.homework.han.creational.builder.car.BMW;
 import com.tms.homework.han.creational.builder.domain.Car;
 import com.tms.homework.han.creational.builder.domain.Director;
 import com.tms.homework.han.creational.builder.domain.IConstructor;
