@@ -1,6 +1,6 @@
 package com.tms.homework.pavelgrigoryev.patterns.structural.adapter;
 
-public class AdapterJavaToDataBase extends JavaApplication implements DataBase{
+public class AdapterJavaToDataBase extends JavaApplication implements DataBase {
     @Override
     public void insert() {
         saveObject();
