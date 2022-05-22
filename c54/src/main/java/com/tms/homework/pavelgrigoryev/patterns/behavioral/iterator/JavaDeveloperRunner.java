@@ -17,7 +17,7 @@ public class JavaDeveloperRunner {
 
         skills.forEach(x -> {
             while (iterator.hasNext()) {
-                System.out.print(iterator.next().toString() + " ");
+                System.out.print(iterator.next() + " ");
             }
         });
     }
