@@ -1,6 +1,5 @@
 package com.tms.homework.han.patterns.creational.factorymethod;
 
-import com.tms.homework.han.creational.factorymethod.domain.*;
 import com.tms.homework.han.patterns.creational.factorymethod.domain.*;
 import com.tms.homework.han.patterns.creational.factorymethod.factories.BMWWorkShop;
 import com.tms.homework.han.patterns.creational.factorymethod.factories.CarWorkShop;
