@@ -1,6 +1,6 @@
-package com.tms.homework.nikitaelenski.task30.patterns.abstractfactory.plantMAZ;
+package com.tms.homework.nikitaelenski.task30.generative.abstractfactory.plantMAZ;
 
-import com.tms.homework.nikitaelenski.task30.patterns.abstractfactory.PersonnelDepartment;
+import com.tms.homework.nikitaelenski.task30.generative.abstractfactory.PersonnelDepartment;
 
 public class HumanResourcesDepartment implements PersonnelDepartment {
     @Override

@@ -1,6 +1,6 @@
-package com.tms.homework.nikitaelenski.task30.patterns.abstractfactory.plantMAZ;
+package com.tms.homework.nikitaelenski.task30.generative.abstractfactory.plantMAZ;
 
-import com.tms.homework.nikitaelenski.task30.patterns.abstractfactory.Worker;
+import com.tms.homework.nikitaelenski.task30.generative.abstractfactory.Worker;
 
 public class Mechanic implements Worker {
 

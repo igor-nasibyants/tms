@@ -1,6 +1,6 @@
-package com.tms.homework.nikitaelenski.task30.patterns.abstractfactory.plantMAZ;
+package com.tms.homework.nikitaelenski.task30.generative.abstractfactory.plantMAZ;
 
-import com.tms.homework.nikitaelenski.task30.patterns.abstractfactory.DrawingDesigner;
+import com.tms.homework.nikitaelenski.task30.generative.abstractfactory.DrawingDesigner;
 
 public class ChiefDesigner implements DrawingDesigner {
     @Override

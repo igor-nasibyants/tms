@@ -1,4 +1,4 @@
-package com.tms.homework.nikitaelenski.task30.patterns.abstractfactory;
+package com.tms.homework.nikitaelenski.task30.generative.abstractfactory;
 
 public interface TheWorkingProcess {
     DrawingDesigner getDrawingDesigner();
