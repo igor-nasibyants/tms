@@ -8,7 +8,7 @@ import java.util.List;
 
 public class UserDAO {
 
-    private final List<User> store = new ArrayList<>();
+    public  List<User> store = new ArrayList<>();
 
     public User getById(int id) {
 

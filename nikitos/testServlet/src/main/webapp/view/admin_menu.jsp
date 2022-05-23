@@ -1,4 +1,3 @@
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
@@ -9,6 +8,9 @@
 <body>
 
 <h1>Hello ADMIN!</h1>
-<button><a  href="<c:url value="/logout"/>">Logout</a></button>
+<input type="submit" value="меню"
+                 onclick="window.location='view/menu.jsp';" />
+<button><a  href="<c:url value="/logout"/>">Выйти</a></button>
+
 </body>
 </html>

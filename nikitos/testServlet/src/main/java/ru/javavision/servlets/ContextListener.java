@@ -17,7 +17,7 @@ import static ru.javavision.model.User.ROLE.USER;
 @WebListener
 public class ContextListener implements ServletContextListener {
 
-    private AtomicReference<UserDAO> dao;
+    public static AtomicReference<UserDAO> dao;
 
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {

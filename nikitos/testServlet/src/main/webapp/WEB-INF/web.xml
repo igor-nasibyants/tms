@@ -25,4 +25,17 @@
         <servlet-name>LogoutServlet</servlet-name>
         <url-pattern>/logout</url-pattern>
     </servlet-mapping>
+    <!--registration servlet-->
+    <servlet>
+        <servlet-name>Registration</servlet-name>
+        <servlet-class>ru.javavision.servlets.registration.Registration</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Registration</servlet-name>
+        <url-pattern>/Registration</url-pattern>
+    </servlet-mapping>
+
+
+
 </web-app>
