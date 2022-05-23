@@ -1,4 +1,4 @@
-package com.tms.homework.nikitaelenski.task30.patterns.builder;
+package com.tms.homework.nikitaelenski.task30.generative.builder;
 
 public class Director {
     WebsiteBuilder builder;

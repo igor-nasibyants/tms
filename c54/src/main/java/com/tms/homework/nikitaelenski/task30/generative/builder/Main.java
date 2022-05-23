@@ -1,6 +1,4 @@
-package com.tms.homework.nikitaelenski.task30.patterns.builder;
-
-import java.util.Random;
+package com.tms.homework.nikitaelenski.task30.generative.builder;
 
 public class Main {
     public static void main(String[] args) {
