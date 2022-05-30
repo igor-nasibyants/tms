@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.springframework', name: 'spring-context-support', version: '5.3.18'
+    implementation group: 'org.springframework', name: 'spring-core', version: '5.3.19'
+    implementation group: 'org.springframework', name: 'spring-beans', version: '5.3.18'
+}
