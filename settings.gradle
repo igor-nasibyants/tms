@@ -26,4 +26,4 @@ include 'pavel:kotlin'
 findProject(':pavel:kotlin')?.name = 'kotlin'
 include "nikitos:website"
 include "nikitos:myspring"
-findProject(':nikitos:myspring')?.name = 'myspring'
+
