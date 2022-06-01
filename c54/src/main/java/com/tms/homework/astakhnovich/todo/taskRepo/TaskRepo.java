@@ -16,8 +16,7 @@ public class TaskRepo {
 
     {
         Path path = Paths.get("json//TaskList.json");
-        if(Files.exists(path)){
-        }else{
+        if(!Files.exists(path)){
             File file = new File("json//TaskList.json");
         }
     }
