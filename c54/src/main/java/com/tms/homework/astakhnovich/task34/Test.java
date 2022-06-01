@@ -4,15 +4,7 @@ import java.util.*;
 
 public class Test {
 
-    List<Integer> list = Arrays.asList(1,2,3,2,3,2,1,2,1,2,3,3,1,2,3,1,1,2);
-    Map<Integer, Integer> map = new HashMap<>();
-
-    public static void main(String[] args) {
-        Test t = new Test();
-        t.test3();
-    }
-
-    void test1(){
+    Integer test1(List<Integer> list){
         int maxCount = 0;
         for (var numberOne : list) {
             int count = 0;
@@ -23,10 +15,11 @@ public class Test {
             }
             maxCount = Math.max(count, maxCount);
         }
-        System.out.println(maxCount);
+       return maxCount;
     }
 
-    void test2(){
+    Map<Integer, Integer> test2(List<Integer> list){
+        Map<Integer, Integer> map = new HashMap<>();
         for (var one : list) {
             int count = 0;
             for (var two : list) {
@@ -35,13 +28,14 @@ public class Test {
                 }
             }
         }
-        map.forEach((k,v) -> System.out.println("k - " + k + ", v - " + v));
+        return map;
     }
 
-    void test3(){
+    Map<Integer, Integer> test3(List<Integer> list){
+        Map<Integer, Integer> map = new HashMap<>();
         list.stream()
                 .distinct()
                 .forEach(a -> map.put(a, Collections.frequency(list, a)));
-        map.forEach((k,v) -> System.out.println("k - " + ", v - " + v));
+       return map;
     }
 }
