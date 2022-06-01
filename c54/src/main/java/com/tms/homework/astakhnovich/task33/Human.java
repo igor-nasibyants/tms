@@ -37,14 +37,14 @@ public class Human {
         this.age = age;
     }
 
-    @Override
-    public String toString() {
-        return "Human{" +
-                "name='" + name + '\'' +
-                ", surName='" + surName + '\'' +
-                ", age=" + age +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Human{" +
+//                "name='" + name + '\'' +
+//                ", surName='" + surName + '\'' +
+//                ", age=" + age +
+//                '}';
+//    }
 
     @Override
     public boolean equals(Object o) {

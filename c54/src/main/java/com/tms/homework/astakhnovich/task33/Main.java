@@ -11,6 +11,5 @@ public class Main {
         System.out.println(h1.equals(h2));
         System.out.println(h1.equals(h3));
         System.out.println(h1.equals(h4));
-
     }
 }
