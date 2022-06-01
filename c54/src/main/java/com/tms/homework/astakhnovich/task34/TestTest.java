@@ -27,7 +27,7 @@ class TestTest {
     void test2() {
         Map<Integer, Integer> actual;
 
-        actual  = test.test3(list);
+        actual  = test.test2(list);
 
         Map<Integer, Integer> expected = new HashMap<>();
         expected.put(1, 6);
