@@ -19,6 +19,7 @@ dependencies {
     implementation 'org.junit.jupiter:junit-jupiter:5.8.2'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0-M1'
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.0-M1'
+    testImplementation group: 'com.jayway.awaitility', name: 'awaitility', version: '1.7.0'
 }
 
 test {
