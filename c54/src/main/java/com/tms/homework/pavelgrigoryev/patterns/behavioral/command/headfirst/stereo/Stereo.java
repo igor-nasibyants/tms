@@ -8,25 +8,18 @@ public class Stereo {
     }
 
     public void on() {
-        System.out.println("Гук уключон!");
+        System.out.println("Гук уключон! у " + room);
     }
 
     public void off() {
-        System.out.println("Гук выключон!");
+        System.out.println("Гук выключон! у " + room);
     }
 
     public void setCd() {
-        System.out.println("Дыск устаулен!");
+        System.out.println("Дыск устаулен! у " + room);
     }
 
     public void setVolume(int volume) {
-        System.out.println("Гук урублен на " + volume);
-    }
-
-    @Override
-    public String toString() {
-        return "Stereo{" +
-                "room='" + room + '\'' +
-                '}';
+        System.out.println("Гук урублен на " + volume + " у " + room);
     }
 }

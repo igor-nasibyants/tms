@@ -8,17 +8,10 @@ public class GarageDoor {
     }
 
     public void up() {
-        System.out.println("Дзвер адчыняецца!");
+        System.out.println("Дзвер адчыняецца! у " + room);
     }
 
     public void down() {
-        System.out.println("Дзвер зачыняецца!");
-    }
-
-    @Override
-    public String toString() {
-        return "GarageDoor{" +
-                "room='" + room + '\'' +
-                '}';
+        System.out.println("Дзвер зачыняецца! у " + room);
     }
 }

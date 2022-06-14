@@ -14,38 +14,31 @@ public class CeilingFan {
     }
 
     public void high() {
-        System.out.println("Вяликая хуткасть!");
+        System.out.println("Вяликая хуткасть! у " + room);
         speed = HIGH;
     }
 
     public void medium() {
-        System.out.println("Сярэдняя хуткасть!");
+        System.out.println("Сярэдняя хуткасть! у " + room);
         speed = MEDIUM;
     }
 
     public void low() {
-        System.out.println("Лоу хуткасть!");
+        System.out.println("Лоу хуткасть! у " + room);
         speed = LOW;
     }
 
     public void on() {
-        System.out.println("Вентылятор паталочны уключан!");
+        System.out.println("Вентылятор паталочны уключан! у " + room);
         speed = LOW;
     }
 
     public void off() {
-        System.out.println("Вентылятор паталочны выключан!");
+        System.out.println("Вентылятор паталочны выключан! у " + room);
         speed = OFF;
     }
 
     public int getSpeed() {
         return speed;
-    }
-
-    @Override
-    public String toString() {
-        return "CeilingFan{" +
-                "room='" + room + '\'' +
-                '}';
     }
 }

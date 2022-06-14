@@ -51,11 +51,12 @@ public class RemoteControlWithUndo {
                     .append(onCommands[i].getClass().getName())
                     .append("\n")
                     .append(offCommands[i].getClass().getName())
-                    .append("\n")
-                    .append("[undo]")
-                    .append(undoCommand.getClass().getName())
                     .append("\n");
         }
+        stringBuilder
+                .append("[undo] ")
+                .append(undoCommand.getClass().getName())
+                .append("\n");
         return stringBuilder.toString();
     }
 }

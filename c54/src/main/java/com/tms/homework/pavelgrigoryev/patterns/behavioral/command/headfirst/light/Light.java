@@ -8,17 +8,10 @@ public class Light {
     }
 
     public void on() {
-        System.out.println("Лампочка горыть");
+        System.out.println("Лампочка горыть у " + room);
     }
 
     public void off() {
-        System.out.println("Лампочка не горыть");
-    }
-
-    @Override
-    public String toString() {
-        return "Light{" +
-                "room='" + room + '\'' +
-                '}';
+        System.out.println("Лампочка не горыть у " + room);
     }
 }
