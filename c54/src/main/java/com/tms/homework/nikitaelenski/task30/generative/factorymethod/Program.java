@@ -14,15 +14,12 @@ public class Program {
         developer2.writeCode();
     }
 
-    static DeveloperFactory creatDeveloper(String speciality){
-            if(speciality.equalsIgnoreCase("java")){
-                return new JavaDeveloperFactory();
-            } else if (speciality.equalsIgnoreCase("С++")) {
-                return new CppDeveloperFActory();
-            } else if (speciality.equalsIgnoreCase("Php")) {
-                return new PhpDeveloperFactory();
-            }else {
-                throw new RuntimeException(speciality + " Нету");
-            }
+    static DeveloperFactory creatDeveloper(String speciality){switch ( speciality){
+            case "java" : return new JavaDeveloperFactory();
+            case "С++" : return new CppDeveloperFActory();
+            case "Php" : return new PhpDeveloperFactory();
+            default:return null;
+        }
+
     }
 }
