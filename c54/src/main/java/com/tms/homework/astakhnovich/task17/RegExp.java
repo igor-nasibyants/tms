@@ -34,7 +34,8 @@ public class RegExp {
     public List<User> checkUser(){
         createUser();
         return userList.stream()
-                .filter(a -> isValidEmail(a.getEmail()) && isValidPassword(a.getPassword())).collect(Collectors.toList());
+                .filter(a -> isValidEmail(a.getEmail()) && isValidPassword(a.getPassword()))
+                .collect(Collectors.toList());
     }
 
     public boolean isValidEmail(String email){

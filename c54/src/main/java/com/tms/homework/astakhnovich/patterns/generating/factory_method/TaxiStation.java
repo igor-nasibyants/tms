@@ -1,19 +1,12 @@
 package com.tms.homework.astakhnovich.patterns.generating.factory_method;
 
-public class TaxiStation implements Transport{
-    TaxiCarFactory taxiCarFactory;
+import com.tms.homework.astakhnovich.patterns.generating.factory_method.transport.Transport;
 
-    public TaxiStation(TaxiCarFactory taxiCarFactory) {
-        this.taxiCarFactory = taxiCarFactory;
-    }
+public class TaxiStation{
+    private final CarFactory taxiCarFactory = new CarFactory();
 
     public Transport orderTaxi(CarType type){
         Transport transport = taxiCarFactory.createTransport(type);
         return transport;
-    }
-
-    @Override
-    public void move() {
-        System.out.println("просто везу");
     }
 }

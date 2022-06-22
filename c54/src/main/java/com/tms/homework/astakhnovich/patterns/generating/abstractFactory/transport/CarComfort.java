@@ -1,6 +1,6 @@
-package com.tms.homework.astakhnovich.patterns.generating.factory_method;
+package com.tms.homework.astakhnovich.patterns.generating.abstractFactory.transport;
 
-public class ComfortTaxiCar implements Transport{
+public class CarComfort implements Transport {
     @Override
     public void move() {
         System.out.println("я наземное такси, везу по дороге за нормально денег");
