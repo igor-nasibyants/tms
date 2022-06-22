@@ -1,4 +1,4 @@
-package by.astakhnovich.patterns.generating.builder.components;
+package com.tms.homework.astakhnovich.patterns.generating.builder.components;
 
 public class Head {
     private boolean flag = false;

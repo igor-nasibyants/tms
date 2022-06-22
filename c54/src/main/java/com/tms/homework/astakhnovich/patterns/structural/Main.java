@@ -1,4 +1,4 @@
-package by.astakhnovich.patterns.structural;
+package com.tms.homework.astakhnovich.patterns.structural;
 
 public class Main {
 }

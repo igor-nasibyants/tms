@@ -1,6 +1,6 @@
-package by.astakhnovich.patterns.generating.builder;
+package com.tms.homework.astakhnovich.patterns.generating.builder;
 
-import by.astakhnovich.patterns.generating.builder.components.*;
+import com.tms.homework.astakhnovich.patterns.generating.builder.components.*;
 import java.util.Objects;
 
 public class Robot {

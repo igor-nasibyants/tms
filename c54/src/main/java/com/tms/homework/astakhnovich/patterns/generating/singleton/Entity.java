@@ -1,4 +1,4 @@
-package by.astakhnovich.patterns.generating.singleton;
+package com.tms.homework.astakhnovich.patterns.generating.singleton;
 
 public class Entity {
     private static Entity instance;

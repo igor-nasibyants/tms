@@ -1,4 +1,4 @@
-package by.astakhnovich.patterns.generating.abstractFactory;
+package com.tms.homework.astakhnovich.patterns.generating.abstractFactory;
 
 public class Car implements Transport {
     String name;

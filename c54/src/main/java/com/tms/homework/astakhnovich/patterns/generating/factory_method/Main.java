@@ -1,9 +1,10 @@
-package by.astakhnovich.patterns.generating.factory_method;
+package com.tms.homework.astakhnovich.patterns.generating.factory_method;
 
 public class Main {
     public static void main(String[] args) {
         TaxiCarFactory taxiCarFactory = new TaxiCarFactory();
-        Transport taxiCar = taxiCarFactory.createTransport(CarType.BUSINESS);
-        taxiCar.move();
+        TaxiStation taxiStation = new TaxiStation(taxiCarFactory);
+        Transport transport = taxiStation.orderTaxi(CarType.BUSINESS);
+        transport.move();
     }
 }
