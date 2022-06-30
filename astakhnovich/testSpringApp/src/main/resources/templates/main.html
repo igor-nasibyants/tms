@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>index page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <div th:insert="fragments/header :: header"></div>
+</head>
+<body>
+<div class="p-5 text-center">Products</div>
+<div class=" mt-4 d-flex justify-content-center align-items-center">
+    <table class="table table-hover" style="width:50%">
+        <thead class="table-light">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Description</th>
+        </tr>
+        </thead>
+        <div th:each="product: ${products}">
+            <div>
+                <tbody>
+                <tr>
+                    <th><span th:text="${product.name}"></span></th>
+                    <th><span th:text="${product.price}"></span></th>
+                    <th><span th:text="${product.description}"></span></th>
+                </tr>
+                </tbody>
+            </div>
+        </div>
+    </table>
+</div>
+</body>
+</html>

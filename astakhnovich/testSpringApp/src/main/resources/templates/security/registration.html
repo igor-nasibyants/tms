@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <div th:insert="fragments/header :: header"></div>
+</head>
+<body>
+<div class="p-5 text-center">Registration</div>
+<form th:action="@{/registration}" method="post">
+    <div class="d-flex flex-column">
+        <div class="input-group input-group-sm mb-4 d-flex justify-content-center">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Username</span>
+            <input name="username" type="text" class="form-control" style='min-width: 20%; max-width: 70%'
+                   aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="input-group input-group-sm mb-4 d-flex justify-content-center">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Password</span>
+            <input name="password" type="password" class="form-control" style='min-width: 20%; max-width: 70%'
+                   aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="text-center p-3">
+            <button type="submit" class="btn btn-outline-success" style="width: 10%">Sign up</button>
+        </div>
+    </div>
+</form>
+</body>
+</html>
