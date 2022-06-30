@@ -1,16 +1,17 @@
 package inc.ast.test.controllers;
 
-import inc.ast.test.entitys.user.Role;
-import inc.ast.test.entitys.user.User;
-import inc.ast.test.repos.UserRepo;
-import inc.ast.test.repos.UserServiceRepo;
+import inc.ast.test.model.user.Role;
+import inc.ast.test.model.user.User;
+import inc.ast.test.repository.UserRepo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
+@RequestMapping("/registration")
 public class RegistrationController {
     private UserRepo userRepo;
 
@@ -18,12 +19,12 @@ public class RegistrationController {
         this.userRepo = userRepo;
     }
 
-    @GetMapping("/registration")
+    @GetMapping
     public String registration() {
         return "/security/registration";
     }
 
-    @PostMapping("/registration")
+    @PostMapping
     public String addUser(@RequestParam(name="username") String username, @RequestParam(name="password") String password,
                           Model model) {
         User newUser = new User(username, password, true, Role.USER);

@@ -1,4 +1,4 @@
-package inc.ast.test.entitys.product;
+package inc.ast.test.model.product;
 
 import javax.persistence.*;
 import java.io.Serializable;

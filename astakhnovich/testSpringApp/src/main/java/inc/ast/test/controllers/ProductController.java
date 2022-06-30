@@ -1,7 +1,7 @@
 package inc.ast.test.controllers;
 
-import inc.ast.test.entitys.product.Product;
-import inc.ast.test.repos.ProductRepo;
+import inc.ast.test.model.product.Product;
+import inc.ast.test.repository.ProductRepo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

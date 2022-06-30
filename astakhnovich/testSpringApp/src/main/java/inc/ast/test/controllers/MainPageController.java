@@ -1,16 +1,16 @@
 package inc.ast.test.controllers;
 
-import inc.ast.test.entitys.product.Product;
-import inc.ast.test.repos.ProductRepo;
+import inc.ast.test.model.product.Product;
+import inc.ast.test.repository.ProductRepo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class MainController {
+public class MainPageController {
     private ProductRepo productRepo;
 
-    public MainController(ProductRepo productRepo) {
+    public MainPageController(ProductRepo productRepo) {
         this.productRepo = productRepo;
     }
 

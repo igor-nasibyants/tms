@@ -1,4 +1,4 @@
-package inc.ast.test.entitys.user;
+package inc.ast.test.model.user;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

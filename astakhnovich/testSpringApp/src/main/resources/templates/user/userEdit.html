@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit</title>
+    <div th:insert="fragments/header :: header"></div>
 </head>
 <body>
-<form th:action="@{/users/edit}" method="post">
-    <div class="d-flex flex-column">
-        <div class="input-group input-group-sm p-5 d-flex justify-content-center">
-            <input name="username" type="text" value="${user.username}" class="form-control" style='min-width: 5%; max-width: 20%'
-                   aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            <button type="submit" class="btn btn-outline-success" style="width: 10%">Search</button>
-        </div>
+<div class="d-flex flex-column">
+    <div class="input-group input-group-sm p-5 d-flex justify-content-center">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th><span th:text="${user.id}"></span></th>
+            <th><span th:text="${user.name}"></span></th>
+            <th><span></span></th>
+        </tr>
     </div>
-</form>
+</div>
 </body>
 </html>

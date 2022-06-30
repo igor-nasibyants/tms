@@ -25,10 +25,10 @@
             <th scope="col">Password</th>
             <th scope="col">Roles</th>
             <th scope="col">Active</th>
-            <th scope="col">Edit</th>
+            <th scope="col">Action</th>
         </tr>
         </thead>
-        <div th:each="user: ${users}">
+        <div th:each="user:${users}">
             <div>
                 <tbody>
                 <tr>
@@ -37,7 +37,12 @@
                     <th><span th:text="${user.password}"></span></th>
                     <th><span th:text="${user.roles}"></span></th>
                     <th><span th:text="${user.active}"></span></th>
-                    <th><span><a href="/user/${user.id}">Edit</a></span></th>
+                    <th><span>
+                        <form th:action="@{/users/edit}" method="get">
+                            <input name="id" type="hidden" value=th:text="${user.id}"/>
+                            <button class="btn btn-outline-success" style="width: 50%">Edit</button>
+                        </form>
+                    </span></th>
                 </tr>
                 </tbody>
             </div>

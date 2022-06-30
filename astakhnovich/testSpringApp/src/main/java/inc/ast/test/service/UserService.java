@@ -1,6 +1,6 @@
 package inc.ast.test.service;
 
-import inc.ast.test.repos.UserServiceRepo;
+import inc.ast.test.repository.UserServiceRepo;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
