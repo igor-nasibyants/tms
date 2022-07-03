@@ -30,4 +30,6 @@ findProject(':pavel:kotlin')?.name = 'kotlin'
 include "nikitos:website"
 include "nikitos:myspring"
 include "logging"
+include "nikitos:springMvc"
+include "nikitos:pizza"
 
