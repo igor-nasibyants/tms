@@ -26,7 +26,10 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '2.7.1'
-
+    implementation 'mysql:mysql-connector-java:8.0.29'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc:2.7.1'
+    testImplementation 'com.h2database:h2:2.1.214'
+    implementation group: 'com.h2database', name: 'h2', version: '2.1.214'
 }
 
 tasks.named('test') {

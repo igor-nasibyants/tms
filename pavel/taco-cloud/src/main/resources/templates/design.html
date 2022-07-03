@@ -77,7 +77,7 @@
         <input type="text" th:field="*{name}"/>
         <span class="validationError"
               th:if="${#fields.hasErrors('name')}"
-              th:errors="*{name}">Ingredient error</span>
+              th:errors="*{name}">Name error</span>
         <br/>
         <button>Submit Your Taco</button>
     </div>
