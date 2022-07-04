@@ -7,6 +7,9 @@
 </head>
 <body>
 <div class="p-5 text-center">Registration</div>
+<div class="text-danger mb-4 d-flex justify-content-center" th:if="${userExists}">
+    <span th:text="${userExists}"></span>
+</div>
 <form th:action="@{/registration}" method="post">
     <div class="d-flex flex-column">
         <div class="input-group input-group-sm mb-4 d-flex justify-content-center">

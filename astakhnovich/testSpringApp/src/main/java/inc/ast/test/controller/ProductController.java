@@ -1,4 +1,4 @@
-package inc.ast.test.controllers;
+package inc.ast.test.controller;
 
 import inc.ast.test.model.product.Product;
 import inc.ast.test.repository.ProductRepo;
@@ -24,8 +24,10 @@ public class ProductController {
     }
 
     @PostMapping("/add")
-    public String add(@RequestParam(name="name") String name, @RequestParam(name="price") String price,
-                      @RequestParam(name="description") String description, Model model){
+    public String add(@RequestParam(name="name") String name,
+                      @RequestParam(name="price") String price,
+                      @RequestParam(name="description") String description,
+                      Model model){
         Product product = new Product(name, price, description);
         productRepo.save(product);
         return "product/addProduct";

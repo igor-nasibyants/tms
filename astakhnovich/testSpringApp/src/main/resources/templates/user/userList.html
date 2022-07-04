@@ -7,10 +7,11 @@
 </head>
 <body>
 <div class="fs-3 text-center">Users</div>
-<form th:action="@{/users/filter}" method="post">
+<form th:action="@{/user/filter}" method="post">
     <div class="d-flex flex-column">
         <div class="input-group input-group-sm p-5 d-flex justify-content-center">
-            <input name="filter" type="text" placeholder="username" class="form-control" style='min-width: 5%; max-width: 20%'
+            <input name="filter" type="text" placeholder="username" class="form-control"
+                   style='min-width: 5%; max-width: 20%'
                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
             <button type="submit" class="btn btn-outline-success" style="width: 10%">Search</button>
         </div>
@@ -23,26 +24,21 @@
             <th scope="col">Id</th>
             <th scope="col">Username</th>
             <th scope="col">Password</th>
-            <th scope="col">Roles</th>
+            <th scope="col">Role</th>
             <th scope="col">Active</th>
-            <th scope="col">Action</th>
+            <th scope="col">Edit</th>
         </tr>
         </thead>
-        <div th:each="user:${users}">
+        <div th:each="user: ${users}">
             <div>
                 <tbody>
                 <tr>
                     <th><span th:text="${user.id}"></span></th>
                     <th><span th:text="${user.username}"></span></th>
                     <th><span th:text="${user.password}"></span></th>
-                    <th><span th:text="${user.roles}"></span></th>
+                    <th><span th:text="${user.role}"></span></th>
                     <th><span th:text="${user.active}"></span></th>
-                    <th><span>
-                        <form th:action="@{/users/edit}" method="get">
-                            <input name="id" type="hidden" value=th:text="${user.id}"/>
-                            <button class="btn btn-outline-success" style="width: 50%">Edit</button>
-                        </form>
-                    </span></th>
+                    <th><a th:href="@{/user/{userId}(userId=${user.id})}">Edit</a></th>
                 </tr>
                 </tbody>
             </div>

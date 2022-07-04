@@ -1,4 +1,4 @@
-package inc.ast.test.controllers;
+package inc.ast.test.controller;
 
 import inc.ast.test.model.product.Product;
 import inc.ast.test.repository.ProductRepo;
