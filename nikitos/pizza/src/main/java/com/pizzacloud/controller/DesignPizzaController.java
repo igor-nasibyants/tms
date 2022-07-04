@@ -34,7 +34,7 @@ public class DesignPizzaController {
                 new Ingredient("EMV", "Emiliana", Type.VEGGIES),
                 new Ingredient("ROF", "Romana", Type.FISH),
                 new Ingredient("TOF", "Tonno", Type.FISH),
-        new Ingredient("TOF", "Tonno", Type.ROll)
+                new Ingredient("TOF", "Tonno", Type.ROll)
         );
 
         Type[] types = Ingredient.Type.values();
@@ -59,6 +59,13 @@ public class DesignPizzaController {
                 public String showDesignForm() {
         return "design";
     }
+
+        @PostMapping
+            public  String processPizza(Pizza pizza , @ModelAttribute PizzaOrder pizzaOrder){
+            pizzaOrder.addPizza(pizza);
+            log.info("Processing pizza: {}",pizza);
+            return "redirect:/orders/current";
+        }
 
         private Iterable<Ingredient> filterByType(
                 List<Ingredient>ingredients ,Type type){

@@ -71,18 +71,12 @@
                    th:value="${ingredient.id}"/>
             <span th:text="${ingredient.name}">INGREDIENT</span>
         </div>
-    </div>
-    <h3>Name your pizza creation:</h3>
-    <input type="text" th:field="*{name}"/>
-
-    <br/>
-<!--    <button>Submit Your Taco</button>-->
-    <button type="button" class="btn btn-primary btn-lg btn-block" value="Home Screan" onclick="location.href='http://localhost:8080/Errors'">Submit Your Taco</button>
-    </div>
-    <div>
-        <button type="button" class="btn btn-primary btn-lg btn-block" value="Home Screan" onclick="location.href='http://localhost:8080'">pizza order</button>
-    </div>
-
-</form>
-</body>
+        <div>
+            <h3>Name your taco creation:</h3>
+            <input type="text" th:field="*{name}"/>
+            <br/>
+            <button>Submit Your Pizza</button>
+        </div>
+  </form>
+ </body>
 </html>
