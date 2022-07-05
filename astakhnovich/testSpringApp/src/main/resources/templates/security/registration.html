@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Registration</title>
-    <div th:insert="fragments/header :: header"></div>
+    <div th:insert="fragments/bootstrap :: bootstrap"></div>
 </head>
 <body>
+<div th:insert="fragments/header :: header"></div>
 <div class="p-5 text-center">Registration</div>
 <div class="text-danger mb-4 d-flex justify-content-center" th:if="${userExists}">
     <span th:text="${userExists}"></span>

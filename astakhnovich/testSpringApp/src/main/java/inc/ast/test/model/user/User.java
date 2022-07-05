@@ -2,11 +2,11 @@ package inc.ast.test.model.user;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Objects;
-import java.util.Set;
 
 @Entity
 @Table(name = "usr")
@@ -18,7 +18,6 @@ public class User implements UserDetails {
     private String password;
     private boolean active;
 
-    @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
     @Enumerated(EnumType.STRING)
     private Role role;
 
@@ -72,15 +71,15 @@ public class User implements UserDetails {
         this.role = role;
     }
 
-    public boolean isUser(){
+    public boolean isUser() {
         return this.role == Role.USER;
     }
 
-    public boolean isProvider(){
+    public boolean isProvider() {
         return this.role == Role.PROVIDER;
     }
 
-    public boolean isAdmin(){
+    public boolean isAdmin() {
         return this.role == Role.ADMIN;
     }
 
@@ -110,13 +109,14 @@ public class User implements UserDetails {
     }
 
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return isActive() == user.isActive() && Objects.equals(getId(), user.getId()) && Objects.equals(getUsername(), user.getUsername()) && Objects.equals(getPassword(), user.getPassword()) && Objects.equals(getRole(), user.getRole());
+        return isActive() == user.isActive() && Objects.equals(getId(), user.getId()) && Objects.equals(getUsername(),
+                user.getUsername()) && Objects.equals(getPassword(), user.getPassword()) && Objects.equals(getRole(),
+                user.getRole());
     }
 
     @Override

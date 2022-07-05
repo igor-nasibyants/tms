@@ -26,8 +26,7 @@ public class ProductController {
     @PostMapping("/add")
     public String add(@RequestParam(name="name") String name,
                       @RequestParam(name="price") String price,
-                      @RequestParam(name="description") String description,
-                      Model model){
+                      @RequestParam(name="description") String description){
         Product product = new Product(name, price, description);
         productRepo.save(product);
         return "product/addProduct";

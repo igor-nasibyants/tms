@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Users</title>
-    <div th:insert="fragments/header :: header"></div>
+    <div th:insert="fragments/bootstrap :: bootstrap"></div>
 </head>
 <body>
+<div th:insert="fragments/header :: header"></div>
 <div class="fs-3 text-center">Users</div>
 <form th:action="@{/user/filter}" method="post">
     <div class="d-flex flex-column">

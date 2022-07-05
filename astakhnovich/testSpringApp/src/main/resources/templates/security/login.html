@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <div th:insert="fragments/header :: header"></div>
+    <div th:insert="fragments/bootstrap :: bootstrap"></div>
 </head>
 <body>
+<div th:insert="fragments/header :: header"></div>
 <div class="p-5 text-center">Login</div>
 <div class="text-danger mb-4 d-flex justify-content-center" th:if="${param.error}">
     Invalid username and password.
