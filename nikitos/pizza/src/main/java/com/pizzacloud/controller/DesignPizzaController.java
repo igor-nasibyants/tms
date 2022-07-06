@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 @Slf4j
 @Controller
 @RequestMapping("/design")
-@SessionAttributes("tacoOrder")
+@SessionAttributes("pizzaOrder")
 public class DesignPizzaController {
     @ModelAttribute
     public  void addIngredientsModel(Model model) {
@@ -28,13 +28,13 @@ public class DesignPizzaController {
                 new Ingredient("MARP", "Margherita", Type.VEGGIES),
                 new Ingredient("MART", "Marinara", Type.TOMATO),
                 new Ingredient("QUSC", "Quattro Stagioni", Type.CHEESE),
-                new Ingredient("CAR", "Carbonara", Type.TOMATO),
-                new Ingredient("CR", "Crudo", Type.SAUCE),
-                new Ingredient("MON", "Montanara", Type.FUNGUS),
-                new Ingredient("EMV", "Emiliana", Type.VEGGIES),
-                new Ingredient("ROF", "Romana", Type.FISH),
-                new Ingredient("TOF", "Tonno", Type.FISH),
-                new Ingredient("TOF", "Tonno", Type.ROll)
+                new Ingredient("CARE", "Carbonara", Type.TOMATO),
+                new Ingredient("CRQW", "Crudo", Type.SAUCE),
+                new Ingredient("MONR", "Montanara", Type.FUNGUS),
+                new Ingredient("EMVT", "Emiliana", Type.VEGGIES),
+                new Ingredient("ROFY", "Romana", Type.FISH),
+                new Ingredient("TOFU", "Tonno", Type.FISH),
+                new Ingredient("TOFI", "Tonno", Type.ROll)
         );
 
         Type[] types = Ingredient.Type.values();
@@ -61,7 +61,10 @@ public class DesignPizzaController {
     }
 
         @PostMapping
-            public  String processPizza(Pizza pizza , @ModelAttribute PizzaOrder pizzaOrder){
+            public  String processPizza(@Valid  Pizza pizza ,Errors errors, @ModelAttribute PizzaOrder pizzaOrder){
+        if (errors.hasErrors()){
+            return "design";
+        }
             pizzaOrder.addPizza(pizza);
             log.info("Processing pizza: {}",pizza);
             return "redirect:/orders/current";

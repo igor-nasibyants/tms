@@ -20,20 +20,20 @@ public class IngredientByIdConverter implements Converter<String,Ingredient>{
                new Ingredient("MART", "Marinara", Type.TOMATO));
        ingredientMap.put("QUSC",
                new Ingredient("QUSC", "Quattro Stagioni", Type.CHEESE));
-       ingredientMap.put("CAR",
-               new Ingredient("CAR", "Carbonara", Type.TOMATO));
-       ingredientMap.put("CR",
-               new Ingredient("CR", "Crudo", Type.SAUCE));
-       ingredientMap.put("MON",
-               new Ingredient("MON", "Montanara", Type.FUNGUS));
-       ingredientMap.put("EMV",
-               new Ingredient("EMV", "Emiliana", Type.VEGGIES));
-       ingredientMap.put("ROF",
-               new Ingredient("ROF", "Romana", Type.FISH));
-       ingredientMap.put("TOF",
-               new Ingredient("TOF", "Tonno", Type.FISH));
-       ingredientMap.put("TOF",
-               new Ingredient("TOF", "Tonno", Type.ROll));
+       ingredientMap.put("CARE",
+               new Ingredient("CARE", "Carbonara", Type.TOMATO));
+       ingredientMap.put("CRQW",
+               new Ingredient("CRQW", "Crudo", Type.SAUCE));
+       ingredientMap.put("MONR",
+               new Ingredient("MONR", "Montanara", Type.FUNGUS));
+       ingredientMap.put("EMVT",
+               new Ingredient("EMVT", "Emiliana", Type.VEGGIES));
+       ingredientMap.put("ROFY",
+               new Ingredient("ROFY", "Romana", Type.FISH));
+       ingredientMap.put("TOFU",
+               new Ingredient("TOFU", "Tonno", Type.FISH));
+       ingredientMap.put("TOFI",
+               new Ingredient("TOFI", "Tonno", Type.ROll));
    }
 
        @Override
