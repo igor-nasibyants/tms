@@ -12,19 +12,25 @@
         <table class="table table-hover" style="width:50%">
             <thead class="table-light">
             <tr>
+                <th scope="col">Type</th>
                 <th scope="col">Name</th>
                 <th scope="col">Price</th>
                 <th scope="col">Description</th>
             </tr>
             </thead>
-            <div th:each="product: ${products}">
+            <div th:each="product : ${products}">
                 <div>
                     <tbody>
                     <tr>
+                        <th><span th:text="${product.typeOfProducts}"></span></th>
                         <th><span th:text="${product.name}"></span></th>
-                        <th><span th:text="${product.price}"></span></th>
-                        <th><span th:text="${product.description}"></span>
-                            <a th:href="@{/product/{productId}(productId=${product.id})}">More </a></th>
+                        <th>
+                            <form th:action=@{"betFromDbByProductId"} method="post">
+                                <input name="currentProductId" type="hidden" value="{product.id}">
+                            </form>
+                            <span th:text="${betFromDbByProductId}"></span>
+                        </th>
+                        <th><span th:text="${product.description}"></span></th>
                     </tr>
                     </tbody>
                 </div>

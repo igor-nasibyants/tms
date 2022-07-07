@@ -2,6 +2,7 @@ package inc.ast.test.model.product;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
@@ -11,20 +12,16 @@ public class Product implements Serializable {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
     private String name;
-    private String price;
     private String description;
 
-    @ElementCollection(targetClass = TypeOfProduct.class, fetch = FetchType.EAGER)
-    @CollectionTable(name = "product_role", joinColumns = @JoinColumn(name = "product_id"))
     @Enumerated(EnumType.STRING)
-    private Set<TypeOfProduct> typeOfProducts;
+    private TypeOfProduct typeOfProducts;
 
     public Product() {
     }
 
-    public Product(String name, String price, String description) {
+    public Product(String name, String description) {
         this.name = name;
-        this.price = price;
         this.description = description;
     }
 
@@ -44,14 +41,6 @@ public class Product implements Serializable {
         this.name = name;
     }
 
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -60,17 +49,25 @@ public class Product implements Serializable {
         this.description = description;
     }
 
+    public TypeOfProduct getTypeOfProducts() {
+        return typeOfProducts;
+    }
+
+    public void setTypeOfProducts(TypeOfProduct typeOfProducts) {
+        this.typeOfProducts = typeOfProducts;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Product product = (Product) o;
-        return Objects.equals(getId(), product.getId()) && Objects.equals(getName(), product.getName()) && Objects.equals(getPrice(), product.getPrice()) && Objects.equals(getDescription(), product.getDescription()) && Objects.equals(typeOfProducts, product.typeOfProducts);
+        return Objects.equals(getId(), product.getId()) && Objects.equals(getName(), product.getName()) && Objects.equals(getDescription(), product.getDescription()) && getTypeOfProducts() == product.getTypeOfProducts();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getName(), getPrice(), getDescription(), typeOfProducts);
+        return Objects.hash(getId(), getName(), getDescription(), getTypeOfProducts());
     }
 
     @Override
@@ -78,9 +75,8 @@ public class Product implements Serializable {
         return "Product{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", price='" + price + '\'' +
                 ", description='" + description + '\'' +
-                ", roles=" + typeOfProducts +
+                ", typeOfProducts=" + typeOfProducts +
                 '}';
     }
 }

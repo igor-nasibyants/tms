@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <div th:insert="fragments/bootstrap :: bootstrap"></div>
+</head>
+<body>
+<div th:insert="fragments/header :: header"></div>
+
+<div class="fs-3 text-center">Users</div>
+
+<form th:action="@{/admin/filter}" method="post">
+    <div class="d-flex flex-column">
+        <div class="input-group input-group-sm p-5 d-flex justify-content-center">
+            <input name="filter" type="text" placeholder="username" class="form-control"
+                   style='min-width: 5%; max-width: 20%'
+                   aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            <button type="submit" class="btn btn-outline-success" style="width: 10%">Search</button>
+        </div>
+    </div>
+</form>
+
+<div class=" mt-4 d-flex justify-content-center align-items-center">
+    <table class="table table-hover" style="width:50%">
+        <thead class="table-light">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Username</th>
+            <th scope="col">Password</th>
+            <th scope="col">Role</th>
+            <th scope="col">Active</th>
+            <th scope="col">Edit</th>
+        </tr>
+        </thead>
+        <div th:each="user: ${users}">
+            <div>
+                <tbody>
+                <tr>
+                    <th><span th:text="${user.id}"></span></th>
+                    <th><span th:text="${user.username}"></span></th>
+                    <th><span th:text="${user.password}"></span></th>
+                    <th><span th:text="${user.role}"></span></th>
+                    <th><span th:text="${user.active}"></span></th>
+                    <th><a th:href="@{/admin/{userId}(userId=${user.id})}">Edit</a></th>
+                </tr>
+                </tbody>
+            </div>
+        </div>
+    </table>
+</div>
+</body>
+</html>

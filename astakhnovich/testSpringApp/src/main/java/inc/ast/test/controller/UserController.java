@@ -1,18 +1,15 @@
 package inc.ast.test.controller;
 
-import inc.ast.test.model.user.Role;
 import inc.ast.test.model.user.User;
 import inc.ast.test.repository.UserRepo;
-import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
 import static inc.ast.test.controller.RegistrationController.validationUsername;
 
 @Controller
 @RequestMapping("/user")
-@PreAuthorize("hasAuthority('ADMIN')")
 public class UserController {
     UserRepo userRepo;
 
@@ -20,74 +17,59 @@ public class UserController {
         this.userRepo = userRepo;
     }
 
-    @GetMapping
-    public String userList(Model model) {
-        Iterable<User> userList = userRepo.findAll();
-        model.addAttribute("users", userList);
-        return "user/userList";
-    }
-
-    @PostMapping("filter")
-    public String filterByUsername(@RequestParam String filter,
-                                   Model model) {
-        Iterable<User> users;
-
-        if (filter != null && !filter.isEmpty()) {
-            users = userRepo.findByUsername(filter);
+    @GetMapping("/settings")
+    public String userSettings(Model model) {
+        User userFromSession = getUserFromSession();
+        if (userFromSession != null) {
+            model.addAttribute("user", userFromSession);
         } else {
-            users = userRepo.findAll();
+            model.addAttribute("error", "error");
         }
-        model.addAttribute("users", users);
-        return "user/userList";
+        return "user/settings";
     }
 
-    @GetMapping("{id}")
-    public String userEditForm(@PathVariable("id") User user,
-                               Model model) {
-        model.addAttribute("user", user);
-        return "user/userEdit";
-    }
-
-    @PostMapping("updateUsername/{id}")
-    public String updateUsername(@PathVariable Long id,
-                                 @RequestParam String username,
+    @PostMapping("updateUserUsername")
+    public String updateUsername(@RequestParam String username,
                                  Model model) {
-        User userFromDB = userRepo.findById(id).get();
-        if (validationUsername(username)) {
-            userFromDB.setUsername(username);
-            userRepo.save(userFromDB);
-            return "redirect:/user";
+        User userFromSession = getUserFromSession();
+        if (validationUsername(username) && userFromSession != null) {
+            userFromSession.setUsername(username);
+            userRepo.save(userFromSession);
+            SecurityContextHolder.clearContext();
         } else {
-            model.addAttribute("userExists", "User exists!");
-            return "redirect:/user/{id}";
+            model.addAttribute("usernameError", "usernameError!");
         }
+        return "redirect:/user/settings";
     }
 
-    @PostMapping("updatePassword/{id}")
-    public String updatePassword(@PathVariable Long id,
-                                 @RequestParam String password) {
-        User userFromDB = userRepo.findById(id).get();
-        userFromDB.setPassword(password);
-        userRepo.save(userFromDB);
-        return "redirect:/user";
-    }
-
-    @PostMapping("updateRole/{id}")
-    public String updateRole(@PathVariable Long id,
-                             @RequestParam String role) {
-        User userFromDB = userRepo.findById(id).get();
-        switch (role) {
-            case "USER" -> userFromDB.setRole(Role.USER);
-            case "PROVIDER" -> userFromDB.setRole(Role.PROVIDER);
-            case "ADMIN" -> userFromDB.setRole(Role.ADMIN);
+    @PostMapping("updateUserPassword")
+    public String updatePassword(@RequestParam String password,
+                                 Model model) {
+        User userFromSession = getUserFromSession();
+        if (userFromSession != null) {
+            userFromSession.setPassword(password);
+            userRepo.save(userFromSession);
+            SecurityContextHolder.clearContext();
+        } else {
+            model.addAttribute("passwordError", "passwordError!");
         }
-        userRepo.save(userFromDB);
-        return "redirect:/user";
+        return "redirect:/user/settings";
     }
 
-    @GetMapping("deleteUser/{id}")
-    public String userEditForm(@PathVariable Long id) {
-        userRepo.deleteById(id);
+    @GetMapping("deleteUser")
+    public String userEditForm() {
+        User userFromSession = getUserFromSession();
+        userRepo.deleteById(userFromSession.getId());
+        SecurityContextHolder.clearContext();
         return "redirect:/";
+    }
+
+    private User getUserFromSession() {
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        User userFromSession = null;
+        if (principal instanceof User) {
+            userFromSession = (User) principal;
+        }
+        return userFromSession;
     }
 }

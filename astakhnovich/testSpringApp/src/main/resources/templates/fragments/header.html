@@ -7,11 +7,17 @@
                     <div><span class="fs-4">Astah.inc</span></div>
                     <li><a class="nav-link px-2 link-dark"> | </a>
                     <li><a href="/" class="nav-link px-2 link-dark">Home</a></li>
-                    <div>
-                        <li><a href="/user" class="nav-link px-2 link-dark">User List</a></li>
-                    </div>
-
+                    <li><a href="/product/add" class="nav-link px-2 link-dark">New Product</a></li>
+                    <li><a href="/admin" class="nav-link px-2 link-dark">User List</a></li>
+                    <li><a href="#" class="nav-link px-2 link-dark">=
+                    </a></li>
                 </ul>
+
+<!--                <form th:action="@{/isAuthorized}" method="get">-->
+<!--                    <span th:text="${userForHeader}"></span>-->
+<!--                </form>-->
+
+                <div th:if="${user.isAdmin() == false}">
                 <div class="dropdown text-end">
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
                        data-bs-toggle="dropdown" aria-expanded="false">
@@ -23,9 +29,7 @@
                         </svg>
                     </a>
                     <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="">
-                        <li><a class="dropdown-item" href="/product/add">New Product</a></li>
-
-                        <li><a class="dropdown-item" href="/servlet/settings">Settings</a></li>
+                        <li><a class="dropdown-item" href="/user/settings">Settings</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -33,6 +37,7 @@
                             <input type="submit" value="Sign Out"/>
                         </form>
                     </ul>
+                </div>
                 </div>
             </div>
         </div>

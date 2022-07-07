@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings</title>
+    <div th:insert="fragments/bootstrap :: bootstrap"></div>
+</head>
+<body>
+<div th:insert="fragments/header :: header"></div>
+<div class="p-4 text-center">User Settings</div>
+<div class=" mt-4 d-flex justify-content-center align-items-center">
+    <table class="table" style="width:50%">
+        <thead class="table-light">
+        <tr>
+            <th scope="col">Username</th>
+            <th scope="col">Password</th>
+            <th scope="col">Role</th>
+            <th scope="col">Active</th>
+        </tr>
+        </thead>
+        <div>
+            <tbody>
+            <tr>
+                <th><span th:text="${user.username}"></span></th>
+                <th><span th:text="${user.password}"></span></th>
+                <th><span th:text="${user.role}"></span></th>
+                <th><span th:text="${user.active}"></span></th>
+            </tr>
+            </tbody>
+        </div>
+    </table>
+</div>
+
+<div class="text-danger mb-4 d-flex justify-content-center" th:if="${usernameError}">
+    <span th:text="${usernameError}"></span>
+</div>
+
+<div class="text-danger mb-4 d-flex justify-content-center" th:if="${passwordError}">
+    <span th:text="${passwordError}"></span>
+</div>
+
+<div class=" mt-4 d-flex justify-content-center align-items-center">
+
+    <form th:action="@{updateUserUsername}" method="post">
+        <div class="input-group-sm p-3 mt-5 d-flex justify-content-center">
+            <span class="input-group-text">New username</span>
+            <input name="username" type="text" class="form-control" style='min-width: 10%; max-width: 40%'>
+            <button type="submit" class="btn btn-outline-success" style="width: 50%">Save password</button>
+        </div>
+    </form>
+
+
+    <form th:action="@{updateUserPassword}" method="post">
+        <div class="input-group-sm p-3 mt-5 d-flex justify-content-center">
+            <span class="input-group-text">New password</span>
+            <input name="password" type="text" class="form-control" style='min-width: 10%; max-width: 40%'>
+            <button type="submit" class="btn btn-outline-success" style="width: 50%">Save password</button>
+        </div>
+    </form>
+</div>
+
+
+<div class="mt-5 d-flex justify-content-center">
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Delete profile
+    </button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete profile?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure what you want to delete the profile? this action cannot be canceled
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Cancel</button>
+                    <form th:action="@{deleteUser/{userId}(userId=${user.id})}" method="get">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

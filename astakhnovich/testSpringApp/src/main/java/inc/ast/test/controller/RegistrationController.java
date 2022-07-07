@@ -3,7 +3,6 @@ package inc.ast.test.controller;
 import inc.ast.test.model.user.Role;
 import inc.ast.test.model.user.User;
 import inc.ast.test.repository.UserRepo;
-import inc.ast.test.repository.UserServiceRepo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,12 +13,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequestMapping("/registration")
 public class RegistrationController {
-    private UserRepo userRepo;
-    private static UserServiceRepo userServiceRepo;
+    private static UserRepo userRepo;
 
-    public RegistrationController(UserRepo userRepo, UserServiceRepo userServiceRepo) {
+    public RegistrationController(UserRepo userRepo, UserRepo userServiceRepo) {
         this.userRepo = userRepo;
-        RegistrationController.userServiceRepo = userServiceRepo;
     }
 
     @GetMapping
@@ -43,12 +40,12 @@ public class RegistrationController {
     }
 
     public static boolean validationUsername(String username){
-        User user = userServiceRepo.findByUsername(username);
+        User user = userRepo.findByUsername(username);
         return user == null;
     }
 
     public static boolean validationPassword(String username){
-        User user = userServiceRepo.findByUsername(username);
+        User user = userRepo.findByUsername(username);
         if(true){
             return user == null;
         }else {
