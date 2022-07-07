@@ -26,7 +26,7 @@
                         <th><span th:text="${product.name}"></span></th>
                         <th>
                             <form th:action=@{"betFromDbByProductId"} method="post">
-                                <input name="currentProductId" type="hidden" value="{product.id}">
+                                <input name="currentProductId" type="hidden" value="${product.id}">
                             </form>
                             <span th:text="${betFromDbByProductId}"></span>
                         </th>
@@ -37,5 +37,11 @@
             </div>
         </table>
     </div>
+
+
+
+    <form th:action="@{/isAuthorized}" method="get">
+        <span th:text="${userForHeader}"></span>
+    </form>
 </body>
 </html>

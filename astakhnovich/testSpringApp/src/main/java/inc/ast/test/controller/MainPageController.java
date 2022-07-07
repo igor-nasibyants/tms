@@ -5,6 +5,8 @@ import inc.ast.test.model.product.Product;
 import inc.ast.test.model.user.User;
 import inc.ast.test.repository.BetRepo;
 import inc.ast.test.repository.ProductRepo;
+import org.apache.juli.logging.Log;
+import org.springframework.boot.logging.log4j2.Log4J2LoggingSystem;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,9 +18,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @Controller
+
 public class MainPageController {
     private ProductRepo productRepo;
     private BetRepo betRepo;
+    Log4J2LoggingSystem log4J2LoggingSystem;
 
     public MainPageController(ProductRepo productRepo, BetRepo betRepo) {
         this.productRepo = productRepo;
@@ -40,15 +44,16 @@ public class MainPageController {
         return "main";
     }
 
-    @GetMapping("/isAuthorized")
-    public void isAuthorized(Model model){
+    @GetMapping("isAuthorized")
+    public String isAuthorized(Model model){
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         if(principal instanceof User){
             User user = (User) principal;
             String username = user.getUsername();
-            model.addAttribute("userForHeader", username);
+            model.addAttribute("userForHeader", user.getUsername());
         }else {
-            model.addAttribute("userUnknown", "unknown");
+            model.addAttribute("userForHeader", "unknown");
         }
+        return "main";
     }
 }

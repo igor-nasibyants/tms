@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<form th:action="@{/calc}" method="post">
+    <div class="d-flex flex-column">
+        <div class="input-group input-group-sm mb-4 d-flex justify-content-center">
+            <span class="input-group-text" id="inputGroup-sizing-sm1">Value</span>
+            <input name="valueOne" type="text" class="form-control" style='min-width: 20%; max-width: 70%'
+                   aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm1">
+        </div>
+
+        <div class="text-center p-3">
+            <button type="submit" class="btn btn-outline-success" style="width: 10%">Sign up</button>
+        </div>
+
+        <div>
+
+        </div>
+    </div>
+</form>
+</body>
+</html>

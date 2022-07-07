@@ -1,4 +1,5 @@
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <div th:fragment="header">
     <header class="p-2 mb-2 border-bottom">
         <div class="container">
@@ -9,15 +10,13 @@
                     <li><a href="/" class="nav-link px-2 link-dark">Home</a></li>
                     <li><a href="/product/add" class="nav-link px-2 link-dark">New Product</a></li>
                     <li><a href="/admin" class="nav-link px-2 link-dark">User List</a></li>
-                    <li><a href="#" class="nav-link px-2 link-dark">=
+                    <li><a href="#" class="nav-link px-2 link-dark">
                     </a></li>
                 </ul>
 
-<!--                <form th:action="@{/isAuthorized}" method="get">-->
-<!--                    <span th:text="${userForHeader}"></span>-->
-<!--                </form>-->
-
-                <div th:if="${user.isAdmin() == false}">
+<!--                <span th:text="${SecurityContextHolder.getContext().getAuthentication().getPrincipal().getUsername()}"></span>-->
+                <div sec:authorize="isAuthenticated()">Authenticated as <span sec:authentication="name"></span></div>
+<!--                <div th:if="${user.isAdmin() == false}">-->
                 <div class="dropdown text-end">
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
                        data-bs-toggle="dropdown" aria-expanded="false">
@@ -38,7 +37,7 @@
                         </form>
                     </ul>
                 </div>
-                </div>
+<!--                </div>-->
             </div>
         </div>
     </header>
