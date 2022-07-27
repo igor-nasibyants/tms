@@ -20,6 +20,12 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0-M1'
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.0-M1'
     testImplementation group: 'com.jayway.awaitility', name: 'awaitility', version: '1.7.0'
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    testCompileOnly 'org.projectlombok:lombok:1.18.24'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
+    implementation platform('io.projectreactor:reactor-bom:2020.0.21')
+    implementation 'io.projectreactor:reactor-core'
 }
 
 test {
