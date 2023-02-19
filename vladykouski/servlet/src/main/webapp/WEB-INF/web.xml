@@ -1,0 +1,28 @@
+<Doc-type>web-app xmlns="http://java.sun.com/xml/ns/javaee"
+
+    <web-app>
+
+    <servlet>
+        <servlet-name>DataServlet</servlet-name>
+        <servlet-class>org.mycompany.date.DataServlet</servlet-class>
+    </servlet>
+
+        <servlet>
+            <servlet-name>WeekServlet</servlet-name>
+            <servlet-class>org.mycompany.date.WeekServlet</servlet-class>
+        </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>DataServlet</servlet-name>
+        <servlet-url>/servlet/date</servlet-url>
+    </servlet-mapping>
+
+        <servlet-mapping>
+            <servlet-name>WeekServlet</servlet-name>
+            <servlet-url>/servlet/week</servlet-url>
+        </servlet-mapping>
+
+    </web-app>
+
+    </Doc-type>
